@@ -26,52 +26,59 @@ import numpy as np
 import torch
 from torch.nn.parallel import DistributedDataParallel as DDP
 from torch.distributed import init_process_group, destroy_process_group
+import psutil
+import wandb
 
 from model import GPTConfig, GPT
 
 # -----------------------------------------------------------------------------
 # default config values designed to train a gpt2 (124M) on OpenWebText
 # I/O
-out_dir = 'out'
-eval_interval = 2000
+out_dir = 'out-shakespeare-char'
+eval_interval = 250
 log_interval = 1
-eval_iters = 200
+eval_iters = 10
 eval_only = False # if True, script exits right after the first eval
-always_save_checkpoint = True # if True, always save a checkpoint after each eval
+always_save_checkpoint = False # if True, always save a checkpoint after each eval
 init_from = 'scratch' # 'scratch' or 'resume' or 'gpt2*'
+max_duration = 60  # maximum training duration in seconds (default: 1 minute)
 # wandb logging
-wandb_log = False # disabled by default
-wandb_project = 'owt'
-wandb_run_name = 'gpt2' # 'run' + str(time.time())
+wandb_log = True # disabled by default
+wandb_project = 'gptnext'
+wandb_run_name = 'baseline_' + str(time.time())
 # data
-dataset = 'openwebtext'
-gradient_accumulation_steps = 5 * 8 # used to simulate larger batch sizes
-batch_size = 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
-block_size = 1024
+dataset = 'shakespeare_char'
+gradient_accumulation_steps = 1 # 5 * 8 # used to simulate larger batch sizes
+batch_size = 2**10  # 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
+block_size = 2**8 # 1024
 # model
-n_layer = 12
-n_head = 12
-n_embd = 768
-dropout = 0.0 # for pretraining 0 is good, for finetuning try 0.1+
+n_layer = 6 # 12
+n_head = 6 #12
+n_embd = 384 #768
+assert n_embd % n_head == 0
+dropout = 0.2 # 0.0 # for pretraining 0 is good, for finetuning try 0.1+
 bias = False # do we use bias inside LayerNorm and Linear layers?
 # adamw optimizer
-learning_rate = 6e-4 # max learning rate
-max_iters = 600000 # total number of training iterations
+learning_rate = 1e-3 # 6e-4 # max learning rate
+max_iters = 500 # 600000 # total number of training iterations
 weight_decay = 1e-1
 beta1 = 0.9
 beta2 = 0.95
 grad_clip = 1.0 # clip gradients at this value, or disable if == 0.0
 # learning rate decay settings
 decay_lr = True # whether to decay the learning rate
-warmup_iters = 2000 # how many steps to warm up for
-lr_decay_iters = 600000 # should be ~= max_iters per Chinchilla
-min_lr = 6e-5 # minimum learning rate, should be ~= learning_rate/10 per Chinchilla
+warmup_iters = 100 #2000 # how many steps to warm up for
+lr_decay_iters = 5000 # 600000 # should be ~= max_iters per Chinchilla
+min_lr = 1e-4 # 6e-5 # minimum learning rate, should be ~= learning_rate/10 per Chinchilla
 # DDP settings
 backend = 'nccl' # 'nccl', 'gloo', etc.
 # system
 device = 'cuda' # examples: 'cpu', 'cuda', 'cuda:0', 'cuda:1' etc., or try 'mps' on macbooks
 dtype = 'bfloat16' if torch.cuda.is_available() and torch.cuda.is_bf16_supported() else 'float16' # 'float32', 'bfloat16', or 'float16', the latter will auto implement a GradScaler
-compile = True # use PyTorch 2.0 to compile the model to be faster
+compile = False # use PyTorch 2.0 to compile the model to be faster
+wandb_notes = """
+baseline training run. Lower batches.
+"""
 # -----------------------------------------------------------------------------
 config_keys = [k for k,v in globals().items() if not k.startswith('_') and isinstance(v, (int, float, bool, str))]
 exec(open('configurator.py').read()) # overrides from command line or config file
@@ -79,6 +86,7 @@ config = {k: globals()[k] for k in config_keys} # will be useful for logging
 # -----------------------------------------------------------------------------
 
 # various inits, derived attributes, I/O setup
+t_start = time.time()
 ddp = int(os.environ.get('RANK', -1)) != -1 # is this a ddp run?
 if ddp:
     init_process_group(backend=backend)
@@ -244,7 +252,22 @@ def get_lr(it):
 # logging
 if wandb_log and master_process:
     import wandb
-    wandb.init(project=wandb_project, name=wandb_run_name, config=config)
+    notes = f"""
+    Training details:
+    - Dataset: {dataset}
+    - Model: {n_layer}L, {n_head}H, {n_embd}D
+    - Batch size: {batch_size} * {gradient_accumulation_steps} * {ddp_world_size} = {batch_size * gradient_accumulation_steps * ddp_world_size}
+    - Context length: {block_size}
+    - Total tokens/iter: {tokens_per_iter:,}
+
+    {wandb_notes}
+    """
+    wandb.init(
+        project=wandb_project,
+        name=wandb_run_name,
+        config=config,
+        notes=notes
+    )
 
 # training loop
 X, Y = get_batch('train') # fetch the very first batch
@@ -262,14 +285,38 @@ while True:
     # evaluate the loss on train/val sets and write checkpoints
     if iter_num % eval_interval == 0 and master_process:
         losses = estimate_loss()
+        # compute train/val perplexities
+        train_ppl = math.exp(losses['train'])
+        val_ppl   = math.exp(losses['val'])
+        
+        # Get memory stats
+        memory_stats = {}
+        # GPU memory tracking
+        if device_type == 'cuda':
+            total_gpu_memory = torch.cuda.get_device_properties(0).total_memory / 1e9
+            memory_stats.update({
+                "gpu/active_gb": torch.cuda.memory_allocated() / 1e9,
+                "gpu/reserved_gb": torch.cuda.memory_reserved() / 1e9,
+                "gpu/max_allocated_gb": torch.cuda.max_memory_allocated() / 1e9,
+                "gpu/total_gb": total_gpu_memory,
+                "gpu/active_pct": (torch.cuda.memory_allocated() / 1e9) / total_gpu_memory * 100,
+                "gpu/reserved_pct": (torch.cuda.memory_reserved() / 1e9) / total_gpu_memory * 100,
+            })
+        # CPU memory tracking
+        process = psutil.Process()
+        memory_stats["cpu/ram_gb"] = process.memory_info().rss / 1e9
+        
         print(f"step {iter_num}: train loss {losses['train']:.4f}, val loss {losses['val']:.4f}")
         if wandb_log:
             wandb.log({
                 "iter": iter_num,
                 "train/loss": losses['train'],
                 "val/loss": losses['val'],
+                "train/perplexity": train_ppl,
+                "val/perplexity": val_ppl,
                 "lr": lr,
                 "mfu": running_mfu*100, # convert to percentage
+                **memory_stats, # Add all memory stats
             })
         if losses['val'] < best_val_loss or always_save_checkpoint:
             best_val_loss = losses['val']
@@ -324,13 +371,29 @@ while True:
         if local_iter_num >= 5: # let the training loop settle a bit
             mfu = raw_model.estimate_mfu(batch_size * gradient_accumulation_steps, dt)
             running_mfu = mfu if running_mfu == -1.0 else 0.9*running_mfu + 0.1*mfu
-        print(f"iter {iter_num}: loss {lossf:.4f}, time {dt*1000:.2f}ms, mfu {running_mfu*100:.2f}%")
+            tokens_per_sec = tokens_per_iter / dt
+            if wandb_log:
+                wandb.log({
+                    "throughput/tokens_per_sec": tokens_per_sec,
+                })
+            print(f"iter {iter_num}: loss {lossf:.4f}, time {dt*1000:.2f}ms, mfu {running_mfu*100:.2f}%")
     iter_num += 1
     local_iter_num += 1
 
     # termination conditions
     if iter_num > max_iters:
         break
+    # check if we've exceeded max duration
+    elapsed = time.time() - t_start
+    if elapsed > max_duration:
+        print(f"\nReached max duration of {max_duration}s, stopping training.")
+        break
+
+# calculate and print total runtime
+total_time = time.time() - t_start
+minutes = int(total_time // 60)
+seconds = int(total_time % 60)
+print(f"\nTotal runtime: {minutes}m {seconds}s")
 
 if ddp:
     destroy_process_group()

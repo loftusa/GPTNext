@@ -1,4 +1,3 @@
-
 # nanoGPT
 
 ![nanoGPT](assets/nanogpt.jpg)
@@ -11,7 +10,19 @@ Because the code is so simple, it is very easy to hack to your needs, train new 
 
 ## install
 
+You can install dependencies using [uv](https://github.com/astral-sh/uv) (recommended):
+
+```bash
+# Install uv if you haven't already
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Install dependencies
+uv pip install torch numpy transformers datasets tiktoken wandb tqdm
 ```
+
+Alternatively, you can use pip:
+
+```bash
 pip install torch numpy transformers datasets tiktoken wandb tqdm
 ```
 
@@ -24,6 +35,8 @@ Dependencies:
 -  `tiktoken` for OpenAI's fast BPE code <3
 -  `wandb` for optional logging <3
 -  `tqdm` for progress bars <3
+
+Note: Using uv will typically result in faster installations and better dependency resolution.
 
 ## quick start
 
