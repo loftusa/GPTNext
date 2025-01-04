@@ -34,23 +34,29 @@ from model import GPTConfig, GPT
 # -----------------------------------------------------------------------------
 # default config values designed to train a gpt2 (124M) on OpenWebText
 # I/O
+# changes regularly
+wandb_run_name = 'torch_compile_' + str(time.time())
+max_duration = 60  # maximum training duration in seconds (default: 1 minute)
+wandb_notes = """
+training run with torch.compile enabled. 
+"""
+batch_size = 2**10  # 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
+block_size = 2**8 # 1024
+
+# other hyperparams
 out_dir = 'out-shakespeare-char'
-eval_interval = 250
+eval_interval = 5  # changed from 250 to evaluate every 5 iterations
 log_interval = 1
 eval_iters = 10
 eval_only = False # if True, script exits right after the first eval
 always_save_checkpoint = False # if True, always save a checkpoint after each eval
 init_from = 'scratch' # 'scratch' or 'resume' or 'gpt2*'
-max_duration = 60  # maximum training duration in seconds (default: 1 minute)
 # wandb logging
 wandb_log = True # disabled by default
 wandb_project = 'gptnext'
-wandb_run_name = 'baseline_' + str(time.time())
 # data
 dataset = 'shakespeare_char'
 gradient_accumulation_steps = 1 # 5 * 8 # used to simulate larger batch sizes
-batch_size = 2**10  # 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
-block_size = 2**8 # 1024
 # model
 n_layer = 6 # 12
 n_head = 6 #12
@@ -75,10 +81,7 @@ backend = 'nccl' # 'nccl', 'gloo', etc.
 # system
 device = 'cuda' # examples: 'cpu', 'cuda', 'cuda:0', 'cuda:1' etc., or try 'mps' on macbooks
 dtype = 'bfloat16' if torch.cuda.is_available() and torch.cuda.is_bf16_supported() else 'float16' # 'float32', 'bfloat16', or 'float16', the latter will auto implement a GradScaler
-compile = False # use PyTorch 2.0 to compile the model to be faster
-wandb_notes = """
-baseline training run. Lower batches.
-"""
+compile = True # use PyTorch 2.0 to compile the model to be faster
 # -----------------------------------------------------------------------------
 config_keys = [k for k,v in globals().items() if not k.startswith('_') and isinstance(v, (int, float, bool, str))]
 exec(open('configurator.py').read()) # overrides from command line or config file
