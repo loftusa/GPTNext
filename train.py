@@ -453,5 +453,49 @@ minutes = int(total_time // 60)
 seconds = int(total_time % 60)
 print(f"\nTotal runtime: {minutes}m {seconds}s")
 
+# Sample from the model and log to wandb before finishing
+if master_process and wandb_log:
+  print("Generating samples for wandb...")
+  model.eval()
+  # Setup sampling parameters
+  start = "\n"  # starting prompt
+  num_samples = 3  # generate 3 samples
+  max_new_tokens = 100  # shorter samples for logging
+  temperature = 0.8
+  top_k = 200
+  
+  # Determine encoding/decoding functions
+  if 'meta.pkl' in os.listdir(data_dir):
+    with open(os.path.join(data_dir, 'meta.pkl'), 'rb') as f:
+      meta = pickle.load(f)
+      stoi, itos = meta['stoi'], meta['itos']
+      encode = lambda s: [stoi[c] for c in s]
+      decode = lambda l: ''.join([itos[i] for i in l])
+  else:
+    print("No meta.pkl found, assuming GPT-2 encodings...")
+    import tiktoken
+    enc = tiktoken.get_encoding("gpt2")
+    encode = lambda s: enc.encode(s, allowed_special={"<|endoftext|>"})
+    decode = lambda l: enc.decode(l)
+
+  # Generate samples
+  start_ids = encode(start)
+  x = (torch.tensor(start_ids, dtype=torch.long, device=device)[None, ...])
+  
+  samples = []
+  with torch.no_grad():
+    with ctx:
+      for k in range(num_samples):
+        y = raw_model.generate(x, max_new_tokens, temperature=temperature, top_k=top_k)
+        sample_text = decode(y[0].tolist())
+        samples.append(sample_text)
+        print(f'Sample {k+1}:\n{sample_text}\n---------------')
+  
+  # Log samples to wandb
+  wandb.log({
+    "samples": [wandb.Html(f"<pre>{sample}</pre>") for sample in samples]
+  })
+
+
 if ddp:
     destroy_process_group()
