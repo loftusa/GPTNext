@@ -35,10 +35,10 @@ from model import GPTConfig, GPT
 # default config values designed to train a gpt2 (124M) on OpenWebText
 # I/O
 # changes regularly
-wandb_run_name = 'baseline' + time.strftime("_%m%d_%H:%M:%S")
+wandb_run_name = 'inference_speed_test' + time.strftime("_%m%d_%H:%M:%S")
 max_duration = 180  # maximum training duration in seconds (default: 1 minute)
 wandb_notes = """
-baseline training run. Includes torch.compile.
+baseline training run. Includes torch.compile. First run with inference speed logging.
 """
 batch_size = 2**10  # 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
 block_size = 2**8 # 1024
@@ -224,16 +224,49 @@ if ddp:
 # helps estimate an arbitrarily accurate loss over either split using many batches
 @torch.no_grad()
 def estimate_loss():
+    """ for evaluation """
     out = {}
     model.eval()
     for split in ['train', 'val']:
+        # -----------------------------
+        # Start speed test logging
+        # -----------------------------
+        start_time = time.time()
+        total_tokens = 0
+        # -----------------------------
+
         losses = torch.zeros(eval_iters)
         for k in range(eval_iters):
             X, Y = get_batch(split)
             with ctx:
                 logits, loss = model(X, Y)
             losses[k] = loss.item()
+
+            # -------------------------------------
+            # Track how many tokens we've processed
+            # X has shape [batch_size, block_size].
+            # For "inference speed," total tokens
+            # can simply be batch_size * block_size.
+            # -------------------------------------
+            total_tokens += X.numel()
+
         out[split] = losses.mean()
+
+        # ---------------------------------
+        # End speed test logging
+        # ---------------------------------
+        elapsed = time.time() - start_time
+        tokens_per_sec = total_tokens / elapsed if elapsed > 0 else float('inf')
+
+        print(f"{split} throughput: {tokens_per_sec/1e6:.2f} M tokens/s in {elapsed:.2f}s")
+        
+        # Optionally log the speed test results to wandb
+        if wandb_log and master_process:
+            wandb.log({
+                f"{split}/inference_throughput": tokens_per_sec,
+                f"{split}/time_s": elapsed,
+            })
+
     model.train()
     return out
 
