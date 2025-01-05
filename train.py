@@ -35,10 +35,10 @@ from model import GPTConfig, GPT
 # default config values designed to train a gpt2 (124M) on OpenWebText
 # I/O
 # changes regularly
-wandb_run_name = 'baseline' + time.strftime("_%m%d_%H:%M:%S")
+wandb_run_name = 'rmsnorm' + time.strftime("_%m%d_%H:%M:%S")
 max_duration = 60  # maximum training duration in seconds (default: 1 minute)
 wandb_notes = """
-baseline training run
+RMSNorm training run
 """
 batch_size = 2**10  # 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
 block_size = 2**8 # 1024
