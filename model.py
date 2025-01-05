@@ -15,6 +15,7 @@ import torch
 import torch.nn as nn
 from torch.nn import functional as F
 
+
 class LayerNorm(nn.Module):
     """ LayerNorm but with an optional bias. PyTorch doesn't support simply bias=False """
 
@@ -25,6 +26,16 @@ class LayerNorm(nn.Module):
 
     def forward(self, input):
         return F.layer_norm(input, self.weight.shape, self.weight, self.bias, 1e-5)
+
+class RMSNorm(nn.Module):
+    """ RMSNorm with an optional bias to map to the same hyperparams as the LayerNorm """
+
+    def __init__(self, ndim, bias):
+        super().__init__()
+        self.norm = torch.nn.modules.normalization.RMSNorm(ndim, eps=1e-5, elementwise_affine=bias)
+
+    def forward(self, input):
+        return self.norm(input)
 
 class CausalSelfAttention(nn.Module):
 
@@ -95,14 +106,14 @@ class Block(nn.Module):
 
     def __init__(self, config):
         super().__init__()
-        self.ln_1 = LayerNorm(config.n_embd, bias=config.bias)
+        self.rmsn_1 = RMSNorm(config.n_embd, bias=config.bias)
         self.attn = CausalSelfAttention(config)
-        self.ln_2 = LayerNorm(config.n_embd, bias=config.bias)
+        self.rmsn_2 = RMSNorm(config.n_embd, bias=config.bias)
         self.mlp = MLP(config)
 
     def forward(self, x):
-        x = x + self.attn(self.ln_1(x))
-        x = x + self.mlp(self.ln_2(x))
+        x = x + self.attn(self.rmsn_1(x))
+        x = x + self.mlp(self.rmsn_2(x))
         return x
 
 @dataclass
@@ -328,3 +339,10 @@ class GPT(nn.Module):
             idx = torch.cat((idx, idx_next), dim=1)
 
         return idx
+
+if __name__ == "__main__":
+    # test RMSNorm
+    print(help(torch.nn.modules.normalization.RMSNorm))
+    x = torch.randn(10, 10)
+    norm = RMSNorm(10, bias=False)
+    print(norm(x))
