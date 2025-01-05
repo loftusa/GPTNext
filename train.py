@@ -35,10 +35,10 @@ from model import GPTConfig, GPT
 # default config values designed to train a gpt2 (124M) on OpenWebText
 # I/O
 # changes regularly
-wandb_run_name = 'baseline' + time.strftime("_%m%d_%H:%M:%S")
+wandb_run_name = 'no_compile' + time.strftime("_%m%d_%H:%M:%S")
 max_duration = 60  # maximum training duration in seconds (default: 1 minute)
 wandb_notes = """
-baseline training run. Includes torch.compile.
+training run w/o torch.compile.
 """
 batch_size = 2**10  # 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
 block_size = 2**8 # 1024
@@ -81,7 +81,7 @@ backend = 'nccl' # 'nccl', 'gloo', etc.
 # system
 device = 'cuda' # examples: 'cpu', 'cuda', 'cuda:0', 'cuda:1' etc., or try 'mps' on macbooks
 dtype = 'bfloat16' if torch.cuda.is_available() and torch.cuda.is_bf16_supported() else 'float16' # 'float32', 'bfloat16', or 'float16', the latter will auto implement a GradScaler
-compile = True # use PyTorch 2.0 to compile the model to be faster
+compile = False # use PyTorch 2.0 to compile the model to be faster
 # -----------------------------------------------------------------------------
 config_keys = [k for k,v in globals().items() if not k.startswith('_') and isinstance(v, (int, float, bool, str))]
 exec(open('configurator.py').read()) # overrides from command line or config file
