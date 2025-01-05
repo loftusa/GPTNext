@@ -36,7 +36,7 @@ from model import GPTConfig, GPT
 # I/O
 # changes regularly
 wandb_run_name = 'rmsnorm' + time.strftime("_%m%d_%H:%M:%S")
-max_duration = 60  # maximum training duration in seconds (default: 1 minute)
+max_duration = 180  # maximum training duration in seconds (default: 1 minute)
 wandb_notes = """
 RMSNorm training run
 """
