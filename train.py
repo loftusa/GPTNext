@@ -36,7 +36,7 @@ from model import GPTConfig, GPT
 # I/O
 # changes regularly
 wandb_run_name = 'no_compile' + time.strftime("_%m%d_%H:%M:%S")
-max_duration = 60  # maximum training duration in seconds (default: 1 minute)
+max_duration = 180  # maximum training duration in seconds (default: 1 minute)
 wandb_notes = """
 training run w/o torch.compile.
 """
