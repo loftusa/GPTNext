@@ -38,7 +38,7 @@ from model import GPTConfig, GPT
 wandb_run_name = 'compile' + time.strftime("_%m%d_%H:%M:%S")
 max_duration = 60  # maximum training duration in seconds (default: 1 minute)
 wandb_notes = """
-torch compile training run
+baseline training run
 """
 batch_size = 2**10  # 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
 block_size = 2**8 # 1024
@@ -89,7 +89,6 @@ config = {k: globals()[k] for k in config_keys} # will be useful for logging
 # -----------------------------------------------------------------------------
 
 # various inits, derived attributes, I/O setup
-t_start = time.time()
 ddp = int(os.environ.get('RANK', -1)) != -1 # is this a ddp run?
 if ddp:
     init_process_group(backend=backend)
@@ -273,12 +272,24 @@ if wandb_log and master_process:
     )
 
 # training loop
+t_start = time.time()
 X, Y = get_batch('train') # fetch the very first batch
 t0 = time.time()
 local_iter_num = 0 # number of iterations in the lifetime of this process
 raw_model = model.module if ddp else model # unwrap DDP container if needed
 running_mfu = -1.0
+
+# tracking token throughput that includes validation
+global_start_time = time.time()
+global_tokens_processed = 0
+if eval_iters > 0:
+    val_tokens_per_eval = 2 * eval_iters * batch_size * block_size
+else:
+    val_tokens_per_eval = 0
+
 while True:
+    iter_start_time = time.time()
+    global_tokens_processed += tokens_per_iter
 
     # determine and set the learning rate for this iteration
     lr = get_lr(iter_num) if decay_lr else learning_rate
@@ -286,9 +297,11 @@ while True:
         param_group['lr'] = lr
 
     # evaluate the loss on train/val sets and write checkpoints
+    # VALIDATION
     if iter_num % eval_interval == 0 and master_process:
         losses = estimate_loss()
         # compute train/val perplexities
+        global_tokens_processed += val_tokens_per_eval
         train_ppl = math.exp(losses['train'])
         val_ppl   = math.exp(losses['val'])
         
@@ -370,16 +383,17 @@ while True:
     if iter_num % log_interval == 0 and master_process:
         # get loss as float. note: this is a CPU-GPU sync point
         # scale up to undo the division above, approximating the true total loss (exact would have been a sum)
+        total_seconds = time.time() - global_start_time
         lossf = loss.item() * gradient_accumulation_steps
+        throughput = global_tokens_processed / total_seconds
         if local_iter_num >= 5: # let the training loop settle a bit
             mfu = raw_model.estimate_mfu(batch_size * gradient_accumulation_steps, dt)
             running_mfu = mfu if running_mfu == -1.0 else 0.9*running_mfu + 0.1*mfu
-            tokens_per_sec = tokens_per_iter / dt
             if wandb_log:
                 wandb.log({
-                    "throughput/tokens_per_sec": tokens_per_sec,
+                    "throughput/tokens_per_sec": throughput,
                 })
-            print(f"iter {iter_num}: loss {lossf:.4f}, time {dt*1000:.2f}ms, mfu {running_mfu*100:.2f}%")
+            print(f"iter {iter_num}: loss {lossf:.4f}, time {dt*1000:.2f}ms, mfu {running_mfu*100:.2f}%, throughput {throughput/1e6:.2f}M tokens/s")
     iter_num += 1
     local_iter_num += 1
 
