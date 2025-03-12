@@ -35,7 +35,7 @@ from model import GPTConfig, GPT
 # default config values designed to train a gpt2 (124M) on OpenWebText
 # I/O
 # changes regularly
-wandb_run_name = 'inference_speed_test' + time.strftime("_%m%d_%H:%M:%S")
+wandb_run_name = 'baseline' + time.strftime("_%m%d_%H:%M:%S")
 max_duration = 180  # maximum training duration in seconds (default: 1 minute)
 wandb_notes = """
 baseline training run. Includes torch.compile. First run with inference speed logging.
@@ -82,6 +82,8 @@ backend = 'nccl' # 'nccl', 'gloo', etc.
 device = 'cuda' # examples: 'cpu', 'cuda', 'cuda:0', 'cuda:1' etc., or try 'mps' on macbooks
 dtype = 'bfloat16' if torch.cuda.is_available() and torch.cuda.is_bf16_supported() else 'float16' # 'float32', 'bfloat16', or 'float16', the latter will auto implement a GradScaler
 compile = True # use PyTorch 2.0 to compile the model to be faster
+test_inference = True
+
 # -----------------------------------------------------------------------------
 config_keys = [k for k,v in globals().items() if not k.startswith('_') and isinstance(v, (int, float, bool, str))]
 exec(open('configurator.py').read()) # overrides from command line or config file
@@ -430,7 +432,7 @@ while True:
             running_mfu = mfu if running_mfu == -1.0 else 0.9*running_mfu + 0.1*mfu
             if wandb_log:
                 wandb.log({
-                    "throughput/tokens_per_sec": throughput,
+                    "throughput/tokens_per_sec_train": throughput,
                     "gpu/gpu_gb": current_gpu_mem,
                     "gpu/bytes_per_token": mem_per_token,
                 })
@@ -483,19 +485,45 @@ if master_process and wandb_log:
   x = (torch.tensor(start_ids, dtype=torch.long, device=device)[None, ...])
   
   samples = []
+  inference_tokens = 0
+  inference_start_time = time.time()
+  
   with torch.no_grad():
     with ctx:
       for k in range(num_samples):
+        # Measure generation time for each sample
+        sample_start_time = time.time()
         y = raw_model.generate(x, max_new_tokens, temperature=temperature, top_k=top_k)
+        sample_time = time.time() - sample_start_time
+        
+        # Calculate tokens generated (excluding prompt)
+        tokens_generated = len(y[0].tolist()) - len(start_ids)
+        inference_tokens += tokens_generated
+        
+        # Calculate throughput for this sample
+        sample_throughput = tokens_generated / sample_time if sample_time > 0 else 0
+        
         sample_text = decode(y[0].tolist())
         samples.append(sample_text)
-        print(f'Sample {k+1}:\n{sample_text}\n---------------')
+        print(f'Sample {k+1}:\n{sample_text}\n')
+        print(f'Generated {tokens_generated} tokens in {sample_time:.2f}s ({sample_throughput:.2f} tokens/sec)\n---------------')
   
-  # Log samples to wandb
+  # Calculate overall inference throughput
+  inference_time = time.time() - inference_start_time
+  inference_throughput = inference_tokens / inference_time if inference_time > 0 else 0
+  print(f'Overall inference: {inference_tokens} tokens in {inference_time:.2f}s ({inference_throughput:.2f} tokens/sec)')
+  
+  # Log samples and inference metrics to wandb
   wandb.log({
-    "samples": [wandb.Html(f"<pre>{sample}</pre>") for sample in samples]
+    "samples": [wandb.Html(f"<pre>{sample}</pre>") for sample in samples],
+    "throughput/tokens_per_sec_inference": inference_throughput,
+    "throughput/total_tokens_inference": inference_tokens,
+    "throughput/time_seconds_inference": inference_time
   })
 
 
 if ddp:
     destroy_process_group()
+
+if wandb_log:
+    wandb.finish()
