@@ -36,7 +36,7 @@ from _12_muon_model import GPTConfig, GPT
 # I/O
 # changes regularly
 wandb_run_name = "baseline" + time.strftime("_%m%d_%H:%M:%S")
-max_duration = 180  # maximum training duration in seconds (default: 1 minute)
+max_duration = 60*60  # maximum training duration in seconds (default: 1 minute)
 wandb_notes = """
 baseline training run. Includes torch.compile. First run with inference speed logging.
 """
@@ -68,7 +68,7 @@ dropout = 0.2  # 0.0 # for pretraining 0 is good, for finetuning try 0.1+
 bias = False  # do we use bias inside LayerNorm and Linear layers?
 # adamw optimizer
 learning_rate = 1e-3  # 6e-4 # max learning rate
-max_iters = 5000  # 600000 # total number of training iterations
+max_iters = 99999999999  # 600000 # total number of training iterations
 weight_decay = 1e-1
 beta1 = 0.9
 beta2 = 0.95

@@ -41,7 +41,7 @@ data_path = os.path.join(parent_dir, 'data')
 name_of_run = "rope"
 
 wandb_run_name = name_of_run + time.strftime("_%m%d_%H:%M:%S")
-max_duration = 180  # maximum training duration in seconds (default: 1 minute)
+max_duration = 60*60  # maximum training duration in seconds (default: 1 minute)
 wandb_notes = f"""
 {name_of_run} training run. Includes torch.compile. First run with inference speed logging.
 """
@@ -49,7 +49,7 @@ batch_size = 2**10  # 12 # if gradient_accumulation_steps > 1, this is the micro
 block_size = 2**8 # 1024
 
 # other hyperparams
-out_dir = 'out-shakespeare-char'
+out_dir = f"../data/output/out-openwebtext_{wandb_run_name}"
 eval_interval = 5  # changed from 250 to evaluate every 5 iterations
 log_interval = 1
 eval_iters = 10
@@ -60,7 +60,7 @@ init_from = 'scratch' # 'scratch' or 'resume' or 'gpt2*'
 wandb_log = True # disabled by default
 wandb_project = 'gptnext'
 # data
-dataset = 'shakespeare_char'
+dataset = "openwebtext"
 gradient_accumulation_steps = 1 # 5 * 8 # used to simulate larger batch sizes
 # model
 n_layer = 6 # 12
@@ -71,7 +71,7 @@ dropout = 0.2 # 0.0 # for pretraining 0 is good, for finetuning try 0.1+
 bias = False # do we use bias inside LayerNorm and Linear layers?
 # adamw optimizer
 learning_rate = 1e-3 # 6e-4 # max learning rate
-max_iters = 5000 # 600000 # total number of training iterations
+max_iters = 99999999999 # 600000 # total number of training iterations
 weight_decay = 1e-1
 beta1 = 0.9
 beta2 = 0.95
