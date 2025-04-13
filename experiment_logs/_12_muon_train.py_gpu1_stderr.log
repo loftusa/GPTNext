@@ -1,0 +1,8 @@
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: Currently logged in as: aloftus (gptnext). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.19.1
+wandb: Run data is saved locally in /disk/u/lofty/GPTNext/wandb/run-20250413_185201-6ukzbxbc
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run muon_0413_18:51:57
+wandb: ⭐️ View project at https://wandb.ai/gptnext/gptnext
+wandb: 🚀 View run at https://wandb.ai/gptnext/gptnext/runs/6ukzbxbc

@@ -1,0 +1,34 @@
+/disk/u/lofty/GPTNext/experiments/_12_muon_train.py:252: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(dtype == "float16"))
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: Currently logged in as: aloftus (gptnext). Use `wandb login --relogin` to force relogin
+wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: | Waiting for wandb.init()...wandb: Tracking run with wandb version 0.19.1
+wandb: Run data is saved locally in /disk/u/lofty/GPTNext/wandb/run-20250413_174633-ghmrjwuy
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run muon_0413_17:46:28
+wandb: ⭐️ View project at https://wandb.ai/gptnext/gptnext
+wandb: 🚀 View run at https://wandb.ai/gptnext/gptnext/runs/ghmrjwuy
+Traceback (most recent call last):
+  File "/disk/u/lofty/GPTNext/experiments/_12_muon_train.py", line 487, in <module>
+    scaler.step(muon_optimizer)
+  File "/disk/u/lofty/GPTNext/.venv/lib/python3.12/site-packages/torch/amp/grad_scaler.py", line 380, in step
+    return optimizer.step(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/disk/u/lofty/GPTNext/.venv/lib/python3.12/site-packages/torch/optim/optimizer.py", line 487, in wrapper
+    out = func(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/disk/u/lofty/GPTNext/.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/disk/u/lofty/GPTNext/experiments/_12_muon_optim.py", line 139, in step
+    handle = dist.all_gather_into_tensor(update_buffer, g, async_op=True)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/disk/u/lofty/GPTNext/.venv/lib/python3.12/site-packages/torch/distributed/c10d_logger.py", line 83, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/disk/u/lofty/GPTNext/.venv/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 3424, in all_gather_into_tensor
+    group = group or _get_default_group()
+                     ^^^^^^^^^^^^^^^^^^^^
+  File "/disk/u/lofty/GPTNext/.venv/lib/python3.12/site-packages/torch/distributed/distributed_c10d.py", line 1150, in _get_default_group
+    raise ValueError(
+ValueError: Default process group has not been initialized, please make sure to call init_process_group.

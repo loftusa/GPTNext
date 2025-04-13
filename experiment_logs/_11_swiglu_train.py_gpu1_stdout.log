@@ -1,0 +1,1701 @@
+tokens per iteration will be: 65,536
+Initializing a new model from scratch
+defaulting to vocab_size of GPT-2 to 50304 (50257 rounded up for efficiency)
+number of parameters: 33.48M
+num decayed parameter tensors: 26, with 33,570,816 parameters
+num non-decayed parameter tensors: 13, with 4,992 parameters
+using fused AdamW: True
+compiling the model... (takes a ~minute)
+train throughput: 0.13 M tokens/s in 5.03s
+val throughput: 1.71 M tokens/s in 0.38s
+step 0: train loss 10.8706, val loss 10.8710
+train throughput: 1.62 M tokens/s in 0.40s
+val throughput: 1.54 M tokens/s in 0.43s
+step 5: train loss 10.3977, val loss 10.3961
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 5: loss 10.4591, time 1439.11ms, mfu 3.04%, throughput 0.20M tokens/s
+iter 6: loss 10.3727, time 115.82ms, mfu 6.50%, throughput 0.20M tokens/s
+iter 7: loss 10.2882, time 76.35ms, mfu 11.57%, throughput 0.20M tokens/s
+iter 8: loss 10.2373, time 99.87ms, mfu 14.79%, throughput 0.21M tokens/s
+iter 9: loss 10.1880, time 100.92ms, mfu 17.64%, throughput 0.21M tokens/s
+train throughput: 1.58 M tokens/s in 0.42s
+val throughput: 1.70 M tokens/s in 0.39s
+step 10: train loss 10.0857, val loss 10.0888
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 10: loss 10.1128, time 1522.86ms, mfu 16.16%, throughput 0.27M tokens/s
+iter 11: loss 10.0632, time 97.96ms, mfu 19.00%, throughput 0.27M tokens/s
+iter 12: loss 10.0185, time 97.04ms, mfu 21.61%, throughput 0.28M tokens/s
+iter 13: loss 9.9424, time 97.73ms, mfu 23.91%, throughput 0.28M tokens/s
+iter 14: loss 9.8838, time 101.47ms, mfu 25.83%, throughput 0.28M tokens/s
+train throughput: 1.56 M tokens/s in 0.42s
+val throughput: 1.19 M tokens/s in 0.55s
+step 15: train loss 9.7636, val loss 9.7670
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 15: loss 9.8088, time 1656.88ms, mfu 23.51%, throughput 0.33M tokens/s
+iter 16: loss 9.7261, time 99.11ms, mfu 25.56%, throughput 0.33M tokens/s
+iter 17: loss 9.6514, time 95.51ms, mfu 27.58%, throughput 0.33M tokens/s
+iter 18: loss 9.5545, time 97.70ms, mfu 29.29%, throughput 0.33M tokens/s
+iter 19: loss 9.4929, time 99.39ms, mfu 30.76%, throughput 0.33M tokens/s
+train throughput: 1.60 M tokens/s in 0.41s
+val throughput: 1.54 M tokens/s in 0.42s
+step 20: train loss 9.3815, val loss 9.3822
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 20: loss 9.4170, time 1538.49ms, mfu 27.97%, throughput 0.37M tokens/s
+iter 21: loss 9.3119, time 98.11ms, mfu 29.62%, throughput 0.38M tokens/s
+iter 22: loss 9.2291, time 97.11ms, mfu 31.16%, throughput 0.38M tokens/s
+iter 23: loss 9.1505, time 98.91ms, mfu 32.46%, throughput 0.38M tokens/s
+iter 24: loss 9.0369, time 97.47ms, mfu 33.69%, throughput 0.38M tokens/s
+train throughput: 1.62 M tokens/s in 0.41s
+val throughput: 1.66 M tokens/s in 0.40s
+step 25: train loss 8.9262, val loss 8.9389
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 25: loss 9.0108, time 1526.15ms, mfu 30.61%, throughput 0.41M tokens/s
+iter 26: loss 8.8761, time 94.93ms, mfu 32.15%, throughput 0.42M tokens/s
+iter 27: loss 8.7977, time 98.01ms, mfu 33.39%, throughput 0.42M tokens/s
+iter 28: loss 8.6641, time 98.85ms, mfu 34.47%, throughput 0.42M tokens/s
+iter 29: loss 8.5918, time 108.53ms, mfu 35.05%, throughput 0.42M tokens/s
+train throughput: 1.51 M tokens/s in 0.43s
+val throughput: 1.22 M tokens/s in 0.54s
+step 30: train loss 8.4595, val loss 8.4639
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 30: loss 8.5042, time 1685.67ms, mfu 31.80%, throughput 0.45M tokens/s
+iter 31: loss 8.3993, time 102.76ms, mfu 32.87%, throughput 0.45M tokens/s
+iter 32: loss 8.2791, time 90.87ms, mfu 34.39%, throughput 0.45M tokens/s
+iter 33: loss 8.2552, time 98.12ms, mfu 35.40%, throughput 0.45M tokens/s
+iter 34: loss 8.1324, time 98.16ms, mfu 36.31%, throughput 0.45M tokens/s
+train throughput: 1.51 M tokens/s in 0.43s
+val throughput: 1.60 M tokens/s in 0.41s
+step 35: train loss 8.0278, val loss 8.0194
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 35: loss 8.0709, time 1565.60ms, mfu 32.96%, throughput 0.47M tokens/s
+iter 36: loss 7.9876, time 100.23ms, mfu 34.02%, throughput 0.47M tokens/s
+iter 37: loss 7.8828, time 78.77ms, mfu 36.17%, throughput 0.48M tokens/s
+iter 38: loss 7.8477, time 98.77ms, mfu 36.97%, throughput 0.48M tokens/s
+iter 39: loss 7.7577, time 97.75ms, mfu 37.74%, throughput 0.48M tokens/s
+train throughput: 1.66 M tokens/s in 0.40s
+val throughput: 1.58 M tokens/s in 0.41s
+step 40: train loss 7.6380, val loss 7.6608
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 40: loss 7.6802, time 1514.83ms, mfu 34.26%, throughput 0.50M tokens/s
+iter 41: loss 7.6000, time 95.57ms, mfu 35.40%, throughput 0.50M tokens/s
+iter 42: loss 7.5944, time 99.64ms, mfu 36.25%, throughput 0.50M tokens/s
+iter 43: loss 7.5732, time 108.95ms, mfu 36.63%, throughput 0.50M tokens/s
+iter 44: loss 7.4950, time 93.52ms, mfu 37.64%, throughput 0.50M tokens/s
+train throughput: 1.33 M tokens/s in 0.49s
+val throughput: 1.43 M tokens/s in 0.46s
+step 45: train loss 7.3883, val loss 7.4198
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 45: loss 7.3330, time 1664.56ms, mfu 34.14%, throughput 0.52M tokens/s
+iter 46: loss 7.3836, time 96.46ms, mfu 35.25%, throughput 0.52M tokens/s
+iter 47: loss 7.3433, time 98.28ms, mfu 36.17%, throughput 0.52M tokens/s
+iter 48: loss 7.2727, time 114.30ms, mfu 36.37%, throughput 0.52M tokens/s
+iter 49: loss 7.3245, time 85.73ms, mfu 37.83%, throughput 0.52M tokens/s
+train throughput: 1.63 M tokens/s in 0.40s
+val throughput: 1.69 M tokens/s in 0.39s
+step 50: train loss 7.2782, val loss 7.2692
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 50: loss 7.3213, time 1516.35ms, mfu 34.34%, throughput 0.54M tokens/s
+iter 51: loss 7.2602, time 92.83ms, mfu 35.61%, throughput 0.54M tokens/s
+iter 52: loss 7.2308, time 99.57ms, mfu 36.43%, throughput 0.54M tokens/s
+iter 53: loss 7.2126, time 96.35ms, mfu 37.32%, throughput 0.54M tokens/s
+iter 54: loss 7.1966, time 103.61ms, mfu 37.81%, throughput 0.54M tokens/s
+train throughput: 1.50 M tokens/s in 0.44s
+val throughput: 1.71 M tokens/s in 0.38s
+step 55: train loss 7.2045, val loss 7.1944
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 55: loss 7.1498, time 1523.78ms, mfu 34.31%, throughput 0.56M tokens/s
+iter 56: loss 7.1774, time 94.44ms, mfu 35.51%, throughput 0.56M tokens/s
+iter 57: loss 7.2040, time 120.20ms, mfu 35.59%, throughput 0.56M tokens/s
+iter 58: loss 7.1539, time 70.92ms, mfu 38.19%, throughput 0.56M tokens/s
+iter 59: loss 7.1162, time 96.66ms, mfu 38.89%, throughput 0.56M tokens/s
+train throughput: 1.62 M tokens/s in 0.40s
+val throughput: 1.69 M tokens/s in 0.39s
+step 60: train loss 7.0873, val loss 7.0758
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 60: loss 7.0995, time 1505.84ms, mfu 35.29%, throughput 0.57M tokens/s
+iter 61: loss 7.0702, time 114.79ms, mfu 35.57%, throughput 0.57M tokens/s
+iter 62: loss 7.0257, time 81.70ms, mfu 37.36%, throughput 0.57M tokens/s
+iter 63: loss 7.0389, time 99.20ms, mfu 38.02%, throughput 0.57M tokens/s
+iter 64: loss 6.9890, time 115.22ms, mfu 38.01%, throughput 0.57M tokens/s
+train throughput: 1.60 M tokens/s in 0.41s
+val throughput: 1.69 M tokens/s in 0.39s
+step 65: train loss 6.9364, val loss 6.9564
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 65: loss 6.9860, time 1475.74ms, mfu 34.51%, throughput 0.59M tokens/s
+iter 66: loss 7.0538, time 104.87ms, mfu 35.22%, throughput 0.59M tokens/s
+iter 67: loss 6.8742, time 91.02ms, mfu 36.50%, throughput 0.59M tokens/s
+iter 68: loss 6.9087, time 97.66ms, mfu 37.32%, throughput 0.59M tokens/s
+iter 69: loss 6.8928, time 100.26ms, mfu 37.95%, throughput 0.59M tokens/s
+train throughput: 1.66 M tokens/s in 0.40s
+val throughput: 1.65 M tokens/s in 0.40s
+step 70: train loss 6.8489, val loss 6.8923
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 70: loss 6.9009, time 1466.81ms, mfu 34.45%, throughput 0.60M tokens/s
+iter 71: loss 6.7958, time 125.90ms, mfu 34.47%, throughput 0.60M tokens/s
+iter 72: loss 6.8919, time 80.92ms, mfu 36.42%, throughput 0.60M tokens/s
+iter 73: loss 6.7906, time 130.36ms, mfu 36.13%, throughput 0.60M tokens/s
+iter 74: loss 6.8129, time 104.64ms, mfu 36.69%, throughput 0.60M tokens/s
+train throughput: 1.43 M tokens/s in 0.46s
+val throughput: 1.72 M tokens/s in 0.38s
+step 75: train loss 6.7744, val loss 6.7988
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 75: loss 6.8880, time 1529.41ms, mfu 33.31%, throughput 0.61M tokens/s
+iter 76: loss 6.7824, time 100.28ms, mfu 34.33%, throughput 0.61M tokens/s
+iter 77: loss 6.7914, time 91.68ms, mfu 35.66%, throughput 0.61M tokens/s
+iter 78: loss 6.7337, time 100.28ms, mfu 36.45%, throughput 0.61M tokens/s
+iter 79: loss 6.8298, time 94.74ms, mfu 37.42%, throughput 0.61M tokens/s
+train throughput: 1.39 M tokens/s in 0.47s
+val throughput: 1.70 M tokens/s in 0.39s
+step 80: train loss 6.6768, val loss 6.7000
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 80: loss 6.6998, time 1554.85ms, mfu 33.96%, throughput 0.62M tokens/s
+iter 81: loss 6.7019, time 96.89ms, mfu 35.07%, throughput 0.62M tokens/s
+iter 82: loss 6.6900, time 104.37ms, mfu 35.75%, throughput 0.62M tokens/s
+iter 83: loss 6.6980, time 94.39ms, mfu 36.80%, throughput 0.62M tokens/s
+iter 84: loss 6.6285, time 96.43ms, mfu 37.65%, throughput 0.62M tokens/s
+train throughput: 1.51 M tokens/s in 0.43s
+val throughput: 1.66 M tokens/s in 0.40s
+step 85: train loss 6.6179, val loss 6.6300
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 85: loss 6.6715, time 1538.80ms, mfu 34.17%, throughput 0.63M tokens/s
+iter 86: loss 6.6172, time 76.20ms, mfu 36.48%, throughput 0.63M tokens/s
+iter 87: loss 6.6278, time 142.02ms, mfu 35.91%, throughput 0.63M tokens/s
+iter 88: loss 6.5668, time 87.85ms, mfu 37.29%, throughput 0.63M tokens/s
+iter 89: loss 6.6481, time 86.86ms, mfu 38.59%, throughput 0.63M tokens/s
+train throughput: 1.42 M tokens/s in 0.46s
+val throughput: 1.72 M tokens/s in 0.38s
+step 90: train loss 6.5300, val loss 6.5674
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 90: loss 6.6013, time 1539.79ms, mfu 35.02%, throughput 0.64M tokens/s
+iter 91: loss 6.5556, time 96.84ms, mfu 36.03%, throughput 0.64M tokens/s
+iter 92: loss 6.5676, time 121.55ms, mfu 36.02%, throughput 0.64M tokens/s
+iter 93: loss 6.5298, time 76.01ms, mfu 38.16%, throughput 0.64M tokens/s
+iter 94: loss 6.4618, time 97.59ms, mfu 38.82%, throughput 0.64M tokens/s
+train throughput: 1.63 M tokens/s in 0.40s
+val throughput: 1.67 M tokens/s in 0.39s
+step 95: train loss 6.5114, val loss 6.5199
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 95: loss 6.5302, time 1509.08ms, mfu 35.23%, throughput 0.65M tokens/s
+iter 96: loss 6.5335, time 106.11ms, mfu 35.82%, throughput 0.65M tokens/s
+iter 97: loss 6.4579, time 94.67ms, mfu 36.85%, throughput 0.65M tokens/s
+iter 98: loss 6.5001, time 115.86ms, mfu 36.94%, throughput 0.65M tokens/s
+iter 99: loss 6.5220, time 76.32ms, mfu 38.97%, throughput 0.65M tokens/s
+train throughput: 1.64 M tokens/s in 0.40s
+val throughput: 1.63 M tokens/s in 0.40s
+step 100: train loss 6.4497, val loss 6.4681
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 100: loss 6.4490, time 1528.67ms, mfu 35.36%, throughput 0.65M tokens/s
+iter 101: loss 6.5236, time 96.52ms, mfu 36.35%, throughput 0.65M tokens/s
+iter 102: loss 6.4509, time 90.17ms, mfu 37.56%, throughput 0.66M tokens/s
+iter 103: loss 6.4544, time 96.97ms, mfu 38.30%, throughput 0.66M tokens/s
+iter 104: loss 6.5377, time 100.28ms, mfu 38.83%, throughput 0.66M tokens/s
+train throughput: 1.65 M tokens/s in 0.40s
+val throughput: 1.72 M tokens/s in 0.38s
+step 105: train loss 6.4269, val loss 6.4435
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 105: loss 6.4390, time 1500.61ms, mfu 35.24%, throughput 0.66M tokens/s
+iter 106: loss 6.4088, time 97.28ms, mfu 36.20%, throughput 0.66M tokens/s
+iter 107: loss 6.4473, time 114.51ms, mfu 36.40%, throughput 0.66M tokens/s
+iter 108: loss 6.4533, time 84.44ms, mfu 37.93%, throughput 0.66M tokens/s
+iter 109: loss 6.3934, time 97.96ms, mfu 38.60%, throughput 0.66M tokens/s
+train throughput: 1.58 M tokens/s in 0.41s
+val throughput: 1.53 M tokens/s in 0.43s
+step 110: train loss 6.3836, val loss 6.4182
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 110: loss 6.4215, time 1556.69ms, mfu 35.02%, throughput 0.67M tokens/s
+iter 111: loss 6.3722, time 96.72ms, mfu 36.03%, throughput 0.67M tokens/s
+iter 112: loss 6.3780, time 98.45ms, mfu 36.87%, throughput 0.67M tokens/s
+iter 113: loss 6.3304, time 104.72ms, mfu 37.35%, throughput 0.67M tokens/s
+iter 114: loss 6.3910, time 93.59ms, mfu 38.28%, throughput 0.67M tokens/s
+train throughput: 1.63 M tokens/s in 0.40s
+val throughput: 1.62 M tokens/s in 0.40s
+step 115: train loss 6.3473, val loss 6.3619
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 115: loss 6.4741, time 1529.43ms, mfu 34.74%, throughput 0.67M tokens/s
+iter 116: loss 6.4423, time 98.05ms, mfu 35.72%, throughput 0.67M tokens/s
+iter 117: loss 6.3511, time 97.54ms, mfu 36.63%, throughput 0.67M tokens/s
+iter 118: loss 6.3405, time 99.52ms, mfu 37.35%, throughput 0.67M tokens/s
+iter 119: loss 6.3601, time 100.34ms, mfu 37.97%, throughput 0.67M tokens/s
+train throughput: 1.62 M tokens/s in 0.40s
+val throughput: 1.69 M tokens/s in 0.39s
+step 120: train loss 6.3166, val loss 6.3228
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 120: loss 6.3649, time 1486.25ms, mfu 34.47%, throughput 0.68M tokens/s
+iter 121: loss 6.3287, time 97.04ms, mfu 35.52%, throughput 0.68M tokens/s
+iter 122: loss 6.3265, time 100.44ms, mfu 36.32%, throughput 0.68M tokens/s
+iter 123: loss 6.3152, time 103.31ms, mfu 36.91%, throughput 0.68M tokens/s
+iter 124: loss 6.3379, time 94.95ms, mfu 37.82%, throughput 0.68M tokens/s
+train throughput: 1.49 M tokens/s in 0.44s
+val throughput: 1.71 M tokens/s in 0.38s
+step 125: train loss 6.2829, val loss 6.2984
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 125: loss 6.3635, time 1556.72ms, mfu 34.32%, throughput 0.69M tokens/s
+iter 126: loss 6.2767, time 95.92ms, mfu 35.44%, throughput 0.69M tokens/s
+iter 127: loss 6.3020, time 98.80ms, mfu 36.32%, throughput 0.69M tokens/s
+iter 128: loss 6.2413, time 123.49ms, mfu 36.22%, throughput 0.69M tokens/s
+iter 129: loss 6.3038, time 95.59ms, mfu 37.17%, throughput 0.69M tokens/s
+train throughput: 1.48 M tokens/s in 0.44s
+val throughput: 1.68 M tokens/s in 0.39s
+step 130: train loss 6.2529, val loss 6.2547
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 130: loss 6.2501, time 1524.27ms, mfu 33.74%, throughput 0.69M tokens/s
+iter 131: loss 6.2868, time 96.87ms, mfu 34.88%, throughput 0.69M tokens/s
+iter 132: loss 6.3074, time 95.98ms, mfu 35.94%, throughput 0.69M tokens/s
+iter 133: loss 6.2064, time 95.38ms, mfu 36.93%, throughput 0.69M tokens/s
+iter 134: loss 6.2841, time 102.84ms, mfu 37.48%, throughput 0.69M tokens/s
+train throughput: 1.64 M tokens/s in 0.40s
+val throughput: 1.70 M tokens/s in 0.38s
+step 135: train loss 6.1961, val loss 6.2280
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 135: loss 6.2753, time 1473.34ms, mfu 34.03%, throughput 0.70M tokens/s
+iter 136: loss 6.2691, time 100.62ms, mfu 34.97%, throughput 0.70M tokens/s
+iter 137: loss 6.1964, time 100.57ms, mfu 35.81%, throughput 0.70M tokens/s
+iter 138: loss 6.2529, time 94.02ms, mfu 36.88%, throughput 0.70M tokens/s
+iter 139: loss 6.1994, time 102.02ms, mfu 37.47%, throughput 0.70M tokens/s
+train throughput: 1.56 M tokens/s in 0.42s
+val throughput: 1.70 M tokens/s in 0.39s
+step 140: train loss 6.1997, val loss 6.2097
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 140: loss 6.2254, time 1518.50ms, mfu 34.01%, throughput 0.70M tokens/s
+iter 141: loss 6.1857, time 96.86ms, mfu 35.12%, throughput 0.70M tokens/s
+iter 142: loss 6.2110, time 102.37ms, mfu 35.87%, throughput 0.70M tokens/s
+iter 143: loss 6.2341, time 95.98ms, mfu 36.84%, throughput 0.70M tokens/s
+iter 144: loss 6.1896, time 99.67ms, mfu 37.54%, throughput 0.70M tokens/s
+train throughput: 1.59 M tokens/s in 0.41s
+val throughput: 1.66 M tokens/s in 0.40s
+step 145: train loss 6.1640, val loss 6.1849
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 145: loss 6.1362, time 1539.18ms, mfu 34.07%, throughput 0.70M tokens/s
+iter 146: loss 6.1437, time 96.44ms, mfu 35.19%, throughput 0.70M tokens/s
+iter 147: loss 6.1490, time 98.70ms, mfu 36.10%, throughput 0.70M tokens/s
+iter 148: loss 6.1698, time 105.09ms, mfu 36.64%, throughput 0.70M tokens/s
+iter 149: loss 6.1237, time 93.29ms, mfu 37.66%, throughput 0.70M tokens/s
+train throughput: 1.52 M tokens/s in 0.43s
+val throughput: 1.69 M tokens/s in 0.39s
+step 150: train loss 6.1273, val loss 6.1244
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 150: loss 6.1991, time 1494.37ms, mfu 34.19%, throughput 0.71M tokens/s
+iter 151: loss 6.1505, time 97.81ms, mfu 35.23%, throughput 0.71M tokens/s
+iter 152: loss 6.0751, time 98.44ms, mfu 36.15%, throughput 0.71M tokens/s
+iter 153: loss 6.1479, time 115.76ms, mfu 36.31%, throughput 0.71M tokens/s
+iter 154: loss 6.1315, time 84.89ms, mfu 37.82%, throughput 0.71M tokens/s
+train throughput: 1.65 M tokens/s in 0.40s
+val throughput: 1.69 M tokens/s in 0.39s
+step 155: train loss 6.1044, val loss 6.1358
+iter 155: loss 6.1403, time 886.32ms, mfu 34.53%, throughput 0.72M tokens/s
+iter 156: loss 6.0864, time 104.60ms, mfu 35.25%, throughput 0.72M tokens/s
+iter 157: loss 6.1063, time 106.65ms, mfu 35.82%, throughput 0.72M tokens/s
+iter 158: loss 6.0700, time 88.78ms, mfu 37.16%, throughput 0.72M tokens/s
+iter 159: loss 6.1397, time 99.86ms, mfu 37.82%, throughput 0.72M tokens/s
+train throughput: 1.40 M tokens/s in 0.47s
+val throughput: 1.40 M tokens/s in 0.47s
+step 160: train loss 6.0781, val loss 6.0966
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 160: loss 6.1187, time 1649.02ms, mfu 34.30%, throughput 0.72M tokens/s
+iter 161: loss 6.1547, time 94.89ms, mfu 35.48%, throughput 0.72M tokens/s
+iter 162: loss 6.0673, time 97.91ms, mfu 36.39%, throughput 0.72M tokens/s
+iter 163: loss 6.0741, time 98.86ms, mfu 37.17%, throughput 0.72M tokens/s
+iter 164: loss 6.1011, time 100.92ms, mfu 37.78%, throughput 0.72M tokens/s
+train throughput: 1.56 M tokens/s in 0.42s
+val throughput: 1.49 M tokens/s in 0.44s
+step 165: train loss 6.0652, val loss 6.0557
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 165: loss 6.0906, time 1587.03ms, mfu 34.28%, throughput 0.72M tokens/s
+iter 166: loss 6.0707, time 102.22ms, mfu 35.12%, throughput 0.72M tokens/s
+iter 167: loss 6.0635, time 94.13ms, mfu 36.25%, throughput 0.72M tokens/s
+iter 168: loss 6.0191, time 100.29ms, mfu 36.98%, throughput 0.72M tokens/s
+iter 169: loss 6.0485, time 102.64ms, mfu 37.54%, throughput 0.72M tokens/s
+train throughput: 1.57 M tokens/s in 0.42s
+val throughput: 1.44 M tokens/s in 0.45s
+step 170: train loss 6.0207, val loss 6.0173
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 170: loss 6.0209, time 1613.61ms, mfu 34.05%, throughput 0.73M tokens/s
+iter 171: loss 6.0755, time 97.68ms, mfu 35.12%, throughput 0.73M tokens/s
+iter 172: loss 6.0801, time 99.76ms, mfu 35.99%, throughput 0.73M tokens/s
+iter 173: loss 6.0597, time 95.52ms, mfu 36.96%, throughput 0.73M tokens/s
+iter 174: loss 6.1192, time 99.24ms, mfu 37.67%, throughput 0.73M tokens/s
+train throughput: 1.48 M tokens/s in 0.44s
+val throughput: 1.54 M tokens/s in 0.42s
+step 175: train loss 5.9955, val loss 6.0188
+iter 175: loss 6.0579, time 972.85ms, mfu 34.35%, throughput 0.73M tokens/s
+iter 176: loss 6.0787, time 98.22ms, mfu 35.36%, throughput 0.73M tokens/s
+iter 177: loss 6.0613, time 98.76ms, mfu 36.25%, throughput 0.73M tokens/s
+iter 178: loss 6.0427, time 99.31ms, mfu 37.02%, throughput 0.73M tokens/s
+iter 179: loss 6.0445, time 99.05ms, mfu 37.73%, throughput 0.73M tokens/s
+train throughput: 1.63 M tokens/s in 0.40s
+val throughput: 1.70 M tokens/s in 0.39s
+step 180: train loss 5.9799, val loss 6.0126
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 180: loss 6.0739, time 1527.17ms, mfu 34.24%, throughput 0.74M tokens/s
+iter 181: loss 6.0149, time 99.14ms, mfu 35.22%, throughput 0.74M tokens/s
+iter 182: loss 6.0687, time 97.00ms, mfu 36.20%, throughput 0.74M tokens/s
+iter 183: loss 5.9954, time 99.52ms, mfu 36.97%, throughput 0.74M tokens/s
+iter 184: loss 5.9933, time 99.34ms, mfu 37.67%, throughput 0.74M tokens/s
+train throughput: 1.57 M tokens/s in 0.42s
+val throughput: 1.53 M tokens/s in 0.43s
+step 185: train loss 5.9447, val loss 5.9539
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 185: loss 6.0494, time 1586.16ms, mfu 34.18%, throughput 0.74M tokens/s
+iter 186: loss 5.9416, time 94.28ms, mfu 35.40%, throughput 0.74M tokens/s
+iter 187: loss 5.9877, time 98.13ms, mfu 36.31%, throughput 0.74M tokens/s
+iter 188: loss 5.9774, time 99.66ms, mfu 37.06%, throughput 0.74M tokens/s
+iter 189: loss 5.9735, time 100.28ms, mfu 37.71%, throughput 0.74M tokens/s
+train throughput: 1.53 M tokens/s in 0.43s
+val throughput: 1.51 M tokens/s in 0.44s
+step 190: train loss 5.9576, val loss 5.9422
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 190: loss 5.9748, time 1589.44ms, mfu 34.21%, throughput 0.74M tokens/s
+iter 191: loss 6.0323, time 100.79ms, mfu 35.13%, throughput 0.74M tokens/s
+iter 192: loss 5.9408, time 96.12ms, mfu 36.16%, throughput 0.74M tokens/s
+iter 193: loss 5.9996, time 99.54ms, mfu 36.93%, throughput 0.74M tokens/s
+iter 194: loss 5.9616, time 98.59ms, mfu 37.67%, throughput 0.74M tokens/s
+train throughput: 1.64 M tokens/s in 0.40s
+val throughput: 1.71 M tokens/s in 0.38s
+step 195: train loss 5.9443, val loss 5.9465
+iter 195: loss 5.9606, time 888.45ms, mfu 34.39%, throughput 0.75M tokens/s
+iter 196: loss 5.9498, time 94.51ms, mfu 35.57%, throughput 0.75M tokens/s
+iter 197: loss 6.0038, time 101.64ms, mfu 36.31%, throughput 0.75M tokens/s
+iter 198: loss 5.9387, time 99.64ms, mfu 37.07%, throughput 0.75M tokens/s
+iter 199: loss 5.9115, time 95.14ms, mfu 37.95%, throughput 0.75M tokens/s
+train throughput: 1.46 M tokens/s in 0.45s
+val throughput: 1.67 M tokens/s in 0.39s
+step 200: train loss 5.9196, val loss 5.8886
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 200: loss 5.9554, time 1574.54ms, mfu 34.43%, throughput 0.75M tokens/s
+iter 201: loss 5.8839, time 96.52ms, mfu 35.52%, throughput 0.75M tokens/s
+iter 202: loss 5.9126, time 105.06ms, mfu 36.12%, throughput 0.75M tokens/s
+iter 203: loss 5.9529, time 94.00ms, mfu 37.16%, throughput 0.75M tokens/s
+iter 204: loss 5.9728, time 98.99ms, mfu 37.85%, throughput 0.75M tokens/s
+train throughput: 1.38 M tokens/s in 0.47s
+val throughput: 1.65 M tokens/s in 0.40s
+step 205: train loss 5.8636, val loss 5.8670
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 205: loss 5.9416, time 1627.82ms, mfu 34.34%, throughput 0.75M tokens/s
+iter 206: loss 5.9851, time 97.65ms, mfu 35.38%, throughput 0.75M tokens/s
+iter 207: loss 5.8525, time 97.91ms, mfu 36.30%, throughput 0.75M tokens/s
+iter 208: loss 5.9453, time 108.28ms, mfu 36.70%, throughput 0.75M tokens/s
+iter 209: loss 5.8331, time 91.47ms, mfu 37.81%, throughput 0.75M tokens/s
+train throughput: 0.95 M tokens/s in 0.69s
+val throughput: 1.65 M tokens/s in 0.40s
+step 210: train loss 5.8643, val loss 5.8507
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 210: loss 5.8684, time 1837.73ms, mfu 34.26%, throughput 0.75M tokens/s
+iter 211: loss 5.9618, time 96.14ms, mfu 35.38%, throughput 0.75M tokens/s
+iter 212: loss 5.8529, time 99.69ms, mfu 36.22%, throughput 0.75M tokens/s
+iter 213: loss 5.8567, time 100.68ms, mfu 36.94%, throughput 0.75M tokens/s
+iter 214: loss 5.8712, time 97.62ms, mfu 37.72%, throughput 0.75M tokens/s
+train throughput: 1.53 M tokens/s in 0.43s
+val throughput: 1.69 M tokens/s in 0.39s
+step 215: train loss 5.8501, val loss 5.8522
+iter 215: loss 5.9201, time 921.03ms, mfu 34.42%, throughput 0.76M tokens/s
+iter 216: loss 5.8717, time 94.61ms, mfu 35.60%, throughput 0.76M tokens/s
+iter 217: loss 5.8607, time 100.33ms, mfu 36.39%, throughput 0.76M tokens/s
+iter 218: loss 5.8629, time 99.13ms, mfu 37.16%, throughput 0.76M tokens/s
+iter 219: loss 5.8013, time 115.50ms, mfu 37.22%, throughput 0.76M tokens/s
+train throughput: 1.47 M tokens/s in 0.45s
+val throughput: 1.18 M tokens/s in 0.55s
+step 220: train loss 5.8062, val loss 5.8060
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 220: loss 5.9026, time 1744.28ms, mfu 33.75%, throughput 0.76M tokens/s
+iter 221: loss 5.8070, time 95.33ms, mfu 34.96%, throughput 0.76M tokens/s
+iter 222: loss 5.8611, time 103.37ms, mfu 35.69%, throughput 0.76M tokens/s
+iter 223: loss 5.8319, time 93.20ms, mfu 36.81%, throughput 0.76M tokens/s
+iter 224: loss 5.8130, time 98.95ms, mfu 37.54%, throughput 0.76M tokens/s
+train throughput: 1.65 M tokens/s in 0.40s
+val throughput: 1.71 M tokens/s in 0.38s
+step 225: train loss 5.7762, val loss 5.8019
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 225: loss 5.8021, time 1550.78ms, mfu 34.07%, throughput 0.76M tokens/s
+iter 226: loss 5.8655, time 121.26ms, mfu 34.26%, throughput 0.76M tokens/s
+iter 227: loss 5.8316, time 72.01ms, mfu 36.90%, throughput 0.76M tokens/s
+iter 228: loss 5.8233, time 98.99ms, mfu 37.62%, throughput 0.76M tokens/s
+iter 229: loss 5.7303, time 106.49ms, mfu 37.96%, throughput 0.76M tokens/s
+train throughput: 1.64 M tokens/s in 0.40s
+val throughput: 1.57 M tokens/s in 0.42s
+step 230: train loss 5.7857, val loss 5.7698
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 230: loss 5.8531, time 1560.74ms, mfu 34.45%, throughput 0.76M tokens/s
+iter 231: loss 5.8421, time 101.69ms, mfu 35.30%, throughput 0.76M tokens/s
+iter 232: loss 5.8664, time 119.24ms, mfu 35.43%, throughput 0.76M tokens/s
+iter 233: loss 5.7673, time 75.55ms, mfu 37.67%, throughput 0.76M tokens/s
+iter 234: loss 5.7613, time 100.57ms, mfu 38.25%, throughput 0.76M tokens/s
+train throughput: 1.30 M tokens/s in 0.51s
+val throughput: 1.57 M tokens/s in 0.42s
+step 235: train loss 5.7457, val loss 5.7620
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 235: loss 5.7855, time 1704.81ms, mfu 34.68%, throughput 0.76M tokens/s
+iter 236: loss 5.7829, time 98.69ms, mfu 35.64%, throughput 0.76M tokens/s
+iter 237: loss 5.7955, time 102.81ms, mfu 36.32%, throughput 0.76M tokens/s
+iter 238: loss 5.8152, time 99.10ms, mfu 37.10%, throughput 0.76M tokens/s
+iter 239: loss 5.7884, time 95.46ms, mfu 37.96%, throughput 0.76M tokens/s
+train throughput: 1.57 M tokens/s in 0.42s
+val throughput: 1.41 M tokens/s in 0.47s
+step 240: train loss 5.7564, val loss 5.7551
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 240: loss 5.7412, time 1592.85ms, mfu 34.44%, throughput 0.76M tokens/s
+iter 241: loss 5.8190, time 95.45ms, mfu 35.57%, throughput 0.76M tokens/s
+iter 242: loss 5.7841, time 100.69ms, mfu 36.35%, throughput 0.76M tokens/s
+iter 243: loss 5.7490, time 112.71ms, mfu 36.59%, throughput 0.76M tokens/s
+iter 244: loss 5.7903, time 83.53ms, mfu 38.16%, throughput 0.76M tokens/s
+train throughput: 1.54 M tokens/s in 0.43s
+val throughput: 1.47 M tokens/s in 0.45s
+step 245: train loss 5.7489, val loss 5.7363
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 245: loss 5.7805, time 1611.66ms, mfu 34.62%, throughput 0.76M tokens/s
+iter 246: loss 5.7246, time 98.46ms, mfu 35.59%, throughput 0.76M tokens/s
+iter 247: loss 5.7499, time 101.19ms, mfu 36.35%, throughput 0.76M tokens/s
+iter 248: loss 5.7492, time 116.23ms, mfu 36.47%, throughput 0.76M tokens/s
+iter 249: loss 5.7974, time 87.00ms, mfu 37.85%, throughput 0.76M tokens/s
+train throughput: 0.94 M tokens/s in 0.70s
+val throughput: 1.39 M tokens/s in 0.47s
+step 250: train loss 5.7093, val loss 5.7189
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 250: loss 5.7641, time 1901.37ms, mfu 34.29%, throughput 0.76M tokens/s
+iter 251: loss 5.7688, time 95.17ms, mfu 35.45%, throughput 0.76M tokens/s
+iter 252: loss 5.7828, time 110.79ms, mfu 35.85%, throughput 0.76M tokens/s
+iter 253: loss 5.7223, time 89.13ms, mfu 37.16%, throughput 0.76M tokens/s
+iter 254: loss 5.7566, time 98.80ms, mfu 37.87%, throughput 0.76M tokens/s
+train throughput: 1.49 M tokens/s in 0.44s
+val throughput: 1.46 M tokens/s in 0.45s
+step 255: train loss 5.6705, val loss 5.7011
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 255: loss 5.7649, time 1568.39ms, mfu 34.36%, throughput 0.76M tokens/s
+iter 256: loss 5.7468, time 93.01ms, mfu 35.62%, throughput 0.76M tokens/s
+iter 257: loss 5.7542, time 99.69ms, mfu 36.44%, throughput 0.76M tokens/s
+iter 258: loss 5.7041, time 101.23ms, mfu 37.11%, throughput 0.76M tokens/s
+iter 259: loss 5.6989, time 97.87ms, mfu 37.86%, throughput 0.76M tokens/s
+train throughput: 1.40 M tokens/s in 0.47s
+val throughput: 1.58 M tokens/s in 0.42s
+step 260: train loss 5.6681, val loss 5.6692
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 260: loss 5.7234, time 1557.48ms, mfu 34.36%, throughput 0.77M tokens/s
+iter 261: loss 5.6862, time 107.58ms, mfu 34.98%, throughput 0.77M tokens/s
+iter 262: loss 5.6823, time 119.71ms, mfu 35.13%, throughput 0.77M tokens/s
+iter 263: loss 5.7454, time 75.63ms, mfu 37.39%, throughput 0.77M tokens/s
+iter 264: loss 5.7134, time 97.25ms, mfu 38.15%, throughput 0.77M tokens/s
+train throughput: 1.55 M tokens/s in 0.42s
+val throughput: 1.70 M tokens/s in 0.39s
+step 265: train loss 5.6691, val loss 5.6546
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 265: loss 5.6711, time 1527.03ms, mfu 34.62%, throughput 0.77M tokens/s
+iter 266: loss 5.6803, time 98.03ms, mfu 35.61%, throughput 0.77M tokens/s
+iter 267: loss 5.7353, time 109.56ms, mfu 36.04%, throughput 0.77M tokens/s
+iter 268: loss 5.7200, time 88.74ms, mfu 37.36%, throughput 0.77M tokens/s
+iter 269: loss 5.6876, time 101.43ms, mfu 37.93%, throughput 0.77M tokens/s
+train throughput: 1.57 M tokens/s in 0.42s
+val throughput: 1.53 M tokens/s in 0.43s
+step 270: train loss 5.6321, val loss 5.6359
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 270: loss 5.7179, time 1560.17ms, mfu 34.41%, throughput 0.77M tokens/s
+iter 271: loss 5.7101, time 103.11ms, mfu 35.21%, throughput 0.77M tokens/s
+iter 272: loss 5.7331, time 92.76ms, mfu 36.40%, throughput 0.77M tokens/s
+iter 273: loss 5.7117, time 100.87ms, mfu 37.09%, throughput 0.77M tokens/s
+iter 274: loss 5.7223, time 100.89ms, mfu 37.71%, throughput 0.77M tokens/s
+train throughput: 1.58 M tokens/s in 0.42s
+val throughput: 1.61 M tokens/s in 0.41s
+step 275: train loss 5.6051, val loss 5.6202
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 275: loss 5.6186, time 1572.66ms, mfu 34.21%, throughput 0.77M tokens/s
+iter 276: loss 5.6461, time 96.99ms, mfu 35.30%, throughput 0.77M tokens/s
+iter 277: loss 5.6962, time 110.22ms, mfu 35.73%, throughput 0.77M tokens/s
+iter 278: loss 5.6790, time 110.14ms, mfu 36.12%, throughput 0.77M tokens/s
+iter 279: loss 5.6504, time 81.89ms, mfu 37.84%, throughput 0.77M tokens/s
+train throughput: 1.53 M tokens/s in 0.43s
+val throughput: 1.63 M tokens/s in 0.40s
+step 280: train loss 5.6130, val loss 5.5917
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 280: loss 5.6495, time 1533.55ms, mfu 34.34%, throughput 0.77M tokens/s
+iter 281: loss 5.6994, time 96.46ms, mfu 35.44%, throughput 0.77M tokens/s
+iter 282: loss 5.6301, time 95.62ms, mfu 36.46%, throughput 0.77M tokens/s
+iter 283: loss 5.6430, time 98.61ms, mfu 37.24%, throughput 0.77M tokens/s
+iter 284: loss 5.6627, time 99.75ms, mfu 37.90%, throughput 0.77M tokens/s
+train throughput: 1.61 M tokens/s in 0.41s
+val throughput: 1.52 M tokens/s in 0.43s
+step 285: train loss 5.5894, val loss 5.5885
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 285: loss 5.5918, time 1522.88ms, mfu 34.40%, throughput 0.77M tokens/s
+iter 286: loss 5.6794, time 93.47ms, mfu 35.63%, throughput 0.77M tokens/s
+iter 287: loss 5.6169, time 93.75ms, mfu 36.73%, throughput 0.77M tokens/s
+iter 288: loss 5.6530, time 129.72ms, mfu 36.42%, throughput 0.77M tokens/s
+iter 289: loss 5.6351, time 75.54ms, mfu 38.56%, throughput 0.77M tokens/s
+train throughput: 1.18 M tokens/s in 0.55s
+val throughput: 1.61 M tokens/s in 0.41s
+step 290: train loss 5.5690, val loss 5.5780
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 290: loss 5.6538, time 1636.93ms, mfu 34.97%, throughput 0.77M tokens/s
+iter 291: loss 5.6538, time 104.03ms, mfu 35.67%, throughput 0.77M tokens/s
+iter 292: loss 5.6628, time 89.96ms, mfu 36.96%, throughput 0.77M tokens/s
+iter 293: loss 5.6335, time 104.13ms, mfu 37.46%, throughput 0.77M tokens/s
+iter 294: loss 5.6391, time 95.00ms, mfu 38.31%, throughput 0.77M tokens/s
+train throughput: 1.54 M tokens/s in 0.43s
+val throughput: 1.68 M tokens/s in 0.39s
+step 295: train loss 5.5637, val loss 5.5590
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 295: loss 5.6487, time 1501.92ms, mfu 34.77%, throughput 0.77M tokens/s
+iter 296: loss 5.6407, time 90.84ms, mfu 36.10%, throughput 0.77M tokens/s
+iter 297: loss 5.5932, time 105.59ms, mfu 36.63%, throughput 0.77M tokens/s
+iter 298: loss 5.5786, time 91.68ms, mfu 37.73%, throughput 0.77M tokens/s
+iter 299: loss 5.6054, time 102.04ms, mfu 38.24%, throughput 0.77M tokens/s
+train throughput: 1.64 M tokens/s in 0.40s
+val throughput: 1.66 M tokens/s in 0.40s
+step 300: train loss 5.5457, val loss 5.5295
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 300: loss 5.5512, time 1482.97ms, mfu 34.71%, throughput 0.78M tokens/s
+iter 301: loss 5.6272, time 96.25ms, mfu 35.78%, throughput 0.78M tokens/s
+iter 302: loss 5.5908, time 101.99ms, mfu 36.48%, throughput 0.78M tokens/s
+iter 303: loss 5.6378, time 101.67ms, mfu 37.13%, throughput 0.78M tokens/s
+iter 304: loss 5.5229, time 136.02ms, mfu 36.63%, throughput 0.77M tokens/s
+train throughput: 1.38 M tokens/s in 0.47s
+val throughput: 1.64 M tokens/s in 0.40s
+step 305: train loss 5.5296, val loss 5.5378
+iter 305: loss 5.5887, time 961.44ms, mfu 33.42%, throughput 0.78M tokens/s
+iter 306: loss 5.5685, time 114.30ms, mfu 33.90%, throughput 0.78M tokens/s
+iter 307: loss 5.5958, time 77.33ms, mfu 36.16%, throughput 0.78M tokens/s
+iter 308: loss 5.5918, time 98.57ms, mfu 36.97%, throughput 0.78M tokens/s
+iter 309: loss 5.5587, time 98.67ms, mfu 37.70%, throughput 0.78M tokens/s
+train throughput: 1.65 M tokens/s in 0.40s
+val throughput: 1.51 M tokens/s in 0.44s
+step 310: train loss 5.5112, val loss 5.5177
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 310: loss 5.5567, time 1534.43ms, mfu 34.22%, throughput 0.78M tokens/s
+iter 311: loss 5.5583, time 99.55ms, mfu 35.18%, throughput 0.78M tokens/s
+iter 312: loss 5.5907, time 96.07ms, mfu 36.21%, throughput 0.78M tokens/s
+iter 313: loss 5.5759, time 100.57ms, mfu 36.93%, throughput 0.78M tokens/s
+iter 314: loss 5.5878, time 97.27ms, mfu 37.73%, throughput 0.78M tokens/s
+train throughput: 1.59 M tokens/s in 0.41s
+val throughput: 1.51 M tokens/s in 0.44s
+step 315: train loss 5.5218, val loss 5.5085
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 315: loss 5.5572, time 1563.16ms, mfu 34.24%, throughput 0.78M tokens/s
+iter 316: loss 5.6087, time 94.97ms, mfu 35.41%, throughput 0.78M tokens/s
+iter 317: loss 5.5490, time 101.29ms, mfu 36.18%, throughput 0.78M tokens/s
+iter 318: loss 5.5853, time 96.38ms, mfu 37.10%, throughput 0.78M tokens/s
+iter 319: loss 5.5326, time 97.64ms, mfu 37.86%, throughput 0.78M tokens/s
+train throughput: 1.42 M tokens/s in 0.46s
+val throughput: 1.13 M tokens/s in 0.58s
+step 320: train loss 5.4860, val loss 5.5098
+iter 320: loss 5.5922, time 1152.40ms, mfu 34.45%, throughput 0.78M tokens/s
+iter 321: loss 5.5821, time 98.97ms, mfu 35.42%, throughput 0.78M tokens/s
+iter 322: loss 5.5347, time 93.92ms, mfu 36.53%, throughput 0.78M tokens/s
+iter 323: loss 5.5645, time 97.86ms, mfu 37.34%, throughput 0.78M tokens/s
+iter 324: loss 5.5545, time 99.22ms, mfu 38.01%, throughput 0.78M tokens/s
+train throughput: 1.55 M tokens/s in 0.42s
+val throughput: 1.52 M tokens/s in 0.43s
+step 325: train loss 5.4792, val loss 5.4845
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 325: loss 5.5211, time 1591.90ms, mfu 34.48%, throughput 0.79M tokens/s
+iter 326: loss 5.5621, time 115.45ms, mfu 34.82%, throughput 0.79M tokens/s
+iter 327: loss 5.5226, time 82.43ms, mfu 36.63%, throughput 0.79M tokens/s
+iter 328: loss 5.5528, time 97.67ms, mfu 37.44%, throughput 0.79M tokens/s
+iter 329: loss 5.5192, time 100.25ms, mfu 38.06%, throughput 0.79M tokens/s
+train throughput: 1.49 M tokens/s in 0.44s
+val throughput: 1.68 M tokens/s in 0.39s
+step 330: train loss 5.4851, val loss 5.4663
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 330: loss 5.5392, time 1526.45ms, mfu 34.54%, throughput 0.79M tokens/s
+iter 331: loss 5.5049, time 96.60ms, mfu 35.60%, throughput 0.79M tokens/s
+iter 332: loss 5.5685, time 98.73ms, mfu 36.47%, throughput 0.79M tokens/s
+iter 333: loss 5.6360, time 102.83ms, mfu 37.07%, throughput 0.79M tokens/s
+iter 334: loss 5.5357, time 96.05ms, mfu 37.91%, throughput 0.79M tokens/s
+train throughput: 1.45 M tokens/s in 0.45s
+val throughput: 1.56 M tokens/s in 0.42s
+step 335: train loss 5.4692, val loss 5.4638
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 335: loss 5.5686, time 1620.17ms, mfu 34.39%, throughput 0.79M tokens/s
+iter 336: loss 5.4970, time 99.92ms, mfu 35.32%, throughput 0.79M tokens/s
+iter 337: loss 5.5418, time 94.74ms, mfu 36.40%, throughput 0.79M tokens/s
+iter 338: loss 5.5624, time 99.27ms, mfu 37.16%, throughput 0.79M tokens/s
+iter 339: loss 5.5357, time 104.83ms, mfu 37.61%, throughput 0.79M tokens/s
+train throughput: 1.54 M tokens/s in 0.43s
+val throughput: 1.35 M tokens/s in 0.49s
+step 340: train loss 5.4155, val loss 5.4429
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 340: loss 5.5079, time 1617.62ms, mfu 34.12%, throughput 0.79M tokens/s
+iter 341: loss 5.5697, time 93.12ms, mfu 35.40%, throughput 0.79M tokens/s
+iter 342: loss 5.5377, time 113.79ms, mfu 35.70%, throughput 0.79M tokens/s
+iter 343: loss 5.4703, time 90.06ms, mfu 36.98%, throughput 0.79M tokens/s
+iter 344: loss 5.4859, time 115.38ms, mfu 37.06%, throughput 0.79M tokens/s
+train throughput: 1.56 M tokens/s in 0.42s
+val throughput: 1.18 M tokens/s in 0.56s
+step 345: train loss 5.4126, val loss 5.4239
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 345: loss 5.4620, time 1695.07ms, mfu 33.62%, throughput 0.79M tokens/s
+iter 346: loss 5.4851, time 112.77ms, mfu 34.13%, throughput 0.79M tokens/s
+iter 347: loss 5.4887, time 88.96ms, mfu 35.62%, throughput 0.79M tokens/s
+iter 348: loss 5.4730, time 92.32ms, mfu 36.79%, throughput 0.79M tokens/s
+iter 349: loss 5.4887, time 99.45ms, mfu 37.51%, throughput 0.79M tokens/s
+train throughput: 1.54 M tokens/s in 0.43s
+val throughput: 1.62 M tokens/s in 0.41s
+step 350: train loss 5.4214, val loss 5.4111
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 350: loss 5.4562, time 1509.25ms, mfu 34.04%, throughput 0.79M tokens/s
+iter 351: loss 5.4457, time 92.32ms, mfu 35.37%, throughput 0.79M tokens/s
+iter 352: loss 5.4861, time 98.38ms, mfu 36.27%, throughput 0.79M tokens/s
+iter 353: loss 5.4711, time 98.94ms, mfu 37.06%, throughput 0.79M tokens/s
+iter 354: loss 5.4803, time 101.41ms, mfu 37.66%, throughput 0.79M tokens/s
+train throughput: 1.63 M tokens/s in 0.40s
+val throughput: 1.69 M tokens/s in 0.39s
+step 355: train loss 5.4144, val loss 5.4081
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 355: loss 5.4968, time 1459.30ms, mfu 34.20%, throughput 0.79M tokens/s
+iter 356: loss 5.4807, time 113.16ms, mfu 34.64%, throughput 0.79M tokens/s
+iter 357: loss 5.5170, time 79.98ms, mfu 36.63%, throughput 0.79M tokens/s
+iter 358: loss 5.5176, time 93.99ms, mfu 37.62%, throughput 0.79M tokens/s
+iter 359: loss 5.4644, time 99.85ms, mfu 38.23%, throughput 0.79M tokens/s
+train throughput: 1.65 M tokens/s in 0.40s
+val throughput: 1.67 M tokens/s in 0.39s
+step 360: train loss 5.3953, val loss 5.3953
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 360: loss 5.5008, time 1468.87ms, mfu 34.70%, throughput 0.79M tokens/s
+iter 361: loss 5.4315, time 96.61ms, mfu 35.75%, throughput 0.79M tokens/s
+iter 362: loss 5.5231, time 99.42ms, mfu 36.57%, throughput 0.79M tokens/s
+iter 363: loss 5.5247, time 103.94ms, mfu 37.12%, throughput 0.79M tokens/s
+iter 364: loss 5.4933, time 94.18ms, mfu 38.04%, throughput 0.79M tokens/s
+train throughput: 1.60 M tokens/s in 0.41s
+val throughput: 1.68 M tokens/s in 0.39s
+step 365: train loss 5.4097, val loss 5.3866
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 365: loss 5.4401, time 1526.23ms, mfu 34.53%, throughput 0.79M tokens/s
+iter 366: loss 5.4901, time 79.95ms, mfu 36.54%, throughput 0.79M tokens/s
+iter 367: loss 5.5142, time 98.57ms, mfu 37.31%, throughput 0.79M tokens/s
+iter 368: loss 5.4240, time 101.33ms, mfu 37.89%, throughput 0.79M tokens/s
+iter 369: loss 5.4503, time 97.46ms, mfu 38.58%, throughput 0.79M tokens/s
+train throughput: 1.66 M tokens/s in 0.39s
+val throughput: 1.71 M tokens/s in 0.38s
+step 370: train loss 5.3789, val loss 5.3841
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 370: loss 5.4856, time 1485.22ms, mfu 35.02%, throughput 0.79M tokens/s
+iter 371: loss 5.5106, time 77.71ms, mfu 37.14%, throughput 0.79M tokens/s
+iter 372: loss 5.4769, time 96.78ms, mfu 37.94%, throughput 0.79M tokens/s
+iter 373: loss 5.3935, time 106.33ms, mfu 38.25%, throughput 0.79M tokens/s
+iter 374: loss 5.4323, time 95.09ms, mfu 39.02%, throughput 0.79M tokens/s
+train throughput: 1.50 M tokens/s in 0.44s
+val throughput: 1.63 M tokens/s in 0.40s
+step 375: train loss 5.3696, val loss 5.3781
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 375: loss 5.4826, time 1538.06ms, mfu 35.40%, throughput 0.79M tokens/s
+iter 376: loss 5.4755, time 79.46ms, mfu 37.36%, throughput 0.79M tokens/s
+iter 377: loss 5.4311, time 97.52ms, mfu 38.10%, throughput 0.79M tokens/s
+iter 378: loss 5.3993, time 95.88ms, mfu 38.85%, throughput 0.79M tokens/s
+iter 379: loss 5.4208, time 98.52ms, mfu 39.40%, throughput 0.79M tokens/s
+train throughput: 1.54 M tokens/s in 0.42s
+val throughput: 1.68 M tokens/s in 0.39s
+step 380: train loss 5.3603, val loss 5.3758
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 380: loss 5.4758, time 1510.80ms, mfu 35.75%, throughput 0.79M tokens/s
+iter 381: loss 5.4141, time 107.04ms, mfu 36.25%, throughput 0.79M tokens/s
+iter 382: loss 5.4626, time 91.91ms, mfu 37.38%, throughput 0.79M tokens/s
+iter 383: loss 5.4127, time 97.54ms, mfu 38.12%, throughput 0.79M tokens/s
+iter 384: loss 5.4714, time 97.99ms, mfu 38.76%, throughput 0.79M tokens/s
+train throughput: 1.61 M tokens/s in 0.41s
+val throughput: 1.68 M tokens/s in 0.39s
+step 385: train loss 5.3357, val loss 5.3552
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 385: loss 5.4453, time 1472.88ms, mfu 35.18%, throughput 0.79M tokens/s
+iter 386: loss 5.3650, time 93.41ms, mfu 36.34%, throughput 0.79M tokens/s
+iter 387: loss 5.4089, time 97.98ms, mfu 37.17%, throughput 0.79M tokens/s
+iter 388: loss 5.4135, time 102.58ms, mfu 37.71%, throughput 0.79M tokens/s
+iter 389: loss 5.3815, time 99.88ms, mfu 38.31%, throughput 0.79M tokens/s
+train throughput: 1.41 M tokens/s in 0.46s
+val throughput: 1.70 M tokens/s in 0.38s
+step 390: train loss 5.3378, val loss 5.3570
+iter 390: loss 5.4137, time 951.70ms, mfu 34.94%, throughput 0.80M tokens/s
+iter 391: loss 5.3682, time 98.01ms, mfu 35.90%, throughput 0.80M tokens/s
+iter 392: loss 5.4564, time 98.31ms, mfu 36.75%, throughput 0.80M tokens/s
+iter 393: loss 5.3613, time 116.91ms, mfu 36.81%, throughput 0.80M tokens/s
+iter 394: loss 5.3873, time 132.58ms, mfu 36.43%, throughput 0.80M tokens/s
+train throughput: 1.43 M tokens/s in 0.46s
+val throughput: 1.27 M tokens/s in 0.52s
+step 395: train loss 5.3443, val loss 5.3319
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 395: loss 5.3172, time 1628.51ms, mfu 33.05%, throughput 0.80M tokens/s
+iter 396: loss 5.3681, time 93.11ms, mfu 34.44%, throughput 0.80M tokens/s
+iter 397: loss 5.4226, time 93.62ms, mfu 35.66%, throughput 0.80M tokens/s
+iter 398: loss 5.4572, time 97.90ms, mfu 36.56%, throughput 0.80M tokens/s
+iter 399: loss 5.3655, time 101.61ms, mfu 37.20%, throughput 0.80M tokens/s
+train throughput: 1.62 M tokens/s in 0.41s
+val throughput: 1.59 M tokens/s in 0.41s
+step 400: train loss 5.3076, val loss 5.3434
+iter 400: loss 5.3855, time 928.01ms, mfu 33.95%, throughput 0.80M tokens/s
+iter 401: loss 5.3889, time 88.96ms, mfu 35.46%, throughput 0.80M tokens/s
+iter 402: loss 5.3992, time 110.82ms, mfu 35.86%, throughput 0.80M tokens/s
+iter 403: loss 5.4666, time 87.36ms, mfu 37.27%, throughput 0.80M tokens/s
+iter 404: loss 5.3712, time 101.25ms, mfu 37.86%, throughput 0.80M tokens/s
+train throughput: 1.57 M tokens/s in 0.42s
+val throughput: 1.48 M tokens/s in 0.44s
+step 405: train loss 5.3236, val loss 5.3252
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 405: loss 5.4488, time 1535.96ms, mfu 34.36%, throughput 0.80M tokens/s
+iter 406: loss 5.3424, time 96.54ms, mfu 35.45%, throughput 0.80M tokens/s
+iter 407: loss 5.3493, time 100.36ms, mfu 36.25%, throughput 0.80M tokens/s
+iter 408: loss 5.3883, time 110.92ms, mfu 36.57%, throughput 0.80M tokens/s
+iter 409: loss 5.4276, time 89.93ms, mfu 37.77%, throughput 0.80M tokens/s
+train throughput: 1.61 M tokens/s in 0.41s
+val throughput: 1.67 M tokens/s in 0.39s
+step 410: train loss 5.3226, val loss 5.3112
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 410: loss 5.3664, time 1494.27ms, mfu 34.28%, throughput 0.80M tokens/s
+iter 411: loss 5.4228, time 87.98ms, mfu 35.82%, throughput 0.80M tokens/s
+iter 412: loss 5.3895, time 100.25ms, mfu 36.59%, throughput 0.80M tokens/s
+iter 413: loss 5.3900, time 103.76ms, mfu 37.14%, throughput 0.80M tokens/s
+iter 414: loss 5.3118, time 91.09ms, mfu 38.23%, throughput 0.80M tokens/s
+train throughput: 1.43 M tokens/s in 0.46s
+val throughput: 1.63 M tokens/s in 0.40s
+step 415: train loss 5.2795, val loss 5.2977
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 415: loss 5.3714, time 1596.56ms, mfu 34.68%, throughput 0.80M tokens/s
+iter 416: loss 5.3508, time 92.76ms, mfu 35.92%, throughput 0.80M tokens/s
+iter 417: loss 5.3746, time 104.93ms, mfu 36.49%, throughput 0.80M tokens/s
+iter 418: loss 5.4143, time 91.90ms, mfu 37.59%, throughput 0.80M tokens/s
+iter 419: loss 5.3243, time 103.66ms, mfu 38.05%, throughput 0.80M tokens/s
+train throughput: 1.35 M tokens/s in 0.49s
+val throughput: 1.43 M tokens/s in 0.46s
+step 420: train loss 5.2872, val loss 5.2732
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 420: loss 5.3877, time 1669.33ms, mfu 34.50%, throughput 0.80M tokens/s
+iter 421: loss 5.3732, time 94.60ms, mfu 35.67%, throughput 0.80M tokens/s
+iter 422: loss 5.3550, time 101.02ms, mfu 36.43%, throughput 0.80M tokens/s
+iter 423: loss 5.3932, time 95.78ms, mfu 37.34%, throughput 0.80M tokens/s
+iter 424: loss 5.3511, time 100.59ms, mfu 37.95%, throughput 0.80M tokens/s
+train throughput: 1.36 M tokens/s in 0.48s
+val throughput: 1.71 M tokens/s in 0.38s
+step 425: train loss 5.2638, val loss 5.2783
+iter 425: loss 5.3296, time 961.55ms, mfu 34.61%, throughput 0.81M tokens/s
+iter 426: loss 5.2879, time 100.04ms, mfu 35.52%, throughput 0.81M tokens/s
+iter 427: loss 5.4048, time 98.43ms, mfu 36.40%, throughput 0.81M tokens/s
+iter 428: loss 5.3514, time 101.92ms, mfu 37.05%, throughput 0.81M tokens/s
+iter 429: loss 5.3444, time 98.59ms, mfu 37.77%, throughput 0.81M tokens/s
+train throughput: 1.34 M tokens/s in 0.49s
+val throughput: 1.14 M tokens/s in 0.58s
+step 430: train loss 5.2538, val loss 5.2663
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 430: loss 5.3515, time 1792.83ms, mfu 34.24%, throughput 0.81M tokens/s
+iter 431: loss 5.3289, time 98.01ms, mfu 35.27%, throughput 0.81M tokens/s
+iter 432: loss 5.3279, time 101.38ms, mfu 36.05%, throughput 0.81M tokens/s
+iter 433: loss 5.3041, time 97.28ms, mfu 36.94%, throughput 0.81M tokens/s
+iter 434: loss 5.2929, time 100.09ms, mfu 37.61%, throughput 0.81M tokens/s
+train throughput: 1.66 M tokens/s in 0.39s
+val throughput: 1.65 M tokens/s in 0.40s
+step 435: train loss 5.2312, val loss 5.2573
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 435: loss 5.3512, time 1527.03ms, mfu 34.13%, throughput 0.81M tokens/s
+iter 436: loss 5.3197, time 99.57ms, mfu 35.11%, throughput 0.81M tokens/s
+iter 437: loss 5.3385, time 94.97ms, mfu 36.20%, throughput 0.81M tokens/s
+iter 438: loss 5.2695, time 99.84ms, mfu 36.95%, throughput 0.81M tokens/s
+iter 439: loss 5.3528, time 99.66ms, mfu 37.64%, throughput 0.81M tokens/s
+train throughput: 1.62 M tokens/s in 0.40s
+val throughput: 1.64 M tokens/s in 0.40s
+step 440: train loss 5.2489, val loss 5.2431
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 440: loss 5.3596, time 1508.88ms, mfu 34.16%, throughput 0.81M tokens/s
+iter 441: loss 5.3374, time 90.25ms, mfu 35.59%, throughput 0.81M tokens/s
+iter 442: loss 5.3573, time 106.14ms, mfu 36.14%, throughput 0.81M tokens/s
+iter 443: loss 5.3275, time 92.24ms, mfu 37.26%, throughput 0.81M tokens/s
+iter 444: loss 5.3503, time 99.52ms, mfu 37.93%, throughput 0.81M tokens/s
+train throughput: 1.54 M tokens/s in 0.43s
+val throughput: 1.64 M tokens/s in 0.40s
+step 445: train loss 5.2462, val loss 5.2492
+iter 445: loss 5.2776, time 931.58ms, mfu 34.60%, throughput 0.81M tokens/s
+iter 446: loss 5.3131, time 97.28ms, mfu 35.63%, throughput 0.81M tokens/s
+iter 447: loss 5.3502, time 101.81ms, mfu 36.36%, throughput 0.81M tokens/s
+iter 448: loss 5.3367, time 95.78ms, mfu 37.28%, throughput 0.81M tokens/s
+iter 449: loss 5.3161, time 101.06ms, mfu 37.88%, throughput 0.81M tokens/s
+train throughput: 1.66 M tokens/s in 0.40s
+val throughput: 1.69 M tokens/s in 0.39s
+step 450: train loss 5.2594, val loss 5.2269
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 450: loss 5.2846, time 1500.06ms, mfu 34.38%, throughput 0.81M tokens/s
+iter 451: loss 5.2916, time 100.46ms, mfu 35.29%, throughput 0.81M tokens/s
+iter 452: loss 5.3157, time 110.43ms, mfu 35.72%, throughput 0.81M tokens/s
+iter 453: loss 5.3514, time 87.76ms, mfu 37.12%, throughput 0.81M tokens/s
+iter 454: loss 5.3167, time 96.55ms, mfu 37.93%, throughput 0.81M tokens/s
+train throughput: 1.63 M tokens/s in 0.40s
+val throughput: 1.53 M tokens/s in 0.43s
+step 455: train loss 5.1973, val loss 5.2037
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 455: loss 5.3205, time 1538.09ms, mfu 34.42%, throughput 0.81M tokens/s
+iter 456: loss 5.3212, time 77.68ms, mfu 36.61%, throughput 0.81M tokens/s
+iter 457: loss 5.2981, time 109.04ms, mfu 36.95%, throughput 0.81M tokens/s
+iter 458: loss 5.3584, time 91.63ms, mfu 38.02%, throughput 0.81M tokens/s
+iter 459: loss 5.2852, time 95.46ms, mfu 38.80%, throughput 0.81M tokens/s
+train throughput: 1.57 M tokens/s in 0.42s
+val throughput: 1.66 M tokens/s in 0.39s
+step 460: train loss 5.2270, val loss 5.2348
+iter 460: loss 5.3054, time 921.21ms, mfu 35.39%, throughput 0.81M tokens/s
+iter 461: loss 5.3352, time 99.07ms, mfu 36.26%, throughput 0.81M tokens/s
+iter 462: loss 5.2662, time 130.95ms, mfu 35.97%, throughput 0.81M tokens/s
+iter 463: loss 5.3143, time 80.17ms, mfu 37.82%, throughput 0.81M tokens/s
+iter 464: loss 5.3078, time 93.77ms, mfu 38.70%, throughput 0.81M tokens/s
+train throughput: 1.63 M tokens/s in 0.40s
+val throughput: 1.70 M tokens/s in 0.39s
+step 465: train loss 5.1925, val loss 5.2089
+iter 465: loss 5.3452, time 893.14ms, mfu 35.32%, throughput 0.82M tokens/s
+iter 466: loss 5.2891, time 114.95ms, mfu 35.58%, throughput 0.82M tokens/s
+iter 467: loss 5.2897, time 86.67ms, mfu 37.07%, throughput 0.82M tokens/s
+iter 468: loss 5.2024, time 96.48ms, mfu 37.89%, throughput 0.82M tokens/s
+iter 469: loss 5.2680, time 127.63ms, mfu 37.52%, throughput 0.82M tokens/s
+train throughput: 1.14 M tokens/s in 0.57s
+val throughput: 1.20 M tokens/s in 0.55s
+step 470: train loss 5.2218, val loss 5.2095
+iter 470: loss 5.3076, time 1205.96ms, mfu 34.13%, throughput 0.82M tokens/s
+iter 471: loss 5.3455, time 95.84ms, mfu 35.27%, throughput 0.82M tokens/s
+iter 472: loss 5.2921, time 99.55ms, mfu 36.13%, throughput 0.82M tokens/s
+iter 473: loss 5.3292, time 100.70ms, mfu 36.86%, throughput 0.82M tokens/s
+iter 474: loss 5.2932, time 112.67ms, mfu 37.05%, throughput 0.82M tokens/s
+train throughput: 1.45 M tokens/s in 0.45s
+val throughput: 1.54 M tokens/s in 0.42s
+step 475: train loss 5.1895, val loss 5.1875
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 475: loss 5.2717, time 1642.22ms, mfu 33.61%, throughput 0.82M tokens/s
+iter 476: loss 5.2844, time 92.84ms, mfu 34.95%, throughput 0.82M tokens/s
+iter 477: loss 5.3317, time 101.81ms, mfu 35.75%, throughput 0.82M tokens/s
+iter 478: loss 5.2638, time 112.20ms, mfu 36.07%, throughput 0.82M tokens/s
+iter 479: loss 5.2885, time 88.40ms, mfu 37.40%, throughput 0.82M tokens/s
+train throughput: 1.51 M tokens/s in 0.43s
+val throughput: 1.70 M tokens/s in 0.38s
+step 480: train loss 5.2133, val loss 5.1854
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 480: loss 5.3418, time 1555.74ms, mfu 33.94%, throughput 0.82M tokens/s
+iter 481: loss 5.2679, time 94.39ms, mfu 35.18%, throughput 0.82M tokens/s
+iter 482: loss 5.2380, time 123.51ms, mfu 35.19%, throughput 0.82M tokens/s
+iter 483: loss 5.2755, time 97.83ms, mfu 36.14%, throughput 0.82M tokens/s
+iter 484: loss 5.2438, time 116.62ms, mfu 36.27%, throughput 0.82M tokens/s
+train throughput: 1.32 M tokens/s in 0.50s
+val throughput: 1.66 M tokens/s in 0.39s
+step 485: train loss 5.2003, val loss 5.1859
+iter 485: loss 5.2415, time 969.60ms, mfu 33.09%, throughput 0.82M tokens/s
+iter 486: loss 5.3127, time 98.82ms, mfu 34.21%, throughput 0.82M tokens/s
+iter 487: loss 5.2170, time 99.28ms, mfu 35.18%, throughput 0.82M tokens/s
+iter 488: loss 5.3565, time 101.16ms, mfu 35.98%, throughput 0.82M tokens/s
+iter 489: loss 5.2840, time 101.38ms, mfu 36.69%, throughput 0.82M tokens/s
+train throughput: 1.28 M tokens/s in 0.51s
+val throughput: 1.40 M tokens/s in 0.47s
+step 490: train loss 5.1820, val loss 5.1565
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 490: loss 5.2921, time 1704.71ms, mfu 33.28%, throughput 0.82M tokens/s
+iter 491: loss 5.2281, time 97.24ms, mfu 34.44%, throughput 0.82M tokens/s
+iter 492: loss 5.2786, time 96.73ms, mfu 35.52%, throughput 0.82M tokens/s
+iter 493: loss 5.2504, time 104.69ms, mfu 36.14%, throughput 0.82M tokens/s
+iter 494: loss 5.2953, time 122.41ms, mfu 36.09%, throughput 0.82M tokens/s
+train throughput: 1.22 M tokens/s in 0.54s
+val throughput: 1.44 M tokens/s in 0.46s
+step 495: train loss 5.1870, val loss 5.1727
+iter 495: loss 5.2985, time 1076.98ms, mfu 32.89%, throughput 0.82M tokens/s
+iter 496: loss 5.2568, time 99.86ms, mfu 33.97%, throughput 0.82M tokens/s
+iter 497: loss 5.3032, time 97.76ms, mfu 35.04%, throughput 0.82M tokens/s
+iter 498: loss 5.2323, time 99.18ms, mfu 35.94%, throughput 0.82M tokens/s
+iter 499: loss 5.2626, time 104.19ms, mfu 36.54%, throughput 0.82M tokens/s
+train throughput: 1.41 M tokens/s in 0.46s
+val throughput: 1.60 M tokens/s in 0.41s
+step 500: train loss 5.1627, val loss 5.1609
+iter 500: loss 5.2698, time 973.38ms, mfu 33.34%, throughput 0.83M tokens/s
+iter 501: loss 5.2490, time 100.99ms, mfu 34.33%, throughput 0.83M tokens/s
+iter 502: loss 5.2147, time 95.55ms, mfu 35.47%, throughput 0.83M tokens/s
+iter 503: loss 5.2965, time 103.78ms, mfu 36.13%, throughput 0.83M tokens/s
+iter 504: loss 5.2400, time 94.92ms, mfu 37.12%, throughput 0.83M tokens/s
+train throughput: 1.58 M tokens/s in 0.41s
+val throughput: 1.69 M tokens/s in 0.39s
+step 505: train loss 5.1597, val loss 5.1751
+iter 505: loss 5.2752, time 905.86ms, mfu 33.89%, throughput 0.83M tokens/s
+iter 506: loss 5.2451, time 97.52ms, mfu 34.98%, throughput 0.83M tokens/s
+iter 507: loss 5.2330, time 99.92ms, mfu 35.85%, throughput 0.83M tokens/s
+iter 508: loss 5.2467, time 99.87ms, mfu 36.64%, throughput 0.83M tokens/s
+iter 509: loss 5.2659, time 99.06ms, mfu 37.38%, throughput 0.83M tokens/s
+train throughput: 1.44 M tokens/s in 0.45s
+val throughput: 1.01 M tokens/s in 0.65s
+step 510: train loss 5.1504, val loss 5.1500
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 510: loss 5.2708, time 1845.68ms, mfu 33.88%, throughput 0.83M tokens/s
+iter 511: loss 5.2423, time 96.94ms, mfu 35.00%, throughput 0.83M tokens/s
+iter 512: loss 5.2259, time 97.10ms, mfu 36.00%, throughput 0.83M tokens/s
+iter 513: loss 5.2078, time 99.95ms, mfu 36.77%, throughput 0.83M tokens/s
+iter 514: loss 5.2666, time 101.61ms, mfu 37.39%, throughput 0.83M tokens/s
+train throughput: 0.83 M tokens/s in 0.79s
+val throughput: 1.29 M tokens/s in 0.51s
+step 515: train loss 5.1508, val loss 5.1458
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 515: loss 5.2729, time 2033.36ms, mfu 33.87%, throughput 0.83M tokens/s
+iter 516: loss 5.2579, time 95.03ms, mfu 35.08%, throughput 0.83M tokens/s
+iter 517: loss 5.2210, time 96.36ms, mfu 36.10%, throughput 0.83M tokens/s
+iter 518: loss 5.2316, time 99.21ms, mfu 36.89%, throughput 0.83M tokens/s
+iter 519: loss 5.2100, time 99.47ms, mfu 37.60%, throughput 0.83M tokens/s
+train throughput: 1.56 M tokens/s in 0.42s
+val throughput: 1.63 M tokens/s in 0.40s
+step 520: train loss 5.1403, val loss 5.1334
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 520: loss 5.2423, time 1543.38ms, mfu 34.12%, throughput 0.83M tokens/s
+iter 521: loss 5.2227, time 98.23ms, mfu 35.15%, throughput 0.83M tokens/s
+iter 522: loss 5.2356, time 97.05ms, mfu 36.14%, throughput 0.83M tokens/s
+iter 523: loss 5.1947, time 99.29ms, mfu 36.92%, throughput 0.83M tokens/s
+iter 524: loss 5.2669, time 105.61ms, mfu 37.37%, throughput 0.83M tokens/s
+train throughput: 1.33 M tokens/s in 0.49s
+val throughput: 1.70 M tokens/s in 0.38s
+step 525: train loss 5.1447, val loss 5.1176
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 525: loss 5.2362, time 1580.44ms, mfu 33.91%, throughput 0.83M tokens/s
+iter 526: loss 5.2150, time 98.35ms, mfu 34.96%, throughput 0.83M tokens/s
+iter 527: loss 5.2401, time 108.27ms, mfu 35.50%, throughput 0.83M tokens/s
+iter 528: loss 5.2220, time 88.63ms, mfu 36.88%, throughput 0.83M tokens/s
+iter 529: loss 5.2134, time 118.23ms, mfu 36.88%, throughput 0.83M tokens/s
+train throughput: 1.36 M tokens/s in 0.48s
+val throughput: 1.54 M tokens/s in 0.43s
+step 530: train loss 5.1098, val loss 5.1055
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 530: loss 5.1842, time 1566.32ms, mfu 33.47%, throughput 0.83M tokens/s
+iter 531: loss 5.2565, time 96.77ms, mfu 34.64%, throughput 0.83M tokens/s
+iter 532: loss 5.2232, time 104.23ms, mfu 35.37%, throughput 0.83M tokens/s
+iter 533: loss 5.2076, time 95.15ms, mfu 36.42%, throughput 0.83M tokens/s
+iter 534: loss 5.2272, time 100.80ms, mfu 37.11%, throughput 0.83M tokens/s
+train throughput: 1.57 M tokens/s in 0.42s
+val throughput: 1.62 M tokens/s in 0.40s
+step 535: train loss 5.1243, val loss 5.1237
+iter 535: loss 5.2234, time 926.88ms, mfu 33.87%, throughput 0.83M tokens/s
+iter 536: loss 5.1971, time 112.28ms, mfu 34.37%, throughput 0.83M tokens/s
+iter 537: loss 5.1876, time 82.53ms, mfu 36.23%, throughput 0.83M tokens/s
+iter 538: loss 5.2493, time 124.88ms, mfu 36.10%, throughput 0.83M tokens/s
+iter 539: loss 5.1567, time 105.59ms, mfu 36.63%, throughput 0.83M tokens/s
+train throughput: 1.41 M tokens/s in 0.47s
+val throughput: 1.57 M tokens/s in 0.42s
+step 540: train loss 5.1233, val loss 5.1108
+iter 540: loss 5.1951, time 955.71ms, mfu 33.42%, throughput 0.83M tokens/s
+iter 541: loss 5.1936, time 98.51ms, mfu 34.52%, throughput 0.83M tokens/s
+iter 542: loss 5.1423, time 102.58ms, mfu 35.32%, throughput 0.83M tokens/s
+iter 543: loss 5.2561, time 99.70ms, mfu 36.17%, throughput 0.83M tokens/s
+iter 544: loss 5.2246, time 97.96ms, mfu 37.01%, throughput 0.83M tokens/s
+train throughput: 1.30 M tokens/s in 0.51s
+val throughput: 1.45 M tokens/s in 0.45s
+step 545: train loss 5.1083, val loss 5.1038
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 545: loss 5.1969, time 1686.20ms, mfu 33.57%, throughput 0.83M tokens/s
+iter 546: loss 5.2369, time 99.05ms, mfu 34.62%, throughput 0.83M tokens/s
+iter 547: loss 5.1848, time 95.04ms, mfu 35.76%, throughput 0.83M tokens/s
+iter 548: loss 5.1615, time 103.02ms, mfu 36.42%, throughput 0.83M tokens/s
+iter 549: loss 5.2530, time 97.95ms, mfu 37.24%, throughput 0.83M tokens/s
+train throughput: 1.57 M tokens/s in 0.42s
+val throughput: 1.19 M tokens/s in 0.55s
+step 550: train loss 5.1397, val loss 5.0897
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 550: loss 5.2339, time 1660.34ms, mfu 33.78%, throughput 0.83M tokens/s
+iter 551: loss 5.2169, time 97.10ms, mfu 34.90%, throughput 0.83M tokens/s
+iter 552: loss 5.2058, time 98.83ms, mfu 35.83%, throughput 0.83M tokens/s
+iter 553: loss 5.2006, time 100.17ms, mfu 36.61%, throughput 0.83M tokens/s
+iter 554: loss 5.1711, time 99.68ms, mfu 37.33%, throughput 0.83M tokens/s
+train throughput: 1.57 M tokens/s in 0.42s
+val throughput: 1.32 M tokens/s in 0.50s
+step 555: train loss 5.1026, val loss 5.1034
+iter 555: loss 5.2194, time 1041.96ms, mfu 34.01%, throughput 0.83M tokens/s
+iter 556: loss 5.1993, time 74.65ms, mfu 36.46%, throughput 0.83M tokens/s
+iter 557: loss 5.1521, time 101.51ms, mfu 37.12%, throughput 0.83M tokens/s
+iter 558: loss 5.1850, time 101.97ms, mfu 37.69%, throughput 0.83M tokens/s
+iter 559: loss 5.1391, time 96.34ms, mfu 38.46%, throughput 0.83M tokens/s
+train throughput: 1.58 M tokens/s in 0.42s
+val throughput: 1.58 M tokens/s in 0.42s
+step 560: train loss 5.0981, val loss 5.0847
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 560: loss 5.1711, time 1590.79ms, mfu 34.89%, throughput 0.83M tokens/s
+iter 561: loss 5.1987, time 98.85ms, mfu 35.82%, throughput 0.83M tokens/s
+iter 562: loss 5.1789, time 96.71ms, mfu 36.75%, throughput 0.83M tokens/s
+iter 563: loss 5.2246, time 105.12ms, mfu 37.23%, throughput 0.83M tokens/s
+iter 564: loss 5.1637, time 94.45ms, mfu 38.13%, throughput 0.83M tokens/s
+train throughput: 1.64 M tokens/s in 0.40s
+val throughput: 1.65 M tokens/s in 0.40s
+step 565: train loss 5.0848, val loss 5.0815
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 565: loss 5.1741, time 1517.15ms, mfu 34.61%, throughput 0.83M tokens/s
+iter 566: loss 5.1749, time 97.11ms, mfu 35.64%, throughput 0.83M tokens/s
+iter 567: loss 5.1811, time 101.30ms, mfu 36.39%, throughput 0.83M tokens/s
+iter 568: loss 5.1466, time 96.47ms, mfu 37.28%, throughput 0.83M tokens/s
+iter 569: loss 5.2031, time 99.06ms, mfu 37.96%, throughput 0.83M tokens/s
+train throughput: 1.23 M tokens/s in 0.53s
+val throughput: 1.11 M tokens/s in 0.59s
+step 570: train loss 5.0638, val loss 5.0546
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 570: loss 5.1733, time 1853.23ms, mfu 34.40%, throughput 0.83M tokens/s
+iter 571: loss 5.1610, time 100.29ms, mfu 35.32%, throughput 0.83M tokens/s
+iter 572: loss 5.2129, time 94.51ms, mfu 36.41%, throughput 0.83M tokens/s
+iter 573: loss 5.1415, time 100.15ms, mfu 37.13%, throughput 0.83M tokens/s
+iter 574: loss 5.2302, time 98.19ms, mfu 37.86%, throughput 0.83M tokens/s
+train throughput: 1.55 M tokens/s in 0.42s
+val throughput: 1.38 M tokens/s in 0.47s
+step 575: train loss 5.0751, val loss 5.0551
+iter 575: loss 5.1939, time 1030.36ms, mfu 34.50%, throughput 0.83M tokens/s
+iter 576: loss 5.2181, time 77.60ms, mfu 36.68%, throughput 0.83M tokens/s
+iter 577: loss 5.1907, time 96.82ms, mfu 37.52%, throughput 0.83M tokens/s
+iter 578: loss 5.1820, time 100.50ms, mfu 38.12%, throughput 0.83M tokens/s
+iter 579: loss 5.1566, time 97.78ms, mfu 38.77%, throughput 0.83M tokens/s
+train throughput: 1.59 M tokens/s in 0.41s
+val throughput: 1.66 M tokens/s in 0.39s
+step 580: train loss 5.0684, val loss 5.0775
+iter 580: loss 5.1767, time 909.80ms, mfu 35.37%, throughput 0.84M tokens/s
+iter 581: loss 5.2281, time 97.13ms, mfu 36.33%, throughput 0.84M tokens/s
+iter 582: loss 5.1867, time 100.81ms, mfu 37.03%, throughput 0.84M tokens/s
+iter 583: loss 5.1504, time 102.63ms, mfu 37.59%, throughput 0.84M tokens/s
+iter 584: loss 5.1488, time 102.29ms, mfu 38.10%, throughput 0.84M tokens/s
+train throughput: 1.52 M tokens/s in 0.43s
+val throughput: 1.71 M tokens/s in 0.38s
+step 585: train loss 5.0676, val loss 5.0658
+iter 585: loss 5.1721, time 930.92ms, mfu 34.76%, throughput 0.84M tokens/s
+iter 586: loss 5.1616, time 79.80ms, mfu 36.75%, throughput 0.84M tokens/s
+iter 587: loss 5.1443, time 100.03ms, mfu 37.45%, throughput 0.84M tokens/s
+iter 588: loss 5.1852, time 98.03ms, mfu 38.16%, throughput 0.84M tokens/s
+iter 589: loss 5.1580, time 99.22ms, mfu 38.74%, throughput 0.84M tokens/s
+train throughput: 1.14 M tokens/s in 0.57s
+val throughput: 1.46 M tokens/s in 0.45s
+step 590: train loss 5.0482, val loss 5.0435
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 590: loss 5.1656, time 1756.84ms, mfu 35.12%, throughput 0.84M tokens/s
+iter 591: loss 5.1054, time 96.65ms, mfu 36.13%, throughput 0.84M tokens/s
+iter 592: loss 5.1389, time 108.03ms, mfu 36.56%, throughput 0.84M tokens/s
+iter 593: loss 5.0885, time 111.44ms, mfu 36.82%, throughput 0.84M tokens/s
+iter 594: loss 5.1368, time 78.22ms, mfu 38.72%, throughput 0.84M tokens/s
+train throughput: 1.54 M tokens/s in 0.43s
+val throughput: 1.71 M tokens/s in 0.38s
+step 595: train loss 5.0608, val loss 5.0630
+iter 595: loss 5.1789, time 911.91ms, mfu 35.33%, throughput 0.84M tokens/s
+iter 596: loss 5.1396, time 97.96ms, mfu 36.25%, throughput 0.84M tokens/s
+iter 597: loss 5.1519, time 120.50ms, mfu 36.25%, throughput 0.84M tokens/s
+iter 598: loss 5.1646, time 80.52ms, mfu 38.05%, throughput 0.84M tokens/s
+iter 599: loss 5.1169, time 100.20ms, mfu 38.61%, throughput 0.84M tokens/s
+train throughput: 1.54 M tokens/s in 0.43s
+val throughput: 1.57 M tokens/s in 0.42s
+step 600: train loss 5.0433, val loss 5.0554
+iter 600: loss 5.1430, time 943.68ms, mfu 35.21%, throughput 0.84M tokens/s
+iter 601: loss 5.1217, time 99.04ms, mfu 36.10%, throughput 0.84M tokens/s
+iter 602: loss 5.1146, time 100.75ms, mfu 36.82%, throughput 0.84M tokens/s
+iter 603: loss 5.0656, time 100.72ms, mfu 37.48%, throughput 0.84M tokens/s
+iter 604: loss 5.1682, time 98.01ms, mfu 38.19%, throughput 0.84M tokens/s
+train throughput: 1.61 M tokens/s in 0.41s
+val throughput: 1.61 M tokens/s in 0.41s
+step 605: train loss 5.0522, val loss 5.0506
+iter 605: loss 5.1195, time 914.56ms, mfu 34.85%, throughput 0.84M tokens/s
+iter 606: loss 5.1833, time 118.03ms, mfu 35.06%, throughput 0.84M tokens/s
+iter 607: loss 5.1412, time 82.49ms, mfu 36.85%, throughput 0.84M tokens/s
+iter 608: loss 5.1588, time 104.47ms, mfu 37.35%, throughput 0.84M tokens/s
+iter 609: loss 5.1366, time 92.73ms, mfu 38.32%, throughput 0.84M tokens/s
+train throughput: 1.48 M tokens/s in 0.44s
+val throughput: 1.67 M tokens/s in 0.39s
+step 610: train loss 5.0329, val loss 5.0285
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 610: loss 5.1453, time 1537.22ms, mfu 34.77%, throughput 0.84M tokens/s
+iter 611: loss 5.1071, time 94.16ms, mfu 35.94%, throughput 0.84M tokens/s
+iter 612: loss 5.1399, time 101.19ms, mfu 36.66%, throughput 0.84M tokens/s
+iter 613: loss 5.1608, time 118.98ms, mfu 36.66%, throughput 0.84M tokens/s
+iter 614: loss 5.1078, time 82.33ms, mfu 38.30%, throughput 0.84M tokens/s
+train throughput: 1.34 M tokens/s in 0.49s
+val throughput: 1.67 M tokens/s in 0.39s
+step 615: train loss 5.0459, val loss 5.0350
+iter 615: loss 5.1101, time 984.12ms, mfu 34.92%, throughput 0.85M tokens/s
+iter 616: loss 5.1136, time 104.98ms, mfu 35.59%, throughput 0.85M tokens/s
+iter 617: loss 5.1068, time 104.69ms, mfu 36.20%, throughput 0.85M tokens/s
+iter 618: loss 5.1410, time 90.12ms, mfu 37.43%, throughput 0.85M tokens/s
+iter 619: loss 5.1353, time 120.47ms, mfu 37.31%, throughput 0.85M tokens/s
+train throughput: 1.60 M tokens/s in 0.41s
+val throughput: 1.67 M tokens/s in 0.39s
+step 620: train loss 5.0303, val loss 5.0317
+iter 620: loss 5.1228, time 882.03ms, mfu 34.07%, throughput 0.85M tokens/s
+iter 621: loss 5.0974, time 102.61ms, mfu 34.92%, throughput 0.85M tokens/s
+iter 622: loss 5.0882, time 98.17ms, mfu 35.88%, throughput 0.85M tokens/s
+iter 623: loss 5.1119, time 127.47ms, mfu 35.72%, throughput 0.85M tokens/s
+iter 624: loss 5.1055, time 79.60ms, mfu 37.63%, throughput 0.85M tokens/s
+train throughput: 1.23 M tokens/s in 0.53s
+val throughput: 1.67 M tokens/s in 0.39s
+step 625: train loss 5.0042, val loss 5.0081
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 625: loss 5.1499, time 1642.33ms, mfu 34.14%, throughput 0.85M tokens/s
+iter 626: loss 5.1594, time 97.07ms, mfu 35.22%, throughput 0.85M tokens/s
+iter 627: loss 5.1091, time 121.65ms, mfu 35.29%, throughput 0.85M tokens/s
+iter 628: loss 5.0808, time 78.58ms, mfu 37.32%, throughput 0.85M tokens/s
+iter 629: loss 5.1273, time 100.37ms, mfu 37.94%, throughput 0.85M tokens/s
+train throughput: 1.39 M tokens/s in 0.47s
+val throughput: 1.66 M tokens/s in 0.39s
+step 630: train loss 5.0010, val loss 5.0194
+iter 630: loss 5.1086, time 970.32ms, mfu 34.60%, throughput 0.85M tokens/s
+iter 631: loss 5.1267, time 93.57ms, mfu 35.80%, throughput 0.85M tokens/s
+iter 632: loss 5.0826, time 105.19ms, mfu 36.38%, throughput 0.85M tokens/s
+iter 633: loss 5.0699, time 94.56ms, mfu 37.36%, throughput 0.85M tokens/s
+iter 634: loss 5.0806, time 99.35ms, mfu 38.02%, throughput 0.85M tokens/s
+train throughput: 1.49 M tokens/s in 0.44s
+val throughput: 1.19 M tokens/s in 0.55s
+step 635: train loss 5.0286, val loss 5.0194
+iter 635: loss 5.0947, time 1113.09ms, mfu 34.61%, throughput 0.85M tokens/s
+iter 636: loss 5.1637, time 86.55ms, mfu 36.19%, throughput 0.85M tokens/s
+iter 637: loss 5.1170, time 94.89ms, mfu 37.18%, throughput 0.85M tokens/s
+iter 638: loss 5.1775, time 107.10ms, mfu 37.54%, throughput 0.85M tokens/s
+iter 639: loss 5.1249, time 92.53ms, mfu 38.51%, throughput 0.85M tokens/s
+train throughput: 1.44 M tokens/s in 0.45s
+val throughput: 1.43 M tokens/s in 0.46s
+step 640: train loss 5.0036, val loss 5.0258
+iter 640: loss 5.0879, time 1017.69ms, mfu 35.08%, throughput 0.85M tokens/s
+iter 641: loss 5.0811, time 101.78ms, mfu 35.87%, throughput 0.85M tokens/s
+iter 642: loss 5.0870, time 99.76ms, mfu 36.66%, throughput 0.85M tokens/s
+iter 643: loss 5.1102, time 94.89ms, mfu 37.60%, throughput 0.85M tokens/s
+iter 644: loss 5.1209, time 100.79ms, mfu 38.17%, throughput 0.85M tokens/s
+train throughput: 1.51 M tokens/s in 0.43s
+val throughput: 1.35 M tokens/s in 0.49s
+step 645: train loss 5.0349, val loss 5.0060
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 645: loss 5.0932, time 1639.08ms, mfu 34.62%, throughput 0.85M tokens/s
+iter 646: loss 5.0948, time 102.44ms, mfu 35.42%, throughput 0.85M tokens/s
+iter 647: loss 5.0837, time 93.34ms, mfu 36.56%, throughput 0.85M tokens/s
+iter 648: loss 5.1280, time 99.66ms, mfu 37.29%, throughput 0.85M tokens/s
+iter 649: loss 5.0879, time 99.80ms, mfu 37.93%, throughput 0.85M tokens/s
+train throughput: 1.63 M tokens/s in 0.40s
+val throughput: 1.55 M tokens/s in 0.42s
+step 650: train loss 4.9883, val loss 4.9904
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 650: loss 5.1331, time 1574.59ms, mfu 34.42%, throughput 0.85M tokens/s
+iter 651: loss 5.0581, time 99.18ms, mfu 35.38%, throughput 0.85M tokens/s
+iter 652: loss 5.1028, time 102.06ms, mfu 36.12%, throughput 0.85M tokens/s
+iter 653: loss 5.1533, time 94.55ms, mfu 37.13%, throughput 0.85M tokens/s
+iter 654: loss 5.1168, time 104.51ms, mfu 37.60%, throughput 0.85M tokens/s
+train throughput: 1.45 M tokens/s in 0.45s
+val throughput: 1.67 M tokens/s in 0.39s
+step 655: train loss 4.9934, val loss 4.9966
+iter 655: loss 5.1537, time 944.98ms, mfu 34.30%, throughput 0.85M tokens/s
+iter 656: loss 5.1542, time 97.85ms, mfu 35.33%, throughput 0.85M tokens/s
+iter 657: loss 5.0993, time 102.65ms, mfu 36.05%, throughput 0.85M tokens/s
+iter 658: loss 5.0838, time 95.66ms, mfu 37.01%, throughput 0.85M tokens/s
+iter 659: loss 5.0309, time 99.71ms, mfu 37.69%, throughput 0.85M tokens/s
+train throughput: 1.62 M tokens/s in 0.40s
+val throughput: 1.53 M tokens/s in 0.43s
+step 660: train loss 4.9899, val loss 4.9855
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 660: loss 5.1229, time 1586.19ms, mfu 34.20%, throughput 0.85M tokens/s
+iter 661: loss 5.0939, time 89.48ms, mfu 35.66%, throughput 0.85M tokens/s
+iter 662: loss 5.1309, time 99.39ms, mfu 36.49%, throughput 0.85M tokens/s
+iter 663: loss 5.0447, time 101.56ms, mfu 37.14%, throughput 0.85M tokens/s
+iter 664: loss 5.1079, time 97.58ms, mfu 37.90%, throughput 0.85M tokens/s
+train throughput: 1.48 M tokens/s in 0.44s
+val throughput: 1.61 M tokens/s in 0.41s
+step 665: train loss 4.9654, val loss 4.9688
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 665: loss 5.0906, time 1563.00ms, mfu 34.39%, throughput 0.85M tokens/s
+iter 666: loss 5.1278, time 97.05ms, mfu 35.45%, throughput 0.85M tokens/s
+iter 667: loss 5.1061, time 95.74ms, mfu 36.47%, throughput 0.85M tokens/s
+iter 668: loss 5.0513, time 99.13ms, mfu 37.23%, throughput 0.85M tokens/s
+iter 669: loss 5.0708, time 102.12ms, mfu 37.78%, throughput 0.85M tokens/s
+train throughput: 1.56 M tokens/s in 0.42s
+val throughput: 1.17 M tokens/s in 0.56s
+step 670: train loss 4.9788, val loss 4.9746
+iter 670: loss 5.0434, time 1114.47ms, mfu 34.40%, throughput 0.86M tokens/s
+iter 671: loss 5.0859, time 74.82ms, mfu 36.80%, throughput 0.86M tokens/s
+iter 672: loss 5.0632, time 99.03ms, mfu 37.53%, throughput 0.86M tokens/s
+iter 673: loss 5.1332, time 97.37ms, mfu 38.26%, throughput 0.86M tokens/s
+iter 674: loss 5.0978, time 121.71ms, mfu 38.02%, throughput 0.85M tokens/s
+train throughput: 1.24 M tokens/s in 0.53s
+val throughput: 1.20 M tokens/s in 0.54s
+step 675: train loss 4.9767, val loss 4.9805
+iter 675: loss 5.1083, time 1155.46ms, mfu 34.60%, throughput 0.86M tokens/s
+iter 676: loss 5.0768, time 98.63ms, mfu 35.57%, throughput 0.86M tokens/s
+iter 677: loss 5.1676, time 99.99ms, mfu 36.38%, throughput 0.86M tokens/s
+iter 678: loss 5.0202, time 101.53ms, mfu 37.04%, throughput 0.86M tokens/s
+iter 679: loss 5.1550, time 96.07ms, mfu 37.89%, throughput 0.86M tokens/s
+train throughput: 1.19 M tokens/s in 0.55s
+val throughput: 1.18 M tokens/s in 0.55s
+step 680: train loss 4.9866, val loss 4.9679
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 680: loss 5.0753, time 1855.95ms, mfu 34.33%, throughput 0.86M tokens/s
+iter 681: loss 5.0294, time 112.83ms, mfu 34.77%, throughput 0.86M tokens/s
+iter 682: loss 5.1030, time 82.93ms, mfu 36.56%, throughput 0.86M tokens/s
+iter 683: loss 5.0657, time 97.70ms, mfu 37.37%, throughput 0.86M tokens/s
+iter 684: loss 5.0943, time 100.14ms, mfu 38.00%, throughput 0.86M tokens/s
+train throughput: 1.49 M tokens/s in 0.44s
+val throughput: 1.65 M tokens/s in 0.40s
+step 685: train loss 4.9815, val loss 4.9650
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 685: loss 5.1009, time 1578.40ms, mfu 34.48%, throughput 0.86M tokens/s
+iter 686: loss 5.0074, time 85.93ms, mfu 36.11%, throughput 0.86M tokens/s
+iter 687: loss 5.1286, time 108.98ms, mfu 36.51%, throughput 0.86M tokens/s
+iter 688: loss 5.0795, time 95.57ms, mfu 37.43%, throughput 0.85M tokens/s
+iter 689: loss 5.1281, time 91.75ms, mfu 38.45%, throughput 0.85M tokens/s
+train throughput: 1.63 M tokens/s in 0.40s
+val throughput: 1.55 M tokens/s in 0.42s
+step 690: train loss 4.9654, val loss 4.9658
+iter 690: loss 5.0689, time 925.36ms, mfu 35.07%, throughput 0.86M tokens/s
+iter 691: loss 5.0424, time 124.64ms, mfu 35.07%, throughput 0.86M tokens/s
+iter 692: loss 5.0280, time 69.53ms, mfu 37.85%, throughput 0.86M tokens/s
+iter 693: loss 5.0567, time 102.55ms, mfu 38.32%, throughput 0.86M tokens/s
+iter 694: loss 5.0559, time 99.50ms, mfu 38.88%, throughput 0.86M tokens/s
+train throughput: 1.28 M tokens/s in 0.51s
+val throughput: 1.47 M tokens/s in 0.45s
+step 695: train loss 4.9641, val loss 4.9452
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 695: loss 5.0379, time 1699.89ms, mfu 35.25%, throughput 0.86M tokens/s
+iter 696: loss 5.0832, time 119.10ms, mfu 35.39%, throughput 0.86M tokens/s
+iter 697: loss 5.0700, time 96.91ms, mfu 36.36%, throughput 0.86M tokens/s
+iter 698: loss 5.0776, time 86.46ms, mfu 37.77%, throughput 0.86M tokens/s
+iter 699: loss 5.0465, time 120.53ms, mfu 37.62%, throughput 0.86M tokens/s
+train throughput: 1.36 M tokens/s in 0.48s
+val throughput: 1.68 M tokens/s in 0.39s
+step 700: train loss 4.9453, val loss 4.9504
+iter 700: loss 5.1193, time 947.04ms, mfu 34.32%, throughput 0.86M tokens/s
+iter 701: loss 4.9828, time 100.71ms, mfu 35.22%, throughput 0.86M tokens/s
+iter 702: loss 5.0642, time 97.72ms, mfu 36.17%, throughput 0.86M tokens/s
+iter 703: loss 4.9997, time 102.15ms, mfu 36.83%, throughput 0.86M tokens/s
+iter 704: loss 5.0801, time 96.64ms, mfu 37.67%, throughput 0.86M tokens/s
+train throughput: 1.28 M tokens/s in 0.51s
+val throughput: 1.50 M tokens/s in 0.44s
+step 705: train loss 4.9381, val loss 4.9444
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 705: loss 5.0183, time 1668.70ms, mfu 34.16%, throughput 0.86M tokens/s
+iter 706: loss 5.0954, time 111.27ms, mfu 34.67%, throughput 0.86M tokens/s
+iter 707: loss 5.0327, time 102.83ms, mfu 35.45%, throughput 0.86M tokens/s
+iter 708: loss 5.0188, time 99.96ms, mfu 36.28%, throughput 0.86M tokens/s
+iter 709: loss 5.0988, time 83.30ms, mfu 37.89%, throughput 0.86M tokens/s
+train throughput: 1.47 M tokens/s in 0.45s
+val throughput: 1.46 M tokens/s in 0.45s
+step 710: train loss 4.9435, val loss 4.9492
+iter 710: loss 5.0107, time 993.86ms, mfu 34.54%, throughput 0.86M tokens/s
+iter 711: loss 5.0472, time 102.70ms, mfu 35.34%, throughput 0.86M tokens/s
+iter 712: loss 5.0519, time 95.15ms, mfu 36.40%, throughput 0.86M tokens/s
+iter 713: loss 5.0432, time 99.28ms, mfu 37.16%, throughput 0.86M tokens/s
+iter 714: loss 5.0409, time 99.55ms, mfu 37.83%, throughput 0.86M tokens/s
+train throughput: 1.18 M tokens/s in 0.55s
+val throughput: 1.06 M tokens/s in 0.62s
+step 715: train loss 4.9491, val loss 4.9415
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 715: loss 5.0293, time 1903.45ms, mfu 34.28%, throughput 0.86M tokens/s
+iter 716: loss 5.0540, time 115.74ms, mfu 34.62%, throughput 0.86M tokens/s
+iter 717: loss 5.1473, time 79.69ms, mfu 36.64%, throughput 0.86M tokens/s
+iter 718: loss 5.0479, time 100.09ms, mfu 37.34%, throughput 0.86M tokens/s
+iter 719: loss 5.0007, time 99.51ms, mfu 38.00%, throughput 0.86M tokens/s
+train throughput: 1.54 M tokens/s in 0.43s
+val throughput: 1.71 M tokens/s in 0.38s
+step 720: train loss 4.9691, val loss 4.9462
+iter 720: loss 5.0956, time 910.34ms, mfu 34.68%, throughput 0.86M tokens/s
+iter 721: loss 4.9667, time 101.81ms, mfu 35.50%, throughput 0.86M tokens/s
+iter 722: loss 5.0165, time 98.04ms, mfu 36.40%, throughput 0.86M tokens/s
+iter 723: loss 5.0551, time 99.50ms, mfu 37.15%, throughput 0.86M tokens/s
+iter 724: loss 5.0413, time 100.11ms, mfu 37.80%, throughput 0.86M tokens/s
+train throughput: 1.53 M tokens/s in 0.43s
+val throughput: 1.07 M tokens/s in 0.61s
+step 725: train loss 4.9273, val loss 4.9343
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 725: loss 5.0034, time 1763.94ms, mfu 34.27%, throughput 0.86M tokens/s
+iter 726: loss 5.0497, time 92.69ms, mfu 35.55%, throughput 0.86M tokens/s
+iter 727: loss 5.0750, time 103.27ms, mfu 36.23%, throughput 0.86M tokens/s
+iter 728: loss 5.0418, time 105.48ms, mfu 36.75%, throughput 0.86M tokens/s
+iter 729: loss 5.0034, time 120.25ms, mfu 36.70%, throughput 0.86M tokens/s
+train throughput: 1.25 M tokens/s in 0.53s
+val throughput: 1.12 M tokens/s in 0.59s
+step 730: train loss 4.9258, val loss 4.9372
+iter 730: loss 5.0379, time 1194.10ms, mfu 33.40%, throughput 0.86M tokens/s
+iter 731: loss 5.0618, time 121.18ms, mfu 33.66%, throughput 0.86M tokens/s
+iter 732: loss 5.0161, time 89.44ms, mfu 35.18%, throughput 0.86M tokens/s
+iter 733: loss 5.0712, time 125.42ms, mfu 35.15%, throughput 0.86M tokens/s
+iter 734: loss 5.0474, time 76.18ms, mfu 37.36%, throughput 0.86M tokens/s
+train throughput: 1.50 M tokens/s in 0.44s
+val throughput: 1.54 M tokens/s in 0.43s
+step 735: train loss 4.9318, val loss 4.9240
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 735: loss 5.0364, time 1544.44ms, mfu 33.91%, throughput 0.86M tokens/s
+iter 736: loss 5.0381, time 101.18ms, mfu 34.84%, throughput 0.86M tokens/s
+iter 737: loss 5.0614, time 95.77ms, mfu 35.91%, throughput 0.86M tokens/s
+iter 738: loss 5.0513, time 115.57ms, mfu 36.10%, throughput 0.86M tokens/s
+iter 739: loss 4.9921, time 84.34ms, mfu 37.67%, throughput 0.86M tokens/s
+train throughput: 1.62 M tokens/s in 0.40s
+val throughput: 1.61 M tokens/s in 0.41s
+step 740: train loss 4.9150, val loss 4.9194
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 740: loss 5.0164, time 1511.48ms, mfu 34.19%, throughput 0.86M tokens/s
+iter 741: loss 5.0099, time 99.78ms, mfu 35.15%, throughput 0.86M tokens/s
+iter 742: loss 5.0675, time 102.43ms, mfu 35.90%, throughput 0.86M tokens/s
+iter 743: loss 4.9534, time 94.84ms, mfu 36.92%, throughput 0.86M tokens/s
+iter 744: loss 5.0477, time 99.27ms, mfu 37.62%, throughput 0.86M tokens/s
+train throughput: 1.60 M tokens/s in 0.41s
+val throughput: 1.69 M tokens/s in 0.39s
+step 745: train loss 4.9084, val loss 4.8970
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 745: loss 5.0433, time 1526.69ms, mfu 34.15%, throughput 0.86M tokens/s
+iter 746: loss 5.0563, time 111.49ms, mfu 34.65%, throughput 0.86M tokens/s
+iter 747: loss 5.0398, time 77.14ms, mfu 36.85%, throughput 0.86M tokens/s
+iter 748: loss 4.9953, time 97.14ms, mfu 37.66%, throughput 0.86M tokens/s
+iter 749: loss 5.0508, time 98.25ms, mfu 38.34%, throughput 0.86M tokens/s
+train throughput: 1.64 M tokens/s in 0.40s
+val throughput: 1.62 M tokens/s in 0.40s
+step 750: train loss 4.8960, val loss 4.9205
+iter 750: loss 5.0105, time 905.55ms, mfu 34.99%, throughput 0.86M tokens/s
+iter 751: loss 5.0025, time 100.49ms, mfu 35.84%, throughput 0.86M tokens/s
+iter 752: loss 4.9701, time 104.29ms, mfu 36.44%, throughput 0.86M tokens/s
+iter 753: loss 5.0706, time 93.21ms, mfu 37.48%, throughput 0.86M tokens/s
+iter 754: loss 4.9719, time 101.14ms, mfu 38.05%, throughput 0.86M tokens/s
+train throughput: 1.57 M tokens/s in 0.42s
+val throughput: 1.21 M tokens/s in 0.54s
+step 755: train loss 4.9056, val loss 4.9144
+iter 755: loss 5.0067, time 1063.54ms, mfu 34.66%, throughput 0.86M tokens/s
+iter 756: loss 4.9585, time 108.68ms, mfu 35.21%, throughput 0.86M tokens/s
+iter 757: loss 5.0250, time 84.44ms, mfu 36.86%, throughput 0.86M tokens/s
+iter 758: loss 5.0306, time 102.56ms, mfu 37.44%, throughput 0.86M tokens/s
+iter 759: loss 4.9608, time 99.86ms, mfu 38.07%, throughput 0.86M tokens/s
+train throughput: 1.50 M tokens/s in 0.44s
+val throughput: 1.64 M tokens/s in 0.40s
+step 760: train loss 4.9053, val loss 4.9116
+iter 760: loss 4.9824, time 940.32ms, mfu 34.72%, throughput 0.86M tokens/s
+iter 761: loss 5.0165, time 98.08ms, mfu 35.70%, throughput 0.86M tokens/s
+iter 762: loss 5.0954, time 98.08ms, mfu 36.59%, throughput 0.86M tokens/s
+iter 763: loss 4.9318, time 106.54ms, mfu 37.03%, throughput 0.86M tokens/s
+iter 764: loss 4.9831, time 95.63ms, mfu 37.89%, throughput 0.86M tokens/s
+train throughput: 1.36 M tokens/s in 0.48s
+val throughput: 1.66 M tokens/s in 0.39s
+step 765: train loss 4.9088, val loss 4.8909
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 765: loss 5.0298, time 1592.50ms, mfu 34.38%, throughput 0.86M tokens/s
+iter 766: loss 5.0152, time 94.94ms, mfu 35.54%, throughput 0.86M tokens/s
+iter 767: loss 4.9663, time 99.79ms, mfu 36.36%, throughput 0.86M tokens/s
+iter 768: loss 4.9416, time 94.89ms, mfu 37.33%, throughput 0.86M tokens/s
+iter 769: loss 5.0311, time 99.59ms, mfu 37.98%, throughput 0.86M tokens/s
+train throughput: 1.64 M tokens/s in 0.40s
+val throughput: 1.60 M tokens/s in 0.41s
+step 770: train loss 4.9137, val loss 4.9065
+iter 770: loss 5.0163, time 916.25ms, mfu 34.66%, throughput 0.87M tokens/s
+iter 771: loss 4.9698, time 97.32ms, mfu 35.68%, throughput 0.87M tokens/s
+iter 772: loss 5.0478, time 138.20ms, mfu 35.28%, throughput 0.87M tokens/s
+iter 773: loss 5.0420, time 105.13ms, mfu 35.90%, throughput 0.87M tokens/s
+iter 774: loss 4.9532, time 75.81ms, mfu 38.07%, throughput 0.87M tokens/s
+train throughput: 1.58 M tokens/s in 0.41s
+val throughput: 1.70 M tokens/s in 0.39s
+step 775: train loss 4.8920, val loss 4.9012
+iter 775: loss 5.0112, time 904.72ms, mfu 34.75%, throughput 0.87M tokens/s
+iter 776: loss 4.9814, time 99.27ms, mfu 35.67%, throughput 0.87M tokens/s
+iter 777: loss 5.0359, time 100.54ms, mfu 36.45%, throughput 0.87M tokens/s
+iter 778: loss 5.0385, time 98.28ms, mfu 37.25%, throughput 0.87M tokens/s
+iter 779: loss 5.0268, time 107.87ms, mfu 37.57%, throughput 0.87M tokens/s
+train throughput: 1.12 M tokens/s in 0.59s
+val throughput: 1.33 M tokens/s in 0.49s
+step 780: train loss 4.9029, val loss 4.8938
+iter 780: loss 4.9617, time 1177.91ms, mfu 34.19%, throughput 0.87M tokens/s
+iter 781: loss 4.9671, time 99.08ms, mfu 35.18%, throughput 0.87M tokens/s
+iter 782: loss 4.9948, time 104.21ms, mfu 35.85%, throughput 0.87M tokens/s
+iter 783: loss 4.9787, time 97.87ms, mfu 36.73%, throughput 0.87M tokens/s
+iter 784: loss 4.9828, time 96.37ms, mfu 37.59%, throughput 0.87M tokens/s
+train throughput: 1.47 M tokens/s in 0.45s
+val throughput: 1.31 M tokens/s in 0.50s
+step 785: train loss 4.8785, val loss 4.8914
+iter 785: loss 5.0355, time 1049.69ms, mfu 34.25%, throughput 0.87M tokens/s
+iter 786: loss 4.9355, time 95.96ms, mfu 35.37%, throughput 0.87M tokens/s
+iter 787: loss 4.9919, time 99.39ms, mfu 36.23%, throughput 0.87M tokens/s
+iter 788: loss 5.0588, time 99.68ms, mfu 36.99%, throughput 0.87M tokens/s
+iter 789: loss 4.9796, time 100.56ms, mfu 37.63%, throughput 0.87M tokens/s
+train throughput: 1.21 M tokens/s in 0.54s
+val throughput: 1.15 M tokens/s in 0.57s
+step 790: train loss 4.9116, val loss 4.8992
+iter 790: loss 4.9909, time 1242.90ms, mfu 34.22%, throughput 0.87M tokens/s
+iter 791: loss 5.0148, time 86.59ms, mfu 35.84%, throughput 0.87M tokens/s
+iter 792: loss 4.9196, time 91.58ms, mfu 37.03%, throughput 0.87M tokens/s
+iter 793: loss 5.0353, time 96.20ms, mfu 37.87%, throughput 0.87M tokens/s
+iter 794: loss 4.9940, time 98.92ms, mfu 38.50%, throughput 0.87M tokens/s
+train throughput: 1.49 M tokens/s in 0.44s
+val throughput: 1.08 M tokens/s in 0.61s
+step 795: train loss 4.8701, val loss 4.8734
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 795: loss 4.9747, time 1751.61ms, mfu 34.90%, throughput 0.87M tokens/s
+iter 796: loss 4.9994, time 100.66ms, mfu 35.74%, throughput 0.87M tokens/s
+iter 797: loss 4.9997, time 94.02ms, mfu 36.82%, throughput 0.87M tokens/s
+iter 798: loss 5.0044, time 100.28ms, mfu 37.49%, throughput 0.87M tokens/s
+iter 799: loss 4.9521, time 101.13ms, mfu 38.06%, throughput 0.87M tokens/s
+train throughput: 1.64 M tokens/s in 0.40s
+val throughput: 1.48 M tokens/s in 0.44s
+step 800: train loss 4.8807, val loss 4.8614
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 800: loss 4.9399, time 1582.75ms, mfu 34.53%, throughput 0.87M tokens/s
+iter 801: loss 5.0110, time 97.86ms, mfu 35.54%, throughput 0.87M tokens/s
+iter 802: loss 4.9783, time 102.71ms, mfu 36.24%, throughput 0.87M tokens/s
+iter 803: loss 4.9708, time 97.79ms, mfu 37.08%, throughput 0.87M tokens/s
+iter 804: loss 4.9583, time 100.02ms, mfu 37.74%, throughput 0.87M tokens/s
+train throughput: 1.53 M tokens/s in 0.43s
+val throughput: 1.61 M tokens/s in 0.41s
+step 805: train loss 4.8628, val loss 4.8517
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 805: loss 4.9646, time 1529.98ms, mfu 34.25%, throughput 0.87M tokens/s
+iter 806: loss 4.9339, time 100.88ms, mfu 35.16%, throughput 0.87M tokens/s
+iter 807: loss 5.0075, time 94.21ms, mfu 36.28%, throughput 0.87M tokens/s
+iter 808: loss 4.9197, time 98.11ms, mfu 37.10%, throughput 0.87M tokens/s
+iter 809: loss 4.9880, time 99.24ms, mfu 37.79%, throughput 0.87M tokens/s
+train throughput: 1.08 M tokens/s in 0.61s
+val throughput: 1.13 M tokens/s in 0.58s
+step 810: train loss 4.8768, val loss 4.8718
+iter 810: loss 4.9988, time 1291.31ms, mfu 34.35%, throughput 0.87M tokens/s
+iter 811: loss 4.9833, time 109.00ms, mfu 34.92%, throughput 0.87M tokens/s
+iter 812: loss 4.9165, time 88.59ms, mfu 36.36%, throughput 0.87M tokens/s
+iter 813: loss 4.9986, time 96.22ms, mfu 37.27%, throughput 0.87M tokens/s
+iter 814: loss 4.9745, time 101.70ms, mfu 37.83%, throughput 0.87M tokens/s
+train throughput: 1.32 M tokens/s in 0.50s
+val throughput: 1.65 M tokens/s in 0.40s
+step 815: train loss 4.8536, val loss 4.8676
+iter 815: loss 4.9909, time 1002.11ms, mfu 34.49%, throughput 0.87M tokens/s
+iter 816: loss 4.9817, time 94.93ms, mfu 35.64%, throughput 0.87M tokens/s
+iter 817: loss 4.9630, time 101.67ms, mfu 36.37%, throughput 0.87M tokens/s
+iter 818: loss 4.9513, time 100.54ms, mfu 37.08%, throughput 0.87M tokens/s
+iter 819: loss 4.9660, time 109.50ms, mfu 37.36%, throughput 0.87M tokens/s
+train throughput: 1.54 M tokens/s in 0.42s
+val throughput: 1.28 M tokens/s in 0.51s
+step 820: train loss 4.8540, val loss 4.8718
+iter 820: loss 5.0190, time 1034.03ms, mfu 34.05%, throughput 0.87M tokens/s
+iter 821: loss 4.9378, time 123.73ms, mfu 34.17%, throughput 0.87M tokens/s
+iter 822: loss 4.9745, time 100.29ms, mfu 35.11%, throughput 0.87M tokens/s
+iter 823: loss 4.9860, time 97.58ms, mfu 36.07%, throughput 0.87M tokens/s
+iter 824: loss 4.9790, time 110.39ms, mfu 36.42%, throughput 0.87M tokens/s
+train throughput: 1.35 M tokens/s in 0.48s
+val throughput: 1.14 M tokens/s in 0.57s
+step 825: train loss 4.8745, val loss 4.8515
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 825: loss 5.0341, time 1736.62ms, mfu 33.03%, throughput 0.87M tokens/s
+iter 826: loss 4.9862, time 103.16ms, mfu 33.96%, throughput 0.87M tokens/s
+iter 827: loss 4.9522, time 91.28ms, mfu 35.35%, throughput 0.87M tokens/s
+iter 828: loss 4.9686, time 104.49ms, mfu 36.00%, throughput 0.87M tokens/s
+iter 829: loss 5.0037, time 96.39ms, mfu 36.93%, throughput 0.87M tokens/s
+train throughput: 1.64 M tokens/s in 0.40s
+val throughput: 0.93 M tokens/s in 0.70s
+step 830: train loss 4.8596, val loss 4.8606
+iter 830: loss 4.9950, time 1205.49ms, mfu 33.60%, throughput 0.87M tokens/s
+iter 831: loss 4.9917, time 95.82ms, mfu 34.80%, throughput 0.87M tokens/s
+iter 832: loss 4.9982, time 104.19ms, mfu 35.51%, throughput 0.87M tokens/s
+iter 833: loss 4.9466, time 94.34ms, mfu 36.59%, throughput 0.87M tokens/s
+iter 834: loss 4.9899, time 100.66ms, mfu 37.27%, throughput 0.87M tokens/s
+train throughput: 1.61 M tokens/s in 0.41s
+val throughput: 1.52 M tokens/s in 0.43s
+step 835: train loss 4.8441, val loss 4.8372
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 835: loss 5.0081, time 1541.46ms, mfu 33.83%, throughput 0.87M tokens/s
+iter 836: loss 4.9761, time 113.13ms, mfu 34.30%, throughput 0.87M tokens/s
+iter 837: loss 4.9476, time 90.03ms, mfu 35.73%, throughput 0.87M tokens/s
+iter 838: loss 5.0118, time 94.83ms, mfu 36.76%, throughput 0.87M tokens/s
+iter 839: loss 4.9261, time 98.86ms, mfu 37.50%, throughput 0.87M tokens/s
+train throughput: 1.63 M tokens/s in 0.40s
+val throughput: 1.39 M tokens/s in 0.47s
+step 840: train loss 4.8280, val loss 4.8420
+iter 840: loss 4.9141, time 993.72ms, mfu 34.19%, throughput 0.87M tokens/s
+iter 841: loss 5.0169, time 85.57ms, mfu 35.88%, throughput 0.87M tokens/s
+iter 842: loss 5.0277, time 101.27ms, mfu 36.60%, throughput 0.87M tokens/s
+iter 843: loss 4.9517, time 97.14ms, mfu 37.44%, throughput 0.87M tokens/s
+iter 844: loss 4.9730, time 97.14ms, mfu 38.19%, throughput 0.87M tokens/s
+train throughput: 1.45 M tokens/s in 0.45s
+val throughput: 1.31 M tokens/s in 0.50s
+step 845: train loss 4.8229, val loss 4.8481
+iter 845: loss 4.9636, time 1054.54ms, mfu 34.79%, throughput 0.88M tokens/s
+iter 846: loss 4.9844, time 102.91ms, mfu 35.55%, throughput 0.88M tokens/s
+iter 847: loss 4.9697, time 95.87ms, mfu 36.55%, throughput 0.88M tokens/s
+iter 848: loss 5.0006, time 98.48ms, mfu 37.33%, throughput 0.88M tokens/s
+iter 849: loss 4.9915, time 99.18ms, mfu 38.00%, throughput 0.87M tokens/s
+train throughput: 1.59 M tokens/s in 0.41s
+val throughput: 1.64 M tokens/s in 0.40s
+step 850: train loss 4.8324, val loss 4.8316
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 850: loss 4.9122, time 1562.13ms, mfu 34.48%, throughput 0.87M tokens/s
+iter 851: loss 5.0052, time 91.59ms, mfu 35.80%, throughput 0.87M tokens/s
+iter 852: loss 4.9173, time 100.29ms, mfu 36.58%, throughput 0.87M tokens/s
+iter 853: loss 4.8627, time 103.17ms, mfu 37.15%, throughput 0.87M tokens/s
+iter 854: loss 4.9916, time 93.45ms, mfu 38.11%, throughput 0.87M tokens/s
+train throughput: 1.27 M tokens/s in 0.52s
+val throughput: 1.52 M tokens/s in 0.43s
+step 855: train loss 4.8448, val loss 4.8243
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 855: loss 4.9355, time 1682.72ms, mfu 34.56%, throughput 0.87M tokens/s
+iter 856: loss 4.8947, time 92.52ms, mfu 35.83%, throughput 0.87M tokens/s
+iter 857: loss 4.9051, time 82.92ms, mfu 37.51%, throughput 0.87M tokens/s
+iter 858: loss 4.9646, time 101.46ms, mfu 38.06%, throughput 0.87M tokens/s
+iter 859: loss 4.9541, time 96.18ms, mfu 38.80%, throughput 0.87M tokens/s
+train throughput: 1.46 M tokens/s in 0.45s
+val throughput: 1.56 M tokens/s in 0.42s
+step 860: train loss 4.8474, val loss 4.8074
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 860: loss 4.9529, time 1603.94ms, mfu 35.19%, throughput 0.87M tokens/s
+iter 861: loss 4.9805, time 96.69ms, mfu 36.19%, throughput 0.87M tokens/s
+iter 862: loss 4.9564, time 99.01ms, mfu 36.98%, throughput 0.87M tokens/s
+iter 863: loss 4.9688, time 106.09ms, mfu 37.40%, throughput 0.87M tokens/s
+iter 864: loss 4.9840, time 121.23ms, mfu 37.26%, throughput 0.87M tokens/s
+train throughput: 1.26 M tokens/s in 0.52s
+val throughput: 1.31 M tokens/s in 0.50s
+step 865: train loss 4.8258, val loss 4.8232
+iter 865: loss 5.0008, time 1104.08ms, mfu 33.93%, throughput 0.88M tokens/s
+iter 866: loss 4.9708, time 107.15ms, mfu 34.62%, throughput 0.87M tokens/s
+iter 867: loss 4.9505, time 89.21ms, mfu 36.05%, throughput 0.87M tokens/s
+iter 868: loss 4.9301, time 102.97ms, mfu 36.69%, throughput 0.87M tokens/s
+iter 869: loss 4.9456, time 94.20ms, mfu 37.66%, throughput 0.87M tokens/s
+train throughput: 1.25 M tokens/s in 0.52s
+val throughput: 1.03 M tokens/s in 0.63s
+step 870: train loss 4.8110, val loss 4.8415
+iter 870: loss 4.9190, time 1283.54ms, mfu 34.23%, throughput 0.88M tokens/s
+iter 871: loss 4.9511, time 78.88ms, mfu 36.34%, throughput 0.88M tokens/s
+iter 872: loss 4.9655, time 99.34ms, mfu 37.11%, throughput 0.88M tokens/s
+iter 873: loss 4.9369, time 93.52ms, mfu 38.07%, throughput 0.88M tokens/s
+iter 874: loss 4.9735, time 98.71ms, mfu 38.68%, throughput 0.88M tokens/s
+train throughput: 1.55 M tokens/s in 0.42s
+val throughput: 1.63 M tokens/s in 0.40s
+step 875: train loss 4.8235, val loss 4.8297
+iter 875: loss 4.9068, time 934.46ms, mfu 35.28%, throughput 0.88M tokens/s
+iter 876: loss 4.9986, time 95.50ms, mfu 36.33%, throughput 0.88M tokens/s
+iter 877: loss 4.8420, time 105.58ms, mfu 36.83%, throughput 0.88M tokens/s
+iter 878: loss 4.9178, time 91.20ms, mfu 37.94%, throughput 0.88M tokens/s
+iter 879: loss 4.9149, time 98.47ms, mfu 38.58%, throughput 0.88M tokens/s
+train throughput: 1.42 M tokens/s in 0.46s
+val throughput: 1.54 M tokens/s in 0.43s
+step 880: train loss 4.7998, val loss 4.8209
+iter 880: loss 4.9187, time 994.69ms, mfu 35.16%, throughput 0.88M tokens/s
+iter 881: loss 4.9658, time 110.46ms, mfu 35.60%, throughput 0.88M tokens/s
+iter 882: loss 4.9529, time 96.54ms, mfu 36.56%, throughput 0.88M tokens/s
+iter 883: loss 4.9740, time 99.67ms, mfu 37.29%, throughput 0.88M tokens/s
+iter 884: loss 4.9020, time 116.64ms, mfu 37.31%, throughput 0.88M tokens/s
+train throughput: 1.59 M tokens/s in 0.41s
+val throughput: 1.69 M tokens/s in 0.39s
+step 885: train loss 4.8115, val loss 4.8019
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 885: loss 4.9373, time 1486.31ms, mfu 33.87%, throughput 0.88M tokens/s
+iter 886: loss 4.9047, time 112.42ms, mfu 34.37%, throughput 0.88M tokens/s
+iter 887: loss 4.9395, time 85.93ms, mfu 36.01%, throughput 0.88M tokens/s
+iter 888: loss 4.9063, time 95.19ms, mfu 37.00%, throughput 0.88M tokens/s
+iter 889: loss 4.9364, time 99.88ms, mfu 37.67%, throughput 0.88M tokens/s
+train throughput: 1.24 M tokens/s in 0.53s
+val throughput: 1.58 M tokens/s in 0.41s
+step 890: train loss 4.8095, val loss 4.8124
+iter 890: loss 4.9053, time 1072.82ms, mfu 34.31%, throughput 0.88M tokens/s
+iter 891: loss 4.9420, time 73.25ms, mfu 36.85%, throughput 0.88M tokens/s
+iter 892: loss 4.9022, time 104.86ms, mfu 37.33%, throughput 0.88M tokens/s
+iter 893: loss 4.9150, time 98.02ms, mfu 38.05%, throughput 0.88M tokens/s
+iter 894: loss 5.0395, time 108.02ms, mfu 38.29%, throughput 0.88M tokens/s
+train throughput: 1.56 M tokens/s in 0.42s
+val throughput: 1.68 M tokens/s in 0.39s
+step 895: train loss 4.8023, val loss 4.8148
+iter 895: loss 4.9204, time 903.80ms, mfu 34.94%, throughput 0.88M tokens/s
+iter 896: loss 4.9514, time 96.97ms, mfu 35.95%, throughput 0.88M tokens/s
+iter 897: loss 4.9003, time 97.24ms, mfu 36.85%, throughput 0.88M tokens/s
+iter 898: loss 4.9434, time 100.73ms, mfu 37.50%, throughput 0.88M tokens/s
+iter 899: loss 4.9276, time 98.71ms, mfu 38.18%, throughput 0.88M tokens/s
+train throughput: 1.53 M tokens/s in 0.43s
+val throughput: 1.66 M tokens/s in 0.40s
+step 900: train loss 4.7929, val loss 4.8228
+iter 900: loss 4.8671, time 947.20ms, mfu 34.82%, throughput 0.88M tokens/s
+iter 901: loss 4.9514, time 85.34ms, mfu 36.46%, throughput 0.88M tokens/s
+iter 902: loss 4.8928, time 97.20ms, mfu 37.30%, throughput 0.88M tokens/s
+iter 903: loss 4.9362, time 99.38ms, mfu 37.97%, throughput 0.88M tokens/s
+iter 904: loss 4.9202, time 95.66ms, mfu 38.74%, throughput 0.88M tokens/s
+train throughput: 1.58 M tokens/s in 0.42s
+val throughput: 1.66 M tokens/s in 0.39s
+step 905: train loss 4.8031, val loss 4.7931
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 905: loss 4.8773, time 1548.66ms, mfu 35.15%, throughput 0.88M tokens/s
+iter 906: loss 4.9624, time 95.77ms, mfu 36.19%, throughput 0.88M tokens/s
+iter 907: loss 4.9201, time 95.59ms, mfu 37.14%, throughput 0.88M tokens/s
+iter 908: loss 4.9284, time 99.07ms, mfu 37.84%, throughput 0.88M tokens/s
+iter 909: loss 4.9655, time 101.81ms, mfu 38.34%, throughput 0.88M tokens/s
+train throughput: 1.53 M tokens/s in 0.43s
+val throughput: 1.40 M tokens/s in 0.47s
+step 910: train loss 4.7821, val loss 4.7936
+iter 910: loss 4.9837, time 1014.84ms, mfu 34.94%, throughput 0.88M tokens/s
+iter 911: loss 4.8826, time 81.73ms, mfu 36.79%, throughput 0.88M tokens/s
+iter 912: loss 4.8948, time 99.24ms, mfu 37.51%, throughput 0.88M tokens/s
+iter 913: loss 4.9685, time 97.98ms, mfu 38.22%, throughput 0.88M tokens/s
+iter 914: loss 4.9107, time 110.34ms, mfu 38.36%, throughput 0.88M tokens/s
+train throughput: 1.56 M tokens/s in 0.42s
+val throughput: 1.66 M tokens/s in 0.40s
+step 915: train loss 4.7869, val loss 4.8190
+iter 915: loss 4.9160, time 908.79ms, mfu 35.00%, throughput 0.88M tokens/s
+iter 916: loss 4.9184, time 97.08ms, mfu 36.00%, throughput 0.88M tokens/s
+iter 917: loss 4.9275, time 101.21ms, mfu 36.72%, throughput 0.88M tokens/s
+iter 918: loss 4.8964, time 97.27ms, mfu 37.53%, throughput 0.88M tokens/s
+iter 919: loss 4.9281, time 100.70ms, mfu 38.12%, throughput 0.88M tokens/s
+train throughput: 1.50 M tokens/s in 0.44s
+val throughput: 1.58 M tokens/s in 0.41s
+step 920: train loss 4.7883, val loss 4.7764
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 920: loss 4.9191, time 1568.31ms, mfu 34.59%, throughput 0.88M tokens/s
+iter 921: loss 4.8719, time 104.78ms, mfu 35.30%, throughput 0.88M tokens/s
+iter 922: loss 4.8816, time 100.12ms, mfu 36.13%, throughput 0.88M tokens/s
+iter 923: loss 4.9132, time 119.87ms, mfu 36.16%, throughput 0.88M tokens/s
+iter 924: loss 4.9040, time 104.75ms, mfu 36.71%, throughput 0.88M tokens/s
+train throughput: 1.28 M tokens/s in 0.51s
+val throughput: 1.67 M tokens/s in 0.39s
+step 925: train loss 4.7822, val loss 4.7796
+iter 925: loss 4.9624, time 985.23ms, mfu 33.49%, throughput 0.89M tokens/s
+iter 926: loss 4.9016, time 106.10ms, mfu 34.25%, throughput 0.89M tokens/s
+iter 927: loss 4.9392, time 122.80ms, mfu 34.39%, throughput 0.89M tokens/s
+iter 928: loss 4.8832, time 81.05ms, mfu 36.34%, throughput 0.89M tokens/s
+iter 929: loss 4.8769, time 99.80ms, mfu 37.08%, throughput 0.89M tokens/s
+train throughput: 1.61 M tokens/s in 0.41s
+val throughput: 1.60 M tokens/s in 0.41s
+step 930: train loss 4.7811, val loss 4.7845
+iter 930: loss 4.9066, time 916.23ms, mfu 33.85%, throughput 0.89M tokens/s
+iter 931: loss 4.9644, time 99.10ms, mfu 34.87%, throughput 0.89M tokens/s
+iter 932: loss 4.8713, time 112.39ms, mfu 35.27%, throughput 0.89M tokens/s
+iter 933: loss 4.9035, time 89.02ms, mfu 36.65%, throughput 0.89M tokens/s
+iter 934: loss 4.9094, time 97.44ms, mfu 37.47%, throughput 0.89M tokens/s
+train throughput: 1.55 M tokens/s in 0.42s
+val throughput: 1.59 M tokens/s in 0.41s
+step 935: train loss 4.7676, val loss 4.7795
+iter 935: loss 4.9042, time 933.90ms, mfu 34.19%, throughput 0.89M tokens/s
+iter 936: loss 4.8944, time 102.10ms, mfu 35.05%, throughput 0.89M tokens/s
+iter 937: loss 4.9139, time 95.68ms, mfu 36.11%, throughput 0.89M tokens/s
+iter 938: loss 4.9081, time 100.37ms, mfu 36.85%, throughput 0.89M tokens/s
+iter 939: loss 4.8689, time 99.54ms, mfu 37.55%, throughput 0.89M tokens/s
+train throughput: 1.43 M tokens/s in 0.46s
+val throughput: 1.46 M tokens/s in 0.45s
+step 940: train loss 4.7784, val loss 4.7759
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 940: loss 4.9355, time 1597.15ms, mfu 34.07%, throughput 0.89M tokens/s
+iter 941: loss 4.9520, time 101.73ms, mfu 34.96%, throughput 0.89M tokens/s
+iter 942: loss 4.8882, time 94.53ms, mfu 36.08%, throughput 0.89M tokens/s
+iter 943: loss 4.8859, time 98.67ms, mfu 36.90%, throughput 0.89M tokens/s
+iter 944: loss 4.8828, time 100.85ms, mfu 37.54%, throughput 0.89M tokens/s
+train throughput: 1.15 M tokens/s in 0.57s
+val throughput: 1.61 M tokens/s in 0.41s
+step 945: train loss 4.7801, val loss 4.7786
+iter 945: loss 4.9125, time 1080.74ms, mfu 34.19%, throughput 0.89M tokens/s
+iter 946: loss 4.9063, time 102.07ms, mfu 35.05%, throughput 0.89M tokens/s
+iter 947: loss 4.8707, time 98.86ms, mfu 35.96%, throughput 0.89M tokens/s
+iter 948: loss 4.8884, time 100.53ms, mfu 36.71%, throughput 0.89M tokens/s
+iter 949: loss 4.8433, time 96.61ms, mfu 37.56%, throughput 0.89M tokens/s
+train throughput: 1.44 M tokens/s in 0.46s
+val throughput: 1.39 M tokens/s in 0.47s
+step 950: train loss 4.7635, val loss 4.7766
+iter 950: loss 4.8535, time 1063.12ms, mfu 34.22%, throughput 0.89M tokens/s
+iter 951: loss 4.8634, time 74.53ms, mfu 36.66%, throughput 0.89M tokens/s
+iter 952: loss 4.9413, time 97.20ms, mfu 37.48%, throughput 0.89M tokens/s
+iter 953: loss 4.8608, time 98.45ms, mfu 38.17%, throughput 0.89M tokens/s
+iter 954: loss 4.8483, time 101.73ms, mfu 38.65%, throughput 0.89M tokens/s
+train throughput: 1.53 M tokens/s in 0.43s
+val throughput: 1.56 M tokens/s in 0.42s
+step 955: train loss 4.7731, val loss 4.7798
+iter 955: loss 4.9171, time 949.30ms, mfu 35.24%, throughput 0.89M tokens/s
+iter 956: loss 4.8868, time 103.95ms, mfu 35.92%, throughput 0.89M tokens/s
+iter 957: loss 4.8290, time 101.42ms, mfu 36.64%, throughput 0.89M tokens/s
+iter 958: loss 4.9220, time 93.84ms, mfu 37.63%, throughput 0.89M tokens/s
+iter 959: loss 4.9063, time 100.70ms, mfu 38.20%, throughput 0.89M tokens/s
+train throughput: 1.62 M tokens/s in 0.41s
+val throughput: 1.49 M tokens/s in 0.44s
+step 960: train loss 4.7813, val loss 4.7554
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+iter 960: loss 4.9198, time 1555.16ms, mfu 34.66%, throughput 0.89M tokens/s
+iter 961: loss 4.8994, time 96.48ms, mfu 35.72%, throughput 0.89M tokens/s
+iter 962: loss 4.8841, time 101.27ms, mfu 36.46%, throughput 0.89M tokens/s
+iter 963: loss 4.8725, time 96.58ms, mfu 37.34%, throughput 0.89M tokens/s
+iter 964: loss 4.9211, time 99.79ms, mfu 37.98%, throughput 0.89M tokens/s
+train throughput: 1.29 M tokens/s in 0.51s
+val throughput: 1.33 M tokens/s in 0.49s
+step 965: train loss 4.7660, val loss 4.7687
+iter 965: loss 4.8933, time 1106.21ms, mfu 34.58%, throughput 0.89M tokens/s
+iter 966: loss 4.9888, time 109.28ms, mfu 35.12%, throughput 0.89M tokens/s
+iter 967: loss 4.8398, time 87.53ms, mfu 36.60%, throughput 0.89M tokens/s
+iter 968: loss 4.8937, time 99.67ms, mfu 37.32%, throughput 0.89M tokens/s
+iter 969: loss 4.8819, time 98.90ms, mfu 38.00%, throughput 0.89M tokens/s
+train throughput: 1.59 M tokens/s in 0.41s
+val throughput: 1.60 M tokens/s in 0.41s
+step 970: train loss 4.7411, val loss 4.7608
+iter 970: loss 4.8631, time 941.30ms, mfu 34.67%, throughput 0.89M tokens/s
+iter 971: loss 4.8928, time 81.51ms, mfu 36.56%, throughput 0.89M tokens/s
+iter 972: loss 4.8370, time 104.68ms, mfu 37.08%, throughput 0.89M tokens/s
+iter 973: loss 4.9381, time 95.66ms, mfu 37.93%, throughput 0.89M tokens/s
+iter 974: loss 4.8973, time 98.72ms, mfu 38.57%, throughput 0.89M tokens/s
+train throughput: 1.46 M tokens/s in 0.45s
+val throughput: 1.10 M tokens/s in 0.60s
+step 975: train loss 4.7533, val loss 4.7613
+iter 975: loss 4.9003, time 1162.69ms, mfu 35.08%, throughput 0.89M tokens/s
+iter 976: loss 4.8144, time 114.59ms, mfu 35.39%, throughput 0.89M tokens/s
+iter 977: loss 4.9129, time 75.36ms, mfu 37.64%, throughput 0.89M tokens/s
+iter 978: loss 4.8508, time 100.13ms, mfu 38.24%, throughput 0.89M tokens/s
+iter 979: loss 4.8541, time 95.81ms, mfu 38.98%, throughput 0.89M tokens/s
+train throughput: 1.64 M tokens/s in 0.40s
+val throughput: 1.55 M tokens/s in 0.42s
+step 980: train loss 4.7709, val loss 4.7473
+saving checkpoint to ../data/output/out-openwebtext_swiglu_0413_16:39:55
+[1;34mwandb[0m: 🚀 View run [33mswiglu_0413_16:39:55[0m at: [34mhttps://wandb.ai/gptnext/gptnext/runs/cacad6jj[0m
+[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20250413_163959-cacad6jj/logs[0m

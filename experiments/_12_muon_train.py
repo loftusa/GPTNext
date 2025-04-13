@@ -41,7 +41,7 @@ wandb_notes = f"""
 {wandb_run_name} training run. Includes torch.compile. First run with inference speed logging.
 """
 batch_size = (
-    2**10
+    2**8
 )  # 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
 block_size = 2**8  # 1024
 
@@ -60,9 +60,9 @@ wandb_project = "gptnext"
 dataset = "openwebtext"
 gradient_accumulation_steps = 1  # 5 * 8 # used to simulate larger batch sizes
 # model
-n_layer = 6  # 12
-n_head = 6  # 12
-n_embd = 384  # 768
+n_layer = 12  # 12
+n_head = 12  # 12
+n_embd = 768  # 768
 assert n_embd % n_head == 0
 dropout = 0.2  # 0.0 # for pretraining 0 is good, for finetuning try 0.1+
 bias = False  # do we use bias inside LayerNorm and Linear layers?
@@ -249,7 +249,9 @@ if block_size < model.config.block_size:
 model.to(device)
 
 # initialize a GradScaler. If enabled=False scaler is a no-op
-scaler = torch.cuda.amp.GradScaler(enabled=(dtype == "float16"))
+# scaler = torch.cuda.amp.GradScaler(enabled=(dtype == "float16"))
+# Use the recommended torch.amp.GradScaler API
+scaler = torch.amp.GradScaler(device_type, enabled=(dtype == 'float16'))
 
 # optimizer
 # model.configure_optimizers now returns two optimizers
