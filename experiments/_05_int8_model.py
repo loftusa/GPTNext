@@ -14,52 +14,7 @@ from dataclasses import dataclass
 import torch
 import torch.nn as nn
 from torch.nn import functional as F
-from torch import Tensor
-
-
-class RotaryEmbedding(torch.nn.Module):
-    """
-    Rotary positional embeddings (RoPE) implementation.
-    Based on the paper: https://arxiv.org/abs/2104.09864
-    """
-    def __init__(self, dim, base=10000):
-        super().__init__()
-        inv_freq = 1.0 / (base ** (torch.arange(0, dim, 2).float() / dim))
-        self.register_buffer('inv_freq', inv_freq)
-        self.seq_len_cached = None
-        self.cos_cached = None
-        self.sin_cached = None
-
-    def forward(self, x, seq_dim=1):
-        seq_len = x.shape[seq_dim]
-        
-        if seq_len != self.seq_len_cached:
-            self.seq_len_cached = seq_len
-            t = torch.arange(seq_len, device=x.device).type_as(self.inv_freq)
-            freqs = torch.einsum('i,j->ij', t, self.inv_freq)
-            emb = torch.cat((freqs, freqs), dim=-1).to(x.device)
-            self.cos_cached = emb.cos()[None, :, None, :]
-            self.sin_cached = emb.sin()[None, :, None, :]
-        
-        return self.cos_cached, self.sin_cached
-
-# Function to apply rotary embeddings to q and k
-def apply_rotary_pos_emb(q, k, cos, sin):
-    # q and k: [batch, heads, seq_len, head_dim]
-    # cos and sin: [1, seq_len, 1, head_dim]
-    
-    # reshape q and k for applying rotary embeddings
-    q_embed = (q * cos) + (rotate_half(q) * sin)
-    k_embed = (k * cos) + (rotate_half(k) * sin)
-    
-    return q_embed, k_embed
-
-# Helper function to rotate half of the dimensions
-def rotate_half(x):
-    # Split the last dimension in half and rotate
-    x1, x2 = x.chunk(2, dim=-1)
-    return torch.cat((-x2, x1), dim=-1)
-
+import bitsandbytes as bnb
 
 class LayerNorm(nn.Module):
     """ LayerNorm but with an optional bias. PyTorch doesn't support simply bias=False """
@@ -78,19 +33,16 @@ class CausalSelfAttention(nn.Module):
         super().__init__()
         assert config.n_embd % config.n_head == 0
         # key, query, value projections for all heads, but in a batch
-        self.c_attn = nn.Linear(config.n_embd, 3 * config.n_embd, bias=config.bias)
+        bnb_linear_cls = bnb.nn.Linear8bitLt if config.use_int8 else nn.Linear
+        self.c_attn = bnb_linear_cls(config.n_embd, 3 * config.n_embd, bias=config.bias, has_fp16_weights=False)
         # output projection
-        self.c_proj = nn.Linear(config.n_embd, config.n_embd, bias=config.bias)
+        self.c_proj = bnb_linear_cls(config.n_embd, config.n_embd, bias=config.bias, has_fp16_weights=False)
         # regularization
         self.attn_dropout = nn.Dropout(config.dropout)
         self.resid_dropout = nn.Dropout(config.dropout)
         self.n_head = config.n_head
         self.n_embd = config.n_embd
         self.dropout = config.dropout
-        self.head_dim = config.n_embd // config.n_head
-
-        self.rope = RotaryEmbedding(self.head_dim)
-
         # flash attention make GPU go brrrrr but support is only in PyTorch >= 2.0
         self.flash = hasattr(torch.nn.functional, 'scaled_dot_product_attention')
         if not self.flash:
@@ -108,9 +60,6 @@ class CausalSelfAttention(nn.Module):
         q = q.view(B, T, self.n_head, C // self.n_head).transpose(1, 2) # (B, nh, T, hs)
         v = v.view(B, T, self.n_head, C // self.n_head).transpose(1, 2) # (B, nh, T, hs)
 
-        # apply rotary embeddings to q and k
-        cos, sin = self.rope(q)
-        q, k = apply_rotary_pos_emb(q, k, cos, sin)
         # causal self-attention; Self-attend: (B, nh, T, hs) x (B, nh, hs, T) -> (B, nh, T, T)
         if self.flash:
             # efficient attention using Flash Attention CUDA kernels
@@ -132,9 +81,10 @@ class MLP(nn.Module):
 
     def __init__(self, config):
         super().__init__()
-        self.c_fc    = nn.Linear(config.n_embd, 4 * config.n_embd, bias=config.bias)
+        bnb_linear_cls = bnb.nn.Linear8bitLt if config.use_int8 else nn.Linear
+        self.c_fc    = bnb_linear_cls(config.n_embd, 4 * config.n_embd, bias=config.bias, has_fp16_weights=False)
         self.gelu    = nn.GELU()
-        self.c_proj  = nn.Linear(4 * config.n_embd, config.n_embd, bias=config.bias)
+        self.c_proj  = bnb_linear_cls(4 * config.n_embd, config.n_embd, bias=config.bias, has_fp16_weights=False)
         self.dropout = nn.Dropout(config.dropout)
 
     def forward(self, x):
@@ -167,6 +117,7 @@ class GPTConfig:
     n_embd: int = 768
     dropout: float = 0.0
     bias: bool = True # True: bias in Linears and LayerNorms, like GPT-2. False: a bit better and faster
+    use_int8: bool = False # Whether to use bitsandbytes int8 quantization
 
 class GPT(nn.Module):
 
@@ -178,11 +129,13 @@ class GPT(nn.Module):
 
         self.transformer = nn.ModuleDict(dict(
             wte = nn.Embedding(config.vocab_size, config.n_embd),
+            wpe = nn.Embedding(config.block_size, config.n_embd),
             drop = nn.Dropout(config.dropout),
             h = nn.ModuleList([Block(config) for _ in range(config.n_layer)]),
             ln_f = LayerNorm(config.n_embd, bias=config.bias),
         ))
-        self.lm_head = nn.Linear(config.n_embd, config.vocab_size, bias=False)
+        bnb_linear_cls = bnb.nn.Linear8bitLt if config.use_int8 else nn.Linear
+        self.lm_head = bnb_linear_cls(config.n_embd, config.vocab_size, bias=False, has_fp16_weights=False)
         # with weight tying when using torch.compile() some warnings get generated:
         # "UserWarning: functional_call was passed multiple values for tied weights.
         # This behavior is deprecated and will be an error in future versions"
@@ -207,13 +160,22 @@ class GPT(nn.Module):
         params are actually used as weights in the final layer, so we include them.
         """
         n_params = sum(p.numel() for p in self.parameters())
+        if non_embedding:
+            n_params -= self.transformer.wpe.weight.numel()
         return n_params
 
     def _init_weights(self, module):
         if isinstance(module, nn.Linear):
+            # For non-quantized Linear layers
             torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
             if module.bias is not None:
                 torch.nn.init.zeros_(module.bias)
+        elif isinstance(module, bnb.nn.Linear8bitLt):
+            # bitsandbytes layers have their own initialization logic.
+            # We might not need to do anything specific here,
+            # but TBD if special init like below is needed.
+            # For now, let bnb handle it.
+            pass
         elif isinstance(module, nn.Embedding):
             torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
 
@@ -221,10 +183,12 @@ class GPT(nn.Module):
         device = idx.device
         b, t = idx.size()
         assert t <= self.config.block_size, f"Cannot forward sequence of length {t}, block size is only {self.config.block_size}"
+        pos = torch.arange(0, t, dtype=torch.long, device=device) # shape (t)
 
         # forward the GPT model itself
         tok_emb = self.transformer.wte(idx) # token embeddings of shape (b, t, n_embd)
-        x = self.transformer.drop(tok_emb)
+        pos_emb = self.transformer.wpe(pos) # position embeddings of shape (t, n_embd)
+        x = self.transformer.drop(tok_emb + pos_emb)
         for block in self.transformer.h:
             x = block(x)
         x = self.transformer.ln_f(x)
@@ -285,6 +249,14 @@ class GPT(nn.Module):
         # init a huggingface/transformers model
         model_hf = GPT2LMHeadModel.from_pretrained(model_type)
         sd_hf = model_hf.state_dict()
+
+        # Special handling for int8 weights if needed.
+        # The bnb.nn.Linear8bitLt layers should ideally handle the state dict conversion,
+        # but careful checking might be required if loading fails.
+        # The current logic assumes the state dict keys match or are handled by bnb.
+        # Check if state dict keys differ significantly when use_int8=True
+        # print("Local state dict keys:", sd.keys())
+        # print("HF state dict keys:", sd_hf.keys())
 
         # copy while ensuring all of the parameters are aligned and match in names and shapes
         sd_keys_hf = sd_hf.keys()

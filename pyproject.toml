@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "accelerate>=1.5.2",
+    "bitsandbytes>=0.45.5",
     "datasets>=3.2.0",
     "ipykernel>=6.29.5",
     "lovely-tensors>=0.1.18",

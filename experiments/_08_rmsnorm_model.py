@@ -14,51 +14,6 @@ from dataclasses import dataclass
 import torch
 import torch.nn as nn
 from torch.nn import functional as F
-from torch import Tensor
-
-
-class RotaryEmbedding(torch.nn.Module):
-    """
-    Rotary positional embeddings (RoPE) implementation.
-    Based on the paper: https://arxiv.org/abs/2104.09864
-    """
-    def __init__(self, dim, base=10000):
-        super().__init__()
-        inv_freq = 1.0 / (base ** (torch.arange(0, dim, 2).float() / dim))
-        self.register_buffer('inv_freq', inv_freq)
-        self.seq_len_cached = None
-        self.cos_cached = None
-        self.sin_cached = None
-
-    def forward(self, x, seq_dim=1):
-        seq_len = x.shape[seq_dim]
-        
-        if seq_len != self.seq_len_cached:
-            self.seq_len_cached = seq_len
-            t = torch.arange(seq_len, device=x.device).type_as(self.inv_freq)
-            freqs = torch.einsum('i,j->ij', t, self.inv_freq)
-            emb = torch.cat((freqs, freqs), dim=-1).to(x.device)
-            self.cos_cached = emb.cos()[None, :, None, :]
-            self.sin_cached = emb.sin()[None, :, None, :]
-        
-        return self.cos_cached, self.sin_cached
-
-# Function to apply rotary embeddings to q and k
-def apply_rotary_pos_emb(q, k, cos, sin):
-    # q and k: [batch, heads, seq_len, head_dim]
-    # cos and sin: [1, seq_len, 1, head_dim]
-    
-    # reshape q and k for applying rotary embeddings
-    q_embed = (q * cos) + (rotate_half(q) * sin)
-    k_embed = (k * cos) + (rotate_half(k) * sin)
-    
-    return q_embed, k_embed
-
-# Helper function to rotate half of the dimensions
-def rotate_half(x):
-    # Split the last dimension in half and rotate
-    x1, x2 = x.chunk(2, dim=-1)
-    return torch.cat((-x2, x1), dim=-1)
 
 
 class LayerNorm(nn.Module):
@@ -71,6 +26,16 @@ class LayerNorm(nn.Module):
 
     def forward(self, input):
         return F.layer_norm(input, self.weight.shape, self.weight, self.bias, 1e-5)
+
+class RMSNorm(nn.Module):
+    """ RMSNorm with an optional bias to map to the same hyperparams as the LayerNorm """
+
+    def __init__(self, ndim, bias):
+        super().__init__()
+        self.norm = torch.nn.modules.normalization.RMSNorm(ndim, eps=1e-5, elementwise_affine=bias)
+
+    def forward(self, input):
+        return self.norm(input)
 
 class CausalSelfAttention(nn.Module):
 
@@ -87,10 +52,6 @@ class CausalSelfAttention(nn.Module):
         self.n_head = config.n_head
         self.n_embd = config.n_embd
         self.dropout = config.dropout
-        self.head_dim = config.n_embd // config.n_head
-
-        self.rope = RotaryEmbedding(self.head_dim)
-
         # flash attention make GPU go brrrrr but support is only in PyTorch >= 2.0
         self.flash = hasattr(torch.nn.functional, 'scaled_dot_product_attention')
         if not self.flash:
@@ -108,9 +69,6 @@ class CausalSelfAttention(nn.Module):
         q = q.view(B, T, self.n_head, C // self.n_head).transpose(1, 2) # (B, nh, T, hs)
         v = v.view(B, T, self.n_head, C // self.n_head).transpose(1, 2) # (B, nh, T, hs)
 
-        # apply rotary embeddings to q and k
-        cos, sin = self.rope(q)
-        q, k = apply_rotary_pos_emb(q, k, cos, sin)
         # causal self-attention; Self-attend: (B, nh, T, hs) x (B, nh, hs, T) -> (B, nh, T, T)
         if self.flash:
             # efficient attention using Flash Attention CUDA kernels
@@ -148,14 +106,14 @@ class Block(nn.Module):
 
     def __init__(self, config):
         super().__init__()
-        self.ln_1 = LayerNorm(config.n_embd, bias=config.bias)
+        self.rmsn_1 = RMSNorm(config.n_embd, bias=config.bias)
         self.attn = CausalSelfAttention(config)
-        self.ln_2 = LayerNorm(config.n_embd, bias=config.bias)
+        self.rmsn_2 = RMSNorm(config.n_embd, bias=config.bias)
         self.mlp = MLP(config)
 
     def forward(self, x):
-        x = x + self.attn(self.ln_1(x))
-        x = x + self.mlp(self.ln_2(x))
+        x = x + self.attn(self.rmsn_1(x))
+        x = x + self.mlp(self.rmsn_2(x))
         return x
 
 @dataclass
@@ -178,9 +136,10 @@ class GPT(nn.Module):
 
         self.transformer = nn.ModuleDict(dict(
             wte = nn.Embedding(config.vocab_size, config.n_embd),
+            wpe = nn.Embedding(config.block_size, config.n_embd),
             drop = nn.Dropout(config.dropout),
             h = nn.ModuleList([Block(config) for _ in range(config.n_layer)]),
-            ln_f = LayerNorm(config.n_embd, bias=config.bias),
+            rmsn_f = RMSNorm(config.n_embd, bias=config.bias),
         ))
         self.lm_head = nn.Linear(config.n_embd, config.vocab_size, bias=False)
         # with weight tying when using torch.compile() some warnings get generated:
@@ -207,6 +166,8 @@ class GPT(nn.Module):
         params are actually used as weights in the final layer, so we include them.
         """
         n_params = sum(p.numel() for p in self.parameters())
+        if non_embedding:
+            n_params -= self.transformer.wpe.weight.numel()
         return n_params
 
     def _init_weights(self, module):
@@ -221,13 +182,15 @@ class GPT(nn.Module):
         device = idx.device
         b, t = idx.size()
         assert t <= self.config.block_size, f"Cannot forward sequence of length {t}, block size is only {self.config.block_size}"
+        pos = torch.arange(0, t, dtype=torch.long, device=device) # shape (t)
 
         # forward the GPT model itself
         tok_emb = self.transformer.wte(idx) # token embeddings of shape (b, t, n_embd)
-        x = self.transformer.drop(tok_emb)
+        pos_emb = self.transformer.wpe(pos) # position embeddings of shape (t, n_embd)
+        x = self.transformer.drop(tok_emb + pos_emb)
         for block in self.transformer.h:
             x = block(x)
-        x = self.transformer.ln_f(x)
+        x = self.transformer.rmsn_f(x)
 
         if targets is not None:
             # if we are given some desired targets also calculate the loss
@@ -376,3 +339,10 @@ class GPT(nn.Module):
             idx = torch.cat((idx, idx_next), dim=1)
 
         return idx
+
+if __name__ == "__main__":
+    # test RMSNorm
+    print(help(torch.nn.modules.normalization.RMSNorm))
+    x = torch.randn(10, 10)
+    norm = RMSNorm(10, bias=False)
+    print(norm(x))
