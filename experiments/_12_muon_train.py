@@ -35,10 +35,10 @@ from _12_muon_model import GPTConfig, GPT
 # default config values designed to train a gpt2 (124M) on OpenWebText
 # I/O
 # changes regularly
-wandb_run_name = "baseline" + time.strftime("_%m%d_%H:%M:%S")
+wandb_run_name = "muon" + time.strftime("_%m%d_%H:%M:%S")
 max_duration = 60*60  # maximum training duration in seconds (default: 1 minute)
-wandb_notes = """
-baseline training run. Includes torch.compile. First run with inference speed logging.
+wandb_notes = f"""
+{wandb_run_name} training run. Includes torch.compile. First run with inference speed logging.
 """
 batch_size = (
     2**10
@@ -46,7 +46,7 @@ batch_size = (
 block_size = 2**8  # 1024
 
 # other hyperparams
-out_dir = "out-shakespeare-char"
+out_dir = f"../data/output/out-openwebtext_{wandb_run_name}"
 eval_interval = 5  # changed from 250 to evaluate every 5 iterations
 log_interval = 1
 eval_iters = 10
@@ -57,7 +57,7 @@ init_from = "scratch"  # 'scratch' or 'resume' or 'gpt2*'
 wandb_log = True  # disabled by default
 wandb_project = "gptnext"
 # data
-dataset = "shakespeare_char"
+dataset = "openwebtext"
 gradient_accumulation_steps = 1  # 5 * 8 # used to simulate larger batch sizes
 # model
 n_layer = 6  # 12

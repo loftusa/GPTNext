@@ -29,7 +29,7 @@ from torch.distributed import init_process_group, destroy_process_group
 import psutil
 import wandb
 
-from model import GPTConfig, GPT
+from _07_noflash_model import GPTConfig, GPT
 
 # -----------------------------------------------------------------------------
 # default config values designed to train a gpt2 (124M) on OpenWebText
