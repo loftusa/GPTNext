@@ -60,9 +60,9 @@ wandb_project = "gptnext"
 dataset = "openwebtext"
 gradient_accumulation_steps = 1  # 5 * 8 # used to simulate larger batch sizes
 # model
-n_layer = 6  # 12
-n_head = 6  # 12
-n_embd = 384  # 768
+n_layer = 12  # 12
+n_head = 12  # 12
+n_embd = 768  # 768
 assert n_embd % n_head == 0
 dropout = 0.2  # 0.0 # for pretraining 0 is good, for finetuning try 0.1+
 bias = False  # do we use bias inside LayerNorm and Linear layers?
@@ -147,6 +147,7 @@ ctx = (
 
 # poor man's data loader
 data_dir = os.path.join("data", dataset)
+assert os.path.exists(data_dir), f"Data directory {data_dir} does not exist"
 
 
 def get_batch(split):

@@ -62,10 +62,10 @@ wandb_project = 'gptnext'
 dataset = "openwebtext"
 gradient_accumulation_steps = 1 # 5 * 8 # used to simulate larger batch sizes
 # model
-n_layer = 6 # 12
-n_head = 6 #12
+n_layer = 12 # 12
+n_head = 12 #12
 n_kv_head = 2
-n_embd = 384 #768
+n_embd = 768 #768
 assert n_embd % n_head == 0
 assert n_head % n_kv_head == 0, "n_head must be divisible by n_kv_head"
 
