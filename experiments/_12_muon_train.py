@@ -147,6 +147,7 @@ ctx = (
 
 # poor man's data loader
 data_dir = os.path.join("data", dataset)
+assert os.path.exists(data_dir), f"Data directory {data_dir} does not exist"
 
 
 def get_batch(split):

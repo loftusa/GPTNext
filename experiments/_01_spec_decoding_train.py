@@ -59,9 +59,9 @@ pass
 # dataset = "openwebtext"
 # gradient_accumulation_steps = 1 # 5 * 8 # used to simulate larger batch sizes
 # # model
-# n_layer = 6 # 12
-# n_head = 6 #12
-# n_embd = 384 #768
+# n_layer = 12 # 12
+# n_head = 12 #12
+# n_embd = 768 #768
 # assert n_embd % n_head == 0
 # dropout = 0.2 # 0.0 # for pretraining 0 is good, for finetuning try 0.1+
 # bias = False # do we use bias inside LayerNorm and Linear layers?
@@ -125,7 +125,7 @@ pass
 # ctx = nullcontext() if device_type == 'cpu' else torch.amp.autocast(device_type=device_type, dtype=ptdtype)
 
 # # poor man's data loader
-# data_dir = os.path.join('data', dataset)
+# data_dir = os.path.join('../data', dataset); assert os.path.exists(data_dir)
 # def get_batch(split):
 #     # We recreate np.memmap every batch to avoid a memory leak, as per
 #     # https://stackoverflow.com/questions/45132940/numpy-memmap-memory-usage-want-to-iterate-once/61472122#61472122
