@@ -1,1 +1,11 @@
+experiments/_01_spec_decoding_train.py
 experiments/_05_int8_train.py
+experiments/_06_no_compile_train.py
+experiments/_07_noflash_train.py
+experiments/_08_rmsnorm_train.py
+experiments/_00_baseline_train.py
+experiments/_02_groupedq_attn_train.py
+experiments/_03_rope_train.py
+experiments/_09_soap_train.py
+experiments/_11_swiglu_train.py
+experiments/_12_muon_train.py

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/disk/u/lofty/GPTNext/experiments/_01_spec_decoding_train.py", line 32, in <module>
+    from _01_spec_decoding_model import GPTConfig, GPT # Changed import
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ImportError: cannot import name 'GPTConfig' from '_01_spec_decoding_model' (/disk/u/lofty/GPTNext/experiments/_01_spec_decoding_model.py)

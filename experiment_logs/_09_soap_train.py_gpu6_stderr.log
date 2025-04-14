@@ -1,5 +1,5 @@
 Traceback (most recent call last):
-  File "/disk/u/lofty/GPTNext/experiments/_06_no_compile_train.py", line 125, in <module>
+  File "/disk/u/lofty/GPTNext/experiments/_09_soap_train.py", line 125, in <module>
     data_dir = os.path.join('../data', dataset); assert os.path.exists(data_dir)
                                                         ^^^^^^^^^^^^^^^^^^^^^^^^
 AssertionError

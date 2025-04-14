@@ -41,7 +41,7 @@ wandb_notes = """
 Turn off flash attention and see how much of a difference it makes in inference speed.
 """
 batch_size = 2**8  # 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
-block_size = 2**8 # 1024
+block_size = 2**10 # 1024
 
 # other hyperparams
 out_dir = f"../data/output/out-openwebtext_{wandb_run_name}"
@@ -263,7 +263,9 @@ def estimate_loss():
         # Optionally log the speed test results to wandb
         if wandb_log and master_process:
             wandb.log({
-                f"{split}/inference_throughput": tokens_per_sec,
+                f"{split}/loss": losses[split],
+                f"{split}/perplexity": math.exp(losses[split]),
+                f"{split}/throughput": tokens_per_sec,
                 f"{split}/time_s": elapsed,
             })
 
@@ -429,11 +431,19 @@ while True:
             mfu = raw_model.estimate_mfu(batch_size * gradient_accumulation_steps, dt)
             running_mfu = mfu if running_mfu == -1.0 else 0.9*running_mfu + 0.1*mfu
             if wandb_log:
-                wandb.log({
-                    "throughput/tokens_per_sec": throughput,
-                    "gpu/gpu_gb": current_gpu_mem,
-                    "gpu/bytes_per_token": mem_per_token,
-                })
+                log_dict = {
+                    "iter_loss": lossf,
+                    "iter_time_ms": dt*1000,
+                    "throughput/tokens_per_sec_train": throughput,
+                    "mfu_train": running_mfu*100,
+                    "lr_iter": lr, # Log learning rate per iteration too
+                }
+                if device_type == 'cuda':
+                    log_dict.update({
+                        "gpu/gpu_gb_iter": current_gpu_mem,
+                        "gpu/bytes_per_token_iter": mem_per_token,
+                    })
+                wandb.log(log_dict)
             print(f"iter {iter_num}: loss {lossf:.4f}, time {dt*1000:.2f}ms, mfu {running_mfu*100:.2f}%, throughput {throughput/1e6:.2f}M tokens/s")
     iter_num += 1
     local_iter_num += 1
@@ -481,21 +491,51 @@ if master_process and wandb_log:
   # Generate samples
   start_ids = encode(start)
   x = (torch.tensor(start_ids, dtype=torch.long, device=device)[None, ...])
-  
+
   samples = []
+  inference_tokens = 0 # Add inference token counter
+  inference_start_time = time.time() # Add inference start time
+
   with torch.no_grad():
     with ctx:
       for k in range(num_samples):
+        # Measure generation time for each sample
+        sample_start_time = time.time()
         y = raw_model.generate(x, max_new_tokens, temperature=temperature, top_k=top_k)
+        sample_time = time.time() - sample_start_time
+
+        # Calculate tokens generated (excluding prompt)
+        tokens_generated = len(y[0].tolist()) - len(start_ids)
+        inference_tokens += tokens_generated
+
+        # Calculate throughput for this sample
+        sample_throughput = tokens_generated / sample_time if sample_time > 0 else 0
+
         sample_text = decode(y[0].tolist())
         samples.append(sample_text)
-        print(f'Sample {k+1}:\n{sample_text}\n---------------')
-  
-  # Log samples to wandb
+        print(f'Sample {k+1}:\n{sample_text}\n')
+        print(f'Generated {tokens_generated} tokens in {sample_time:.2f}s ({sample_throughput:.2f} tokens/sec)\n---------------')
+
+  # Calculate overall inference throughput
+  inference_time = time.time() - inference_start_time
+  inference_throughput = inference_tokens / inference_time if inference_time > 0 else 0
+  print(f'Overall inference: {inference_tokens} tokens in {inference_time:.2f}s ({inference_throughput:.2f} tokens/sec)')
+
+  # Log samples and inference metrics to wandb
   wandb.log({
-    "samples": [wandb.Html(f"<pre>{sample}</pre>") for sample in samples]
+    "samples": [wandb.Html(f"<pre>{sample}</pre>") for sample in samples],
+    "throughput/tokens_per_sec_inference": inference_throughput,
+    "throughput/total_tokens_inference": inference_tokens,
+    "throughput/time_seconds_inference": inference_time,
+    "config/num_samples_inference": num_samples,
+    "config/max_new_tokens_inference": max_new_tokens,
+    "config/temperature_inference": temperature,
+    "config/top_k_inference": top_k,
   })
 
 
 if ddp:
     destroy_process_group()
+
+if wandb_log: # Add finish call
+    wandb.finish()

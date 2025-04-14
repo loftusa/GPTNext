@@ -1,15 +1,10 @@
-tokens per iteration will be: 65,536
+tokens per iteration will be: 262,144
 Initializing a new model from scratch
 defaulting to vocab_size of GPT-2 to 50304 (50257 rounded up for efficiency)
-number of parameters: 29.94M
-AdamW: num decayed parameter tensors: 2, with 19,415,040 parameters
-AdamW: num non-decayed parameter tensors: 13, with 4,992 parameters
+number of parameters: 123.59M
+AdamW: num decayed parameter tensors: 2, with 39,419,904 parameters
+AdamW: num non-decayed parameter tensors: 25, with 19,200 parameters
 using fused AdamW: True
-Muon: num parameter tensors: 24, with 10,616,832 parameters
-using Muon optimizer for 24 tensors
+Muon: num parameter tensors: 48, with 84,934,656 parameters
+using Muon optimizer for 48 tensors
 compiling the model... (takes a ~minute)
-train throughput: 0.14 M tokens/s in 4.69s
-val throughput: 1.85 M tokens/s in 0.35s
-step 0: train loss 10.8843, val loss 10.8840
-[1;34mwandb[0m: 🚀 View run [33mmuon_0413_17:46:28[0m at: [34mhttps://wandb.ai/gptnext/gptnext/runs/ghmrjwuy[0m
-[1;34mwandb[0m: Find logs at: [1;35mwandb/run-20250413_174633-ghmrjwuy/logs[0m
