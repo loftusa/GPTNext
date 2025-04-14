@@ -43,6 +43,13 @@ def get_train_scripts(directory: str = "experiments", retry_failed: bool = False
              os.remove(FAILED_LOG_FILE)
         pattern = os.path.join(directory, "*_train.py")
         scripts = sorted(glob.glob(pattern))
+        to_skip = [
+            "experiments/_01_spec_decoding_train.py",
+            "experiments/_05_int8_train.py",
+            "experiments/_06_no_compile_train.py",
+            "experiments/_07_noflash_train.py",
+        ]
+        scripts = [script for script in scripts if script not in to_skip]
         print(f"Found {len(scripts)} scripts matching '{pattern}' for a standard run.")
         return scripts
 
