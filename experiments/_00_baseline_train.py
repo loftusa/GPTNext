@@ -36,7 +36,7 @@ from _00_baseline_model import GPTConfig, GPT
 # default config values designed to train a gpt2 (124M) on OpenWebText
 # I/O
 # changes regularly
-DEBUG = True
+DEBUG = False
 wandb_run_name = 'baseline' + time.strftime("_%m%d_%H:%M:%S") + "_DEBUG" if DEBUG else ""
 max_duration = 60*60  # maximum training duration in seconds 
 max_duration = 30 if DEBUG else max_duration
@@ -45,7 +45,7 @@ baseline training run. Includes torch.compile. First run with inference speed lo
 """
 if DEBUG: 
     wandb_notes += "\n#########DEBUG RUN#########"
-batch_size = 2**10  # 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
+batch_size = 2**10 # 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
 block_size = 2**8 # 1024
 
 # other hyperparams
