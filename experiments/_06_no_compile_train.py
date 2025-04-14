@@ -40,7 +40,7 @@ max_duration = 60*60  # maximum training duration in seconds (default: 1 minute)
 wandb_notes = """
 training run w/o torch.compile.
 """
-batch_size = 2**10  # 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
+batch_size = 2**8  # 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
 block_size = 2**8 # 1024
 
 # other hyperparams

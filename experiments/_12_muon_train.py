@@ -36,14 +36,14 @@ from _12_muon_model import GPTConfig, GPT
 # I/O
 # changes regularly
 wandb_run_name = "muon" + time.strftime("_%m%d_%H:%M:%S")
-max_duration = 60*60  # maximum training duration in seconds (default: 1 minute)
+max_duration = 60*60*3  # maximum training duration in seconds (default: 1 minute)
 wandb_notes = f"""
 {wandb_run_name} training run. Includes torch.compile. First run with inference speed logging.
 """
 batch_size = (
-    2**10
+    2**9
 )  # 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
-block_size = 2**8  # 1024
+block_size = 2**10  # 1024
 
 # other hyperparams
 out_dir = f"../data/output/out-openwebtext_{wandb_run_name}"
@@ -64,21 +64,21 @@ n_layer = 12  # 12
 n_head = 12  # 12
 n_embd = 768  # 768
 assert n_embd % n_head == 0
-dropout = 0.2  # 0.0 # for pretraining 0 is good, for finetuning try 0.1+
+dropout = 0  # 0.0 # for pretraining 0 is good, for finetuning try 0.1+
 bias = False  # do we use bias inside LayerNorm and Linear layers?
 # adamw optimizer
-learning_rate = 1e-3  # 6e-4 # max learning rate
-max_iters = 99999999999  # 600000 # total number of training iterations
+learning_rate = 6e-4  # 6e-4 # max learning rate
+max_iters = 25000  # 600000 # total number of training iterations
 weight_decay = 1e-1
 beta1 = 0.9
 beta2 = 0.95
 grad_clip = 1.0  # clip gradients at this value, or disable if == 0.0
 # learning rate decay settings
 decay_lr = True  # whether to decay the learning rate
-warmup_iters = 100  # 2000 # how many steps to warm up for
-lr_decay_iters = 5000  # 600000 # should be ~= max_iters per Chinchilla
+warmup_iters = 2000  # 2000 # how many steps to warm up for
+lr_decay_iters = max_iters  # 600000 # should be ~= max_iters per Chinchilla
 min_lr = (
-    1e-4  # 6e-5 # minimum learning rate, should be ~= learning_rate/10 per Chinchilla
+    6e-5  # 6e-5 # minimum learning rate, should be ~= learning_rate/10 per Chinchilla
 )
 # DDP settings
 backend = "nccl"  # 'nccl', 'gloo', etc.
@@ -250,7 +250,9 @@ if block_size < model.config.block_size:
 model.to(device)
 
 # initialize a GradScaler. If enabled=False scaler is a no-op
-scaler = torch.cuda.amp.GradScaler(enabled=(dtype == "float16"))
+# scaler = torch.cuda.amp.GradScaler(enabled=(dtype == "float16"))
+# Use the recommended torch.amp.GradScaler API
+scaler = torch.amp.GradScaler(device_type, enabled=(dtype == 'float16'))
 
 # optimizer
 # model.configure_optimizers now returns two optimizers

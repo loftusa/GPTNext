@@ -38,7 +38,7 @@ from _00_baseline_model import GPTConfig, GPT
 # changes regularly
 DEBUG = False
 wandb_run_name = 'baseline' + time.strftime("_%m%d_%H:%M:%S") + "_DEBUG" if DEBUG else ""
-max_duration = 60*60  # maximum training duration in seconds 
+max_duration = 60*60*3  # maximum training duration in seconds 
 max_duration = 30 if DEBUG else max_duration
 wandb_notes = """
 baseline training run. Includes torch.compile. First run with inference speed logging.
@@ -67,20 +67,20 @@ n_layer = 12  # 12
 n_head = 12  # 12
 n_embd = 768  # 768
 assert n_embd % n_head == 0
-dropout = 0.2 # 0.0 # for pretraining 0 is good, for finetuning try 0.1+
+dropout = 0.0 # 0.0 # for pretraining 0 is good, for finetuning try 0.1+
 bias = False # do we use bias inside LayerNorm and Linear layers?
 # adamw optimizer
-learning_rate = 1e-3 # 6e-4 # max learning rate
-max_iters = 99999999999 # 600000 # total number of training iterations. Set to a large number so that we're bottlenecked by the max duration.
+learning_rate = 6e-4 # 6e-4 # max learning rate
+max_iters = 25000 # 600000 # total number of training iterations. Set to a large number so that we're bottlenecked by the max duration.
 weight_decay = 1e-1
 beta1 = 0.9
 beta2 = 0.95
 grad_clip = 1.0 # clip gradients at this value, or disable if == 0.0
 # learning rate decay settings
 decay_lr = True # whether to decay the learning rate
-warmup_iters = 100 #2000 # how many steps to warm up for
-lr_decay_iters = 5000 # 600000 # should be ~= max_iters per Chinchilla
-min_lr = 1e-4 # 6e-5 # minimum learning rate, should be ~= learning_rate/10 per Chinchilla
+warmup_iters = 2000 #2000 # how many steps to warm up for
+lr_decay_iters = max_iters # 600000 # should be ~= max_iters per Chinchilla
+min_lr = 6e-5 # 6e-5 # minimum learning rate, should be ~= learning_rate/10 per Chinchilla
 # DDP settings
 backend = 'nccl' # 'nccl', 'gloo', etc.
 # system

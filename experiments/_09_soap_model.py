@@ -16,7 +16,7 @@ import torch.nn as nn
 from torch.nn import functional as F
 from torch import Tensor
 
-from soap import SOAP
+from _09_soap import SOAP
 
 class LayerNorm(nn.Module):
     """ LayerNorm but with an optional bias. PyTorch doesn't support simply bias=False """

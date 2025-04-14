@@ -36,12 +36,12 @@ from _08_rmsnorm_model import GPTConfig, GPT
 # I/O
 # changes regularly
 wandb_run_name = 'rmsnorm' + time.strftime("_%m%d_%H:%M:%S")
-max_duration = 60*60  # maximum training duration in seconds (default: 1 minute)
+max_duration = 60*60*3  # maximum training duration in seconds (default: 1 minute)
 wandb_notes = """
 RMSNorm training run
 """
-batch_size = 2**10  # 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
-block_size = 2**8 # 1024
+batch_size = 2**9  # 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
+block_size = 2**10 # 1024
 
 # other hyperparams
 out_dir = f"../data/output/out-openwebtext_{wandb_run_name}"
@@ -62,20 +62,20 @@ n_layer = 12 # 12
 n_head = 12 #12
 n_embd = 768 #768
 assert n_embd % n_head == 0
-dropout = 0.2 # 0.0 # for pretraining 0 is good, for finetuning try 0.1+
+dropout = 0.0 # 0.0 # for pretraining 0 is good, for finetuning try 0.1+
 bias = False # do we use bias inside LayerNorm and Linear layers?
 # adamw optimizer
-learning_rate = 1e-3 # 6e-4 # max learning rate
-max_iters = 99999999999 # 600000 # total number of training iterations
+learning_rate = 6e-4 # 6e-4 # max learning rate
+max_iters = 50000 # 600000 # total number of training iterations
 weight_decay = 1e-1
 beta1 = 0.9
 beta2 = 0.95
 grad_clip = 1.0 # clip gradients at this value, or disable if == 0.0
 # learning rate decay settings
 decay_lr = True # whether to decay the learning rate
-warmup_iters = 100 #2000 # how many steps to warm up for
-lr_decay_iters = 5000 # 600000 # should be ~= max_iters per Chinchilla
-min_lr = 1e-4 # 6e-5 # minimum learning rate, should be ~= learning_rate/10 per Chinchilla
+warmup_iters = 2000 #2000 # how many steps to warm up for
+lr_decay_iters = max_iters # 600000 # should be ~= max_iters per Chinchilla
+min_lr = 6e-5 # 6e-5 # minimum learning rate, should be ~= learning_rate/10 per Chinchilla
 # DDP settings
 backend = 'nccl' # 'nccl', 'gloo', etc.
 # system
@@ -452,6 +452,72 @@ total_time = time.time() - t_start
 minutes = int(total_time // 60)
 seconds = int(total_time % 60)
 print(f"\nTotal runtime: {minutes}m {seconds}s")
+
+# Sample from the model and log to wandb before finishing
+if master_process and wandb_log:
+  print("Generating samples for wandb...")
+  model.eval()
+  # Setup sampling parameters
+  start = "\n"  # starting prompt
+  num_samples = 3  # generate 3 samples
+  max_new_tokens = 100  # shorter samples for logging
+  temperature = 0.8
+  top_k = 200
+  
+  # Determine encoding/decoding functions
+  if 'meta.pkl' in os.listdir(data_dir):
+    with open(os.path.join(data_dir, 'meta.pkl'), 'rb') as f:
+      meta = pickle.load(f)
+      stoi, itos = meta['stoi'], meta['itos']
+      encode = lambda s: [stoi[c] for c in s]
+      decode = lambda l: ''.join([itos[i] for i in l])
+  else:
+    print("No meta.pkl found, assuming GPT-2 encodings...")
+    import tiktoken
+    enc = tiktoken.get_encoding("gpt2")
+    encode = lambda s: enc.encode(s, allowed_special={"<|endoftext|>"})
+    decode = lambda l: enc.decode(l)
+
+  # Generate samples
+  start_ids = encode(start)
+  x = (torch.tensor(start_ids, dtype=torch.long, device=device)[None, ...])
+  
+  samples = []
+  inference_tokens = 0
+  inference_start_time = time.time()
+  
+  with torch.no_grad():
+    with ctx:
+      for k in range(num_samples):
+        # Measure generation time for each sample
+        sample_start_time = time.time()
+        y = raw_model.generate(x, max_new_tokens, temperature=temperature, top_k=top_k)
+        sample_time = time.time() - sample_start_time
+        
+        # Calculate tokens generated (excluding prompt)
+        tokens_generated = len(y[0].tolist()) - len(start_ids)
+        inference_tokens += tokens_generated
+        
+        # Calculate throughput for this sample
+        sample_throughput = tokens_generated / sample_time if sample_time > 0 else 0
+        
+        sample_text = decode(y[0].tolist())
+        samples.append(sample_text)
+        print(f'Sample {k+1}:\n{sample_text}\n')
+        print(f'Generated {tokens_generated} tokens in {sample_time:.2f}s ({sample_throughput:.2f} tokens/sec)\n---------------')
+  
+  # Calculate overall inference throughput
+  inference_time = time.time() - inference_start_time
+  inference_throughput = inference_tokens / inference_time if inference_time > 0 else 0
+  print(f'Overall inference: {inference_tokens} tokens in {inference_time:.2f}s ({inference_throughput:.2f} tokens/sec)')
+  
+  # Log samples and inference metrics to wandb
+  wandb.log({
+    "samples": [wandb.Html(f"<pre>{sample}</pre>") for sample in samples],
+    "throughput/tokens_per_sec_inference": inference_throughput,
+    "throughput/total_tokens_inference": inference_tokens,
+    "throughput/time_seconds_inference": inference_time
+  })
 
 if ddp:
     destroy_process_group()

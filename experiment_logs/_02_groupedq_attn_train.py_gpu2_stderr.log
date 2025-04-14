@@ -1,0 +1,68 @@
+/disk/u/lofty/GPTNext/experiments/_02_groupedq_attn_train.py:215: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler(enabled=(dtype == 'float16'))
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: Currently logged in as: aloftus (gptnext). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.19.1
+wandb: Run data is saved locally in /disk/u/lofty/GPTNext/wandb/run-20250413_164617-ycho0jbm
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run groupedq_attn_0413_16:46:13
+wandb: ⭐️ View project at https://wandb.ai/gptnext/gptnext
+wandb: 🚀 View run at https://wandb.ai/gptnext/gptnext/runs/ycho0jbm
+wandb:                                                                                
+wandb: 
+wandb: Run history:
+wandb:                          cpu/ram_gb █▃▁▄▂▂▄▂▂▄▂▁▄▄▁▄▄▄▃▁▄▄▄▁▁▂▂▁▁▁▁▁▅▅▅▁▁▁▁▁
+wandb:                       gpu/active_gb ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                      gpu/active_pct ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                 gpu/bytes_per_token ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                          gpu/gpu_gb ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                gpu/max_allocated_gb ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                     gpu/reserved_gb ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                    gpu/reserved_pct ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                        gpu/total_gb ▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                                iter ▁▁▂▂▂▂▂▂▂▃▃▃▃▃▃▄▄▄▄▅▅▅▅▅▅▅▆▆▆▆▆▆▆▆▇▇▇▇▇█
+wandb:                                  lr ▁▄▅██▇▇▆▆▆▅▅▄▄▃▃▃▃▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂
+wandb:                                 mfu ▆▅▅▇█▆▅▁▅▇▅█▆▆▂▆▅▅▄▇▄▆▃▃▅▄▅▄▅▄▆▆▅▅▅▆▄▅▅▆
+wandb:   throughput/time_seconds_inference ▁
+wandb: throughput/tokens_per_sec_inference ▁
+wandb:     throughput/tokens_per_sec_train ▁▅▅▅▅▆▆▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇██████████████
+wandb:   throughput/total_tokens_inference ▁
+wandb:          train/inference_throughput ▄▂▄▁█▂▂▃█▂▄▁▄▄▃▂▂▃▂▂▂▂▁▃▂▄▁▃▇▂▃▁▃▄▂▃▂▄▂▂
+wandb:                          train/loss █▇▅▂▂▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                    train/perplexity █▆▄▄▄▂▂▂▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                        train/time_s ▁▄█▁▃▇▄▆▆▆▆▇▇▆▆▅▄▃▇▆█▇▆▆▆▆▇▇▅▇▆▇▅▆▆▇▄▇▅▇
+wandb:            val/inference_throughput ▃▂▂▂▃▂▃▄▁▃▂▃▂█▂▃▂▁▂▂▄▂▂▂▁▃▄▂▂▃▃▃▂▆▂▃▅▆▂▂
+wandb:                            val/loss █▇▆▆▅▄▄▄▃▃▂▂▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                      val/perplexity █▆▆▃▂▂▂▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁▁
+wandb:                          val/time_s ▂▅▁▄▄▂▅▃▅▃▅▁▄▄▃▄▃▅▃▄▆▄▄▄▅▄▄▄▅▄▃▄▅▃▃▅█▄▄▄
+wandb: 
+wandb: Run summary:
+wandb:                          cpu/ram_gb 1.21127
+wandb:                       gpu/active_gb 6.95817
+wandb:                      gpu/active_pct 8.17686
+wandb:                 gpu/bytes_per_token 106173.22656
+wandb:                          gpu/gpu_gb 6.95817
+wandb:                gpu/max_allocated_gb 26.3737
+wandb:                     gpu/reserved_gb 27.30911
+wandb:                    gpu/reserved_pct 32.09217
+wandb:                        gpu/total_gb 85.09587
+wandb:                                iter 9775
+wandb:                                  lr 0.0001
+wandb:                                 mfu 33.71654
+wandb:   throughput/time_seconds_inference 0.81143
+wandb: throughput/tokens_per_sec_inference 369.71908
+wandb:     throughput/tokens_per_sec_train 890182.54907
+wandb:   throughput/total_tokens_inference 300
+wandb:          train/inference_throughput 904378.26957
+wandb:                          train/loss 4.13002
+wandb:                    train/perplexity 62.17894
+wandb:                        train/time_s 0.72465
+wandb:            val/inference_throughput 995443.93684
+wandb:                            val/loss 4.14184
+wandb:                      val/perplexity 62.91854
+wandb:                          val/time_s 0.65836
+wandb: 
+wandb: 🚀 View run groupedq_attn_0413_16:46:13 at: https://wandb.ai/gptnext/gptnext/runs/ycho0jbm
+wandb: ⭐️ View project at: https://wandb.ai/gptnext/gptnext
+wandb: Synced 8 W&B file(s), 0 media file(s), 0 artifact file(s) and 3 other file(s)
+wandb: Find logs at: ./wandb/run-20250413_164617-ycho0jbm/logs

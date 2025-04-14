@@ -41,7 +41,7 @@ pass
 # wandb_notes = """
 # baseline training run. Includes torch.compile. First run with inference speed logging.
 # """
-# batch_size = 2**10  # 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
+# batch_size = 2**8  # 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
 # block_size = 2**8 # 1024
 
 # # other hyperparams

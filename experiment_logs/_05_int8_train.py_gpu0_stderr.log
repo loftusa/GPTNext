@@ -1,0 +1,11 @@
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: Currently logged in as: aloftus (gptnext). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.19.1
+wandb: Run data is saved locally in /disk/u/lofty/GPTNext/wandb/run-20250413_185200-kxloukwb
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run int8_quantization_0413_18:51:59
+wandb: ⭐️ View project at https://wandb.ai/gptnext/gptnext
+wandb: 🚀 View run at https://wandb.ai/gptnext/gptnext/runs/kxloukwb
+/disk/u/lofty/GPTNext/.venv/lib/python3.12/site-packages/bitsandbytes/autograd/_functions.py:315: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+Error invalid configuration argument at line 525 in file /src/csrc/ops.cu
