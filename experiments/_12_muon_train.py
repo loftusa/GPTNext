@@ -41,7 +41,7 @@ wandb_notes = f"""
 {wandb_run_name} training run. Includes torch.compile. First run with inference speed logging.
 """
 batch_size = 2**8  # 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
-block_size = 2**10  # 1024
+block_size = 2**8  # 1024
 
 # other hyperparams
 out_dir = f"../data/output/out-openwebtext_{wandb_run_name}"
@@ -329,9 +329,9 @@ def estimate_loss():
         # Optionally log the speed test results to wandb
         if wandb_log and master_process:
             wandb.log({
-                f"{split}/loss": losses[split],
-                f"{split}/perplexity": math.exp(losses[split]),
-                f"{split}/throughput": tokens_per_sec,
+                f"{split}/loss": out[split],
+                f"{split}/perplexity": math.exp(out[split]),
+                f"{split}/inference_throughput": tokens_per_sec,
                 f"{split}/time_s": elapsed,
             })
 

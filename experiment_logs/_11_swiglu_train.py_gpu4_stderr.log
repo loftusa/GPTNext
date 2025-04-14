@@ -1,21 +1,21 @@
-/disk/u/lofty/GPTNext/experiments/_02_groupedq_attn_train.py:215: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+/disk/u/lofty/GPTNext/experiments/_11_swiglu_train.py:206: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
   scaler = torch.cuda.amp.GradScaler(enabled=(dtype == 'float16'))
 wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
 wandb: Currently logged in as: aloftus (gptnext). Use `wandb login --relogin` to force relogin
 wandb: - Waiting for wandb.init()...wandb: \ Waiting for wandb.init()...wandb: Tracking run with wandb version 0.19.1
-wandb: Run data is saved locally in /disk/u/lofty/GPTNext/wandb/run-20250414_140217-teuz3fvw
+wandb: Run data is saved locally in /disk/u/lofty/GPTNext/wandb/run-20250414_140231-rx64melf
 wandb: Run `wandb offline` to turn off syncing.
-wandb: Syncing run groupedq_attn_0414_14:02:06
+wandb: Syncing run swiglu_0414_14:02:25
 wandb: ⭐️ View project at https://wandb.ai/gptnext/gptnext
-wandb: 🚀 View run at https://wandb.ai/gptnext/gptnext/runs/teuz3fvw
+wandb: 🚀 View run at https://wandb.ai/gptnext/gptnext/runs/rx64melf
 Traceback (most recent call last):
-  File "/disk/u/lofty/GPTNext/experiments/_02_groupedq_attn_train.py", line 346, in <module>
+  File "/disk/u/lofty/GPTNext/experiments/_11_swiglu_train.py", line 337, in <module>
     losses = estimate_loss()
              ^^^^^^^^^^^^^^^
   File "/disk/u/lofty/GPTNext/.venv/lib/python3.12/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
     return func(*args, **kwargs)
            ^^^^^^^^^^^^^^^^^^^^^
-  File "/disk/u/lofty/GPTNext/experiments/_02_groupedq_attn_train.py", line 252, in estimate_loss
+  File "/disk/u/lofty/GPTNext/experiments/_11_swiglu_train.py", line 243, in estimate_loss
     losses[k] = loss.item()
                 ^^^^^^^^^^^
 KeyboardInterrupt

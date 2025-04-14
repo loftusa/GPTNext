@@ -1,5 +1,17 @@
-Traceback (most recent call last):
-  File "/disk/u/lofty/GPTNext/experiments/_05_int8_train.py", line 127, in <module>
-    data_dir = os.path.join('../data', dataset); assert os.path.exists(data_dir)
-                                                        ^^^^^^^^^^^^^^^^^^^^^^^^
-AssertionError
+WARNING: BNB_CUDA_VERSION=124 environment variable detected; loading libbitsandbytes_cuda124.so.
+This can be used to load a bitsandbytes version that is different from the PyTorch CUDA version.
+If this was unintended set the BNB_CUDA_VERSION variable to an empty string: export BNB_CUDA_VERSION=
+If you use the manual override make sure the right libcudart.so is in your LD_LIBRARY_PATH
+For example by adding the following to your .bashrc: export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:<path_to_cuda_dir/lib64
+
+wandb: Using wandb-core as the SDK backend.  Please refer to https://wandb.me/wandb-core for more information.
+wandb: Currently logged in as: aloftus (gptnext). Use `wandb login --relogin` to force relogin
+wandb: Tracking run with wandb version 0.19.1
+wandb: Run data is saved locally in /disk/u/lofty/GPTNext/wandb/run-20250414_140216-cojk7539
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run int8_quantization_0414_14:02:12
+wandb: ⭐️ View project at https://wandb.ai/gptnext/gptnext
+wandb: 🚀 View run at https://wandb.ai/gptnext/gptnext/runs/cojk7539
+/disk/u/lofty/GPTNext/.venv/lib/python3.12/site-packages/bitsandbytes/autograd/_functions.py:315: UserWarning: MatMul8bitLt: inputs will be cast from torch.float32 to float16 during quantization
+  warnings.warn(f"MatMul8bitLt: inputs will be cast from {A.dtype} to float16 during quantization")
+Error invalid configuration argument at line 525 in file /src/csrc/ops.cu

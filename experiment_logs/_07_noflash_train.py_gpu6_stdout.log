@@ -1,1 +1,2956 @@
-tokens per iteration will be: 262,144
+tokens per iteration will be: 65,536
+Initializing a new model from scratch
+defaulting to vocab_size of GPT-2 to 50304 (50257 rounded up for efficiency)
+WARNING: using slow attention. Flash Attention requires PyTorch >= 2.0
+WARNING: using slow attention. Flash Attention requires PyTorch >= 2.0
+WARNING: using slow attention. Flash Attention requires PyTorch >= 2.0
+WARNING: using slow attention. Flash Attention requires PyTorch >= 2.0
+WARNING: using slow attention. Flash Attention requires PyTorch >= 2.0
+WARNING: using slow attention. Flash Attention requires PyTorch >= 2.0
+WARNING: using slow attention. Flash Attention requires PyTorch >= 2.0
+WARNING: using slow attention. Flash Attention requires PyTorch >= 2.0
+WARNING: using slow attention. Flash Attention requires PyTorch >= 2.0
+WARNING: using slow attention. Flash Attention requires PyTorch >= 2.0
+WARNING: using slow attention. Flash Attention requires PyTorch >= 2.0
+WARNING: using slow attention. Flash Attention requires PyTorch >= 2.0
+number of parameters: 123.59M
+num decayed parameter tensors: 50, with 123,764,736 parameters
+num non-decayed parameter tensors: 25, with 19,200 parameters
+using fused AdamW: True
+compiling the model... (takes a ~minute)
+train throughput: 0.05 M tokens/s in 14.04s
+val throughput: 0.55 M tokens/s in 1.18s
+step 0: train loss 10.9513, val loss 10.9530
+train throughput: 0.56 M tokens/s in 1.17s
+val throughput: 0.57 M tokens/s in 1.16s
+step 5: train loss 9.6396, val loss 9.6277
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 5: loss 9.6698, time 4374.99ms, mfu 3.70%, throughput 0.07M tokens/s
+iter 6: loss 9.5787, time 333.40ms, mfu 8.18%, throughput 0.07M tokens/s
+iter 7: loss 9.5375, time 328.70ms, mfu 12.28%, throughput 0.07M tokens/s
+iter 8: loss 9.4517, time 332.96ms, mfu 15.91%, throughput 0.07M tokens/s
+iter 9: loss 9.3441, time 331.74ms, mfu 19.19%, throughput 0.07M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.57 M tokens/s in 1.16s
+step 10: train loss 9.2671, val loss 9.2659
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 10: loss 9.2626, time 4810.47ms, mfu 17.61%, throughput 0.10M tokens/s
+iter 11: loss 9.1991, time 377.82ms, mfu 20.13%, throughput 0.10M tokens/s
+iter 12: loss 9.0918, time 331.23ms, mfu 23.00%, throughput 0.10M tokens/s
+iter 13: loss 8.9942, time 332.15ms, mfu 25.57%, throughput 0.10M tokens/s
+iter 14: loss 8.8735, time 332.76ms, mfu 27.87%, throughput 0.10M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.57 M tokens/s in 1.16s
+step 15: train loss 8.7429, val loss 8.7448
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 15: loss 8.7376, time 4718.13ms, mfu 25.42%, throughput 0.12M tokens/s
+iter 16: loss 8.6533, time 364.96ms, mfu 27.31%, throughput 0.12M tokens/s
+iter 17: loss 8.4775, time 332.92ms, mfu 29.44%, throughput 0.12M tokens/s
+iter 18: loss 8.3965, time 334.18ms, mfu 31.33%, throughput 0.12M tokens/s
+iter 19: loss 8.3224, time 330.75ms, mfu 33.09%, throughput 0.12M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 20: train loss 8.1534, val loss 8.1608
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 20: loss 8.2110, time 4855.75ms, mfu 30.11%, throughput 0.13M tokens/s
+iter 21: loss 8.0843, time 328.88ms, mfu 32.02%, throughput 0.13M tokens/s
+iter 22: loss 7.9336, time 335.91ms, mfu 33.63%, throughput 0.13M tokens/s
+iter 23: loss 7.8355, time 332.72ms, mfu 35.13%, throughput 0.13M tokens/s
+iter 24: loss 7.7379, time 331.06ms, mfu 36.50%, throughput 0.13M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.16s
+step 25: train loss 7.6579, val loss 7.6713
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 25: loss 7.6971, time 4798.97ms, mfu 33.19%, throughput 0.14M tokens/s
+iter 26: loss 7.5926, time 364.45ms, mfu 34.30%, throughput 0.14M tokens/s
+iter 27: loss 7.5221, time 333.11ms, mfu 35.73%, throughput 0.14M tokens/s
+iter 28: loss 7.4152, time 331.45ms, mfu 37.03%, throughput 0.14M tokens/s
+iter 29: loss 7.4429, time 333.73ms, mfu 38.18%, throughput 0.14M tokens/s
+train throughput: 0.54 M tokens/s in 1.21s
+val throughput: 0.57 M tokens/s in 1.16s
+step 30: train loss 7.4078, val loss 7.3737
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 30: loss 7.4188, time 4682.29ms, mfu 34.70%, throughput 0.15M tokens/s
+iter 31: loss 7.3685, time 332.87ms, mfu 36.09%, throughput 0.15M tokens/s
+iter 32: loss 7.3366, time 332.48ms, mfu 37.35%, throughput 0.15M tokens/s
+iter 33: loss 7.2964, time 335.75ms, mfu 38.43%, throughput 0.15M tokens/s
+iter 34: loss 7.2995, time 334.12ms, mfu 39.42%, throughput 0.15M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 35: train loss 7.2582, val loss 7.2735
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 35: loss 7.1985, time 4782.54ms, mfu 35.82%, throughput 0.16M tokens/s
+iter 36: loss 7.2307, time 355.88ms, mfu 36.78%, throughput 0.16M tokens/s
+iter 37: loss 7.2450, time 331.38ms, mfu 37.98%, throughput 0.16M tokens/s
+iter 38: loss 7.1806, time 334.01ms, mfu 39.03%, throughput 0.16M tokens/s
+iter 39: loss 7.2461, time 334.13ms, mfu 39.96%, throughput 0.16M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 40: train loss 7.1528, val loss 7.1957
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 40: loss 7.1761, time 4607.12ms, mfu 36.32%, throughput 0.17M tokens/s
+iter 41: loss 7.2152, time 336.57ms, mfu 37.49%, throughput 0.17M tokens/s
+iter 42: loss 7.1303, time 330.35ms, mfu 38.64%, throughput 0.17M tokens/s
+iter 43: loss 7.1466, time 332.68ms, mfu 39.63%, throughput 0.17M tokens/s
+iter 44: loss 7.1764, time 336.65ms, mfu 40.47%, throughput 0.17M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 45: train loss 7.0953, val loss 7.0755
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 45: loss 7.1122, time 4684.01ms, mfu 36.77%, throughput 0.18M tokens/s
+iter 46: loss 7.0894, time 375.23ms, mfu 37.40%, throughput 0.18M tokens/s
+iter 47: loss 7.0389, time 337.72ms, mfu 38.45%, throughput 0.18M tokens/s
+iter 48: loss 6.9863, time 331.13ms, mfu 39.49%, throughput 0.18M tokens/s
+iter 49: loss 7.0459, time 335.43ms, mfu 40.36%, throughput 0.18M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.16s
+step 50: train loss 6.9668, val loss 7.0175
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 50: loss 6.9336, time 4527.98ms, mfu 36.68%, throughput 0.18M tokens/s
+iter 51: loss 6.9394, time 324.86ms, mfu 37.99%, throughput 0.18M tokens/s
+iter 52: loss 7.0118, time 336.88ms, mfu 38.99%, throughput 0.18M tokens/s
+iter 53: loss 6.9416, time 334.10ms, mfu 39.93%, throughput 0.18M tokens/s
+iter 54: loss 7.0050, time 335.23ms, mfu 40.76%, throughput 0.18M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.43 M tokens/s in 1.54s
+step 55: train loss 6.9105, val loss 6.9130
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 55: loss 6.9247, time 5215.65ms, mfu 37.00%, throughput 0.19M tokens/s
+iter 56: loss 6.9142, time 346.03ms, mfu 37.97%, throughput 0.19M tokens/s
+iter 57: loss 6.8493, time 334.64ms, mfu 39.01%, throughput 0.19M tokens/s
+iter 58: loss 6.8304, time 335.49ms, mfu 39.93%, throughput 0.19M tokens/s
+iter 59: loss 6.8423, time 336.30ms, mfu 40.74%, throughput 0.19M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 60: train loss 6.8163, val loss 6.8387
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 60: loss 6.8544, time 4766.75ms, mfu 37.01%, throughput 0.19M tokens/s
+iter 61: loss 6.8512, time 344.06ms, mfu 38.01%, throughput 0.19M tokens/s
+iter 62: loss 6.7420, time 338.65ms, mfu 38.98%, throughput 0.19M tokens/s
+iter 63: loss 6.7802, time 329.85ms, mfu 39.98%, throughput 0.19M tokens/s
+iter 64: loss 6.7217, time 336.36ms, mfu 40.79%, throughput 0.19M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 65: train loss 6.7380, val loss 6.7287
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 65: loss 6.7415, time 4706.39ms, mfu 37.06%, throughput 0.20M tokens/s
+iter 66: loss 6.7995, time 330.50ms, mfu 38.24%, throughput 0.20M tokens/s
+iter 67: loss 6.7070, time 336.99ms, mfu 39.22%, throughput 0.20M tokens/s
+iter 68: loss 6.7447, time 334.20ms, mfu 40.14%, throughput 0.20M tokens/s
+iter 69: loss 6.7264, time 336.22ms, mfu 40.93%, throughput 0.20M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 70: train loss 6.6309, val loss 6.6581
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 70: loss 6.6303, time 4911.20ms, mfu 37.17%, throughput 0.20M tokens/s
+iter 71: loss 6.6698, time 377.09ms, mfu 37.74%, throughput 0.20M tokens/s
+iter 72: loss 6.6878, time 335.61ms, mfu 38.78%, throughput 0.20M tokens/s
+iter 73: loss 6.6463, time 334.03ms, mfu 39.75%, throughput 0.20M tokens/s
+iter 74: loss 6.5919, time 336.03ms, mfu 40.58%, throughput 0.20M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 75: train loss 6.5778, val loss 6.6052
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 75: loss 6.5923, time 4788.33ms, mfu 36.86%, throughput 0.20M tokens/s
+iter 76: loss 6.6378, time 330.84ms, mfu 38.06%, throughput 0.20M tokens/s
+iter 77: loss 6.6319, time 337.34ms, mfu 39.05%, throughput 0.20M tokens/s
+iter 78: loss 6.5662, time 334.58ms, mfu 39.98%, throughput 0.20M tokens/s
+iter 79: loss 6.6003, time 340.30ms, mfu 40.73%, throughput 0.20M tokens/s
+train throughput: 0.53 M tokens/s in 1.23s
+val throughput: 0.56 M tokens/s in 1.18s
+step 80: train loss 6.5607, val loss 6.5683
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 80: loss 6.6815, time 4920.46ms, mfu 36.99%, throughput 0.21M tokens/s
+iter 81: loss 6.5579, time 351.12ms, mfu 37.90%, throughput 0.21M tokens/s
+iter 82: loss 6.6623, time 336.88ms, mfu 38.91%, throughput 0.21M tokens/s
+iter 83: loss 6.5143, time 333.85ms, mfu 39.86%, throughput 0.21M tokens/s
+iter 84: loss 6.5067, time 334.47ms, mfu 40.71%, throughput 0.21M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.18s
+step 85: train loss 6.4898, val loss 6.5313
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 85: loss 6.5515, time 4794.84ms, mfu 36.97%, throughput 0.21M tokens/s
+iter 86: loss 6.6137, time 330.66ms, mfu 38.17%, throughput 0.21M tokens/s
+iter 87: loss 6.4953, time 337.14ms, mfu 39.15%, throughput 0.21M tokens/s
+iter 88: loss 6.4712, time 334.87ms, mfu 40.06%, throughput 0.21M tokens/s
+iter 89: loss 6.5502, time 337.51ms, mfu 40.85%, throughput 0.21M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.17s
+step 90: train loss 6.4758, val loss 6.4689
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 90: loss 6.4967, time 4810.82ms, mfu 37.10%, throughput 0.21M tokens/s
+iter 91: loss 6.4905, time 367.38ms, mfu 37.79%, throughput 0.21M tokens/s
+iter 92: loss 6.4609, time 336.84ms, mfu 38.81%, throughput 0.21M tokens/s
+iter 93: loss 6.4726, time 335.48ms, mfu 39.75%, throughput 0.21M tokens/s
+iter 94: loss 6.4337, time 334.52ms, mfu 40.61%, throughput 0.21M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 95: train loss 6.4069, val loss 6.4361
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 95: loss 6.5238, time 4888.18ms, mfu 36.88%, throughput 0.21M tokens/s
+iter 96: loss 6.4308, time 356.91ms, mfu 37.72%, throughput 0.21M tokens/s
+iter 97: loss 6.4426, time 336.39ms, mfu 38.76%, throughput 0.21M tokens/s
+iter 98: loss 6.3967, time 333.18ms, mfu 39.73%, throughput 0.21M tokens/s
+iter 99: loss 6.4501, time 336.12ms, mfu 40.57%, throughput 0.21M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.55 M tokens/s in 1.18s
+step 100: train loss 6.3730, val loss 6.3777
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 100: loss 6.3570, time 4718.86ms, mfu 36.86%, throughput 0.21M tokens/s
+iter 101: loss 6.3800, time 342.58ms, mfu 37.89%, throughput 0.21M tokens/s
+iter 102: loss 6.4031, time 337.40ms, mfu 38.90%, throughput 0.21M tokens/s
+iter 103: loss 6.4102, time 338.33ms, mfu 39.79%, throughput 0.21M tokens/s
+iter 104: loss 6.2911, time 330.68ms, mfu 40.70%, throughput 0.21M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 105: train loss 6.3252, val loss 6.3710
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 105: loss 6.3225, time 4807.87ms, mfu 36.96%, throughput 0.22M tokens/s
+iter 106: loss 6.3423, time 364.01ms, mfu 37.71%, throughput 0.22M tokens/s
+iter 107: loss 6.3686, time 334.28ms, mfu 38.78%, throughput 0.22M tokens/s
+iter 108: loss 6.3698, time 336.09ms, mfu 39.71%, throughput 0.22M tokens/s
+iter 109: loss 6.3528, time 337.04ms, mfu 40.54%, throughput 0.22M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 110: train loss 6.3178, val loss 6.3284
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 110: loss 6.3480, time 4794.34ms, mfu 36.82%, throughput 0.22M tokens/s
+iter 111: loss 6.2892, time 331.69ms, mfu 38.01%, throughput 0.22M tokens/s
+iter 112: loss 6.3996, time 337.68ms, mfu 39.00%, throughput 0.22M tokens/s
+iter 113: loss 6.3717, time 334.71ms, mfu 39.93%, throughput 0.22M tokens/s
+iter 114: loss 6.3562, time 336.34ms, mfu 40.75%, throughput 0.22M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.18s
+step 115: train loss 6.2780, val loss 6.3101
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 115: loss 6.3291, time 4712.17ms, mfu 37.01%, throughput 0.22M tokens/s
+iter 116: loss 6.3724, time 349.61ms, mfu 37.94%, throughput 0.22M tokens/s
+iter 117: loss 6.3750, time 339.19ms, mfu 38.91%, throughput 0.22M tokens/s
+iter 118: loss 6.3359, time 338.14ms, mfu 39.80%, throughput 0.22M tokens/s
+iter 119: loss 6.3448, time 332.66ms, mfu 40.68%, throughput 0.22M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 120: train loss 6.2579, val loss 6.2813
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 120: loss 6.3520, time 4882.22ms, mfu 36.95%, throughput 0.22M tokens/s
+iter 121: loss 6.2635, time 331.02ms, mfu 38.14%, throughput 0.22M tokens/s
+iter 122: loss 6.2865, time 338.04ms, mfu 39.11%, throughput 0.22M tokens/s
+iter 123: loss 6.2842, time 649.82ms, mfu 37.68%, throughput 0.22M tokens/s
+iter 124: loss 6.3059, time 220.67ms, mfu 41.24%, throughput 0.22M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.17s
+step 125: train loss 6.2239, val loss 6.2422
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 125: loss 6.2892, time 4837.79ms, mfu 37.45%, throughput 0.22M tokens/s
+iter 126: loss 6.2240, time 365.79ms, mfu 38.13%, throughput 0.22M tokens/s
+iter 127: loss 6.2381, time 334.31ms, mfu 39.15%, throughput 0.22M tokens/s
+iter 128: loss 6.2143, time 337.23ms, mfu 40.03%, throughput 0.22M tokens/s
+iter 129: loss 6.2092, time 336.83ms, mfu 40.83%, throughput 0.22M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.18s
+step 130: train loss 6.2020, val loss 6.1829
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 130: loss 6.2461, time 4954.87ms, mfu 37.07%, throughput 0.22M tokens/s
+iter 131: loss 6.1861, time 333.31ms, mfu 38.22%, throughput 0.22M tokens/s
+iter 132: loss 6.2115, time 337.09ms, mfu 39.19%, throughput 0.22M tokens/s
+iter 133: loss 6.2977, time 334.57ms, mfu 40.11%, throughput 0.22M tokens/s
+iter 134: loss 6.2009, time 335.12ms, mfu 40.92%, throughput 0.22M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.55 M tokens/s in 1.18s
+step 135: train loss 6.1710, val loss 6.1580
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 135: loss 6.1791, time 4875.57ms, mfu 37.16%, throughput 0.23M tokens/s
+iter 136: loss 6.1447, time 333.33ms, mfu 38.30%, throughput 0.22M tokens/s
+iter 137: loss 6.1968, time 337.85ms, mfu 39.25%, throughput 0.22M tokens/s
+iter 138: loss 6.1721, time 333.69ms, mfu 40.17%, throughput 0.22M tokens/s
+iter 139: loss 6.1384, time 335.87ms, mfu 40.97%, throughput 0.22M tokens/s
+train throughput: 0.54 M tokens/s in 1.21s
+val throughput: 0.56 M tokens/s in 1.17s
+step 140: train loss 6.1307, val loss 6.1223
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 140: loss 6.1609, time 4856.24ms, mfu 37.21%, throughput 0.23M tokens/s
+iter 141: loss 6.1176, time 367.05ms, mfu 37.89%, throughput 0.23M tokens/s
+iter 142: loss 6.1269, time 336.38ms, mfu 38.91%, throughput 0.23M tokens/s
+iter 143: loss 6.1382, time 335.09ms, mfu 39.84%, throughput 0.23M tokens/s
+iter 144: loss 6.0533, time 334.87ms, mfu 40.69%, throughput 0.23M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 145: train loss 6.1261, val loss 6.1292
+iter 145: loss 6.1208, time 2711.82ms, mfu 37.22%, throughput 0.23M tokens/s
+iter 146: loss 6.1521, time 335.73ms, mfu 38.31%, throughput 0.23M tokens/s
+iter 147: loss 6.1534, time 336.53ms, mfu 39.29%, throughput 0.23M tokens/s
+iter 148: loss 6.0907, time 337.51ms, mfu 40.15%, throughput 0.23M tokens/s
+iter 149: loss 6.1328, time 335.57ms, mfu 40.95%, throughput 0.23M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.18s
+step 150: train loss 6.0960, val loss 6.0815
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 150: loss 6.0591, time 4786.58ms, mfu 37.19%, throughput 0.23M tokens/s
+iter 151: loss 6.0987, time 334.26ms, mfu 38.31%, throughput 0.23M tokens/s
+iter 152: loss 6.1277, time 336.43ms, mfu 39.29%, throughput 0.23M tokens/s
+iter 153: loss 6.0309, time 334.04ms, mfu 40.20%, throughput 0.23M tokens/s
+iter 154: loss 6.1250, time 335.91ms, mfu 40.99%, throughput 0.23M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.18s
+step 155: train loss 6.0390, val loss 6.0763
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 155: loss 6.0835, time 4864.99ms, mfu 37.23%, throughput 0.23M tokens/s
+iter 156: loss 6.0327, time 333.46ms, mfu 38.35%, throughput 0.23M tokens/s
+iter 157: loss 6.0647, time 337.35ms, mfu 39.31%, throughput 0.23M tokens/s
+iter 158: loss 5.9944, time 351.82ms, mfu 39.98%, throughput 0.23M tokens/s
+iter 159: loss 6.1160, time 318.09ms, mfu 41.06%, throughput 0.23M tokens/s
+train throughput: 0.54 M tokens/s in 1.21s
+val throughput: 0.56 M tokens/s in 1.18s
+step 160: train loss 6.0368, val loss 6.0503
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 160: loss 6.0998, time 4749.08ms, mfu 37.30%, throughput 0.23M tokens/s
+iter 161: loss 6.0766, time 354.49ms, mfu 38.13%, throughput 0.23M tokens/s
+iter 162: loss 6.0439, time 329.55ms, mfu 39.22%, throughput 0.23M tokens/s
+iter 163: loss 6.0267, time 339.21ms, mfu 40.07%, throughput 0.23M tokens/s
+iter 164: loss 6.0583, time 333.66ms, mfu 40.91%, throughput 0.23M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 165: train loss 5.9818, val loss 6.0125
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 165: loss 6.0062, time 4742.54ms, mfu 37.16%, throughput 0.23M tokens/s
+iter 166: loss 6.0541, time 336.34ms, mfu 38.25%, throughput 0.23M tokens/s
+iter 167: loss 6.0065, time 330.45ms, mfu 39.32%, throughput 0.23M tokens/s
+iter 168: loss 6.0417, time 339.43ms, mfu 40.15%, throughput 0.23M tokens/s
+iter 169: loss 5.9057, time 332.32ms, mfu 41.00%, throughput 0.23M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 170: train loss 5.9775, val loss 5.9912
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 170: loss 6.0216, time 4973.13ms, mfu 37.23%, throughput 0.23M tokens/s
+iter 171: loss 6.0103, time 218.91ms, mfu 40.89%, throughput 0.23M tokens/s
+iter 172: loss 6.0232, time 345.26ms, mfu 41.49%, throughput 0.23M tokens/s
+iter 173: loss 5.9956, time 326.52ms, mfu 42.29%, throughput 0.23M tokens/s
+iter 174: loss 5.9069, time 337.04ms, mfu 42.86%, throughput 0.23M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 175: train loss 5.9667, val loss 5.9711
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 175: loss 6.0276, time 4818.64ms, mfu 38.91%, throughput 0.24M tokens/s
+iter 176: loss 5.9941, time 328.23ms, mfu 39.94%, throughput 0.23M tokens/s
+iter 177: loss 5.9306, time 337.15ms, mfu 40.75%, throughput 0.23M tokens/s
+iter 178: loss 5.9585, time 336.58ms, mfu 41.48%, throughput 0.23M tokens/s
+iter 179: loss 5.9548, time 335.50ms, mfu 42.15%, throughput 0.23M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.17s
+step 180: train loss 5.9298, val loss 5.9297
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 180: loss 5.9637, time 4689.42ms, mfu 38.28%, throughput 0.24M tokens/s
+iter 181: loss 5.9673, time 346.74ms, mfu 39.11%, throughput 0.24M tokens/s
+iter 182: loss 5.9587, time 335.57ms, mfu 40.02%, throughput 0.24M tokens/s
+iter 183: loss 6.0460, time 335.55ms, mfu 40.84%, throughput 0.24M tokens/s
+iter 184: loss 5.9516, time 335.56ms, mfu 41.57%, throughput 0.24M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 185: train loss 5.9043, val loss 5.9283
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 185: loss 5.9979, time 4672.11ms, mfu 37.76%, throughput 0.24M tokens/s
+iter 186: loss 5.9109, time 297.61ms, mfu 39.42%, throughput 0.24M tokens/s
+iter 187: loss 5.9247, time 337.29ms, mfu 40.27%, throughput 0.24M tokens/s
+iter 188: loss 6.0078, time 334.53ms, mfu 41.08%, throughput 0.24M tokens/s
+iter 189: loss 5.8780, time 335.85ms, mfu 41.79%, throughput 0.24M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.18s
+step 190: train loss 5.8891, val loss 5.9004
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 190: loss 5.9558, time 4825.56ms, mfu 37.94%, throughput 0.24M tokens/s
+iter 191: loss 5.9170, time 369.00ms, mfu 38.53%, throughput 0.24M tokens/s
+iter 192: loss 5.9079, time 338.91ms, mfu 39.45%, throughput 0.24M tokens/s
+iter 193: loss 5.9158, time 331.19ms, mfu 40.39%, throughput 0.24M tokens/s
+iter 194: loss 5.9427, time 336.21ms, mfu 41.16%, throughput 0.24M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.18s
+step 195: train loss 5.8610, val loss 5.8566
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 195: loss 5.9546, time 4591.04ms, mfu 37.39%, throughput 0.24M tokens/s
+iter 196: loss 5.9042, time 336.89ms, mfu 38.45%, throughput 0.24M tokens/s
+iter 197: loss 5.9209, time 333.35ms, mfu 39.46%, throughput 0.24M tokens/s
+iter 198: loss 5.8433, time 335.57ms, mfu 40.33%, throughput 0.24M tokens/s
+iter 199: loss 5.8923, time 336.75ms, mfu 41.10%, throughput 0.24M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.19s
+step 200: train loss 5.8246, val loss 5.8524
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 200: loss 5.8884, time 4931.77ms, mfu 37.32%, throughput 0.24M tokens/s
+iter 201: loss 5.8892, time 353.51ms, mfu 38.16%, throughput 0.24M tokens/s
+iter 202: loss 5.8918, time 335.62ms, mfu 39.16%, throughput 0.24M tokens/s
+iter 203: loss 5.9502, time 333.63ms, mfu 40.09%, throughput 0.24M tokens/s
+iter 204: loss 5.9152, time 337.16ms, mfu 40.88%, throughput 0.24M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 205: train loss 5.8240, val loss 5.8292
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 205: loss 5.8837, time 4903.22ms, mfu 37.12%, throughput 0.24M tokens/s
+iter 206: loss 5.8757, time 338.10ms, mfu 38.19%, throughput 0.24M tokens/s
+iter 207: loss 5.8922, time 330.70ms, mfu 39.26%, throughput 0.24M tokens/s
+iter 208: loss 5.8306, time 337.38ms, mfu 40.13%, throughput 0.24M tokens/s
+iter 209: loss 5.7728, time 333.74ms, mfu 40.96%, throughput 0.24M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 210: train loss 5.7829, val loss 5.7967
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 210: loss 5.8220, time 4944.15ms, mfu 37.19%, throughput 0.24M tokens/s
+iter 211: loss 5.9018, time 347.42ms, mfu 38.13%, throughput 0.24M tokens/s
+iter 212: loss 5.7709, time 342.81ms, mfu 39.03%, throughput 0.24M tokens/s
+iter 213: loss 5.8716, time 327.29ms, mfu 40.07%, throughput 0.24M tokens/s
+iter 214: loss 5.7859, time 334.51ms, mfu 40.90%, throughput 0.24M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.16s
+step 215: train loss 5.7905, val loss 5.7785
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 215: loss 5.8314, time 4824.37ms, mfu 37.14%, throughput 0.24M tokens/s
+iter 216: loss 5.8541, time 367.82ms, mfu 37.82%, throughput 0.24M tokens/s
+iter 217: loss 5.7361, time 362.95ms, mfu 38.50%, throughput 0.24M tokens/s
+iter 218: loss 5.7922, time 309.12ms, mfu 39.88%, throughput 0.24M tokens/s
+iter 219: loss 5.8399, time 336.15ms, mfu 40.70%, throughput 0.24M tokens/s
+train throughput: 0.54 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.17s
+step 220: train loss 5.7459, val loss 5.7319
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 220: loss 5.7770, time 4695.07ms, mfu 36.98%, throughput 0.24M tokens/s
+iter 221: loss 5.7581, time 332.04ms, mfu 38.15%, throughput 0.24M tokens/s
+iter 222: loss 5.8002, time 337.08ms, mfu 39.13%, throughput 0.24M tokens/s
+iter 223: loss 5.7164, time 335.96ms, mfu 40.03%, throughput 0.24M tokens/s
+iter 224: loss 5.7184, time 336.28ms, mfu 40.84%, throughput 0.24M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 225: train loss 5.7104, val loss 5.7211
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 225: loss 5.7332, time 4861.03ms, mfu 37.09%, throughput 0.24M tokens/s
+iter 226: loss 5.7596, time 364.07ms, mfu 37.82%, throughput 0.24M tokens/s
+iter 227: loss 5.7529, time 336.05ms, mfu 38.85%, throughput 0.24M tokens/s
+iter 228: loss 5.7050, time 335.37ms, mfu 39.79%, throughput 0.24M tokens/s
+iter 229: loss 5.7316, time 337.26ms, mfu 40.60%, throughput 0.24M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 230: train loss 5.7091, val loss 5.7048
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 230: loss 5.7105, time 4843.02ms, mfu 36.88%, throughput 0.24M tokens/s
+iter 231: loss 5.7697, time 332.99ms, mfu 38.04%, throughput 0.24M tokens/s
+iter 232: loss 5.7716, time 337.01ms, mfu 39.04%, throughput 0.24M tokens/s
+iter 233: loss 5.7852, time 338.34ms, mfu 39.91%, throughput 0.24M tokens/s
+iter 234: loss 5.7092, time 333.66ms, mfu 40.77%, throughput 0.24M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.17s
+step 235: train loss 5.6875, val loss 5.6657
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 235: loss 5.7294, time 4915.58ms, mfu 37.02%, throughput 0.24M tokens/s
+iter 236: loss 5.7539, time 376.81ms, mfu 37.61%, throughput 0.24M tokens/s
+iter 237: loss 5.7202, time 334.30ms, mfu 38.69%, throughput 0.24M tokens/s
+iter 238: loss 5.6697, time 335.46ms, mfu 39.64%, throughput 0.24M tokens/s
+iter 239: loss 5.7275, time 341.27ms, mfu 40.41%, throughput 0.24M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.54 M tokens/s in 1.21s
+step 240: train loss 5.6593, val loss 5.6688
+iter 240: loss 5.6600, time 2753.14ms, mfu 36.96%, throughput 0.24M tokens/s
+iter 241: loss 5.6457, time 331.15ms, mfu 38.15%, throughput 0.24M tokens/s
+iter 242: loss 5.6910, time 335.01ms, mfu 39.16%, throughput 0.24M tokens/s
+iter 243: loss 5.6700, time 336.32ms, mfu 40.05%, throughput 0.24M tokens/s
+iter 244: loss 5.6864, time 336.86ms, mfu 40.85%, throughput 0.24M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 245: train loss 5.6558, val loss 5.6443
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 245: loss 5.6421, time 4803.25ms, mfu 37.10%, throughput 0.24M tokens/s
+iter 246: loss 5.7017, time 333.37ms, mfu 38.24%, throughput 0.24M tokens/s
+iter 247: loss 5.6644, time 336.55ms, mfu 39.22%, throughput 0.24M tokens/s
+iter 248: loss 5.6708, time 336.27ms, mfu 40.11%, throughput 0.24M tokens/s
+iter 249: loss 5.6243, time 337.97ms, mfu 40.88%, throughput 0.24M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 250: train loss 5.6203, val loss 5.5838
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 250: loss 5.6548, time 4790.94ms, mfu 37.13%, throughput 0.24M tokens/s
+iter 251: loss 5.6022, time 366.94ms, mfu 37.82%, throughput 0.24M tokens/s
+iter 252: loss 5.6422, time 337.51ms, mfu 38.83%, throughput 0.24M tokens/s
+iter 253: loss 5.6928, time 335.42ms, mfu 39.77%, throughput 0.24M tokens/s
+iter 254: loss 5.6218, time 340.70ms, mfu 40.54%, throughput 0.24M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 255: train loss 5.6004, val loss 5.6023
+iter 255: loss 5.6002, time 2699.73ms, mfu 37.08%, throughput 0.25M tokens/s
+iter 256: loss 5.7006, time 337.46ms, mfu 38.17%, throughput 0.25M tokens/s
+iter 257: loss 5.7280, time 338.76ms, mfu 39.12%, throughput 0.25M tokens/s
+iter 258: loss 5.6192, time 337.80ms, mfu 40.00%, throughput 0.25M tokens/s
+iter 259: loss 5.5570, time 335.66ms, mfu 40.82%, throughput 0.25M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.18s
+step 260: train loss 5.5815, val loss 5.5485
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 260: loss 5.6044, time 4884.07ms, mfu 37.07%, throughput 0.25M tokens/s
+iter 261: loss 5.5300, time 358.97ms, mfu 37.86%, throughput 0.25M tokens/s
+iter 262: loss 5.6322, time 336.67ms, mfu 38.88%, throughput 0.25M tokens/s
+iter 263: loss 5.6828, time 336.22ms, mfu 39.80%, throughput 0.25M tokens/s
+iter 264: loss 5.6504, time 334.30ms, mfu 40.66%, throughput 0.25M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 265: train loss 5.5505, val loss 5.5502
+iter 265: loss 5.5834, time 2702.57ms, mfu 37.19%, throughput 0.25M tokens/s
+iter 266: loss 5.5852, time 337.18ms, mfu 38.27%, throughput 0.25M tokens/s
+iter 267: loss 5.6180, time 337.18ms, mfu 39.24%, throughput 0.25M tokens/s
+iter 268: loss 5.5756, time 337.20ms, mfu 40.11%, throughput 0.25M tokens/s
+iter 269: loss 5.6404, time 335.86ms, mfu 40.91%, throughput 0.25M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.55 M tokens/s in 1.18s
+step 270: train loss 5.5238, val loss 5.5554
+iter 270: loss 5.6124, time 2717.03ms, mfu 37.42%, throughput 0.25M tokens/s
+iter 271: loss 5.6213, time 337.37ms, mfu 38.47%, throughput 0.25M tokens/s
+iter 272: loss 5.6407, time 336.13ms, mfu 39.43%, throughput 0.25M tokens/s
+iter 273: loss 5.5521, time 336.41ms, mfu 40.30%, throughput 0.25M tokens/s
+iter 274: loss 5.5645, time 337.09ms, mfu 41.06%, throughput 0.25M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.17s
+step 275: train loss 5.5232, val loss 5.4938
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 275: loss 5.5228, time 4864.90ms, mfu 37.29%, throughput 0.25M tokens/s
+iter 276: loss 5.5720, time 327.14ms, mfu 38.50%, throughput 0.25M tokens/s
+iter 277: loss 5.6135, time 336.52ms, mfu 39.46%, throughput 0.25M tokens/s
+iter 278: loss 5.5567, time 335.68ms, mfu 40.33%, throughput 0.25M tokens/s
+iter 279: loss 5.5784, time 338.70ms, mfu 41.07%, throughput 0.25M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.55 M tokens/s in 1.18s
+step 280: train loss 5.4903, val loss 5.4913
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 280: loss 5.5237, time 4910.06ms, mfu 37.29%, throughput 0.25M tokens/s
+iter 281: loss 5.4931, time 359.24ms, mfu 38.06%, throughput 0.25M tokens/s
+iter 282: loss 5.5143, time 335.27ms, mfu 39.08%, throughput 0.25M tokens/s
+iter 283: loss 5.5739, time 334.55ms, mfu 40.01%, throughput 0.25M tokens/s
+iter 284: loss 5.5227, time 335.92ms, mfu 40.82%, throughput 0.25M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 285: train loss 5.4881, val loss 5.4914
+iter 285: loss 5.5250, time 2698.44ms, mfu 37.34%, throughput 0.25M tokens/s
+iter 286: loss 5.5204, time 337.48ms, mfu 38.39%, throughput 0.25M tokens/s
+iter 287: loss 5.5886, time 336.11ms, mfu 39.37%, throughput 0.25M tokens/s
+iter 288: loss 5.4889, time 334.23ms, mfu 40.27%, throughput 0.25M tokens/s
+iter 289: loss 5.5071, time 337.64ms, mfu 41.03%, throughput 0.25M tokens/s
+train throughput: 0.54 M tokens/s in 1.21s
+val throughput: 0.56 M tokens/s in 1.17s
+step 290: train loss 5.4838, val loss 5.4581
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 290: loss 5.5557, time 5001.25ms, mfu 37.25%, throughput 0.25M tokens/s
+iter 291: loss 5.4902, time 333.72ms, mfu 38.37%, throughput 0.25M tokens/s
+iter 292: loss 5.4911, time 337.07ms, mfu 39.33%, throughput 0.25M tokens/s
+iter 293: loss 5.5555, time 335.19ms, mfu 40.22%, throughput 0.25M tokens/s
+iter 294: loss 5.5681, time 336.01ms, mfu 41.01%, throughput 0.25M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.18s
+step 295: train loss 5.4521, val loss 5.4482
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 295: loss 5.4972, time 4775.94ms, mfu 37.25%, throughput 0.25M tokens/s
+iter 296: loss 5.5966, time 372.54ms, mfu 37.87%, throughput 0.25M tokens/s
+iter 297: loss 5.5190, time 336.71ms, mfu 38.88%, throughput 0.25M tokens/s
+iter 298: loss 5.4774, time 331.74ms, mfu 39.87%, throughput 0.25M tokens/s
+iter 299: loss 5.5335, time 336.63ms, mfu 40.68%, throughput 0.25M tokens/s
+train throughput: 0.54 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.18s
+step 300: train loss 5.4475, val loss 5.4531
+iter 300: loss 5.5038, time 2716.76ms, mfu 37.21%, throughput 0.25M tokens/s
+iter 301: loss 5.5379, time 336.67ms, mfu 38.29%, throughput 0.25M tokens/s
+iter 302: loss 5.5408, time 336.61ms, mfu 39.27%, throughput 0.25M tokens/s
+iter 303: loss 5.4522, time 335.26ms, mfu 40.16%, throughput 0.25M tokens/s
+iter 304: loss 5.4520, time 335.64ms, mfu 40.97%, throughput 0.25M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 305: train loss 5.4192, val loss 5.3988
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 305: loss 5.4727, time 4690.68ms, mfu 37.21%, throughput 0.25M tokens/s
+iter 306: loss 5.5178, time 332.39ms, mfu 38.36%, throughput 0.25M tokens/s
+iter 307: loss 5.4856, time 336.74ms, mfu 39.32%, throughput 0.25M tokens/s
+iter 308: loss 5.5040, time 337.15ms, mfu 40.19%, throughput 0.25M tokens/s
+iter 309: loss 5.4691, time 337.04ms, mfu 40.97%, throughput 0.25M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.18s
+step 310: train loss 5.4221, val loss 5.4023
+iter 310: loss 5.4664, time 2698.74ms, mfu 37.47%, throughput 0.26M tokens/s
+iter 311: loss 5.4828, time 341.84ms, mfu 38.45%, throughput 0.26M tokens/s
+iter 312: loss 5.4640, time 332.03ms, mfu 39.48%, throughput 0.26M tokens/s
+iter 313: loss 5.4524, time 337.27ms, mfu 40.32%, throughput 0.26M tokens/s
+iter 314: loss 5.4361, time 337.16ms, mfu 41.09%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.55 M tokens/s in 1.18s
+step 315: train loss 5.3814, val loss 5.3876
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 315: loss 5.4159, time 4845.46ms, mfu 37.31%, throughput 0.26M tokens/s
+iter 316: loss 5.4484, time 365.99ms, mfu 38.00%, throughput 0.26M tokens/s
+iter 317: loss 5.4359, time 335.40ms, mfu 39.02%, throughput 0.26M tokens/s
+iter 318: loss 5.4523, time 336.25ms, mfu 39.93%, throughput 0.26M tokens/s
+iter 319: loss 5.3803, time 336.47ms, mfu 40.74%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.20s
+step 320: train loss 5.3874, val loss 5.3806
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 320: loss 5.5224, time 4950.35ms, mfu 36.99%, throughput 0.26M tokens/s
+iter 321: loss 5.4632, time 332.35ms, mfu 38.16%, throughput 0.26M tokens/s
+iter 322: loss 5.4732, time 338.28ms, mfu 39.12%, throughput 0.26M tokens/s
+iter 323: loss 5.4915, time 332.53ms, mfu 40.07%, throughput 0.26M tokens/s
+iter 324: loss 5.4454, time 337.75ms, mfu 40.85%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.17s
+step 325: train loss 5.3658, val loss 5.3662
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 325: loss 5.4102, time 4849.73ms, mfu 37.10%, throughput 0.26M tokens/s
+iter 326: loss 5.4617, time 295.29ms, mfu 38.87%, throughput 0.26M tokens/s
+iter 327: loss 5.4000, time 332.91ms, mfu 39.84%, throughput 0.26M tokens/s
+iter 328: loss 5.4208, time 338.86ms, mfu 40.63%, throughput 0.26M tokens/s
+iter 329: loss 5.4065, time 332.12ms, mfu 41.43%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 330: train loss 5.3385, val loss 5.3521
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 330: loss 5.4580, time 4698.38ms, mfu 37.63%, throughput 0.26M tokens/s
+iter 331: loss 5.3766, time 346.04ms, mfu 38.54%, throughput 0.26M tokens/s
+iter 332: loss 5.4556, time 335.26ms, mfu 39.51%, throughput 0.26M tokens/s
+iter 333: loss 5.3998, time 336.91ms, mfu 40.36%, throughput 0.26M tokens/s
+iter 334: loss 5.4365, time 335.18ms, mfu 41.15%, throughput 0.26M tokens/s
+train throughput: 0.54 M tokens/s in 1.21s
+val throughput: 0.56 M tokens/s in 1.18s
+step 335: train loss 5.3395, val loss 5.3279
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 335: loss 5.3956, time 4933.02ms, mfu 37.36%, throughput 0.26M tokens/s
+iter 336: loss 5.3803, time 349.18ms, mfu 38.26%, throughput 0.26M tokens/s
+iter 337: loss 5.4239, time 331.42ms, mfu 39.31%, throughput 0.26M tokens/s
+iter 338: loss 5.4106, time 335.70ms, mfu 40.20%, throughput 0.26M tokens/s
+iter 339: loss 5.3833, time 335.71ms, mfu 40.99%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 340: train loss 5.3072, val loss 5.3260
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 340: loss 5.3757, time 4842.72ms, mfu 37.23%, throughput 0.26M tokens/s
+iter 341: loss 5.4091, time 365.25ms, mfu 37.93%, throughput 0.26M tokens/s
+iter 342: loss 5.4159, time 335.14ms, mfu 38.96%, throughput 0.26M tokens/s
+iter 343: loss 5.3295, time 333.88ms, mfu 39.91%, throughput 0.26M tokens/s
+iter 344: loss 5.4043, time 340.42ms, mfu 40.67%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 345: train loss 5.3151, val loss 5.3117
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 345: loss 5.4243, time 4745.13ms, mfu 36.94%, throughput 0.26M tokens/s
+iter 346: loss 5.3925, time 333.28ms, mfu 38.10%, throughput 0.26M tokens/s
+iter 347: loss 5.4123, time 336.73ms, mfu 39.09%, throughput 0.26M tokens/s
+iter 348: loss 5.2945, time 333.84ms, mfu 40.03%, throughput 0.26M tokens/s
+iter 349: loss 5.3242, time 335.78ms, mfu 40.84%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 350: train loss 5.3156, val loss 5.2915
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 350: loss 5.3739, time 4644.38ms, mfu 37.11%, throughput 0.26M tokens/s
+iter 351: loss 5.3008, time 358.73ms, mfu 37.90%, throughput 0.26M tokens/s
+iter 352: loss 5.3635, time 336.69ms, mfu 38.91%, throughput 0.26M tokens/s
+iter 353: loss 5.3487, time 334.54ms, mfu 39.86%, throughput 0.26M tokens/s
+iter 354: loss 5.4130, time 337.20ms, mfu 40.67%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 355: train loss 5.2982, val loss 5.2920
+iter 355: loss 5.3016, time 2706.31ms, mfu 37.20%, throughput 0.26M tokens/s
+iter 356: loss 5.3597, time 335.49ms, mfu 38.30%, throughput 0.26M tokens/s
+iter 357: loss 5.2945, time 336.76ms, mfu 39.27%, throughput 0.26M tokens/s
+iter 358: loss 5.3856, time 336.90ms, mfu 40.14%, throughput 0.26M tokens/s
+iter 359: loss 5.3998, time 336.79ms, mfu 40.93%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.19s
+step 360: train loss 5.2709, val loss 5.2634
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 360: loss 5.3246, time 4677.14ms, mfu 37.18%, throughput 0.26M tokens/s
+iter 361: loss 5.3648, time 332.59ms, mfu 38.33%, throughput 0.26M tokens/s
+iter 362: loss 5.3149, time 335.21ms, mfu 39.32%, throughput 0.26M tokens/s
+iter 363: loss 5.3831, time 338.34ms, mfu 40.17%, throughput 0.26M tokens/s
+iter 364: loss 5.3166, time 335.46ms, mfu 40.97%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 365: train loss 5.2801, val loss 5.2828
+iter 365: loss 5.3357, time 2714.21ms, mfu 37.47%, throughput 0.26M tokens/s
+iter 366: loss 5.4060, time 337.57ms, mfu 38.51%, throughput 0.26M tokens/s
+iter 367: loss 5.3527, time 335.21ms, mfu 39.48%, throughput 0.26M tokens/s
+iter 368: loss 5.3307, time 333.40ms, mfu 40.39%, throughput 0.26M tokens/s
+iter 369: loss 5.2943, time 339.63ms, mfu 41.11%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 370: train loss 5.2502, val loss 5.2470
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 370: loss 5.3320, time 4748.69ms, mfu 37.34%, throughput 0.26M tokens/s
+iter 371: loss 5.3156, time 353.33ms, mfu 38.18%, throughput 0.26M tokens/s
+iter 372: loss 5.3601, time 335.61ms, mfu 39.18%, throughput 0.26M tokens/s
+iter 373: loss 5.3504, time 337.05ms, mfu 40.06%, throughput 0.26M tokens/s
+iter 374: loss 5.2765, time 332.95ms, mfu 40.91%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 375: train loss 5.2466, val loss 5.2337
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 375: loss 5.2551, time 4723.23ms, mfu 37.16%, throughput 0.26M tokens/s
+iter 376: loss 5.3608, time 331.16ms, mfu 38.33%, throughput 0.26M tokens/s
+iter 377: loss 5.3321, time 337.64ms, mfu 39.29%, throughput 0.26M tokens/s
+iter 378: loss 5.3229, time 336.10ms, mfu 40.17%, throughput 0.26M tokens/s
+iter 379: loss 5.2863, time 335.99ms, mfu 40.96%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.55 M tokens/s in 1.18s
+step 380: train loss 5.2423, val loss 5.2267
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 380: loss 5.3925, time 4801.09ms, mfu 37.20%, throughput 0.26M tokens/s
+iter 381: loss 5.2799, time 370.32ms, mfu 37.85%, throughput 0.26M tokens/s
+iter 382: loss 5.3051, time 337.21ms, mfu 38.86%, throughput 0.26M tokens/s
+iter 383: loss 5.2786, time 333.83ms, mfu 39.82%, throughput 0.26M tokens/s
+iter 384: loss 5.2808, time 337.89ms, mfu 40.62%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.55 M tokens/s in 1.18s
+step 385: train loss 5.2069, val loss 5.2187
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 385: loss 5.3126, time 4813.08ms, mfu 36.90%, throughput 0.26M tokens/s
+iter 386: loss 5.2744, time 328.50ms, mfu 38.13%, throughput 0.26M tokens/s
+iter 387: loss 5.2000, time 336.33ms, mfu 39.12%, throughput 0.26M tokens/s
+iter 388: loss 5.3007, time 336.62ms, mfu 40.02%, throughput 0.26M tokens/s
+iter 389: loss 5.2862, time 335.63ms, mfu 40.83%, throughput 0.26M tokens/s
+train throughput: 0.54 M tokens/s in 1.21s
+val throughput: 0.55 M tokens/s in 1.18s
+step 390: train loss 5.1917, val loss 5.2159
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 390: loss 5.2196, time 4807.50ms, mfu 37.09%, throughput 0.26M tokens/s
+iter 391: loss 5.3054, time 360.79ms, mfu 37.86%, throughput 0.26M tokens/s
+iter 392: loss 5.2699, time 332.89ms, mfu 38.93%, throughput 0.26M tokens/s
+iter 393: loss 5.2430, time 334.77ms, mfu 39.87%, throughput 0.26M tokens/s
+iter 394: loss 5.2773, time 336.96ms, mfu 40.68%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.18s
+step 395: train loss 5.2030, val loss 5.1980
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 395: loss 5.2356, time 4764.15ms, mfu 36.95%, throughput 0.26M tokens/s
+iter 396: loss 5.2309, time 330.92ms, mfu 38.14%, throughput 0.26M tokens/s
+iter 397: loss 5.2585, time 337.45ms, mfu 39.12%, throughput 0.26M tokens/s
+iter 398: loss 5.2062, time 335.87ms, mfu 40.02%, throughput 0.26M tokens/s
+iter 399: loss 5.2444, time 338.52ms, mfu 40.80%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 400: train loss 5.1851, val loss 5.1802
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 400: loss 5.3076, time 4650.19ms, mfu 37.07%, throughput 0.26M tokens/s
+iter 401: loss 5.2611, time 360.63ms, mfu 37.84%, throughput 0.26M tokens/s
+iter 402: loss 5.2852, time 336.23ms, mfu 38.87%, throughput 0.26M tokens/s
+iter 403: loss 5.2903, time 335.37ms, mfu 39.80%, throughput 0.26M tokens/s
+iter 404: loss 5.2526, time 335.11ms, mfu 40.65%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 405: train loss 5.1826, val loss 5.1866
+iter 405: loss 5.2590, time 2708.22ms, mfu 37.18%, throughput 0.26M tokens/s
+iter 406: loss 5.1786, time 342.22ms, mfu 38.19%, throughput 0.26M tokens/s
+iter 407: loss 5.2404, time 331.46ms, mfu 39.25%, throughput 0.26M tokens/s
+iter 408: loss 5.1730, time 338.77ms, mfu 40.10%, throughput 0.26M tokens/s
+iter 409: loss 5.2360, time 337.10ms, mfu 40.88%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 410: train loss 5.1551, val loss 5.1509
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 410: loss 5.1945, time 4746.40ms, mfu 37.14%, throughput 0.26M tokens/s
+iter 411: loss 5.1866, time 332.02ms, mfu 38.29%, throughput 0.26M tokens/s
+iter 412: loss 5.2127, time 336.98ms, mfu 39.26%, throughput 0.26M tokens/s
+iter 413: loss 5.2377, time 336.37ms, mfu 40.14%, throughput 0.26M tokens/s
+iter 414: loss 5.1838, time 335.90ms, mfu 40.94%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.18s
+step 415: train loss 5.1502, val loss 5.1410
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 415: loss 5.2103, time 4804.38ms, mfu 37.19%, throughput 0.26M tokens/s
+iter 416: loss 5.1667, time 334.62ms, mfu 38.30%, throughput 0.26M tokens/s
+iter 417: loss 5.2432, time 336.39ms, mfu 39.28%, throughput 0.26M tokens/s
+iter 418: loss 5.2967, time 334.24ms, mfu 40.19%, throughput 0.26M tokens/s
+iter 419: loss 5.2243, time 336.15ms, mfu 40.98%, throughput 0.26M tokens/s
+train throughput: 0.54 M tokens/s in 1.21s
+val throughput: 0.55 M tokens/s in 1.18s
+step 420: train loss 5.1565, val loss 5.1657
+iter 420: loss 5.1965, time 2732.45ms, mfu 37.47%, throughput 0.26M tokens/s
+iter 421: loss 5.1702, time 335.09ms, mfu 38.55%, throughput 0.26M tokens/s
+iter 422: loss 5.2096, time 334.57ms, mfu 39.53%, throughput 0.26M tokens/s
+iter 423: loss 5.1570, time 335.83ms, mfu 40.39%, throughput 0.26M tokens/s
+iter 424: loss 5.2087, time 338.10ms, mfu 41.13%, throughput 0.26M tokens/s
+train throughput: 0.54 M tokens/s in 1.22s
+val throughput: 0.56 M tokens/s in 1.18s
+step 425: train loss 5.1163, val loss 5.1370
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 425: loss 5.2462, time 4759.18ms, mfu 37.36%, throughput 0.26M tokens/s
+iter 426: loss 5.2175, time 349.80ms, mfu 38.25%, throughput 0.26M tokens/s
+iter 427: loss 5.1813, time 338.83ms, mfu 39.20%, throughput 0.26M tokens/s
+iter 428: loss 5.2004, time 335.39ms, mfu 40.10%, throughput 0.26M tokens/s
+iter 429: loss 5.2032, time 338.78ms, mfu 40.86%, throughput 0.26M tokens/s
+train throughput: 0.54 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.17s
+step 430: train loss 5.1469, val loss 5.1281
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 430: loss 5.2689, time 4736.56ms, mfu 37.12%, throughput 0.26M tokens/s
+iter 431: loss 5.1604, time 333.17ms, mfu 38.26%, throughput 0.26M tokens/s
+iter 432: loss 5.1693, time 336.91ms, mfu 39.23%, throughput 0.26M tokens/s
+iter 433: loss 5.2475, time 334.85ms, mfu 40.14%, throughput 0.26M tokens/s
+iter 434: loss 5.2502, time 338.42ms, mfu 40.90%, throughput 0.26M tokens/s
+train throughput: 0.49 M tokens/s in 1.34s
+val throughput: 0.56 M tokens/s in 1.17s
+step 435: train loss 5.1318, val loss 5.1153
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 435: loss 5.1515, time 4879.70ms, mfu 37.14%, throughput 0.26M tokens/s
+iter 436: loss 5.1621, time 353.99ms, mfu 38.00%, throughput 0.26M tokens/s
+iter 437: loss 5.1439, time 337.37ms, mfu 38.99%, throughput 0.26M tokens/s
+iter 438: loss 5.2142, time 335.29ms, mfu 39.91%, throughput 0.26M tokens/s
+iter 439: loss 5.1678, time 335.02ms, mfu 40.75%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.19s
+step 440: train loss 5.1112, val loss 5.1048
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 440: loss 5.1581, time 5132.08ms, mfu 36.99%, throughput 0.26M tokens/s
+iter 441: loss 5.1524, time 220.60ms, mfu 40.62%, throughput 0.26M tokens/s
+iter 442: loss 5.1648, time 336.06ms, mfu 41.37%, throughput 0.26M tokens/s
+iter 443: loss 5.1868, time 335.67ms, mfu 42.05%, throughput 0.26M tokens/s
+iter 444: loss 5.1518, time 336.79ms, mfu 42.65%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.54 M tokens/s in 1.21s
+step 445: train loss 5.0977, val loss 5.0949
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 445: loss 5.2292, time 4885.66ms, mfu 38.71%, throughput 0.26M tokens/s
+iter 446: loss 5.1978, time 376.00ms, mfu 39.14%, throughput 0.26M tokens/s
+iter 447: loss 5.1699, time 340.78ms, mfu 39.97%, throughput 0.26M tokens/s
+iter 448: loss 5.1638, time 331.80ms, mfu 40.85%, throughput 0.26M tokens/s
+iter 449: loss 5.2140, time 335.91ms, mfu 41.58%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 450: train loss 5.1026, val loss 5.0760
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 450: loss 5.1546, time 4894.87ms, mfu 37.75%, throughput 0.26M tokens/s
+iter 451: loss 5.1802, time 322.21ms, mfu 38.99%, throughput 0.26M tokens/s
+iter 452: loss 5.1176, time 335.94ms, mfu 39.91%, throughput 0.26M tokens/s
+iter 453: loss 5.2189, time 333.21ms, mfu 40.77%, throughput 0.26M tokens/s
+iter 454: loss 5.1926, time 339.71ms, mfu 41.45%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.16s
+step 455: train loss 5.0923, val loss 5.0685
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 455: loss 5.1989, time 4771.96ms, mfu 37.65%, throughput 0.26M tokens/s
+iter 456: loss 5.1240, time 335.25ms, mfu 38.71%, throughput 0.26M tokens/s
+iter 457: loss 5.1462, time 338.51ms, mfu 39.61%, throughput 0.26M tokens/s
+iter 458: loss 5.1604, time 331.67ms, mfu 40.53%, throughput 0.26M tokens/s
+iter 459: loss 5.1726, time 335.90ms, mfu 41.29%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 460: train loss 5.0791, val loss 5.0790
+iter 460: loss 5.1707, time 2700.67ms, mfu 37.76%, throughput 0.26M tokens/s
+iter 461: loss 5.1558, time 337.44ms, mfu 38.77%, throughput 0.26M tokens/s
+iter 462: loss 5.1494, time 339.06ms, mfu 39.67%, throughput 0.26M tokens/s
+iter 463: loss 5.1091, time 332.58ms, mfu 40.56%, throughput 0.26M tokens/s
+iter 464: loss 5.1148, time 336.35ms, mfu 41.31%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 465: train loss 5.0758, val loss 5.0616
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 465: loss 5.1235, time 4707.67ms, mfu 37.53%, throughput 0.26M tokens/s
+iter 466: loss 5.1346, time 365.63ms, mfu 38.20%, throughput 0.26M tokens/s
+iter 467: loss 5.1149, time 335.75ms, mfu 39.19%, throughput 0.26M tokens/s
+iter 468: loss 5.0743, time 328.80ms, mfu 40.19%, throughput 0.26M tokens/s
+iter 469: loss 5.1399, time 338.02ms, mfu 40.96%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 470: train loss 5.0561, val loss 5.0516
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 470: loss 5.1483, time 4912.94ms, mfu 37.19%, throughput 0.26M tokens/s
+iter 471: loss 5.1195, time 334.19ms, mfu 38.31%, throughput 0.26M tokens/s
+iter 472: loss 5.1350, time 338.06ms, mfu 39.26%, throughput 0.26M tokens/s
+iter 473: loss 5.1155, time 335.43ms, mfu 40.16%, throughput 0.26M tokens/s
+iter 474: loss 5.1082, time 335.55ms, mfu 40.96%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.19s
+step 475: train loss 5.0543, val loss 5.0590
+iter 475: loss 5.1019, time 2717.24ms, mfu 37.46%, throughput 0.27M tokens/s
+iter 476: loss 5.1449, time 337.38ms, mfu 38.51%, throughput 0.27M tokens/s
+iter 477: loss 5.0548, time 337.35ms, mfu 39.45%, throughput 0.27M tokens/s
+iter 478: loss 5.1487, time 338.13ms, mfu 40.29%, throughput 0.27M tokens/s
+iter 479: loss 5.0752, time 336.81ms, mfu 41.06%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 480: train loss 5.0367, val loss 5.0379
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 480: loss 5.1522, time 4859.54ms, mfu 37.29%, throughput 0.27M tokens/s
+iter 481: loss 5.0613, time 361.97ms, mfu 38.02%, throughput 0.27M tokens/s
+iter 482: loss 5.0868, time 336.92ms, mfu 39.02%, throughput 0.27M tokens/s
+iter 483: loss 5.0693, time 335.27ms, mfu 39.94%, throughput 0.26M tokens/s
+iter 484: loss 5.1122, time 336.56ms, mfu 40.75%, throughput 0.26M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.18s
+step 485: train loss 5.0209, val loss 5.0337
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 485: loss 5.0888, time 4631.21ms, mfu 37.03%, throughput 0.27M tokens/s
+iter 486: loss 5.0381, time 331.88ms, mfu 38.20%, throughput 0.27M tokens/s
+iter 487: loss 5.1064, time 335.95ms, mfu 39.19%, throughput 0.27M tokens/s
+iter 488: loss 5.1569, time 342.10ms, mfu 40.00%, throughput 0.27M tokens/s
+iter 489: loss 5.0759, time 332.88ms, mfu 40.86%, throughput 0.27M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 490: train loss 5.0481, val loss 5.0651
+iter 490: loss 5.0475, time 2695.14ms, mfu 37.37%, throughput 0.27M tokens/s
+iter 491: loss 5.1236, time 337.16ms, mfu 38.43%, throughput 0.27M tokens/s
+iter 492: loss 5.0710, time 336.69ms, mfu 39.39%, throughput 0.27M tokens/s
+iter 493: loss 5.0702, time 336.78ms, mfu 40.25%, throughput 0.27M tokens/s
+iter 494: loss 5.0615, time 336.65ms, mfu 41.03%, throughput 0.27M tokens/s
+train throughput: 0.54 M tokens/s in 1.21s
+val throughput: 0.54 M tokens/s in 1.20s
+step 495: train loss 5.0308, val loss 5.0165
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 495: loss 5.0626, time 4768.59ms, mfu 37.27%, throughput 0.27M tokens/s
+iter 496: loss 5.1167, time 360.94ms, mfu 38.02%, throughput 0.27M tokens/s
+iter 497: loss 5.0999, time 337.06ms, mfu 39.02%, throughput 0.27M tokens/s
+iter 498: loss 5.0307, time 336.31ms, mfu 39.92%, throughput 0.27M tokens/s
+iter 499: loss 5.1718, time 337.68ms, mfu 40.72%, throughput 0.27M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 500: train loss 5.0199, val loss 5.0069
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 500: loss 5.0987, time 4811.24ms, mfu 36.98%, throughput 0.27M tokens/s
+iter 501: loss 5.1376, time 331.79ms, mfu 38.16%, throughput 0.27M tokens/s
+iter 502: loss 5.0132, time 337.48ms, mfu 39.13%, throughput 0.27M tokens/s
+iter 503: loss 5.0785, time 338.99ms, mfu 39.99%, throughput 0.27M tokens/s
+iter 504: loss 5.0933, time 333.24ms, mfu 40.84%, throughput 0.27M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 505: train loss 5.0083, val loss 4.9995
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 505: loss 5.1393, time 4628.52ms, mfu 37.11%, throughput 0.27M tokens/s
+iter 506: loss 5.0712, time 361.73ms, mfu 37.87%, throughput 0.27M tokens/s
+iter 507: loss 5.1366, time 402.85ms, mfu 38.10%, throughput 0.27M tokens/s
+iter 508: loss 5.0996, time 270.11ms, mfu 40.27%, throughput 0.27M tokens/s
+iter 509: loss 5.0685, time 338.42ms, mfu 41.02%, throughput 0.27M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 510: train loss 4.9832, val loss 4.9743
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 510: loss 5.0707, time 4664.49ms, mfu 37.27%, throughput 0.27M tokens/s
+iter 511: loss 5.0034, time 335.07ms, mfu 38.37%, throughput 0.27M tokens/s
+iter 512: loss 5.0446, time 335.69ms, mfu 39.35%, throughput 0.27M tokens/s
+iter 513: loss 5.0721, time 337.04ms, mfu 40.21%, throughput 0.27M tokens/s
+iter 514: loss 5.0783, time 336.97ms, mfu 40.99%, throughput 0.27M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.18s
+step 515: train loss 4.9534, val loss 4.9835
+iter 515: loss 5.0617, time 2709.06ms, mfu 37.49%, throughput 0.27M tokens/s
+iter 516: loss 5.0475, time 337.76ms, mfu 38.53%, throughput 0.27M tokens/s
+iter 517: loss 5.0662, time 337.06ms, mfu 39.47%, throughput 0.27M tokens/s
+iter 518: loss 5.0181, time 341.28ms, mfu 40.26%, throughput 0.27M tokens/s
+iter 519: loss 5.0480, time 329.87ms, mfu 41.14%, throughput 0.27M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.18s
+step 520: train loss 4.9706, val loss 4.9865
+iter 520: loss 5.0652, time 2702.48ms, mfu 37.62%, throughput 0.27M tokens/s
+iter 521: loss 5.0263, time 337.34ms, mfu 38.65%, throughput 0.27M tokens/s
+iter 522: loss 5.0308, time 336.46ms, mfu 39.59%, throughput 0.27M tokens/s
+iter 523: loss 5.0383, time 336.54ms, mfu 40.44%, throughput 0.27M tokens/s
+iter 524: loss 5.0120, time 336.95ms, mfu 41.19%, throughput 0.27M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.55 M tokens/s in 1.19s
+step 525: train loss 4.9808, val loss 4.9750
+iter 525: loss 5.0484, time 2710.12ms, mfu 37.67%, throughput 0.27M tokens/s
+iter 526: loss 5.0572, time 337.08ms, mfu 38.70%, throughput 0.27M tokens/s
+iter 527: loss 5.0587, time 337.07ms, mfu 39.63%, throughput 0.27M tokens/s
+iter 528: loss 5.0372, time 336.24ms, mfu 40.48%, throughput 0.27M tokens/s
+iter 529: loss 5.0375, time 338.79ms, mfu 41.20%, throughput 0.27M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 530: train loss 4.9856, val loss 4.9895
+iter 530: loss 5.0478, time 2697.04ms, mfu 37.68%, throughput 0.27M tokens/s
+iter 531: loss 5.0678, time 351.94ms, mfu 38.51%, throughput 0.27M tokens/s
+iter 532: loss 5.0808, time 320.00ms, mfu 39.71%, throughput 0.27M tokens/s
+iter 533: loss 5.0818, time 336.79ms, mfu 40.54%, throughput 0.27M tokens/s
+iter 534: loss 5.0435, time 336.97ms, mfu 41.28%, throughput 0.27M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 535: train loss 4.9568, val loss 4.9767
+iter 535: loss 5.0622, time 2708.66ms, mfu 37.75%, throughput 0.27M tokens/s
+iter 536: loss 5.0084, time 337.41ms, mfu 38.77%, throughput 0.27M tokens/s
+iter 537: loss 5.0240, time 337.00ms, mfu 39.69%, throughput 0.27M tokens/s
+iter 538: loss 5.0236, time 339.58ms, mfu 40.48%, throughput 0.27M tokens/s
+iter 539: loss 5.0468, time 333.94ms, mfu 41.28%, throughput 0.27M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 540: train loss 4.9598, val loss 4.9532
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 540: loss 4.9818, time 4952.04ms, mfu 37.48%, throughput 0.27M tokens/s
+iter 541: loss 5.0263, time 369.56ms, mfu 38.10%, throughput 0.27M tokens/s
+iter 542: loss 5.0765, time 335.11ms, mfu 39.12%, throughput 0.27M tokens/s
+iter 543: loss 5.0035, time 334.70ms, mfu 40.04%, throughput 0.27M tokens/s
+iter 544: loss 5.0198, time 336.43ms, mfu 40.84%, throughput 0.27M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.18s
+step 545: train loss 4.9522, val loss 4.9381
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 545: loss 5.0359, time 4621.63ms, mfu 37.11%, throughput 0.27M tokens/s
+iter 546: loss 4.9880, time 332.58ms, mfu 38.26%, throughput 0.27M tokens/s
+iter 547: loss 5.0694, time 337.48ms, mfu 39.22%, throughput 0.27M tokens/s
+iter 548: loss 5.0546, time 335.75ms, mfu 40.12%, throughput 0.27M tokens/s
+iter 549: loss 5.0384, time 337.79ms, mfu 40.89%, throughput 0.27M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 550: train loss 4.9385, val loss 4.9332
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 550: loss 4.9848, time 4799.50ms, mfu 37.14%, throughput 0.27M tokens/s
+iter 551: loss 5.0198, time 361.87ms, mfu 37.90%, throughput 0.27M tokens/s
+iter 552: loss 5.0810, time 336.92ms, mfu 38.91%, throughput 0.27M tokens/s
+iter 553: loss 5.0449, time 337.24ms, mfu 39.81%, throughput 0.27M tokens/s
+iter 554: loss 5.0356, time 344.79ms, mfu 40.52%, throughput 0.27M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 555: train loss 4.9328, val loss 4.9320
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 555: loss 4.9693, time 4604.25ms, mfu 36.82%, throughput 0.27M tokens/s
+iter 556: loss 5.0028, time 327.42ms, mfu 38.08%, throughput 0.27M tokens/s
+iter 557: loss 5.0671, time 339.24ms, mfu 39.03%, throughput 0.27M tokens/s
+iter 558: loss 5.0166, time 331.28ms, mfu 40.01%, throughput 0.27M tokens/s
+iter 559: loss 4.9850, time 337.76ms, mfu 40.80%, throughput 0.27M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.55 M tokens/s in 1.18s
+step 560: train loss 4.9132, val loss 4.9060
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 560: loss 5.0025, time 4733.30ms, mfu 37.06%, throughput 0.27M tokens/s
+iter 561: loss 5.0123, time 347.56ms, mfu 38.01%, throughput 0.27M tokens/s
+iter 562: loss 4.9915, time 336.15ms, mfu 39.02%, throughput 0.27M tokens/s
+iter 563: loss 5.0403, time 331.29ms, mfu 40.00%, throughput 0.27M tokens/s
+iter 564: loss 5.0369, time 336.04ms, mfu 40.81%, throughput 0.27M tokens/s
+train throughput: 0.54 M tokens/s in 1.20s
+val throughput: 0.54 M tokens/s in 1.22s
+step 565: train loss 4.9329, val loss 4.9163
+iter 565: loss 4.9972, time 2779.64ms, mfu 37.31%, throughput 0.27M tokens/s
+iter 566: loss 5.0099, time 321.62ms, mfu 38.61%, throughput 0.27M tokens/s
+iter 567: loss 5.0247, time 336.44ms, mfu 39.55%, throughput 0.27M tokens/s
+iter 568: loss 4.9827, time 337.63ms, mfu 40.39%, throughput 0.27M tokens/s
+iter 569: loss 4.9722, time 352.19ms, mfu 40.94%, throughput 0.27M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.18s
+step 570: train loss 4.9091, val loss 4.9399
+iter 570: loss 5.0091, time 2681.42ms, mfu 37.45%, throughput 0.27M tokens/s
+iter 571: loss 4.9933, time 336.71ms, mfu 38.51%, throughput 0.27M tokens/s
+iter 572: loss 5.0542, time 337.29ms, mfu 39.45%, throughput 0.27M tokens/s
+iter 573: loss 4.9852, time 336.07ms, mfu 40.32%, throughput 0.27M tokens/s
+iter 574: loss 4.9534, time 336.05ms, mfu 41.10%, throughput 0.27M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.18s
+step 575: train loss 4.9009, val loss 4.9146
+iter 575: loss 4.9955, time 2718.46ms, mfu 37.58%, throughput 0.27M tokens/s
+iter 576: loss 5.0116, time 334.55ms, mfu 38.66%, throughput 0.27M tokens/s
+iter 577: loss 4.9881, time 336.26ms, mfu 39.60%, throughput 0.27M tokens/s
+iter 578: loss 4.9934, time 337.13ms, mfu 40.44%, throughput 0.27M tokens/s
+iter 579: loss 4.9853, time 336.85ms, mfu 41.19%, throughput 0.27M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 580: train loss 4.9028, val loss 4.8904
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 580: loss 4.9483, time 4899.27ms, mfu 37.40%, throughput 0.27M tokens/s
+iter 581: loss 4.9061, time 335.36ms, mfu 38.49%, throughput 0.27M tokens/s
+iter 582: loss 4.9437, time 334.67ms, mfu 39.47%, throughput 0.27M tokens/s
+iter 583: loss 4.9784, time 334.34ms, mfu 40.36%, throughput 0.27M tokens/s
+iter 584: loss 4.9728, time 336.42ms, mfu 41.13%, throughput 0.27M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.55 M tokens/s in 1.20s
+step 585: train loss 4.9093, val loss 4.9077
+iter 585: loss 4.9551, time 2715.31ms, mfu 37.61%, throughput 0.27M tokens/s
+iter 586: loss 4.9563, time 336.43ms, mfu 38.66%, throughput 0.27M tokens/s
+iter 587: loss 4.9921, time 337.55ms, mfu 39.58%, throughput 0.27M tokens/s
+iter 588: loss 4.9792, time 337.14ms, mfu 40.42%, throughput 0.27M tokens/s
+iter 589: loss 5.0110, time 337.05ms, mfu 41.18%, throughput 0.27M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 590: train loss 4.8947, val loss 4.8821
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 590: loss 4.9885, time 4823.68ms, mfu 37.39%, throughput 0.27M tokens/s
+iter 591: loss 4.9562, time 356.72ms, mfu 38.19%, throughput 0.27M tokens/s
+iter 592: loss 4.9387, time 342.09ms, mfu 39.10%, throughput 0.27M tokens/s
+iter 593: loss 4.9500, time 331.38ms, mfu 40.07%, throughput 0.27M tokens/s
+iter 594: loss 4.9740, time 337.02ms, mfu 40.86%, throughput 0.27M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.55 M tokens/s in 1.18s
+step 595: train loss 4.8683, val loss 4.8687
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 595: loss 4.9671, time 4820.85ms, mfu 37.11%, throughput 0.27M tokens/s
+iter 596: loss 4.9090, time 334.12ms, mfu 38.24%, throughput 0.27M tokens/s
+iter 597: loss 4.9819, time 352.92ms, mfu 38.99%, throughput 0.27M tokens/s
+iter 598: loss 4.9527, time 316.01ms, mfu 40.21%, throughput 0.27M tokens/s
+iter 599: loss 4.9696, time 336.35ms, mfu 41.00%, throughput 0.27M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.18s
+step 600: train loss 4.8460, val loss 4.8719
+iter 600: loss 4.9417, time 2717.28ms, mfu 37.49%, throughput 0.27M tokens/s
+iter 601: loss 4.9645, time 335.57ms, mfu 38.56%, throughput 0.27M tokens/s
+iter 602: loss 4.9606, time 335.12ms, mfu 39.53%, throughput 0.27M tokens/s
+iter 603: loss 4.8948, time 336.47ms, mfu 40.38%, throughput 0.27M tokens/s
+iter 604: loss 4.9242, time 336.75ms, mfu 41.15%, throughput 0.27M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.17s
+step 605: train loss 4.8697, val loss 4.8587
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 605: loss 4.9358, time 4823.94ms, mfu 37.37%, throughput 0.27M tokens/s
+iter 606: loss 4.9906, time 361.92ms, mfu 38.10%, throughput 0.27M tokens/s
+iter 607: loss 4.9079, time 335.84ms, mfu 39.10%, throughput 0.27M tokens/s
+iter 608: loss 4.9596, time 334.42ms, mfu 40.03%, throughput 0.27M tokens/s
+iter 609: loss 4.9920, time 337.70ms, mfu 40.82%, throughput 0.27M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.18s
+step 610: train loss 4.8698, val loss 4.8624
+iter 610: loss 4.9501, time 2695.91ms, mfu 37.33%, throughput 0.27M tokens/s
+iter 611: loss 4.9414, time 337.11ms, mfu 38.40%, throughput 0.27M tokens/s
+iter 612: loss 4.9612, time 337.67ms, mfu 39.35%, throughput 0.27M tokens/s
+iter 613: loss 4.9242, time 341.36ms, mfu 40.15%, throughput 0.27M tokens/s
+iter 614: loss 4.9292, time 331.30ms, mfu 41.01%, throughput 0.27M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 615: train loss 4.8633, val loss 4.8518
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 615: loss 4.9370, time 4886.48ms, mfu 37.24%, throughput 0.27M tokens/s
+iter 616: loss 4.9554, time 359.30ms, mfu 38.02%, throughput 0.27M tokens/s
+iter 617: loss 4.9703, time 336.65ms, mfu 39.02%, throughput 0.27M tokens/s
+iter 618: loss 4.9444, time 332.94ms, mfu 39.98%, throughput 0.27M tokens/s
+iter 619: loss 4.9005, time 334.60ms, mfu 40.81%, throughput 0.27M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.18s
+step 620: train loss 4.8506, val loss 4.8447
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 620: loss 4.9682, time 4957.94ms, mfu 37.06%, throughput 0.27M tokens/s
+iter 621: loss 4.9359, time 335.45ms, mfu 38.17%, throughput 0.27M tokens/s
+iter 622: loss 4.8529, time 335.07ms, mfu 39.18%, throughput 0.27M tokens/s
+iter 623: loss 4.8466, time 336.40ms, mfu 40.07%, throughput 0.27M tokens/s
+iter 624: loss 4.9185, time 332.01ms, mfu 40.93%, throughput 0.27M tokens/s
+train throughput: 0.54 M tokens/s in 1.21s
+val throughput: 0.56 M tokens/s in 1.17s
+step 625: train loss 4.8360, val loss 4.8543
+iter 625: loss 4.9114, time 2722.49ms, mfu 37.43%, throughput 0.28M tokens/s
+iter 626: loss 4.8381, time 335.44ms, mfu 38.51%, throughput 0.28M tokens/s
+iter 627: loss 4.9076, time 335.78ms, mfu 39.48%, throughput 0.28M tokens/s
+iter 628: loss 4.9111, time 336.13ms, mfu 40.34%, throughput 0.28M tokens/s
+iter 629: loss 4.9283, time 337.07ms, mfu 41.10%, throughput 0.27M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 630: train loss 4.8219, val loss 4.8345
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 630: loss 4.9756, time 4749.01ms, mfu 37.33%, throughput 0.28M tokens/s
+iter 631: loss 4.9022, time 366.11ms, mfu 38.02%, throughput 0.28M tokens/s
+iter 632: loss 4.9150, time 332.68ms, mfu 39.08%, throughput 0.28M tokens/s
+iter 633: loss 4.9041, time 335.40ms, mfu 39.99%, throughput 0.27M tokens/s
+iter 634: loss 4.8991, time 333.29ms, mfu 40.84%, throughput 0.27M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 635: train loss 4.8178, val loss 4.8092
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 635: loss 4.8158, time 4930.73ms, mfu 37.09%, throughput 0.27M tokens/s
+iter 636: loss 4.9152, time 337.42ms, mfu 38.17%, throughput 0.27M tokens/s
+iter 637: loss 4.8603, time 332.31ms, mfu 39.22%, throughput 0.27M tokens/s
+iter 638: loss 4.8764, time 334.96ms, mfu 40.12%, throughput 0.27M tokens/s
+iter 639: loss 4.8757, time 334.44ms, mfu 40.95%, throughput 0.27M tokens/s
+train throughput: 0.44 M tokens/s in 1.48s
+val throughput: 0.56 M tokens/s in 1.17s
+step 640: train loss 4.8237, val loss 4.8152
+iter 640: loss 4.9209, time 2986.29ms, mfu 37.39%, throughput 0.28M tokens/s
+iter 641: loss 4.8916, time 337.07ms, mfu 38.45%, throughput 0.28M tokens/s
+iter 642: loss 4.9349, time 336.82ms, mfu 39.41%, throughput 0.28M tokens/s
+iter 643: loss 4.8692, time 334.27ms, mfu 40.30%, throughput 0.28M tokens/s
+iter 644: loss 4.8911, time 336.91ms, mfu 41.07%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 645: train loss 4.8205, val loss 4.8293
+iter 645: loss 4.8837, time 2708.99ms, mfu 37.56%, throughput 0.28M tokens/s
+iter 646: loss 4.9492, time 335.19ms, mfu 38.63%, throughput 0.28M tokens/s
+iter 647: loss 4.9821, time 337.77ms, mfu 39.56%, throughput 0.28M tokens/s
+iter 648: loss 4.9244, time 334.35ms, mfu 40.44%, throughput 0.28M tokens/s
+iter 649: loss 4.8875, time 336.20ms, mfu 41.20%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.18s
+step 650: train loss 4.8126, val loss 4.8166
+iter 650: loss 4.9012, time 2710.62ms, mfu 37.68%, throughput 0.28M tokens/s
+iter 651: loss 4.9279, time 337.01ms, mfu 38.71%, throughput 0.28M tokens/s
+iter 652: loss 4.9435, time 337.78ms, mfu 39.63%, throughput 0.28M tokens/s
+iter 653: loss 4.8449, time 335.14ms, mfu 40.49%, throughput 0.28M tokens/s
+iter 654: loss 4.8868, time 336.84ms, mfu 41.24%, throughput 0.28M tokens/s
+train throughput: 0.54 M tokens/s in 1.21s
+val throughput: 0.56 M tokens/s in 1.17s
+step 655: train loss 4.7782, val loss 4.8242
+iter 655: loss 4.9130, time 2726.36ms, mfu 37.71%, throughput 0.28M tokens/s
+iter 656: loss 4.9061, time 352.41ms, mfu 38.53%, throughput 0.28M tokens/s
+iter 657: loss 4.8297, time 319.31ms, mfu 39.74%, throughput 0.28M tokens/s
+iter 658: loss 4.8776, time 336.90ms, mfu 40.56%, throughput 0.28M tokens/s
+iter 659: loss 4.8560, time 341.87ms, mfu 41.24%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 660: train loss 4.7942, val loss 4.7860
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 660: loss 4.8066, time 4815.56ms, mfu 37.45%, throughput 0.28M tokens/s
+iter 661: loss 4.8826, time 369.31ms, mfu 38.08%, throughput 0.28M tokens/s
+iter 662: loss 4.8165, time 334.72ms, mfu 39.11%, throughput 0.28M tokens/s
+iter 663: loss 4.9141, time 333.56ms, mfu 40.04%, throughput 0.28M tokens/s
+iter 664: loss 4.9139, time 337.34ms, mfu 40.83%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.18s
+step 665: train loss 4.7661, val loss 4.7899
+iter 665: loss 4.8455, time 2717.66ms, mfu 37.34%, throughput 0.28M tokens/s
+iter 666: loss 4.8248, time 334.83ms, mfu 38.44%, throughput 0.28M tokens/s
+iter 667: loss 4.7798, time 336.88ms, mfu 39.40%, throughput 0.28M tokens/s
+iter 668: loss 4.8457, time 337.38ms, mfu 40.25%, throughput 0.28M tokens/s
+iter 669: loss 4.9012, time 336.49ms, mfu 41.03%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.18s
+step 670: train loss 4.7838, val loss 4.7736
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 670: loss 4.8784, time 4972.49ms, mfu 37.25%, throughput 0.28M tokens/s
+iter 671: loss 4.8247, time 342.88ms, mfu 38.24%, throughput 0.28M tokens/s
+iter 672: loss 4.8065, time 333.03ms, mfu 39.27%, throughput 0.28M tokens/s
+iter 673: loss 4.8327, time 329.55ms, mfu 40.25%, throughput 0.28M tokens/s
+iter 674: loss 4.8016, time 336.02ms, mfu 41.04%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.55 M tokens/s in 1.19s
+step 675: train loss 4.7890, val loss 4.7935
+iter 675: loss 4.9116, time 2725.93ms, mfu 37.53%, throughput 0.28M tokens/s
+iter 676: loss 4.8936, time 575.67ms, mfu 36.59%, throughput 0.28M tokens/s
+iter 677: loss 4.8359, time 219.16ms, mfu 40.31%, throughput 0.28M tokens/s
+iter 678: loss 4.9109, time 336.67ms, mfu 41.08%, throughput 0.28M tokens/s
+iter 679: loss 4.9242, time 336.88ms, mfu 41.77%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.55 M tokens/s in 1.19s
+step 680: train loss 4.7740, val loss 4.7705
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 680: loss 4.8369, time 4846.54ms, mfu 37.93%, throughput 0.28M tokens/s
+iter 681: loss 4.8286, time 371.03ms, mfu 38.49%, throughput 0.28M tokens/s
+iter 682: loss 4.8916, time 336.16ms, mfu 39.45%, throughput 0.28M tokens/s
+iter 683: loss 4.8090, time 334.33ms, mfu 40.34%, throughput 0.28M tokens/s
+iter 684: loss 4.8149, time 335.04ms, mfu 41.14%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.55 M tokens/s in 1.20s
+step 685: train loss 4.7665, val loss 4.7666
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 685: loss 4.9405, time 4785.49ms, mfu 37.36%, throughput 0.28M tokens/s
+iter 686: loss 4.8681, time 333.79ms, mfu 38.47%, throughput 0.28M tokens/s
+iter 687: loss 4.7968, time 341.06ms, mfu 39.36%, throughput 0.28M tokens/s
+iter 688: loss 4.8293, time 329.44ms, mfu 40.34%, throughput 0.28M tokens/s
+iter 689: loss 4.7961, time 336.44ms, mfu 41.11%, throughput 0.28M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.55 M tokens/s in 1.18s
+step 690: train loss 4.7504, val loss 4.7456
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 690: loss 4.8286, time 4860.00ms, mfu 37.33%, throughput 0.28M tokens/s
+iter 691: loss 4.8800, time 354.23ms, mfu 38.16%, throughput 0.28M tokens/s
+iter 692: loss 4.7925, time 336.56ms, mfu 39.15%, throughput 0.28M tokens/s
+iter 693: loss 4.8963, time 335.21ms, mfu 40.06%, throughput 0.28M tokens/s
+iter 694: loss 4.8600, time 336.61ms, mfu 40.86%, throughput 0.28M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.55 M tokens/s in 1.18s
+step 695: train loss 4.7480, val loss 4.7408
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 695: loss 4.8342, time 4928.07ms, mfu 37.10%, throughput 0.28M tokens/s
+iter 696: loss 4.7995, time 349.24ms, mfu 38.02%, throughput 0.28M tokens/s
+iter 697: loss 4.8625, time 336.18ms, mfu 39.03%, throughput 0.28M tokens/s
+iter 698: loss 4.8883, time 331.66ms, mfu 40.00%, throughput 0.28M tokens/s
+iter 699: loss 4.8567, time 334.14ms, mfu 40.84%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.18s
+step 700: train loss 4.7424, val loss 4.7582
+iter 700: loss 4.8554, time 2710.04ms, mfu 37.35%, throughput 0.28M tokens/s
+iter 701: loss 4.8162, time 336.40ms, mfu 38.42%, throughput 0.28M tokens/s
+iter 702: loss 4.8615, time 335.41ms, mfu 39.40%, throughput 0.28M tokens/s
+iter 703: loss 4.8317, time 336.07ms, mfu 40.27%, throughput 0.28M tokens/s
+iter 704: loss 4.8052, time 335.11ms, mfu 41.07%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 705: train loss 4.7334, val loss 4.7446
+iter 705: loss 4.8531, time 2698.76ms, mfu 37.56%, throughput 0.28M tokens/s
+iter 706: loss 4.8499, time 338.88ms, mfu 38.58%, throughput 0.28M tokens/s
+iter 707: loss 4.8752, time 333.29ms, mfu 39.57%, throughput 0.28M tokens/s
+iter 708: loss 4.8306, time 337.85ms, mfu 40.40%, throughput 0.28M tokens/s
+iter 709: loss 4.8358, time 339.88ms, mfu 41.12%, throughput 0.28M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 710: train loss 4.7274, val loss 4.7110
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 710: loss 4.8398, time 4672.71ms, mfu 37.35%, throughput 0.28M tokens/s
+iter 711: loss 4.7816, time 338.09ms, mfu 38.40%, throughput 0.28M tokens/s
+iter 712: loss 4.8011, time 329.80ms, mfu 39.46%, throughput 0.28M tokens/s
+iter 713: loss 4.8267, time 336.50ms, mfu 40.32%, throughput 0.28M tokens/s
+iter 714: loss 4.8629, time 336.89ms, mfu 41.09%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.18s
+step 715: train loss 4.7421, val loss 4.7374
+iter 715: loss 4.7507, time 2713.80ms, mfu 37.58%, throughput 0.28M tokens/s
+iter 716: loss 4.8256, time 337.74ms, mfu 38.61%, throughput 0.28M tokens/s
+iter 717: loss 4.8279, time 337.93ms, mfu 39.53%, throughput 0.28M tokens/s
+iter 718: loss 4.8021, time 334.31ms, mfu 40.42%, throughput 0.28M tokens/s
+iter 719: loss 4.8276, time 337.07ms, mfu 41.17%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.44 M tokens/s in 1.48s
+step 720: train loss 4.7345, val loss 4.7095
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 720: loss 4.7642, time 5129.28ms, mfu 37.37%, throughput 0.28M tokens/s
+iter 721: loss 4.7490, time 347.67ms, mfu 38.28%, throughput 0.28M tokens/s
+iter 722: loss 4.7846, time 336.17ms, mfu 39.27%, throughput 0.28M tokens/s
+iter 723: loss 4.8705, time 335.96ms, mfu 40.15%, throughput 0.28M tokens/s
+iter 724: loss 4.7293, time 334.31ms, mfu 40.97%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.18s
+step 725: train loss 4.7163, val loss 4.7232
+iter 725: loss 4.7742, time 2699.17ms, mfu 37.48%, throughput 0.28M tokens/s
+iter 726: loss 4.7309, time 336.17ms, mfu 38.54%, throughput 0.28M tokens/s
+iter 727: loss 4.7913, time 337.06ms, mfu 39.48%, throughput 0.28M tokens/s
+iter 728: loss 4.7960, time 333.32ms, mfu 40.39%, throughput 0.28M tokens/s
+iter 729: loss 4.7750, time 337.26ms, mfu 41.14%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.18s
+step 730: train loss 4.6957, val loss 4.7119
+iter 730: loss 4.8127, time 2697.21ms, mfu 37.63%, throughput 0.28M tokens/s
+iter 731: loss 4.8624, time 335.79ms, mfu 38.68%, throughput 0.28M tokens/s
+iter 732: loss 4.7374, time 339.08ms, mfu 39.58%, throughput 0.28M tokens/s
+iter 733: loss 4.7340, time 332.95ms, mfu 40.48%, throughput 0.28M tokens/s
+iter 734: loss 4.7465, time 337.06ms, mfu 41.23%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 735: train loss 4.7147, val loss 4.7154
+iter 735: loss 4.7485, time 2697.21ms, mfu 37.71%, throughput 0.28M tokens/s
+iter 736: loss 4.8071, time 334.95ms, mfu 38.76%, throughput 0.28M tokens/s
+iter 737: loss 4.7910, time 336.42ms, mfu 39.69%, throughput 0.28M tokens/s
+iter 738: loss 4.7722, time 336.18ms, mfu 40.53%, throughput 0.28M tokens/s
+iter 739: loss 4.8307, time 337.38ms, mfu 41.27%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 740: train loss 4.7195, val loss 4.6956
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 740: loss 4.7725, time 4898.77ms, mfu 37.48%, throughput 0.28M tokens/s
+iter 741: loss 4.7705, time 333.37ms, mfu 38.58%, throughput 0.28M tokens/s
+iter 742: loss 4.7752, time 340.63ms, mfu 39.47%, throughput 0.28M tokens/s
+iter 743: loss 4.8187, time 330.50ms, mfu 40.41%, throughput 0.28M tokens/s
+iter 744: loss 4.7838, time 338.19ms, mfu 41.15%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 745: train loss 4.6883, val loss 4.6855
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 745: loss 4.7257, time 4806.98ms, mfu 37.38%, throughput 0.28M tokens/s
+iter 746: loss 4.8515, time 367.21ms, mfu 38.04%, throughput 0.28M tokens/s
+iter 747: loss 4.8017, time 335.51ms, mfu 39.06%, throughput 0.28M tokens/s
+iter 748: loss 4.8152, time 338.80ms, mfu 39.92%, throughput 0.28M tokens/s
+iter 749: loss 4.7883, time 332.63ms, mfu 40.79%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 750: train loss 4.6802, val loss 4.6887
+iter 750: loss 4.7578, time 2687.88ms, mfu 37.32%, throughput 0.28M tokens/s
+iter 751: loss 4.8165, time 340.63ms, mfu 38.33%, throughput 0.28M tokens/s
+iter 752: loss 4.7721, time 330.93ms, mfu 39.38%, throughput 0.28M tokens/s
+iter 753: loss 4.7920, time 334.97ms, mfu 40.27%, throughput 0.28M tokens/s
+iter 754: loss 4.7929, time 336.24ms, mfu 41.06%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.18s
+step 755: train loss 4.6796, val loss 4.6903
+iter 755: loss 4.7871, time 2707.95ms, mfu 37.55%, throughput 0.28M tokens/s
+iter 756: loss 4.7727, time 336.33ms, mfu 38.60%, throughput 0.28M tokens/s
+iter 757: loss 4.7808, time 337.84ms, mfu 39.53%, throughput 0.28M tokens/s
+iter 758: loss 4.7663, time 336.37ms, mfu 40.38%, throughput 0.28M tokens/s
+iter 759: loss 4.7843, time 342.23ms, mfu 41.07%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 760: train loss 4.6853, val loss 4.6806
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 760: loss 4.7759, time 4906.38ms, mfu 37.29%, throughput 0.28M tokens/s
+iter 761: loss 4.7784, time 327.06ms, mfu 38.51%, throughput 0.28M tokens/s
+iter 762: loss 4.8363, time 336.67ms, mfu 39.46%, throughput 0.28M tokens/s
+iter 763: loss 4.7514, time 336.37ms, mfu 40.32%, throughput 0.28M tokens/s
+iter 764: loss 4.8129, time 334.15ms, mfu 41.13%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.18s
+step 765: train loss 4.6903, val loss 4.6908
+iter 765: loss 4.7931, time 2713.37ms, mfu 37.61%, throughput 0.28M tokens/s
+iter 766: loss 4.7377, time 338.36ms, mfu 38.63%, throughput 0.28M tokens/s
+iter 767: loss 4.7432, time 336.08ms, mfu 39.58%, throughput 0.28M tokens/s
+iter 768: loss 4.7553, time 336.48ms, mfu 40.43%, throughput 0.28M tokens/s
+iter 769: loss 4.7883, time 337.09ms, mfu 41.18%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 770: train loss 4.6481, val loss 4.6807
+iter 770: loss 4.7513, time 2688.66ms, mfu 37.66%, throughput 0.28M tokens/s
+iter 771: loss 4.6841, time 337.52ms, mfu 38.69%, throughput 0.28M tokens/s
+iter 772: loss 4.7810, time 333.82ms, mfu 39.66%, throughput 0.28M tokens/s
+iter 773: loss 4.7685, time 335.29ms, mfu 40.52%, throughput 0.28M tokens/s
+iter 774: loss 4.7857, time 342.68ms, mfu 41.19%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 775: train loss 4.6572, val loss 4.6694
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 775: loss 4.7858, time 4872.53ms, mfu 37.40%, throughput 0.28M tokens/s
+iter 776: loss 4.7682, time 358.98ms, mfu 38.16%, throughput 0.28M tokens/s
+iter 777: loss 4.7508, time 337.70ms, mfu 39.14%, throughput 0.28M tokens/s
+iter 778: loss 4.7905, time 337.06ms, mfu 40.02%, throughput 0.28M tokens/s
+iter 779: loss 4.7566, time 337.13ms, mfu 40.81%, throughput 0.28M tokens/s
+train throughput: 0.54 M tokens/s in 1.21s
+val throughput: 0.55 M tokens/s in 1.19s
+step 780: train loss 4.6338, val loss 4.6656
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 780: loss 4.7555, time 5006.44ms, mfu 37.06%, throughput 0.28M tokens/s
+iter 781: loss 4.6989, time 328.40ms, mfu 38.27%, throughput 0.28M tokens/s
+iter 782: loss 4.7778, time 336.54ms, mfu 39.25%, throughput 0.28M tokens/s
+iter 783: loss 4.6520, time 334.90ms, mfu 40.16%, throughput 0.28M tokens/s
+iter 784: loss 4.7416, time 334.22ms, mfu 40.98%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 785: train loss 4.6479, val loss 4.6555
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 785: loss 4.7826, time 4757.62ms, mfu 37.22%, throughput 0.28M tokens/s
+iter 786: loss 4.7439, time 373.67ms, mfu 37.83%, throughput 0.28M tokens/s
+iter 787: loss 4.7366, time 335.93ms, mfu 38.86%, throughput 0.28M tokens/s
+iter 788: loss 4.6900, time 333.01ms, mfu 39.83%, throughput 0.28M tokens/s
+iter 789: loss 4.7598, time 339.43ms, mfu 40.61%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.19s
+step 790: train loss 4.6372, val loss 4.6566
+iter 790: loss 4.6684, time 2720.89ms, mfu 37.14%, throughput 0.28M tokens/s
+iter 791: loss 4.7051, time 333.80ms, mfu 38.27%, throughput 0.28M tokens/s
+iter 792: loss 4.6870, time 336.53ms, mfu 39.25%, throughput 0.28M tokens/s
+iter 793: loss 4.7565, time 334.66ms, mfu 40.16%, throughput 0.28M tokens/s
+iter 794: loss 4.7283, time 337.44ms, mfu 40.93%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 795: train loss 4.6202, val loss 4.6333
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 795: loss 4.6987, time 4731.41ms, mfu 37.18%, throughput 0.28M tokens/s
+iter 796: loss 4.7603, time 350.27ms, mfu 38.08%, throughput 0.28M tokens/s
+iter 797: loss 4.7363, time 336.58ms, mfu 39.08%, throughput 0.28M tokens/s
+iter 798: loss 4.7462, time 333.11ms, mfu 40.02%, throughput 0.28M tokens/s
+iter 799: loss 4.7825, time 337.88ms, mfu 40.81%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 800: train loss 4.6214, val loss 4.6465
+iter 800: loss 4.6928, time 2699.26ms, mfu 37.33%, throughput 0.28M tokens/s
+iter 801: loss 4.7318, time 335.36ms, mfu 38.41%, throughput 0.28M tokens/s
+iter 802: loss 4.7781, time 339.58ms, mfu 39.33%, throughput 0.28M tokens/s
+iter 803: loss 4.7411, time 332.75ms, mfu 40.26%, throughput 0.28M tokens/s
+iter 804: loss 4.7476, time 335.67ms, mfu 41.05%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 805: train loss 4.6176, val loss 4.6316
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 805: loss 4.7289, time 4830.43ms, mfu 37.28%, throughput 0.28M tokens/s
+iter 806: loss 4.7601, time 359.50ms, mfu 38.05%, throughput 0.28M tokens/s
+iter 807: loss 4.7371, time 334.31ms, mfu 39.08%, throughput 0.28M tokens/s
+iter 808: loss 4.6937, time 334.27ms, mfu 40.01%, throughput 0.28M tokens/s
+iter 809: loss 4.6977, time 338.21ms, mfu 40.79%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 810: train loss 4.6167, val loss 4.6294
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 810: loss 4.7248, time 4835.59ms, mfu 37.05%, throughput 0.28M tokens/s
+iter 811: loss 4.6735, time 330.21ms, mfu 38.24%, throughput 0.28M tokens/s
+iter 812: loss 4.7022, time 336.53ms, mfu 39.22%, throughput 0.28M tokens/s
+iter 813: loss 4.7938, time 333.66ms, mfu 40.15%, throughput 0.28M tokens/s
+iter 814: loss 4.7036, time 336.69ms, mfu 40.93%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 815: train loss 4.6340, val loss 4.6451
+iter 815: loss 4.7049, time 2703.42ms, mfu 37.44%, throughput 0.28M tokens/s
+iter 816: loss 4.7508, time 335.15ms, mfu 38.52%, throughput 0.28M tokens/s
+iter 817: loss 4.7306, time 335.61ms, mfu 39.49%, throughput 0.28M tokens/s
+iter 818: loss 4.7459, time 337.44ms, mfu 40.33%, throughput 0.28M tokens/s
+iter 819: loss 4.7419, time 337.36ms, mfu 41.09%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.17s
+step 820: train loss 4.6182, val loss 4.6253
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 820: loss 4.7313, time 4928.66ms, mfu 37.31%, throughput 0.28M tokens/s
+iter 821: loss 4.7360, time 375.15ms, mfu 37.89%, throughput 0.28M tokens/s
+iter 822: loss 4.6992, time 330.63ms, mfu 38.99%, throughput 0.28M tokens/s
+iter 823: loss 4.6608, time 333.94ms, mfu 39.93%, throughput 0.28M tokens/s
+iter 824: loss 4.6914, time 335.80ms, mfu 40.76%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 825: train loss 4.6137, val loss 4.6223
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 825: loss 4.6977, time 4795.19ms, mfu 37.02%, throughput 0.28M tokens/s
+iter 826: loss 4.7019, time 332.46ms, mfu 38.18%, throughput 0.28M tokens/s
+iter 827: loss 4.6921, time 334.98ms, mfu 39.19%, throughput 0.28M tokens/s
+iter 828: loss 4.6865, time 335.16ms, mfu 40.09%, throughput 0.28M tokens/s
+iter 829: loss 4.7187, time 336.12ms, mfu 40.90%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.43 M tokens/s in 1.52s
+step 830: train loss 4.6033, val loss 4.6041
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 830: loss 4.7335, time 5131.44ms, mfu 37.12%, throughput 0.28M tokens/s
+iter 831: loss 4.7174, time 341.98ms, mfu 38.14%, throughput 0.28M tokens/s
+iter 832: loss 4.6490, time 334.89ms, mfu 39.15%, throughput 0.28M tokens/s
+iter 833: loss 4.7135, time 334.70ms, mfu 40.07%, throughput 0.28M tokens/s
+iter 834: loss 4.7474, time 342.86ms, mfu 40.78%, throughput 0.28M tokens/s
+train throughput: 0.54 M tokens/s in 1.21s
+val throughput: 0.56 M tokens/s in 1.18s
+step 835: train loss 4.5982, val loss 4.6034
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 835: loss 4.6662, time 4688.55ms, mfu 37.05%, throughput 0.28M tokens/s
+iter 836: loss 4.6635, time 334.06ms, mfu 38.18%, throughput 0.28M tokens/s
+iter 837: loss 4.6680, time 335.02ms, mfu 39.19%, throughput 0.28M tokens/s
+iter 838: loss 4.7098, time 334.05ms, mfu 40.11%, throughput 0.28M tokens/s
+iter 839: loss 4.6676, time 335.66ms, mfu 40.92%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 840: train loss 4.6125, val loss 4.6069
+iter 840: loss 4.6719, time 2705.04ms, mfu 37.42%, throughput 0.28M tokens/s
+iter 841: loss 4.6715, time 333.65ms, mfu 38.53%, throughput 0.28M tokens/s
+iter 842: loss 4.7065, time 335.05ms, mfu 39.50%, throughput 0.28M tokens/s
+iter 843: loss 4.6843, time 335.18ms, mfu 40.38%, throughput 0.28M tokens/s
+iter 844: loss 4.7080, time 335.37ms, mfu 41.16%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 845: train loss 4.5951, val loss 4.5988
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 845: loss 4.6629, time 4725.70ms, mfu 37.39%, throughput 0.28M tokens/s
+iter 846: loss 4.6421, time 353.07ms, mfu 38.23%, throughput 0.28M tokens/s
+iter 847: loss 4.6962, time 335.25ms, mfu 39.23%, throughput 0.28M tokens/s
+iter 848: loss 4.6573, time 335.74ms, mfu 40.12%, throughput 0.28M tokens/s
+iter 849: loss 4.6590, time 335.01ms, mfu 40.94%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 850: train loss 4.5898, val loss 4.5963
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 850: loss 4.6851, time 4745.23ms, mfu 37.18%, throughput 0.28M tokens/s
+iter 851: loss 4.6602, time 338.48ms, mfu 38.24%, throughput 0.28M tokens/s
+iter 852: loss 4.6919, time 331.93ms, mfu 39.29%, throughput 0.28M tokens/s
+iter 853: loss 4.6494, time 334.15ms, mfu 40.20%, throughput 0.28M tokens/s
+iter 854: loss 4.6515, time 335.13ms, mfu 41.01%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 855: train loss 4.5906, val loss 4.6025
+iter 855: loss 4.6841, time 2705.03ms, mfu 37.50%, throughput 0.28M tokens/s
+iter 856: loss 4.6510, time 335.51ms, mfu 38.57%, throughput 0.28M tokens/s
+iter 857: loss 4.6759, time 563.18ms, mfu 37.59%, throughput 0.28M tokens/s
+iter 858: loss 4.6852, time 219.47ms, mfu 41.20%, throughput 0.28M tokens/s
+iter 859: loss 4.7009, time 337.38ms, mfu 41.87%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.54 M tokens/s in 1.21s
+step 860: train loss 4.5807, val loss 4.5788
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 860: loss 4.7151, time 4759.04ms, mfu 38.02%, throughput 0.28M tokens/s
+iter 861: loss 4.6364, time 358.46ms, mfu 38.73%, throughput 0.28M tokens/s
+iter 862: loss 4.6930, time 334.10ms, mfu 39.70%, throughput 0.28M tokens/s
+iter 863: loss 4.7391, time 331.42ms, mfu 40.61%, throughput 0.28M tokens/s
+iter 864: loss 4.6649, time 336.65ms, mfu 41.35%, throughput 0.28M tokens/s
+train throughput: 0.52 M tokens/s in 1.27s
+val throughput: 0.55 M tokens/s in 1.19s
+step 865: train loss 4.5772, val loss 4.6051
+iter 865: loss 4.6986, time 2799.97ms, mfu 37.79%, throughput 0.28M tokens/s
+iter 866: loss 4.6377, time 338.17ms, mfu 38.79%, throughput 0.28M tokens/s
+iter 867: loss 4.6383, time 335.87ms, mfu 39.73%, throughput 0.28M tokens/s
+iter 868: loss 4.6975, time 335.92ms, mfu 40.57%, throughput 0.28M tokens/s
+iter 869: loss 4.7238, time 343.59ms, mfu 41.22%, throughput 0.28M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.18s
+step 870: train loss 4.5546, val loss 4.5580
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 870: loss 4.6129, time 4837.56ms, mfu 37.43%, throughput 0.28M tokens/s
+iter 871: loss 4.6948, time 333.20ms, mfu 38.54%, throughput 0.28M tokens/s
+iter 872: loss 4.7206, time 334.65ms, mfu 39.52%, throughput 0.28M tokens/s
+iter 873: loss 4.6731, time 339.23ms, mfu 40.33%, throughput 0.28M tokens/s
+iter 874: loss 4.6211, time 341.56ms, mfu 41.04%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 875: train loss 4.5818, val loss 4.5633
+iter 875: loss 4.6647, time 2683.65ms, mfu 37.53%, throughput 0.29M tokens/s
+iter 876: loss 4.6664, time 335.89ms, mfu 38.60%, throughput 0.29M tokens/s
+iter 877: loss 4.6247, time 335.16ms, mfu 39.56%, throughput 0.28M tokens/s
+iter 878: loss 4.7466, time 335.31ms, mfu 40.43%, throughput 0.28M tokens/s
+iter 879: loss 4.6852, time 335.95ms, mfu 41.20%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 880: train loss 4.5768, val loss 4.5522
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 880: loss 4.6820, time 4755.07ms, mfu 37.42%, throughput 0.28M tokens/s
+iter 881: loss 4.6953, time 374.95ms, mfu 37.99%, throughput 0.28M tokens/s
+iter 882: loss 4.7141, time 334.10ms, mfu 39.03%, throughput 0.28M tokens/s
+iter 883: loss 4.6182, time 333.17ms, mfu 39.98%, throughput 0.28M tokens/s
+iter 884: loss 4.6457, time 336.51ms, mfu 40.79%, throughput 0.28M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 885: train loss 4.5769, val loss 4.5663
+iter 885: loss 4.6931, time 2696.34ms, mfu 37.31%, throughput 0.29M tokens/s
+iter 886: loss 4.6612, time 334.84ms, mfu 38.41%, throughput 0.29M tokens/s
+iter 887: loss 4.6793, time 338.64ms, mfu 39.34%, throughput 0.29M tokens/s
+iter 888: loss 4.6916, time 334.95ms, mfu 40.24%, throughput 0.29M tokens/s
+iter 889: loss 4.5914, time 338.33ms, mfu 40.99%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 890: train loss 4.5847, val loss 4.5745
+iter 890: loss 4.6376, time 2701.41ms, mfu 37.49%, throughput 0.29M tokens/s
+iter 891: loss 4.6147, time 353.37ms, mfu 38.32%, throughput 0.29M tokens/s
+iter 892: loss 4.6586, time 319.14ms, mfu 39.55%, throughput 0.29M tokens/s
+iter 893: loss 4.6902, time 342.11ms, mfu 40.32%, throughput 0.29M tokens/s
+iter 894: loss 4.6670, time 331.53ms, mfu 41.17%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.55 M tokens/s in 1.19s
+step 895: train loss 4.5697, val loss 4.5491
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 895: loss 4.6694, time 4904.67ms, mfu 37.38%, throughput 0.29M tokens/s
+iter 896: loss 4.6425, time 331.46ms, mfu 38.52%, throughput 0.29M tokens/s
+iter 897: loss 4.6326, time 338.09ms, mfu 39.45%, throughput 0.29M tokens/s
+iter 898: loss 4.7015, time 334.67ms, mfu 40.34%, throughput 0.29M tokens/s
+iter 899: loss 4.7033, time 335.34ms, mfu 41.13%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 900: train loss 4.5359, val loss 4.5716
+iter 900: loss 4.5711, time 2700.06ms, mfu 37.61%, throughput 0.29M tokens/s
+iter 901: loss 4.6658, time 358.12ms, mfu 38.37%, throughput 0.29M tokens/s
+iter 902: loss 4.6833, time 317.72ms, mfu 39.62%, throughput 0.29M tokens/s
+iter 903: loss 4.6713, time 334.99ms, mfu 40.49%, throughput 0.29M tokens/s
+iter 904: loss 4.6568, time 334.08ms, mfu 41.28%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.18s
+step 905: train loss 4.5518, val loss 4.5353
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 905: loss 4.6044, time 4896.73ms, mfu 37.48%, throughput 0.29M tokens/s
+iter 906: loss 4.6353, time 364.02ms, mfu 38.17%, throughput 0.29M tokens/s
+iter 907: loss 4.6713, time 334.67ms, mfu 39.19%, throughput 0.29M tokens/s
+iter 908: loss 4.6427, time 337.23ms, mfu 40.06%, throughput 0.29M tokens/s
+iter 909: loss 4.6459, time 333.68ms, mfu 40.90%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 910: train loss 4.5395, val loss 4.5507
+iter 910: loss 4.5718, time 2701.56ms, mfu 37.41%, throughput 0.29M tokens/s
+iter 911: loss 4.6574, time 335.85ms, mfu 38.49%, throughput 0.29M tokens/s
+iter 912: loss 4.6064, time 339.12ms, mfu 39.41%, throughput 0.29M tokens/s
+iter 913: loss 4.6750, time 332.76ms, mfu 40.32%, throughput 0.29M tokens/s
+iter 914: loss 4.6029, time 336.66ms, mfu 41.10%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 915: train loss 4.5628, val loss 4.5531
+iter 915: loss 4.6732, time 2694.71ms, mfu 37.59%, throughput 0.29M tokens/s
+iter 916: loss 4.6388, time 337.78ms, mfu 38.61%, throughput 0.29M tokens/s
+iter 917: loss 4.6150, time 336.95ms, mfu 39.55%, throughput 0.29M tokens/s
+iter 918: loss 4.6282, time 336.46ms, mfu 40.40%, throughput 0.29M tokens/s
+iter 919: loss 4.6212, time 342.16ms, mfu 41.09%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.55 M tokens/s in 1.18s
+step 920: train loss 4.5263, val loss 4.5266
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 920: loss 4.6989, time 4733.26ms, mfu 37.32%, throughput 0.29M tokens/s
+iter 921: loss 4.6126, time 326.83ms, mfu 38.54%, throughput 0.29M tokens/s
+iter 922: loss 4.6644, time 336.14ms, mfu 39.49%, throughput 0.29M tokens/s
+iter 923: loss 4.6251, time 333.69ms, mfu 40.39%, throughput 0.29M tokens/s
+iter 924: loss 4.5876, time 335.45ms, mfu 41.17%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 925: train loss 4.5173, val loss 4.5436
+iter 925: loss 4.6038, time 2709.40ms, mfu 37.65%, throughput 0.29M tokens/s
+iter 926: loss 4.6310, time 335.43ms, mfu 38.71%, throughput 0.29M tokens/s
+iter 927: loss 4.6609, time 335.45ms, mfu 39.66%, throughput 0.29M tokens/s
+iter 928: loss 4.6481, time 336.13ms, mfu 40.50%, throughput 0.29M tokens/s
+iter 929: loss 4.6724, time 335.15ms, mfu 41.28%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 930: train loss 4.5370, val loss 4.5657
+iter 930: loss 4.6610, time 2695.43ms, mfu 37.75%, throughput 0.29M tokens/s
+iter 931: loss 4.6188, time 338.21ms, mfu 38.76%, throughput 0.29M tokens/s
+iter 932: loss 4.6113, time 337.39ms, mfu 39.67%, throughput 0.29M tokens/s
+iter 933: loss 4.5900, time 340.72ms, mfu 40.45%, throughput 0.29M tokens/s
+iter 934: loss 4.5981, time 335.15ms, mfu 41.23%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 935: train loss 4.5336, val loss 4.5261
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 935: loss 4.6047, time 4803.78ms, mfu 37.44%, throughput 0.29M tokens/s
+iter 936: loss 4.5711, time 369.52ms, mfu 38.08%, throughput 0.29M tokens/s
+iter 937: loss 4.6702, time 332.62ms, mfu 39.13%, throughput 0.29M tokens/s
+iter 938: loss 4.6050, time 336.30ms, mfu 40.03%, throughput 0.29M tokens/s
+iter 939: loss 4.6578, time 333.02ms, mfu 40.88%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 940: train loss 4.5045, val loss 4.5363
+iter 940: loss 4.5886, time 2708.32ms, mfu 37.39%, throughput 0.29M tokens/s
+iter 941: loss 4.6326, time 332.13ms, mfu 38.52%, throughput 0.29M tokens/s
+iter 942: loss 4.5902, time 335.71ms, mfu 39.48%, throughput 0.29M tokens/s
+iter 943: loss 4.6371, time 337.15ms, mfu 40.33%, throughput 0.29M tokens/s
+iter 944: loss 4.6650, time 336.00ms, mfu 41.11%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.54 M tokens/s in 1.21s
+step 945: train loss 4.5431, val loss 4.5229
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 945: loss 4.6424, time 4769.07ms, mfu 37.34%, throughput 0.29M tokens/s
+iter 946: loss 4.6201, time 339.36ms, mfu 38.37%, throughput 0.29M tokens/s
+iter 947: loss 4.6066, time 330.19ms, mfu 39.43%, throughput 0.29M tokens/s
+iter 948: loss 4.5912, time 339.55ms, mfu 40.25%, throughput 0.29M tokens/s
+iter 949: loss 4.6574, time 330.35ms, mfu 41.12%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 950: train loss 4.5239, val loss 4.5030
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 950: loss 4.6318, time 4727.71ms, mfu 37.35%, throughput 0.29M tokens/s
+iter 951: loss 4.5822, time 354.58ms, mfu 38.18%, throughput 0.29M tokens/s
+iter 952: loss 4.5986, time 335.63ms, mfu 39.18%, throughput 0.29M tokens/s
+iter 953: loss 4.5726, time 338.66ms, mfu 40.03%, throughput 0.29M tokens/s
+iter 954: loss 4.5797, time 332.35ms, mfu 40.89%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 955: train loss 4.5239, val loss 4.5170
+iter 955: loss 4.5842, time 2706.90ms, mfu 37.40%, throughput 0.29M tokens/s
+iter 956: loss 4.6016, time 335.21ms, mfu 38.49%, throughput 0.29M tokens/s
+iter 957: loss 4.5375, time 336.16ms, mfu 39.45%, throughput 0.29M tokens/s
+iter 958: loss 4.6213, time 336.70ms, mfu 40.31%, throughput 0.29M tokens/s
+iter 959: loss 4.6047, time 336.76ms, mfu 41.08%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 960: train loss 4.5014, val loss 4.5293
+iter 960: loss 4.5690, time 2697.88ms, mfu 37.57%, throughput 0.29M tokens/s
+iter 961: loss 4.6107, time 336.22ms, mfu 38.62%, throughput 0.29M tokens/s
+iter 962: loss 4.6126, time 337.69ms, mfu 39.55%, throughput 0.29M tokens/s
+iter 963: loss 4.6222, time 337.54ms, mfu 40.38%, throughput 0.29M tokens/s
+iter 964: loss 4.6144, time 336.99ms, mfu 41.14%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 965: train loss 4.5261, val loss 4.5120
+iter 965: loss 4.6091, time 2690.38ms, mfu 37.63%, throughput 0.29M tokens/s
+iter 966: loss 4.6119, time 334.09ms, mfu 38.71%, throughput 0.29M tokens/s
+iter 967: loss 4.5721, time 335.52ms, mfu 39.66%, throughput 0.29M tokens/s
+iter 968: loss 4.5906, time 335.87ms, mfu 40.51%, throughput 0.29M tokens/s
+iter 969: loss 4.5863, time 335.43ms, mfu 41.28%, throughput 0.29M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.18s
+step 970: train loss 4.5114, val loss 4.5128
+iter 970: loss 4.6243, time 2696.85ms, mfu 37.75%, throughput 0.29M tokens/s
+iter 971: loss 4.6017, time 337.54ms, mfu 38.76%, throughput 0.29M tokens/s
+iter 972: loss 4.5938, time 336.10ms, mfu 39.70%, throughput 0.29M tokens/s
+iter 973: loss 4.6516, time 336.65ms, mfu 40.53%, throughput 0.29M tokens/s
+iter 974: loss 4.6009, time 336.71ms, mfu 41.28%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 975: train loss 4.5105, val loss 4.4930
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 975: loss 4.5726, time 4877.65ms, mfu 37.48%, throughput 0.29M tokens/s
+iter 976: loss 4.6227, time 331.41ms, mfu 38.62%, throughput 0.29M tokens/s
+iter 977: loss 4.6684, time 339.83ms, mfu 39.51%, throughput 0.29M tokens/s
+iter 978: loss 4.6333, time 332.43ms, mfu 40.43%, throughput 0.29M tokens/s
+iter 979: loss 4.5720, time 336.53ms, mfu 41.19%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.19s
+step 980: train loss 4.5073, val loss 4.5174
+iter 980: loss 4.5515, time 2717.69ms, mfu 37.66%, throughput 0.29M tokens/s
+iter 981: loss 4.5504, time 336.22ms, mfu 38.71%, throughput 0.29M tokens/s
+iter 982: loss 4.6243, time 339.64ms, mfu 39.60%, throughput 0.29M tokens/s
+iter 983: loss 4.5701, time 339.45ms, mfu 40.40%, throughput 0.29M tokens/s
+iter 984: loss 4.6741, time 328.20ms, mfu 41.29%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 985: train loss 4.4797, val loss 4.4967
+iter 985: loss 4.5906, time 2697.87ms, mfu 37.76%, throughput 0.29M tokens/s
+iter 986: loss 4.5722, time 330.96ms, mfu 38.87%, throughput 0.29M tokens/s
+iter 987: loss 4.5892, time 358.82ms, mfu 39.49%, throughput 0.29M tokens/s
+iter 988: loss 4.5886, time 316.88ms, mfu 40.64%, throughput 0.29M tokens/s
+iter 989: loss 4.6010, time 335.32ms, mfu 41.40%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 990: train loss 4.4795, val loss 4.4948
+iter 990: loss 4.6073, time 2710.17ms, mfu 37.86%, throughput 0.29M tokens/s
+iter 991: loss 4.5621, time 336.73ms, mfu 38.87%, throughput 0.29M tokens/s
+iter 992: loss 4.6054, time 336.90ms, mfu 39.79%, throughput 0.29M tokens/s
+iter 993: loss 4.6248, time 337.41ms, mfu 40.60%, throughput 0.29M tokens/s
+iter 994: loss 4.5901, time 336.84ms, mfu 41.34%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.19s
+step 995: train loss 4.4868, val loss 4.5009
+iter 995: loss 4.5779, time 2720.39ms, mfu 37.80%, throughput 0.29M tokens/s
+iter 996: loss 4.6564, time 337.35ms, mfu 38.81%, throughput 0.29M tokens/s
+iter 997: loss 4.5622, time 334.40ms, mfu 39.77%, throughput 0.29M tokens/s
+iter 998: loss 4.5866, time 337.07ms, mfu 40.59%, throughput 0.29M tokens/s
+iter 999: loss 4.5966, time 336.85ms, mfu 41.33%, throughput 0.29M tokens/s
+train throughput: 0.54 M tokens/s in 1.21s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1000: train loss 4.4827, val loss 4.4861
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1000: loss 4.5160, time 4774.62ms, mfu 37.54%, throughput 0.29M tokens/s
+iter 1001: loss 4.6114, time 378.81ms, mfu 38.05%, throughput 0.29M tokens/s
+iter 1002: loss 4.5935, time 337.81ms, mfu 39.03%, throughput 0.29M tokens/s
+iter 1003: loss 4.6166, time 331.58ms, mfu 40.01%, throughput 0.29M tokens/s
+iter 1004: loss 4.5621, time 337.38ms, mfu 40.80%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1005: train loss 4.4825, val loss 4.5126
+iter 1005: loss 4.6130, time 2704.42ms, mfu 37.32%, throughput 0.29M tokens/s
+iter 1006: loss 4.5332, time 343.43ms, mfu 38.29%, throughput 0.29M tokens/s
+iter 1007: loss 4.5849, time 328.55ms, mfu 39.39%, throughput 0.29M tokens/s
+iter 1008: loss 4.5874, time 336.31ms, mfu 40.26%, throughput 0.29M tokens/s
+iter 1009: loss 4.6301, time 336.04ms, mfu 41.04%, throughput 0.29M tokens/s
+train throughput: 0.54 M tokens/s in 1.21s
+val throughput: 0.55 M tokens/s in 1.18s
+step 1010: train loss 4.4869, val loss 4.4758
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1010: loss 4.5933, time 4601.07ms, mfu 37.29%, throughput 0.29M tokens/s
+iter 1011: loss 4.5815, time 332.26ms, mfu 38.43%, throughput 0.29M tokens/s
+iter 1012: loss 4.5792, time 336.83ms, mfu 39.39%, throughput 0.29M tokens/s
+iter 1013: loss 4.5570, time 344.80ms, mfu 40.14%, throughput 0.29M tokens/s
+iter 1014: loss 4.5839, time 327.13ms, mfu 41.07%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1015: train loss 4.4686, val loss 4.4827
+iter 1015: loss 4.5273, time 2696.16ms, mfu 37.56%, throughput 0.29M tokens/s
+iter 1016: loss 4.5931, time 335.52ms, mfu 38.62%, throughput 0.29M tokens/s
+iter 1017: loss 4.5759, time 335.35ms, mfu 39.58%, throughput 0.29M tokens/s
+iter 1018: loss 4.5350, time 341.44ms, mfu 40.36%, throughput 0.29M tokens/s
+iter 1019: loss 4.6023, time 333.45ms, mfu 41.17%, throughput 0.29M tokens/s
+train throughput: 0.54 M tokens/s in 1.21s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1020: train loss 4.4605, val loss 4.4804
+iter 1020: loss 4.5688, time 2727.29ms, mfu 37.65%, throughput 0.29M tokens/s
+iter 1021: loss 4.5217, time 337.63ms, mfu 38.67%, throughput 0.29M tokens/s
+iter 1022: loss 4.5340, time 337.65ms, mfu 39.60%, throughput 0.29M tokens/s
+iter 1023: loss 4.5706, time 337.28ms, mfu 40.43%, throughput 0.29M tokens/s
+iter 1024: loss 4.5673, time 334.40ms, mfu 41.22%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1025: train loss 4.4830, val loss 4.4866
+iter 1025: loss 4.6221, time 2704.40ms, mfu 37.70%, throughput 0.29M tokens/s
+iter 1026: loss 4.5566, time 334.82ms, mfu 38.76%, throughput 0.29M tokens/s
+iter 1027: loss 4.5621, time 336.92ms, mfu 39.68%, throughput 0.29M tokens/s
+iter 1028: loss 4.5954, time 337.17ms, mfu 40.51%, throughput 0.29M tokens/s
+iter 1029: loss 4.5566, time 335.41ms, mfu 41.28%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1030: train loss 4.4729, val loss 4.4826
+iter 1030: loss 4.5874, time 2725.17ms, mfu 37.75%, throughput 0.29M tokens/s
+iter 1031: loss 4.5689, time 331.34ms, mfu 38.85%, throughput 0.29M tokens/s
+iter 1032: loss 4.4589, time 336.18ms, mfu 39.78%, throughput 0.29M tokens/s
+iter 1033: loss 4.6102, time 336.53ms, mfu 40.60%, throughput 0.29M tokens/s
+iter 1034: loss 4.5498, time 338.36ms, mfu 41.32%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1035: train loss 4.4592, val loss 4.4967
+iter 1035: loss 4.5795, time 2690.46ms, mfu 37.79%, throughput 0.29M tokens/s
+iter 1036: loss 4.5782, time 340.83ms, mfu 38.76%, throughput 0.29M tokens/s
+iter 1037: loss 4.5969, time 336.60ms, mfu 39.68%, throughput 0.29M tokens/s
+iter 1038: loss 4.5494, time 331.48ms, mfu 40.59%, throughput 0.29M tokens/s
+iter 1039: loss 4.6331, time 342.34ms, mfu 41.26%, throughput 0.29M tokens/s
+train throughput: 0.54 M tokens/s in 1.22s
+val throughput: 0.55 M tokens/s in 1.18s
+step 1040: train loss 4.4489, val loss 4.4551
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1040: loss 4.5760, time 4804.41ms, mfu 37.47%, throughput 0.29M tokens/s
+iter 1041: loss 4.5570, time 356.16ms, mfu 38.26%, throughput 0.29M tokens/s
+iter 1042: loss 4.5814, time 342.76ms, mfu 39.15%, throughput 0.29M tokens/s
+iter 1043: loss 4.5504, time 330.50ms, mfu 40.13%, throughput 0.29M tokens/s
+iter 1044: loss 4.5498, time 331.59ms, mfu 40.99%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.20s
+step 1045: train loss 4.4759, val loss 4.4701
+iter 1045: loss 4.5907, time 2723.39ms, mfu 37.49%, throughput 0.29M tokens/s
+iter 1046: loss 4.5453, time 337.06ms, mfu 38.54%, throughput 0.29M tokens/s
+iter 1047: loss 4.5204, time 337.18ms, mfu 39.48%, throughput 0.29M tokens/s
+iter 1048: loss 4.5148, time 338.87ms, mfu 40.30%, throughput 0.29M tokens/s
+iter 1049: loss 4.5633, time 336.09ms, mfu 41.08%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1050: train loss 4.4743, val loss 4.4721
+iter 1050: loss 4.5801, time 2716.89ms, mfu 37.57%, throughput 0.29M tokens/s
+iter 1051: loss 4.5760, time 334.53ms, mfu 38.65%, throughput 0.29M tokens/s
+iter 1052: loss 4.5395, time 340.02ms, mfu 39.54%, throughput 0.29M tokens/s
+iter 1053: loss 4.6219, time 330.78ms, mfu 40.47%, throughput 0.29M tokens/s
+iter 1054: loss 4.5574, time 335.96ms, mfu 41.24%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1055: train loss 4.4651, val loss 4.4671
+iter 1055: loss 4.5545, time 2701.46ms, mfu 37.71%, throughput 0.29M tokens/s
+iter 1056: loss 4.5258, time 337.38ms, mfu 38.74%, throughput 0.29M tokens/s
+iter 1057: loss 4.5313, time 336.83ms, mfu 39.66%, throughput 0.29M tokens/s
+iter 1058: loss 4.5457, time 337.16ms, mfu 40.49%, throughput 0.29M tokens/s
+iter 1059: loss 4.4961, time 336.99ms, mfu 41.24%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1060: train loss 4.4553, val loss 4.4633
+iter 1060: loss 4.5468, time 2707.09ms, mfu 37.72%, throughput 0.29M tokens/s
+iter 1061: loss 4.5386, time 338.22ms, mfu 38.72%, throughput 0.29M tokens/s
+iter 1062: loss 4.5737, time 334.08ms, mfu 39.69%, throughput 0.29M tokens/s
+iter 1063: loss 4.5808, time 345.35ms, mfu 40.41%, throughput 0.29M tokens/s
+iter 1064: loss 4.5532, time 328.09ms, mfu 41.29%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1065: train loss 4.4493, val loss 4.4409
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1065: loss 4.6030, time 4827.57ms, mfu 37.50%, throughput 0.29M tokens/s
+iter 1066: loss 4.5463, time 328.26ms, mfu 38.68%, throughput 0.29M tokens/s
+iter 1067: loss 4.5444, time 336.31ms, mfu 39.62%, throughput 0.29M tokens/s
+iter 1068: loss 4.4793, time 336.27ms, mfu 40.46%, throughput 0.29M tokens/s
+iter 1069: loss 4.5488, time 335.84ms, mfu 41.23%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.18s
+step 1070: train loss 4.4424, val loss 4.4625
+iter 1070: loss 4.6393, time 2714.46ms, mfu 37.70%, throughput 0.29M tokens/s
+iter 1071: loss 4.5246, time 337.43ms, mfu 38.73%, throughput 0.29M tokens/s
+iter 1072: loss 4.5447, time 336.49ms, mfu 39.66%, throughput 0.29M tokens/s
+iter 1073: loss 4.5464, time 336.11ms, mfu 40.50%, throughput 0.29M tokens/s
+iter 1074: loss 4.5146, time 343.90ms, mfu 41.16%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1075: train loss 4.4547, val loss 4.4332
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1075: loss 4.5090, time 4727.79ms, mfu 37.38%, throughput 0.29M tokens/s
+iter 1076: loss 4.5364, time 350.44ms, mfu 38.26%, throughput 0.29M tokens/s
+iter 1077: loss 4.4950, time 336.22ms, mfu 39.24%, throughput 0.29M tokens/s
+iter 1078: loss 4.5508, time 335.20ms, mfu 40.14%, throughput 0.29M tokens/s
+iter 1079: loss 4.5200, time 333.96ms, mfu 40.97%, throughput 0.29M tokens/s
+train throughput: 0.46 M tokens/s in 1.42s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1080: train loss 4.4355, val loss 4.4630
+iter 1080: loss 4.5872, time 2936.86ms, mfu 37.42%, throughput 0.30M tokens/s
+iter 1081: loss 4.5048, time 339.97ms, mfu 38.44%, throughput 0.30M tokens/s
+iter 1082: loss 4.5658, time 335.35ms, mfu 39.42%, throughput 0.29M tokens/s
+iter 1083: loss 4.5443, time 333.53ms, mfu 40.32%, throughput 0.29M tokens/s
+iter 1084: loss 4.5217, time 336.13ms, mfu 41.10%, throughput 0.29M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1085: train loss 4.4361, val loss 4.4418
+iter 1085: loss 4.5734, time 2699.29ms, mfu 37.59%, throughput 0.30M tokens/s
+iter 1086: loss 4.5455, time 334.26ms, mfu 38.67%, throughput 0.30M tokens/s
+iter 1087: loss 4.5114, time 335.66ms, mfu 39.62%, throughput 0.30M tokens/s
+iter 1088: loss 4.5507, time 336.35ms, mfu 40.47%, throughput 0.30M tokens/s
+iter 1089: loss 4.6176, time 335.86ms, mfu 41.23%, throughput 0.30M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1090: train loss 4.4409, val loss 4.4163
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1090: loss 4.5228, time 4735.13ms, mfu 37.45%, throughput 0.30M tokens/s
+iter 1091: loss 4.4881, time 333.08ms, mfu 38.56%, throughput 0.30M tokens/s
+iter 1092: loss 4.5396, time 334.54ms, mfu 39.54%, throughput 0.30M tokens/s
+iter 1093: loss 4.5213, time 334.44ms, mfu 40.42%, throughput 0.30M tokens/s
+iter 1094: loss 4.5662, time 351.57ms, mfu 40.98%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1095: train loss 4.4392, val loss 4.4336
+iter 1095: loss 4.4670, time 2694.21ms, mfu 37.48%, throughput 0.30M tokens/s
+iter 1096: loss 4.5023, time 335.91ms, mfu 38.55%, throughput 0.30M tokens/s
+iter 1097: loss 4.5313, time 340.30ms, mfu 39.44%, throughput 0.30M tokens/s
+iter 1098: loss 4.5316, time 330.19ms, mfu 40.40%, throughput 0.30M tokens/s
+iter 1099: loss 4.5261, time 337.41ms, mfu 41.15%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1100: train loss 4.4224, val loss 4.4632
+iter 1100: loss 4.5297, time 2695.86ms, mfu 37.63%, throughput 0.30M tokens/s
+iter 1101: loss 4.5389, time 338.07ms, mfu 38.65%, throughput 0.30M tokens/s
+iter 1102: loss 4.5143, time 336.42ms, mfu 39.60%, throughput 0.30M tokens/s
+iter 1103: loss 4.5045, time 335.04ms, mfu 40.46%, throughput 0.30M tokens/s
+iter 1104: loss 4.5708, time 337.26ms, mfu 41.21%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1105: train loss 4.4269, val loss 4.4501
+iter 1105: loss 4.5474, time 2715.54ms, mfu 37.68%, throughput 0.30M tokens/s
+iter 1106: loss 4.5497, time 336.77ms, mfu 38.72%, throughput 0.30M tokens/s
+iter 1107: loss 4.5280, time 337.53ms, mfu 39.64%, throughput 0.30M tokens/s
+iter 1108: loss 4.5044, time 335.05ms, mfu 40.50%, throughput 0.30M tokens/s
+iter 1109: loss 4.5084, time 335.62ms, mfu 41.27%, throughput 0.30M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1110: train loss 4.4281, val loss 4.4251
+iter 1110: loss 4.5386, time 2694.33ms, mfu 37.74%, throughput 0.30M tokens/s
+iter 1111: loss 4.5718, time 340.54ms, mfu 38.72%, throughput 0.30M tokens/s
+iter 1112: loss 4.4662, time 332.63ms, mfu 39.71%, throughput 0.30M tokens/s
+iter 1113: loss 4.5596, time 339.97ms, mfu 40.49%, throughput 0.30M tokens/s
+iter 1114: loss 4.5611, time 333.72ms, mfu 41.29%, throughput 0.30M tokens/s
+train throughput: 0.54 M tokens/s in 1.21s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1115: train loss 4.4156, val loss 4.4277
+iter 1115: loss 4.4351, time 2725.23ms, mfu 37.75%, throughput 0.30M tokens/s
+iter 1116: loss 4.5000, time 334.91ms, mfu 38.81%, throughput 0.30M tokens/s
+iter 1117: loss 4.5840, time 337.31ms, mfu 39.72%, throughput 0.30M tokens/s
+iter 1118: loss 4.5495, time 339.92ms, mfu 40.50%, throughput 0.30M tokens/s
+iter 1119: loss 4.4364, time 333.53ms, mfu 41.30%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1120: train loss 4.4222, val loss 4.4133
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1120: loss 4.5214, time 4702.07ms, mfu 37.52%, throughput 0.30M tokens/s
+iter 1121: loss 4.4933, time 354.71ms, mfu 38.32%, throughput 0.30M tokens/s
+iter 1122: loss 4.5143, time 335.82ms, mfu 39.31%, throughput 0.30M tokens/s
+iter 1123: loss 4.5307, time 351.54ms, mfu 39.98%, throughput 0.30M tokens/s
+iter 1124: loss 4.5232, time 322.23ms, mfu 41.00%, throughput 0.30M tokens/s
+train throughput: 0.52 M tokens/s in 1.26s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1125: train loss 4.4294, val loss 4.4234
+iter 1125: loss 4.4756, time 2773.15ms, mfu 37.48%, throughput 0.30M tokens/s
+iter 1126: loss 4.5248, time 337.73ms, mfu 38.52%, throughput 0.30M tokens/s
+iter 1127: loss 4.5756, time 336.72ms, mfu 39.47%, throughput 0.30M tokens/s
+iter 1128: loss 4.5438, time 341.64ms, mfu 40.26%, throughput 0.30M tokens/s
+iter 1129: loss 4.5242, time 330.83ms, mfu 41.12%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1130: train loss 4.4254, val loss 4.4273
+iter 1130: loss 4.5407, time 2699.00ms, mfu 37.61%, throughput 0.30M tokens/s
+iter 1131: loss 4.5375, time 344.85ms, mfu 38.53%, throughput 0.30M tokens/s
+iter 1132: loss 4.4726, time 327.14ms, mfu 39.62%, throughput 0.30M tokens/s
+iter 1133: loss 4.4977, time 337.63ms, mfu 40.45%, throughput 0.30M tokens/s
+iter 1134: loss 4.4917, time 334.16ms, mfu 41.24%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1135: train loss 4.4103, val loss 4.4003
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1135: loss 4.5241, time 4846.05ms, mfu 37.45%, throughput 0.30M tokens/s
+iter 1136: loss 4.4937, time 369.45ms, mfu 38.09%, throughput 0.30M tokens/s
+iter 1137: loss 4.5054, time 336.54ms, mfu 39.08%, throughput 0.30M tokens/s
+iter 1138: loss 4.5394, time 334.32ms, mfu 40.01%, throughput 0.30M tokens/s
+iter 1139: loss 4.5171, time 330.40ms, mfu 40.90%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1140: train loss 4.3960, val loss 4.4059
+iter 1140: loss 4.5278, time 2703.75ms, mfu 37.41%, throughput 0.30M tokens/s
+iter 1141: loss 4.5085, time 336.27ms, mfu 38.48%, throughput 0.30M tokens/s
+iter 1142: loss 4.5373, time 344.91ms, mfu 39.32%, throughput 0.30M tokens/s
+iter 1143: loss 4.4940, time 330.52ms, mfu 40.28%, throughput 0.30M tokens/s
+iter 1144: loss 4.5406, time 333.88ms, mfu 41.10%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1145: train loss 4.4066, val loss 4.4184
+iter 1145: loss 4.5079, time 2710.26ms, mfu 37.58%, throughput 0.30M tokens/s
+iter 1146: loss 4.5368, time 333.65ms, mfu 38.67%, throughput 0.30M tokens/s
+iter 1147: loss 4.4691, time 336.81ms, mfu 39.60%, throughput 0.30M tokens/s
+iter 1148: loss 4.5173, time 337.43ms, mfu 40.44%, throughput 0.30M tokens/s
+iter 1149: loss 4.5146, time 335.22ms, mfu 41.22%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1150: train loss 4.4003, val loss 4.4025
+iter 1150: loss 4.5204, time 2694.11ms, mfu 37.70%, throughput 0.30M tokens/s
+iter 1151: loss 4.5201, time 338.57ms, mfu 38.70%, throughput 0.30M tokens/s
+iter 1152: loss 4.5337, time 333.71ms, mfu 39.68%, throughput 0.30M tokens/s
+iter 1153: loss 4.5226, time 337.68ms, mfu 40.50%, throughput 0.30M tokens/s
+iter 1154: loss 4.5390, time 335.97ms, mfu 41.26%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.18s
+step 1155: train loss 4.4126, val loss 4.4127
+iter 1155: loss 4.5060, time 2712.79ms, mfu 37.73%, throughput 0.30M tokens/s
+iter 1156: loss 4.5183, time 340.12ms, mfu 38.71%, throughput 0.30M tokens/s
+iter 1157: loss 4.4779, time 333.45ms, mfu 39.69%, throughput 0.30M tokens/s
+iter 1158: loss 4.4893, time 336.65ms, mfu 40.53%, throughput 0.30M tokens/s
+iter 1159: loss 4.4939, time 333.46ms, mfu 41.32%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1160: train loss 4.3992, val loss 4.3920
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1160: loss 4.4774, time 4767.42ms, mfu 37.53%, throughput 0.30M tokens/s
+iter 1161: loss 4.4934, time 330.88ms, mfu 38.66%, throughput 0.30M tokens/s
+iter 1162: loss 4.4673, time 337.52ms, mfu 39.59%, throughput 0.30M tokens/s
+iter 1163: loss 4.5091, time 331.62ms, mfu 40.51%, throughput 0.30M tokens/s
+iter 1164: loss 4.4746, time 335.13ms, mfu 41.28%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.55 M tokens/s in 1.19s
+step 1165: train loss 4.4049, val loss 4.4214
+iter 1165: loss 4.5199, time 2712.60ms, mfu 37.75%, throughput 0.30M tokens/s
+iter 1166: loss 4.4749, time 341.80ms, mfu 38.70%, throughput 0.30M tokens/s
+iter 1167: loss 4.5030, time 332.08ms, mfu 39.70%, throughput 0.30M tokens/s
+iter 1168: loss 4.4801, time 336.25ms, mfu 40.54%, throughput 0.30M tokens/s
+iter 1169: loss 4.4852, time 336.26ms, mfu 41.30%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1170: train loss 4.3985, val loss 4.4123
+iter 1170: loss 4.5109, time 2698.23ms, mfu 37.77%, throughput 0.30M tokens/s
+iter 1171: loss 4.5002, time 333.73ms, mfu 38.84%, throughput 0.30M tokens/s
+iter 1172: loss 4.4882, time 335.78ms, mfu 39.77%, throughput 0.30M tokens/s
+iter 1173: loss 4.5207, time 334.95ms, mfu 40.62%, throughput 0.30M tokens/s
+iter 1174: loss 4.5294, time 341.69ms, mfu 41.29%, throughput 0.30M tokens/s
+train throughput: 0.54 M tokens/s in 1.22s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1175: train loss 4.3927, val loss 4.4018
+iter 1175: loss 4.4999, time 2728.35ms, mfu 37.75%, throughput 0.30M tokens/s
+iter 1176: loss 4.4768, time 333.76ms, mfu 38.82%, throughput 0.30M tokens/s
+iter 1177: loss 4.5120, time 336.67ms, mfu 39.74%, throughput 0.30M tokens/s
+iter 1178: loss 4.5083, time 335.88ms, mfu 40.58%, throughput 0.30M tokens/s
+iter 1179: loss 4.4608, time 336.51ms, mfu 41.33%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1180: train loss 4.3957, val loss 4.3970
+iter 1180: loss 4.4739, time 2694.65ms, mfu 37.80%, throughput 0.30M tokens/s
+iter 1181: loss 4.4807, time 337.73ms, mfu 38.81%, throughput 0.30M tokens/s
+iter 1182: loss 4.4485, time 334.16ms, mfu 39.76%, throughput 0.30M tokens/s
+iter 1183: loss 4.5263, time 336.96ms, mfu 40.59%, throughput 0.30M tokens/s
+iter 1184: loss 4.4821, time 337.09ms, mfu 41.33%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1185: train loss 4.4051, val loss 4.3921
+iter 1185: loss 4.4491, time 2705.24ms, mfu 37.79%, throughput 0.30M tokens/s
+iter 1186: loss 4.5368, time 335.17ms, mfu 38.84%, throughput 0.30M tokens/s
+iter 1187: loss 4.4428, time 342.53ms, mfu 39.67%, throughput 0.30M tokens/s
+iter 1188: loss 4.5177, time 329.04ms, mfu 40.62%, throughput 0.30M tokens/s
+iter 1189: loss 4.4554, time 335.85ms, mfu 41.37%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1190: train loss 4.3862, val loss 4.3762
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1190: loss 4.4903, time 4651.06ms, mfu 37.58%, throughput 0.30M tokens/s
+iter 1191: loss 4.4991, time 363.61ms, mfu 38.27%, throughput 0.30M tokens/s
+iter 1192: loss 4.5148, time 334.75ms, mfu 39.28%, throughput 0.30M tokens/s
+iter 1193: loss 4.4793, time 330.72ms, mfu 40.24%, throughput 0.30M tokens/s
+iter 1194: loss 4.4615, time 337.13ms, mfu 41.01%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1195: train loss 4.3637, val loss 4.3688
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1195: loss 4.5575, time 4799.46ms, mfu 37.25%, throughput 0.30M tokens/s
+iter 1196: loss 4.4564, time 332.22ms, mfu 38.39%, throughput 0.30M tokens/s
+iter 1197: loss 4.4875, time 333.33ms, mfu 39.40%, throughput 0.30M tokens/s
+iter 1198: loss 4.4865, time 334.30ms, mfu 40.30%, throughput 0.30M tokens/s
+iter 1199: loss 4.4411, time 335.87ms, mfu 41.08%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1200: train loss 4.3670, val loss 4.3847
+iter 1200: loss 4.4895, time 2707.41ms, mfu 37.57%, throughput 0.30M tokens/s
+iter 1201: loss 4.5025, time 335.72ms, mfu 38.63%, throughput 0.30M tokens/s
+iter 1202: loss 4.5301, time 335.43ms, mfu 39.59%, throughput 0.30M tokens/s
+iter 1203: loss 4.5466, time 339.78ms, mfu 40.39%, throughput 0.30M tokens/s
+iter 1204: loss 4.5218, time 332.23ms, mfu 41.22%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.53 M tokens/s in 1.24s
+step 1205: train loss 4.3954, val loss 4.3971
+iter 1205: loss 4.4465, time 2758.40ms, mfu 37.68%, throughput 0.30M tokens/s
+iter 1206: loss 4.4680, time 342.26ms, mfu 38.64%, throughput 0.30M tokens/s
+iter 1207: loss 4.4870, time 333.88ms, mfu 39.62%, throughput 0.30M tokens/s
+iter 1208: loss 4.4805, time 331.52ms, mfu 40.53%, throughput 0.30M tokens/s
+iter 1209: loss 4.4831, time 340.31ms, mfu 41.23%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.18s
+step 1210: train loss 4.3579, val loss 4.3839
+iter 1210: loss 4.4791, time 2702.42ms, mfu 37.71%, throughput 0.30M tokens/s
+iter 1211: loss 4.4513, time 349.14ms, mfu 38.57%, throughput 0.30M tokens/s
+iter 1212: loss 4.4622, time 325.38ms, mfu 39.68%, throughput 0.30M tokens/s
+iter 1213: loss 4.4656, time 334.43ms, mfu 40.55%, throughput 0.30M tokens/s
+iter 1214: loss 4.4207, time 336.10ms, mfu 41.30%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1215: train loss 4.3956, val loss 4.3994
+iter 1215: loss 4.4257, time 2695.39ms, mfu 37.77%, throughput 0.30M tokens/s
+iter 1216: loss 4.5318, time 335.81ms, mfu 38.81%, throughput 0.30M tokens/s
+iter 1217: loss 4.4436, time 337.63ms, mfu 39.72%, throughput 0.30M tokens/s
+iter 1218: loss 4.5117, time 335.60ms, mfu 40.57%, throughput 0.30M tokens/s
+iter 1219: loss 4.4744, time 336.60ms, mfu 41.31%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.19s
+step 1220: train loss 4.3740, val loss 4.3826
+iter 1220: loss 4.4782, time 2722.31ms, mfu 37.78%, throughput 0.30M tokens/s
+iter 1221: loss 4.4862, time 336.71ms, mfu 38.80%, throughput 0.30M tokens/s
+iter 1222: loss 4.4473, time 343.69ms, mfu 39.63%, throughput 0.30M tokens/s
+iter 1223: loss 4.4895, time 332.88ms, mfu 40.52%, throughput 0.30M tokens/s
+iter 1224: loss 4.4736, time 331.49ms, mfu 41.35%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1225: train loss 4.3703, val loss 4.3895
+iter 1225: loss 4.4967, time 2702.44ms, mfu 37.81%, throughput 0.30M tokens/s
+iter 1226: loss 4.4890, time 335.94ms, mfu 38.84%, throughput 0.30M tokens/s
+iter 1227: loss 4.4437, time 336.99ms, mfu 39.76%, throughput 0.30M tokens/s
+iter 1228: loss 4.4353, time 338.61ms, mfu 40.56%, throughput 0.30M tokens/s
+iter 1229: loss 4.4815, time 334.33ms, mfu 41.34%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1230: train loss 4.3881, val loss 4.3686
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1230: loss 4.4644, time 4634.55ms, mfu 37.55%, throughput 0.30M tokens/s
+iter 1231: loss 4.4853, time 376.77ms, mfu 38.09%, throughput 0.30M tokens/s
+iter 1232: loss 4.4689, time 332.70ms, mfu 39.14%, throughput 0.30M tokens/s
+iter 1233: loss 4.4626, time 345.14ms, mfu 39.91%, throughput 0.30M tokens/s
+iter 1234: loss 4.5109, time 326.49ms, mfu 40.87%, throughput 0.30M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1235: train loss 4.3688, val loss 4.3581
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1235: loss 4.4713, time 4745.01ms, mfu 37.13%, throughput 0.30M tokens/s
+iter 1236: loss 4.4882, time 333.39ms, mfu 38.27%, throughput 0.30M tokens/s
+iter 1237: loss 4.4953, time 333.18ms, mfu 39.29%, throughput 0.30M tokens/s
+iter 1238: loss 4.4535, time 334.25ms, mfu 40.20%, throughput 0.30M tokens/s
+iter 1239: loss 4.3901, time 334.56ms, mfu 41.01%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1240: train loss 4.3560, val loss 4.3729
+iter 1240: loss 4.4753, time 2696.74ms, mfu 37.51%, throughput 0.30M tokens/s
+iter 1241: loss 4.4678, time 330.05ms, mfu 38.66%, throughput 0.30M tokens/s
+iter 1242: loss 4.4971, time 335.78ms, mfu 39.61%, throughput 0.30M tokens/s
+iter 1243: loss 4.4687, time 335.81ms, mfu 40.46%, throughput 0.30M tokens/s
+iter 1244: loss 4.4755, time 340.17ms, mfu 41.17%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1245: train loss 4.3915, val loss 4.3763
+iter 1245: loss 4.4970, time 2708.26ms, mfu 37.65%, throughput 0.30M tokens/s
+iter 1246: loss 4.5060, time 334.31ms, mfu 38.72%, throughput 0.30M tokens/s
+iter 1247: loss 4.4613, time 336.96ms, mfu 39.65%, throughput 0.30M tokens/s
+iter 1248: loss 4.4383, time 334.50ms, mfu 40.52%, throughput 0.30M tokens/s
+iter 1249: loss 4.4186, time 335.70ms, mfu 41.28%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.42 M tokens/s in 1.55s
+step 1250: train loss 4.3456, val loss 4.3699
+iter 1250: loss 4.4218, time 3074.96ms, mfu 37.68%, throughput 0.30M tokens/s
+iter 1251: loss 4.4884, time 339.77ms, mfu 38.67%, throughput 0.30M tokens/s
+iter 1252: loss 4.4433, time 333.00ms, mfu 39.66%, throughput 0.30M tokens/s
+iter 1253: loss 4.4938, time 335.28ms, mfu 40.52%, throughput 0.30M tokens/s
+iter 1254: loss 4.4626, time 336.22ms, mfu 41.28%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1255: train loss 4.3661, val loss 4.3671
+iter 1255: loss 4.4395, time 2698.53ms, mfu 37.75%, throughput 0.30M tokens/s
+iter 1256: loss 4.4909, time 334.58ms, mfu 38.81%, throughput 0.30M tokens/s
+iter 1257: loss 4.4638, time 335.35ms, mfu 39.75%, throughput 0.30M tokens/s
+iter 1258: loss 4.5143, time 334.56ms, mfu 40.61%, throughput 0.30M tokens/s
+iter 1259: loss 4.4435, time 336.52ms, mfu 41.35%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1260: train loss 4.3548, val loss 4.3665
+iter 1260: loss 4.4227, time 2686.65ms, mfu 37.82%, throughput 0.30M tokens/s
+iter 1261: loss 4.4302, time 335.72ms, mfu 38.85%, throughput 0.30M tokens/s
+iter 1262: loss 4.4556, time 335.10ms, mfu 39.79%, throughput 0.30M tokens/s
+iter 1263: loss 4.4482, time 333.96ms, mfu 40.66%, throughput 0.30M tokens/s
+iter 1264: loss 4.4686, time 335.02ms, mfu 41.42%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1265: train loss 4.3523, val loss 4.3610
+iter 1265: loss 4.4544, time 2700.02ms, mfu 37.87%, throughput 0.30M tokens/s
+iter 1266: loss 4.4323, time 336.67ms, mfu 38.89%, throughput 0.30M tokens/s
+iter 1267: loss 4.4519, time 335.16ms, mfu 39.83%, throughput 0.30M tokens/s
+iter 1268: loss 4.4485, time 335.43ms, mfu 40.66%, throughput 0.30M tokens/s
+iter 1269: loss 4.4035, time 336.25ms, mfu 41.41%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.16s
+step 1270: train loss 4.3560, val loss 4.3762
+iter 1270: loss 4.4204, time 2684.52ms, mfu 37.87%, throughput 0.30M tokens/s
+iter 1271: loss 4.4683, time 334.73ms, mfu 38.91%, throughput 0.30M tokens/s
+iter 1272: loss 4.5006, time 335.78ms, mfu 39.84%, throughput 0.30M tokens/s
+iter 1273: loss 4.4207, time 333.94ms, mfu 40.70%, throughput 0.30M tokens/s
+iter 1274: loss 4.4131, time 334.13ms, mfu 41.47%, throughput 0.30M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.55 M tokens/s in 1.19s
+step 1275: train loss 4.3598, val loss 4.3582
+iter 1275: loss 4.4584, time 2723.53ms, mfu 37.91%, throughput 0.30M tokens/s
+iter 1276: loss 4.4074, time 321.78ms, mfu 39.15%, throughput 0.30M tokens/s
+iter 1277: loss 4.4730, time 335.40ms, mfu 40.05%, throughput 0.30M tokens/s
+iter 1278: loss 4.4318, time 336.98ms, mfu 40.85%, throughput 0.30M tokens/s
+iter 1279: loss 4.4766, time 334.69ms, mfu 41.59%, throughput 0.30M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1280: train loss 4.3377, val loss 4.3806
+iter 1280: loss 4.4170, time 2683.78ms, mfu 38.04%, throughput 0.30M tokens/s
+iter 1281: loss 4.4485, time 337.03ms, mfu 39.03%, throughput 0.30M tokens/s
+iter 1282: loss 4.4584, time 336.65ms, mfu 39.93%, throughput 0.30M tokens/s
+iter 1283: loss 4.4410, time 334.29ms, mfu 40.78%, throughput 0.30M tokens/s
+iter 1284: loss 4.4442, time 334.54ms, mfu 41.53%, throughput 0.30M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1285: train loss 4.3278, val loss 4.3774
+iter 1285: loss 4.3978, time 2681.69ms, mfu 37.98%, throughput 0.30M tokens/s
+iter 1286: loss 4.4534, time 336.69ms, mfu 38.99%, throughput 0.30M tokens/s
+iter 1287: loss 4.4217, time 334.76ms, mfu 39.92%, throughput 0.30M tokens/s
+iter 1288: loss 4.4459, time 334.52ms, mfu 40.76%, throughput 0.30M tokens/s
+iter 1289: loss 4.4081, time 334.33ms, mfu 41.52%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1290: train loss 4.3409, val loss 4.3630
+iter 1290: loss 4.4577, time 2726.77ms, mfu 37.96%, throughput 0.30M tokens/s
+iter 1291: loss 4.3857, time 308.88ms, mfu 39.40%, throughput 0.30M tokens/s
+iter 1292: loss 4.4278, time 334.90ms, mfu 40.29%, throughput 0.30M tokens/s
+iter 1293: loss 4.4150, time 333.97ms, mfu 41.10%, throughput 0.30M tokens/s
+iter 1294: loss 4.4181, time 334.62ms, mfu 41.82%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1295: train loss 4.3519, val loss 4.3522
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1295: loss 4.4088, time 4791.63ms, mfu 37.98%, throughput 0.30M tokens/s
+iter 1296: loss 4.3879, time 329.82ms, mfu 39.08%, throughput 0.30M tokens/s
+iter 1297: loss 4.3965, time 335.74ms, mfu 39.99%, throughput 0.30M tokens/s
+iter 1298: loss 4.3648, time 349.44ms, mfu 40.62%, throughput 0.30M tokens/s
+iter 1299: loss 4.4418, time 321.16ms, mfu 41.59%, throughput 0.30M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1300: train loss 4.3445, val loss 4.3466
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1300: loss 4.4922, time 4566.13ms, mfu 37.79%, throughput 0.30M tokens/s
+iter 1301: loss 4.4091, time 348.83ms, mfu 38.65%, throughput 0.30M tokens/s
+iter 1302: loss 4.4811, time 336.47ms, mfu 39.59%, throughput 0.30M tokens/s
+iter 1303: loss 4.4658, time 333.45ms, mfu 40.48%, throughput 0.30M tokens/s
+iter 1304: loss 4.4543, time 335.06ms, mfu 41.26%, throughput 0.30M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1305: train loss 4.3184, val loss 4.3483
+iter 1305: loss 4.3898, time 2681.88ms, mfu 37.73%, throughput 0.30M tokens/s
+iter 1306: loss 4.4430, time 335.37ms, mfu 38.78%, throughput 0.30M tokens/s
+iter 1307: loss 4.4631, time 349.29ms, mfu 39.53%, throughput 0.30M tokens/s
+iter 1308: loss 4.4356, time 320.29ms, mfu 40.63%, throughput 0.30M tokens/s
+iter 1309: loss 4.4352, time 335.99ms, mfu 41.38%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.55 M tokens/s in 1.20s
+step 1310: train loss 4.3335, val loss 4.3418
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1310: loss 4.4797, time 4668.93ms, mfu 37.59%, throughput 0.30M tokens/s
+iter 1311: loss 4.3806, time 332.77ms, mfu 38.69%, throughput 0.30M tokens/s
+iter 1312: loss 4.4188, time 339.39ms, mfu 39.58%, throughput 0.30M tokens/s
+iter 1313: loss 4.4749, time 329.82ms, mfu 40.53%, throughput 0.30M tokens/s
+iter 1314: loss 4.4597, time 337.13ms, mfu 41.27%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.16s
+step 1315: train loss 4.3435, val loss 4.3327
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1315: loss 4.4232, time 4677.96ms, mfu 37.49%, throughput 0.30M tokens/s
+iter 1316: loss 4.4820, time 360.68ms, mfu 38.22%, throughput 0.30M tokens/s
+iter 1317: loss 4.4200, time 336.08ms, mfu 39.21%, throughput 0.30M tokens/s
+iter 1318: loss 4.3792, time 336.19ms, mfu 40.10%, throughput 0.30M tokens/s
+iter 1319: loss 4.4161, time 336.18ms, mfu 40.90%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1320: train loss 4.3232, val loss 4.3582
+iter 1320: loss 4.4262, time 2702.41ms, mfu 37.41%, throughput 0.30M tokens/s
+iter 1321: loss 4.4814, time 336.04ms, mfu 38.48%, throughput 0.30M tokens/s
+iter 1322: loss 4.3886, time 337.63ms, mfu 39.42%, throughput 0.30M tokens/s
+iter 1323: loss 4.4317, time 331.59ms, mfu 40.36%, throughput 0.30M tokens/s
+iter 1324: loss 4.4125, time 333.98ms, mfu 41.16%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1325: train loss 4.3069, val loss 4.3299
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1325: loss 4.4318, time 4679.95ms, mfu 37.39%, throughput 0.30M tokens/s
+iter 1326: loss 4.4504, time 330.00ms, mfu 38.55%, throughput 0.30M tokens/s
+iter 1327: loss 4.4324, time 338.33ms, mfu 39.48%, throughput 0.30M tokens/s
+iter 1328: loss 4.4671, time 330.34ms, mfu 40.42%, throughput 0.30M tokens/s
+iter 1329: loss 4.4302, time 337.03ms, mfu 41.18%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1330: train loss 4.3471, val loss 4.3306
+iter 1330: loss 4.4488, time 2707.35ms, mfu 37.66%, throughput 0.31M tokens/s
+iter 1331: loss 4.4468, time 336.12ms, mfu 38.70%, throughput 0.31M tokens/s
+iter 1332: loss 4.4744, time 336.49ms, mfu 39.64%, throughput 0.31M tokens/s
+iter 1333: loss 4.4506, time 335.78ms, mfu 40.49%, throughput 0.30M tokens/s
+iter 1334: loss 4.4056, time 335.83ms, mfu 41.26%, throughput 0.30M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.55 M tokens/s in 1.19s
+step 1335: train loss 4.3291, val loss 4.3347
+iter 1335: loss 4.4447, time 2715.20ms, mfu 37.73%, throughput 0.31M tokens/s
+iter 1336: loss 4.4611, time 334.53ms, mfu 38.79%, throughput 0.31M tokens/s
+iter 1337: loss 4.4139, time 335.76ms, mfu 39.73%, throughput 0.31M tokens/s
+iter 1338: loss 4.3555, time 335.06ms, mfu 40.58%, throughput 0.31M tokens/s
+iter 1339: loss 4.4866, time 336.04ms, mfu 41.33%, throughput 0.31M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1340: train loss 4.3300, val loss 4.3476
+iter 1340: loss 4.4355, time 2691.48ms, mfu 37.80%, throughput 0.31M tokens/s
+iter 1341: loss 4.3627, time 334.89ms, mfu 38.85%, throughput 0.31M tokens/s
+iter 1342: loss 4.3894, time 340.81ms, mfu 39.71%, throughput 0.31M tokens/s
+iter 1343: loss 4.4264, time 332.56ms, mfu 40.60%, throughput 0.31M tokens/s
+iter 1344: loss 4.4224, time 335.85ms, mfu 41.36%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.18s
+step 1345: train loss 4.3344, val loss 4.3282
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1345: loss 4.3812, time 4748.27ms, mfu 37.56%, throughput 0.31M tokens/s
+iter 1346: loss 4.4324, time 353.93ms, mfu 38.37%, throughput 0.31M tokens/s
+iter 1347: loss 4.3750, time 335.40ms, mfu 39.36%, throughput 0.31M tokens/s
+iter 1348: loss 4.4229, time 333.69ms, mfu 40.27%, throughput 0.31M tokens/s
+iter 1349: loss 4.3920, time 336.87ms, mfu 41.04%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1350: train loss 4.3284, val loss 4.3292
+iter 1350: loss 4.4101, time 2698.35ms, mfu 37.54%, throughput 0.31M tokens/s
+iter 1351: loss 4.3965, time 339.24ms, mfu 38.55%, throughput 0.31M tokens/s
+iter 1352: loss 4.4518, time 332.01ms, mfu 39.56%, throughput 0.31M tokens/s
+iter 1353: loss 4.4204, time 336.78ms, mfu 40.41%, throughput 0.31M tokens/s
+iter 1354: loss 4.4350, time 337.03ms, mfu 41.17%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.55 M tokens/s in 1.19s
+step 1355: train loss 4.3290, val loss 4.3416
+iter 1355: loss 4.4401, time 2712.45ms, mfu 37.65%, throughput 0.31M tokens/s
+iter 1356: loss 4.4916, time 331.19ms, mfu 38.76%, throughput 0.31M tokens/s
+iter 1357: loss 4.4515, time 335.08ms, mfu 39.71%, throughput 0.31M tokens/s
+iter 1358: loss 4.4140, time 340.00ms, mfu 40.50%, throughput 0.31M tokens/s
+iter 1359: loss 4.3872, time 332.20ms, mfu 41.32%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1360: train loss 4.3061, val loss 4.3442
+iter 1360: loss 4.3770, time 2699.09ms, mfu 37.78%, throughput 0.31M tokens/s
+iter 1361: loss 4.3763, time 336.33ms, mfu 38.81%, throughput 0.31M tokens/s
+iter 1362: loss 4.4448, time 335.45ms, mfu 39.75%, throughput 0.31M tokens/s
+iter 1363: loss 4.4152, time 337.68ms, mfu 40.57%, throughput 0.31M tokens/s
+iter 1364: loss 4.4390, time 335.41ms, mfu 41.33%, throughput 0.31M tokens/s
+train throughput: 0.53 M tokens/s in 1.24s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1365: train loss 4.3124, val loss 4.3246
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1365: loss 4.3999, time 4793.15ms, mfu 37.53%, throughput 0.31M tokens/s
+iter 1366: loss 4.4274, time 318.63ms, mfu 38.86%, throughput 0.31M tokens/s
+iter 1367: loss 4.3844, time 336.38ms, mfu 39.78%, throughput 0.31M tokens/s
+iter 1368: loss 4.4392, time 337.29ms, mfu 40.59%, throughput 0.31M tokens/s
+iter 1369: loss 4.4564, time 332.70ms, mfu 41.40%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1370: train loss 4.3262, val loss 4.3211
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1370: loss 4.3960, time 4896.87ms, mfu 37.59%, throughput 0.31M tokens/s
+iter 1371: loss 4.4222, time 376.14ms, mfu 38.13%, throughput 0.31M tokens/s
+iter 1372: loss 4.4190, time 335.03ms, mfu 39.14%, throughput 0.31M tokens/s
+iter 1373: loss 4.3627, time 334.76ms, mfu 40.06%, throughput 0.31M tokens/s
+iter 1374: loss 4.4335, time 334.50ms, mfu 40.89%, throughput 0.31M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.45 M tokens/s in 1.44s
+step 1375: train loss 4.3114, val loss 4.3168
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1375: loss 4.4125, time 5010.18ms, mfu 37.12%, throughput 0.31M tokens/s
+iter 1376: loss 4.4431, time 330.08ms, mfu 38.31%, throughput 0.31M tokens/s
+iter 1377: loss 4.4233, time 335.89ms, mfu 39.29%, throughput 0.31M tokens/s
+iter 1378: loss 4.4150, time 338.99ms, mfu 40.13%, throughput 0.31M tokens/s
+iter 1379: loss 4.3844, time 333.11ms, mfu 40.97%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1380: train loss 4.3127, val loss 4.3045
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1380: loss 4.4356, time 4681.36ms, mfu 37.22%, throughput 0.31M tokens/s
+iter 1381: loss 4.4141, time 356.67ms, mfu 38.03%, throughput 0.31M tokens/s
+iter 1382: loss 4.4396, time 334.67ms, mfu 39.06%, throughput 0.31M tokens/s
+iter 1383: loss 4.3877, time 334.88ms, mfu 39.98%, throughput 0.31M tokens/s
+iter 1384: loss 4.3638, time 334.84ms, mfu 40.81%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1385: train loss 4.3042, val loss 4.3219
+iter 1385: loss 4.3585, time 2688.69ms, mfu 37.33%, throughput 0.31M tokens/s
+iter 1386: loss 4.4196, time 335.94ms, mfu 38.41%, throughput 0.31M tokens/s
+iter 1387: loss 4.4203, time 340.04ms, mfu 39.33%, throughput 0.31M tokens/s
+iter 1388: loss 4.4740, time 342.05ms, mfu 40.12%, throughput 0.31M tokens/s
+iter 1389: loss 4.3655, time 326.81ms, mfu 41.06%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.19s
+step 1390: train loss 4.2973, val loss 4.3169
+iter 1390: loss 4.3791, time 2716.98ms, mfu 37.55%, throughput 0.31M tokens/s
+iter 1391: loss 4.3645, time 334.66ms, mfu 38.63%, throughput 0.31M tokens/s
+iter 1392: loss 4.3916, time 336.50ms, mfu 39.57%, throughput 0.31M tokens/s
+iter 1393: loss 4.3523, time 335.05ms, mfu 40.44%, throughput 0.31M tokens/s
+iter 1394: loss 4.4439, time 337.05ms, mfu 41.19%, throughput 0.31M tokens/s
+train throughput: 0.54 M tokens/s in 1.21s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1395: train loss 4.3035, val loss 4.3234
+iter 1395: loss 4.4261, time 2726.18ms, mfu 37.67%, throughput 0.31M tokens/s
+iter 1396: loss 4.3942, time 328.19ms, mfu 38.83%, throughput 0.31M tokens/s
+iter 1397: loss 4.4174, time 335.77ms, mfu 39.76%, throughput 0.31M tokens/s
+iter 1398: loss 4.3793, time 335.17ms, mfu 40.61%, throughput 0.31M tokens/s
+iter 1399: loss 4.3597, time 338.04ms, mfu 41.33%, throughput 0.31M tokens/s
+train throughput: 0.54 M tokens/s in 1.21s
+val throughput: 0.56 M tokens/s in 1.16s
+step 1400: train loss 4.3103, val loss 4.3143
+iter 1400: loss 4.4592, time 2707.12ms, mfu 37.80%, throughput 0.31M tokens/s
+iter 1401: loss 4.4150, time 334.56ms, mfu 38.85%, throughput 0.31M tokens/s
+iter 1402: loss 4.3900, time 335.22ms, mfu 39.79%, throughput 0.31M tokens/s
+iter 1403: loss 4.3811, time 337.23ms, mfu 40.60%, throughput 0.31M tokens/s
+iter 1404: loss 4.4084, time 331.69ms, mfu 41.42%, throughput 0.31M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1405: train loss 4.3125, val loss 4.3107
+iter 1405: loss 4.3936, time 2692.22ms, mfu 37.88%, throughput 0.31M tokens/s
+iter 1406: loss 4.4115, time 333.80ms, mfu 38.93%, throughput 0.31M tokens/s
+iter 1407: loss 4.4462, time 334.56ms, mfu 39.87%, throughput 0.31M tokens/s
+iter 1408: loss 4.4168, time 335.30ms, mfu 40.71%, throughput 0.31M tokens/s
+iter 1409: loss 4.4343, time 352.92ms, mfu 41.22%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1410: train loss 4.2891, val loss 4.3184
+iter 1410: loss 4.3954, time 2688.49ms, mfu 37.70%, throughput 0.31M tokens/s
+iter 1411: loss 4.3179, time 337.88ms, mfu 38.72%, throughput 0.31M tokens/s
+iter 1412: loss 4.4448, time 340.08ms, mfu 39.60%, throughput 0.31M tokens/s
+iter 1413: loss 4.3760, time 333.94ms, mfu 40.48%, throughput 0.31M tokens/s
+iter 1414: loss 4.4094, time 332.20ms, mfu 41.30%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1415: train loss 4.2827, val loss 4.3181
+iter 1415: loss 4.4126, time 2687.32ms, mfu 37.77%, throughput 0.31M tokens/s
+iter 1416: loss 4.4266, time 335.26ms, mfu 38.82%, throughput 0.31M tokens/s
+iter 1417: loss 4.3379, time 334.14ms, mfu 39.78%, throughput 0.31M tokens/s
+iter 1418: loss 4.3745, time 334.78ms, mfu 40.63%, throughput 0.31M tokens/s
+iter 1419: loss 4.3502, time 335.87ms, mfu 41.38%, throughput 0.31M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1420: train loss 4.3080, val loss 4.2791
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1420: loss 4.4066, time 4707.02ms, mfu 37.59%, throughput 0.31M tokens/s
+iter 1421: loss 4.4147, time 353.40ms, mfu 38.40%, throughput 0.31M tokens/s
+iter 1422: loss 4.4309, time 336.07ms, mfu 39.37%, throughput 0.31M tokens/s
+iter 1423: loss 4.4046, time 334.19ms, mfu 40.28%, throughput 0.31M tokens/s
+iter 1424: loss 4.3922, time 337.64ms, mfu 41.04%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1425: train loss 4.3098, val loss 4.3042
+iter 1425: loss 4.3993, time 2688.85ms, mfu 37.54%, throughput 0.31M tokens/s
+iter 1426: loss 4.3704, time 335.33ms, mfu 38.60%, throughput 0.31M tokens/s
+iter 1427: loss 4.3382, time 335.83ms, mfu 39.56%, throughput 0.31M tokens/s
+iter 1428: loss 4.3400, time 335.91ms, mfu 40.42%, throughput 0.31M tokens/s
+iter 1429: loss 4.3444, time 336.36ms, mfu 41.18%, throughput 0.31M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.43 M tokens/s in 1.51s
+step 1430: train loss 4.2846, val loss 4.3000
+iter 1430: loss 4.3851, time 3033.36ms, mfu 37.60%, throughput 0.31M tokens/s
+iter 1431: loss 4.4009, time 330.30ms, mfu 38.73%, throughput 0.31M tokens/s
+iter 1432: loss 4.4232, time 332.89ms, mfu 39.72%, throughput 0.31M tokens/s
+iter 1433: loss 4.4140, time 340.77ms, mfu 40.49%, throughput 0.31M tokens/s
+iter 1434: loss 4.3804, time 329.51ms, mfu 41.35%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1435: train loss 4.2798, val loss 4.3152
+iter 1435: loss 4.4474, time 2701.35ms, mfu 37.81%, throughput 0.31M tokens/s
+iter 1436: loss 4.4076, time 336.22ms, mfu 38.84%, throughput 0.31M tokens/s
+iter 1437: loss 4.3494, time 335.66ms, mfu 39.77%, throughput 0.31M tokens/s
+iter 1438: loss 4.4002, time 333.42ms, mfu 40.65%, throughput 0.31M tokens/s
+iter 1439: loss 4.3054, time 450.79ms, mfu 40.17%, throughput 0.31M tokens/s
+train throughput: 0.56 M tokens/s in 1.17s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1440: train loss 4.2883, val loss 4.3041
+iter 1440: loss 4.3851, time 2576.04ms, mfu 36.78%, throughput 0.31M tokens/s
+iter 1441: loss 4.4281, time 336.01ms, mfu 37.91%, throughput 0.31M tokens/s
+iter 1442: loss 4.3954, time 332.87ms, mfu 38.98%, throughput 0.31M tokens/s
+iter 1443: loss 4.4052, time 337.29ms, mfu 39.88%, throughput 0.31M tokens/s
+iter 1444: loss 4.4258, time 337.11ms, mfu 40.69%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1445: train loss 4.2908, val loss 4.3212
+iter 1445: loss 4.3032, time 2692.50ms, mfu 37.22%, throughput 0.31M tokens/s
+iter 1446: loss 4.3707, time 335.98ms, mfu 38.31%, throughput 0.31M tokens/s
+iter 1447: loss 4.3642, time 336.75ms, mfu 39.28%, throughput 0.31M tokens/s
+iter 1448: loss 4.4194, time 334.38ms, mfu 40.19%, throughput 0.31M tokens/s
+iter 1449: loss 4.3724, time 336.45ms, mfu 40.98%, throughput 0.31M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1450: train loss 4.2946, val loss 4.3111
+iter 1450: loss 4.3945, time 2685.36ms, mfu 37.48%, throughput 0.31M tokens/s
+iter 1451: loss 4.3994, time 334.05ms, mfu 38.57%, throughput 0.31M tokens/s
+iter 1452: loss 4.4260, time 335.42ms, mfu 39.54%, throughput 0.31M tokens/s
+iter 1453: loss 4.3771, time 340.97ms, mfu 40.33%, throughput 0.31M tokens/s
+iter 1454: loss 4.3991, time 330.82ms, mfu 41.18%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1455: train loss 4.2808, val loss 4.2826
+iter 1455: loss 4.3293, time 2706.98ms, mfu 37.66%, throughput 0.31M tokens/s
+iter 1456: loss 4.3941, time 329.87ms, mfu 38.80%, throughput 0.31M tokens/s
+iter 1457: loss 4.3559, time 335.83ms, mfu 39.73%, throughput 0.31M tokens/s
+iter 1458: loss 4.3980, time 335.09ms, mfu 40.58%, throughput 0.31M tokens/s
+iter 1459: loss 4.3595, time 336.38ms, mfu 41.33%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1460: train loss 4.2854, val loss 4.3069
+iter 1460: loss 4.3236, time 2693.66ms, mfu 37.80%, throughput 0.31M tokens/s
+iter 1461: loss 4.4003, time 336.84ms, mfu 38.82%, throughput 0.31M tokens/s
+iter 1462: loss 4.4156, time 336.14ms, mfu 39.75%, throughput 0.31M tokens/s
+iter 1463: loss 4.4310, time 334.34ms, mfu 40.61%, throughput 0.31M tokens/s
+iter 1464: loss 4.4326, time 334.23ms, mfu 41.39%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1465: train loss 4.2853, val loss 4.2869
+iter 1465: loss 4.4205, time 2691.32ms, mfu 37.85%, throughput 0.31M tokens/s
+iter 1466: loss 4.3209, time 335.02ms, mfu 38.89%, throughput 0.31M tokens/s
+iter 1467: loss 4.3445, time 335.70ms, mfu 39.82%, throughput 0.31M tokens/s
+iter 1468: loss 4.3827, time 336.09ms, mfu 40.65%, throughput 0.31M tokens/s
+iter 1469: loss 4.4175, time 333.02ms, mfu 41.44%, throughput 0.31M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1470: train loss 4.2898, val loss 4.2917
+iter 1470: loss 4.4235, time 2692.89ms, mfu 37.90%, throughput 0.31M tokens/s
+iter 1471: loss 4.3348, time 334.61ms, mfu 38.94%, throughput 0.31M tokens/s
+iter 1472: loss 4.4049, time 336.18ms, mfu 39.86%, throughput 0.31M tokens/s
+iter 1473: loss 4.3549, time 335.37ms, mfu 40.69%, throughput 0.31M tokens/s
+iter 1474: loss 4.4001, time 340.68ms, mfu 41.37%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1475: train loss 4.2744, val loss 4.2947
+iter 1475: loss 4.3767, time 2691.41ms, mfu 37.83%, throughput 0.31M tokens/s
+iter 1476: loss 4.4202, time 336.86ms, mfu 38.85%, throughput 0.31M tokens/s
+iter 1477: loss 4.3706, time 334.21ms, mfu 39.80%, throughput 0.31M tokens/s
+iter 1478: loss 4.3736, time 333.77ms, mfu 40.67%, throughput 0.31M tokens/s
+iter 1479: loss 4.4016, time 335.17ms, mfu 41.43%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.19s
+step 1480: train loss 4.2711, val loss 4.2990
+iter 1480: loss 4.3798, time 2720.58ms, mfu 37.88%, throughput 0.31M tokens/s
+iter 1481: loss 4.3506, time 334.35ms, mfu 38.93%, throughput 0.31M tokens/s
+iter 1482: loss 4.3559, time 336.41ms, mfu 39.84%, throughput 0.31M tokens/s
+iter 1483: loss 4.3456, time 334.21ms, mfu 40.69%, throughput 0.31M tokens/s
+iter 1484: loss 4.4242, time 338.31ms, mfu 41.41%, throughput 0.31M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.16s
+step 1485: train loss 4.2742, val loss 4.2899
+iter 1485: loss 4.3578, time 2679.64ms, mfu 37.87%, throughput 0.31M tokens/s
+iter 1486: loss 4.3410, time 335.87ms, mfu 38.90%, throughput 0.31M tokens/s
+iter 1487: loss 4.3928, time 335.33ms, mfu 39.83%, throughput 0.31M tokens/s
+iter 1488: loss 4.3655, time 341.16ms, mfu 40.59%, throughput 0.31M tokens/s
+iter 1489: loss 4.3450, time 329.18ms, mfu 41.44%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1490: train loss 4.2765, val loss 4.2800
+iter 1490: loss 4.3482, time 2692.99ms, mfu 37.90%, throughput 0.31M tokens/s
+iter 1491: loss 4.3878, time 336.06ms, mfu 38.92%, throughput 0.31M tokens/s
+iter 1492: loss 4.3274, time 333.60ms, mfu 39.87%, throughput 0.31M tokens/s
+iter 1493: loss 4.4123, time 334.59ms, mfu 40.72%, throughput 0.31M tokens/s
+iter 1494: loss 4.3646, time 335.47ms, mfu 41.47%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1495: train loss 4.2630, val loss 4.2797
+iter 1495: loss 4.3926, time 2698.87ms, mfu 37.92%, throughput 0.31M tokens/s
+iter 1496: loss 4.3735, time 334.01ms, mfu 38.97%, throughput 0.31M tokens/s
+iter 1497: loss 4.3612, time 337.09ms, mfu 39.87%, throughput 0.31M tokens/s
+iter 1498: loss 4.3422, time 332.47ms, mfu 40.75%, throughput 0.31M tokens/s
+iter 1499: loss 4.3078, time 334.48ms, mfu 41.51%, throughput 0.31M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1500: train loss 4.2722, val loss 4.2678
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1500: loss 4.3657, time 4698.48ms, mfu 37.70%, throughput 0.31M tokens/s
+iter 1501: loss 4.3079, time 377.51ms, mfu 38.21%, throughput 0.31M tokens/s
+iter 1502: loss 4.4444, time 324.27ms, mfu 39.38%, throughput 0.31M tokens/s
+iter 1503: loss 4.3607, time 334.32ms, mfu 40.28%, throughput 0.31M tokens/s
+iter 1504: loss 4.2667, time 334.85ms, mfu 41.08%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1505: train loss 4.2814, val loss 4.3010
+iter 1505: loss 4.3892, time 2693.89ms, mfu 37.57%, throughput 0.31M tokens/s
+iter 1506: loss 4.3180, time 340.59ms, mfu 38.56%, throughput 0.31M tokens/s
+iter 1507: loss 4.3815, time 332.69ms, mfu 39.57%, throughput 0.31M tokens/s
+iter 1508: loss 4.3509, time 336.74ms, mfu 40.41%, throughput 0.31M tokens/s
+iter 1509: loss 4.3978, time 336.03ms, mfu 41.18%, throughput 0.31M tokens/s
+train throughput: 0.54 M tokens/s in 1.21s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1510: train loss 4.2626, val loss 4.2732
+iter 1510: loss 4.3782, time 2721.96ms, mfu 37.66%, throughput 0.31M tokens/s
+iter 1511: loss 4.3638, time 336.36ms, mfu 38.70%, throughput 0.31M tokens/s
+iter 1512: loss 4.3396, time 334.39ms, mfu 39.67%, throughput 0.31M tokens/s
+iter 1513: loss 4.3332, time 336.59ms, mfu 40.50%, throughput 0.31M tokens/s
+iter 1514: loss 4.3679, time 333.99ms, mfu 41.29%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.19s
+step 1515: train loss 4.2794, val loss 4.2911
+iter 1515: loss 4.3894, time 2712.70ms, mfu 37.76%, throughput 0.31M tokens/s
+iter 1516: loss 4.3348, time 337.07ms, mfu 38.78%, throughput 0.31M tokens/s
+iter 1517: loss 4.3653, time 339.00ms, mfu 39.67%, throughput 0.31M tokens/s
+iter 1518: loss 4.4128, time 335.82ms, mfu 40.52%, throughput 0.31M tokens/s
+iter 1519: loss 4.3741, time 334.14ms, mfu 41.31%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1520: train loss 4.2377, val loss 4.2720
+iter 1520: loss 4.3545, time 2706.76ms, mfu 37.78%, throughput 0.31M tokens/s
+iter 1521: loss 4.3430, time 332.44ms, mfu 38.86%, throughput 0.31M tokens/s
+iter 1522: loss 4.3193, time 344.08ms, mfu 39.68%, throughput 0.31M tokens/s
+iter 1523: loss 4.3226, time 328.77ms, mfu 40.63%, throughput 0.31M tokens/s
+iter 1524: loss 4.3257, time 334.23ms, mfu 41.40%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.18s
+step 1525: train loss 4.2553, val loss 4.2631
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1525: loss 4.3736, time 4771.82ms, mfu 37.60%, throughput 0.31M tokens/s
+iter 1526: loss 4.3875, time 333.36ms, mfu 38.69%, throughput 0.31M tokens/s
+iter 1527: loss 4.3717, time 336.21ms, mfu 39.63%, throughput 0.31M tokens/s
+iter 1528: loss 4.3431, time 332.01ms, mfu 40.54%, throughput 0.31M tokens/s
+iter 1529: loss 4.4111, time 335.30ms, mfu 41.31%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1530: train loss 4.2568, val loss 4.2642
+iter 1530: loss 4.3885, time 2692.63ms, mfu 37.78%, throughput 0.31M tokens/s
+iter 1531: loss 4.3503, time 341.50ms, mfu 38.74%, throughput 0.31M tokens/s
+iter 1532: loss 4.3116, time 325.40ms, mfu 39.83%, throughput 0.31M tokens/s
+iter 1533: loss 4.4127, time 341.98ms, mfu 40.58%, throughput 0.31M tokens/s
+iter 1534: loss 4.3948, time 329.86ms, mfu 41.42%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1535: train loss 4.2679, val loss 4.2671
+iter 1535: loss 4.3780, time 2714.44ms, mfu 37.87%, throughput 0.31M tokens/s
+iter 1536: loss 4.3522, time 336.56ms, mfu 38.89%, throughput 0.31M tokens/s
+iter 1537: loss 4.3457, time 334.62ms, mfu 39.84%, throughput 0.31M tokens/s
+iter 1538: loss 4.3659, time 349.99ms, mfu 40.47%, throughput 0.31M tokens/s
+iter 1539: loss 4.4283, time 322.63ms, mfu 41.44%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1540: train loss 4.2630, val loss 4.2649
+iter 1540: loss 4.3883, time 2698.02ms, mfu 37.89%, throughput 0.31M tokens/s
+iter 1541: loss 4.3562, time 337.66ms, mfu 38.89%, throughput 0.31M tokens/s
+iter 1542: loss 4.3583, time 331.32ms, mfu 39.88%, throughput 0.31M tokens/s
+iter 1543: loss 4.3257, time 337.61ms, mfu 40.68%, throughput 0.31M tokens/s
+iter 1544: loss 4.3740, time 332.52ms, mfu 41.48%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1545: train loss 4.2567, val loss 4.2572
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1545: loss 4.3802, time 4746.69ms, mfu 37.67%, throughput 0.31M tokens/s
+iter 1546: loss 4.3410, time 364.40ms, mfu 38.34%, throughput 0.31M tokens/s
+iter 1547: loss 4.3908, time 334.79ms, mfu 39.34%, throughput 0.31M tokens/s
+iter 1548: loss 4.3136, time 333.76ms, mfu 40.25%, throughput 0.31M tokens/s
+iter 1549: loss 4.4133, time 339.38ms, mfu 40.99%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1550: train loss 4.2383, val loss 4.2609
+iter 1550: loss 4.3523, time 2705.86ms, mfu 37.49%, throughput 0.31M tokens/s
+iter 1551: loss 4.3720, time 351.78ms, mfu 38.34%, throughput 0.31M tokens/s
+iter 1552: loss 4.3494, time 324.54ms, mfu 39.48%, throughput 0.31M tokens/s
+iter 1553: loss 4.4316, time 332.58ms, mfu 40.40%, throughput 0.31M tokens/s
+iter 1554: loss 4.3898, time 336.08ms, mfu 41.17%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1555: train loss 4.2473, val loss 4.2458
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1555: loss 4.3389, time 4846.11ms, mfu 37.39%, throughput 0.31M tokens/s
+iter 1556: loss 4.3513, time 324.63ms, mfu 38.63%, throughput 0.31M tokens/s
+iter 1557: loss 4.3402, time 336.15ms, mfu 39.58%, throughput 0.31M tokens/s
+iter 1558: loss 4.3952, time 334.52ms, mfu 40.45%, throughput 0.31M tokens/s
+iter 1559: loss 4.3264, time 335.32ms, mfu 41.23%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1560: train loss 4.2508, val loss 4.2581
+iter 1560: loss 4.3880, time 2698.18ms, mfu 37.71%, throughput 0.31M tokens/s
+iter 1561: loss 4.3268, time 335.11ms, mfu 38.76%, throughput 0.31M tokens/s
+iter 1562: loss 4.4044, time 335.59ms, mfu 39.70%, throughput 0.31M tokens/s
+iter 1563: loss 4.2926, time 337.17ms, mfu 40.53%, throughput 0.31M tokens/s
+iter 1564: loss 4.3522, time 349.62ms, mfu 41.10%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1565: train loss 4.2552, val loss 4.2566
+iter 1565: loss 4.3751, time 2679.40ms, mfu 37.60%, throughput 0.31M tokens/s
+iter 1566: loss 4.3357, time 337.03ms, mfu 38.63%, throughput 0.31M tokens/s
+iter 1567: loss 4.3465, time 336.64ms, mfu 39.57%, throughput 0.31M tokens/s
+iter 1568: loss 4.3559, time 334.68ms, mfu 40.45%, throughput 0.31M tokens/s
+iter 1569: loss 4.3614, time 335.76ms, mfu 41.22%, throughput 0.31M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1570: train loss 4.2397, val loss 4.2604
+iter 1570: loss 4.3638, time 2691.76ms, mfu 37.70%, throughput 0.31M tokens/s
+iter 1571: loss 4.3398, time 335.66ms, mfu 38.75%, throughput 0.31M tokens/s
+iter 1572: loss 4.2959, time 337.58ms, mfu 39.66%, throughput 0.31M tokens/s
+iter 1573: loss 4.3613, time 336.86ms, mfu 40.50%, throughput 0.31M tokens/s
+iter 1574: loss 4.4215, time 333.40ms, mfu 41.30%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1575: train loss 4.2439, val loss 4.2578
+iter 1575: loss 4.3008, time 2696.54ms, mfu 37.77%, throughput 0.31M tokens/s
+iter 1576: loss 4.3534, time 336.31ms, mfu 38.80%, throughput 0.31M tokens/s
+iter 1577: loss 4.3311, time 336.64ms, mfu 39.72%, throughput 0.31M tokens/s
+iter 1578: loss 4.3611, time 335.25ms, mfu 40.57%, throughput 0.31M tokens/s
+iter 1579: loss 4.3270, time 333.56ms, mfu 41.36%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1580: train loss 4.2424, val loss 4.2555
+iter 1580: loss 4.3237, time 2701.04ms, mfu 37.83%, throughput 0.31M tokens/s
+iter 1581: loss 4.3886, time 334.51ms, mfu 38.88%, throughput 0.31M tokens/s
+iter 1582: loss 4.3392, time 336.80ms, mfu 39.79%, throughput 0.31M tokens/s
+iter 1583: loss 4.3284, time 330.07ms, mfu 40.71%, throughput 0.31M tokens/s
+iter 1584: loss 4.3269, time 335.18ms, mfu 41.46%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1585: train loss 4.2500, val loss 4.2564
+iter 1585: loss 4.3219, time 2693.25ms, mfu 37.92%, throughput 0.31M tokens/s
+iter 1586: loss 4.3262, time 336.41ms, mfu 38.93%, throughput 0.31M tokens/s
+iter 1587: loss 4.3530, time 346.66ms, mfu 39.70%, throughput 0.31M tokens/s
+iter 1588: loss 4.3369, time 325.42ms, mfu 40.70%, throughput 0.31M tokens/s
+iter 1589: loss 4.3926, time 335.31ms, mfu 41.46%, throughput 0.31M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1590: train loss 4.2417, val loss 4.2476
+iter 1590: loss 4.3011, time 2680.39ms, mfu 37.91%, throughput 0.31M tokens/s
+iter 1591: loss 4.3391, time 335.21ms, mfu 38.95%, throughput 0.31M tokens/s
+iter 1592: loss 4.3139, time 335.83ms, mfu 39.87%, throughput 0.31M tokens/s
+iter 1593: loss 4.3094, time 337.61ms, mfu 40.67%, throughput 0.31M tokens/s
+iter 1594: loss 4.3431, time 339.53ms, mfu 41.37%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1595: train loss 4.2577, val loss 4.2680
+iter 1595: loss 4.3532, time 2707.63ms, mfu 37.83%, throughput 0.31M tokens/s
+iter 1596: loss 4.3527, time 335.21ms, mfu 38.87%, throughput 0.31M tokens/s
+iter 1597: loss 4.3773, time 334.94ms, mfu 39.81%, throughput 0.31M tokens/s
+iter 1598: loss 4.4050, time 335.98ms, mfu 40.64%, throughput 0.31M tokens/s
+iter 1599: loss 4.3760, time 351.52ms, mfu 41.18%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1600: train loss 4.2410, val loss 4.2390
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1600: loss 4.3016, time 4650.89ms, mfu 37.41%, throughput 0.31M tokens/s
+iter 1601: loss 4.3684, time 331.50ms, mfu 38.54%, throughput 0.31M tokens/s
+iter 1602: loss 4.3594, time 340.96ms, mfu 39.43%, throughput 0.31M tokens/s
+iter 1603: loss 4.3380, time 328.05ms, mfu 40.42%, throughput 0.31M tokens/s
+iter 1604: loss 4.3709, time 335.97ms, mfu 41.19%, throughput 0.31M tokens/s
+train throughput: 0.54 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1605: train loss 4.2379, val loss 4.2594
+iter 1605: loss 4.3311, time 2711.57ms, mfu 37.67%, throughput 0.31M tokens/s
+iter 1606: loss 4.3441, time 337.43ms, mfu 38.69%, throughput 0.31M tokens/s
+iter 1607: loss 4.3280, time 334.75ms, mfu 39.65%, throughput 0.31M tokens/s
+iter 1608: loss 4.3211, time 335.24ms, mfu 40.51%, throughput 0.31M tokens/s
+iter 1609: loss 4.3481, time 334.95ms, mfu 41.29%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.55 M tokens/s in 1.18s
+step 1610: train loss 4.2319, val loss 4.2476
+iter 1610: loss 4.3146, time 2706.82ms, mfu 37.76%, throughput 0.31M tokens/s
+iter 1611: loss 4.3322, time 336.37ms, mfu 38.79%, throughput 0.31M tokens/s
+iter 1612: loss 4.3193, time 336.76ms, mfu 39.71%, throughput 0.31M tokens/s
+iter 1613: loss 4.2674, time 333.57ms, mfu 40.59%, throughput 0.31M tokens/s
+iter 1614: loss 4.3534, time 334.21ms, mfu 41.37%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1615: train loss 4.2144, val loss 4.2315
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1615: loss 4.3900, time 4765.34ms, mfu 37.57%, throughput 0.31M tokens/s
+iter 1616: loss 4.3595, time 367.98ms, mfu 38.21%, throughput 0.31M tokens/s
+iter 1617: loss 4.3598, time 334.23ms, mfu 39.22%, throughput 0.31M tokens/s
+iter 1618: loss 4.3093, time 334.94ms, mfu 40.13%, throughput 0.31M tokens/s
+iter 1619: loss 4.3202, time 334.87ms, mfu 40.95%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1620: train loss 4.2442, val loss 4.2466
+iter 1620: loss 4.3348, time 2685.74ms, mfu 37.45%, throughput 0.31M tokens/s
+iter 1621: loss 4.3454, time 335.91ms, mfu 38.52%, throughput 0.31M tokens/s
+iter 1622: loss 4.2765, time 335.00ms, mfu 39.50%, throughput 0.31M tokens/s
+iter 1623: loss 4.3504, time 336.20ms, mfu 40.36%, throughput 0.31M tokens/s
+iter 1624: loss 4.3518, time 341.00ms, mfu 41.06%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1625: train loss 4.2458, val loss 4.2259
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1625: loss 4.3124, time 4824.71ms, mfu 37.29%, throughput 0.31M tokens/s
+iter 1626: loss 4.3658, time 334.39ms, mfu 38.40%, throughput 0.31M tokens/s
+iter 1627: loss 4.3489, time 331.66ms, mfu 39.43%, throughput 0.31M tokens/s
+iter 1628: loss 4.3778, time 338.21ms, mfu 40.27%, throughput 0.31M tokens/s
+iter 1629: loss 4.3950, time 329.45ms, mfu 41.15%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1630: train loss 4.2164, val loss 4.2319
+iter 1630: loss 4.3303, time 2710.61ms, mfu 37.63%, throughput 0.31M tokens/s
+iter 1631: loss 4.3273, time 335.16ms, mfu 38.70%, throughput 0.31M tokens/s
+iter 1632: loss 4.3060, time 335.44ms, mfu 39.65%, throughput 0.31M tokens/s
+iter 1633: loss 4.3148, time 338.60ms, mfu 40.46%, throughput 0.31M tokens/s
+iter 1634: loss 4.2861, time 333.66ms, mfu 41.26%, throughput 0.31M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1635: train loss 4.2365, val loss 4.2277
+iter 1635: loss 4.3409, time 2696.70ms, mfu 37.73%, throughput 0.31M tokens/s
+iter 1636: loss 4.3342, time 324.80ms, mfu 38.94%, throughput 0.31M tokens/s
+iter 1637: loss 4.3236, time 337.81ms, mfu 39.83%, throughput 0.31M tokens/s
+iter 1638: loss 4.3425, time 335.39ms, mfu 40.67%, throughput 0.31M tokens/s
+iter 1639: loss 4.3121, time 335.47ms, mfu 41.42%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.52 M tokens/s in 1.25s
+step 1640: train loss 4.2377, val loss 4.2295
+iter 1640: loss 4.3151, time 2768.32ms, mfu 37.86%, throughput 0.31M tokens/s
+iter 1641: loss 4.3386, time 336.05ms, mfu 38.89%, throughput 0.31M tokens/s
+iter 1642: loss 4.3200, time 334.98ms, mfu 39.83%, throughput 0.31M tokens/s
+iter 1643: loss 4.3252, time 337.97ms, mfu 40.63%, throughput 0.31M tokens/s
+iter 1644: loss 4.3614, time 332.12ms, mfu 41.44%, throughput 0.31M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1645: train loss 4.2258, val loss 4.2445
+iter 1645: loss 4.3506, time 2690.92ms, mfu 37.89%, throughput 0.32M tokens/s
+iter 1646: loss 4.3168, time 333.62ms, mfu 38.95%, throughput 0.32M tokens/s
+iter 1647: loss 4.3307, time 335.06ms, mfu 39.88%, throughput 0.31M tokens/s
+iter 1648: loss 4.3442, time 338.43ms, mfu 40.67%, throughput 0.31M tokens/s
+iter 1649: loss 4.3013, time 331.24ms, mfu 41.49%, throughput 0.31M tokens/s
+train throughput: 0.43 M tokens/s in 1.53s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1650: train loss 4.2188, val loss 4.2188
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1650: loss 4.3033, time 5011.89ms, mfu 37.66%, throughput 0.31M tokens/s
+iter 1651: loss 4.3420, time 359.38ms, mfu 38.39%, throughput 0.31M tokens/s
+iter 1652: loss 4.3466, time 335.72ms, mfu 39.37%, throughput 0.31M tokens/s
+iter 1653: loss 4.2715, time 334.39ms, mfu 40.27%, throughput 0.31M tokens/s
+iter 1654: loss 4.3297, time 359.35ms, mfu 40.74%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.16s
+step 1655: train loss 4.2181, val loss 4.2400
+iter 1655: loss 4.2959, time 2677.01ms, mfu 37.27%, throughput 0.32M tokens/s
+iter 1656: loss 4.3316, time 335.36ms, mfu 38.37%, throughput 0.32M tokens/s
+iter 1657: loss 4.3411, time 336.01ms, mfu 39.34%, throughput 0.31M tokens/s
+iter 1658: loss 4.2761, time 335.85ms, mfu 40.22%, throughput 0.31M tokens/s
+iter 1659: loss 4.3456, time 336.15ms, mfu 41.01%, throughput 0.31M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.55 M tokens/s in 1.18s
+step 1660: train loss 4.2178, val loss 4.2252
+iter 1660: loss 4.3112, time 2711.70ms, mfu 37.51%, throughput 0.32M tokens/s
+iter 1661: loss 4.2879, time 335.63ms, mfu 38.57%, throughput 0.32M tokens/s
+iter 1662: loss 4.3413, time 334.48ms, mfu 39.55%, throughput 0.32M tokens/s
+iter 1663: loss 4.3160, time 336.72ms, mfu 40.40%, throughput 0.32M tokens/s
+iter 1664: loss 4.3026, time 333.74ms, mfu 41.20%, throughput 0.32M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1665: train loss 4.2197, val loss 4.2318
+iter 1665: loss 4.3043, time 2711.76ms, mfu 37.68%, throughput 0.32M tokens/s
+iter 1666: loss 4.3283, time 333.83ms, mfu 38.76%, throughput 0.32M tokens/s
+iter 1667: loss 4.2662, time 336.78ms, mfu 39.68%, throughput 0.32M tokens/s
+iter 1668: loss 4.3215, time 334.88ms, mfu 40.54%, throughput 0.32M tokens/s
+iter 1669: loss 4.3444, time 337.06ms, mfu 41.29%, throughput 0.32M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1670: train loss 4.2263, val loss 4.2396
+iter 1670: loss 4.3144, time 2699.64ms, mfu 37.76%, throughput 0.32M tokens/s
+iter 1671: loss 4.2854, time 337.50ms, mfu 38.77%, throughput 0.32M tokens/s
+iter 1672: loss 4.2752, time 333.91ms, mfu 39.74%, throughput 0.32M tokens/s
+iter 1673: loss 4.3068, time 334.74ms, mfu 40.59%, throughput 0.32M tokens/s
+iter 1674: loss 4.3382, time 333.96ms, mfu 41.38%, throughput 0.32M tokens/s
+train throughput: 0.55 M tokens/s in 1.20s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1675: train loss 4.2086, val loss 4.2351
+iter 1675: loss 4.2647, time 2708.09ms, mfu 37.84%, throughput 0.32M tokens/s
+iter 1676: loss 4.3209, time 335.59ms, mfu 38.87%, throughput 0.32M tokens/s
+iter 1677: loss 4.2512, time 339.04ms, mfu 39.75%, throughput 0.32M tokens/s
+iter 1678: loss 4.3170, time 332.49ms, mfu 40.64%, throughput 0.32M tokens/s
+iter 1679: loss 4.3415, time 334.01ms, mfu 41.42%, throughput 0.32M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1680: train loss 4.2238, val loss 4.2370
+iter 1680: loss 4.3551, time 2709.18ms, mfu 37.87%, throughput 0.32M tokens/s
+iter 1681: loss 4.3085, time 333.36ms, mfu 38.94%, throughput 0.32M tokens/s
+iter 1682: loss 4.3284, time 336.24ms, mfu 39.85%, throughput 0.32M tokens/s
+iter 1683: loss 4.3137, time 334.64ms, mfu 40.70%, throughput 0.32M tokens/s
+iter 1684: loss 4.3084, time 333.83ms, mfu 41.47%, throughput 0.32M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1685: train loss 4.2316, val loss 4.2242
+iter 1685: loss 4.2786, time 2697.72ms, mfu 37.93%, throughput 0.32M tokens/s
+iter 1686: loss 4.3726, time 336.31ms, mfu 38.94%, throughput 0.32M tokens/s
+iter 1687: loss 4.2701, time 334.83ms, mfu 39.88%, throughput 0.32M tokens/s
+iter 1688: loss 4.3070, time 335.48ms, mfu 40.71%, throughput 0.32M tokens/s
+iter 1689: loss 4.3531, time 333.31ms, mfu 41.49%, throughput 0.32M tokens/s
+train throughput: 0.54 M tokens/s in 1.21s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1690: train loss 4.2169, val loss 4.2069
+saving checkpoint to ../data/output/out-openwebtext_noflash_0414_14:02:06
+iter 1690: loss 4.2607, time 4668.45ms, mfu 37.69%, throughput 0.32M tokens/s
+iter 1691: loss 4.3682, time 363.89ms, mfu 38.36%, throughput 0.32M tokens/s
+iter 1692: loss 4.3124, time 334.80ms, mfu 39.36%, throughput 0.32M tokens/s
+iter 1693: loss 4.2848, time 334.87ms, mfu 40.25%, throughput 0.32M tokens/s
+iter 1694: loss 4.3677, time 335.70ms, mfu 41.04%, throughput 0.32M tokens/s
+train throughput: 0.54 M tokens/s in 1.21s
+val throughput: 0.56 M tokens/s in 1.16s
+step 1695: train loss 4.2145, val loss 4.2150
+iter 1695: loss 4.3027, time 2709.14ms, mfu 37.53%, throughput 0.32M tokens/s
+iter 1696: loss 4.2864, time 333.75ms, mfu 38.63%, throughput 0.32M tokens/s
+iter 1697: loss 4.3099, time 336.72ms, mfu 39.57%, throughput 0.32M tokens/s
+iter 1698: loss 4.3322, time 334.91ms, mfu 40.44%, throughput 0.32M tokens/s
+iter 1699: loss 4.3403, time 332.83ms, mfu 41.25%, throughput 0.32M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1700: train loss 4.2263, val loss 4.2238
+iter 1700: loss 4.3051, time 2689.96ms, mfu 37.73%, throughput 0.32M tokens/s
+iter 1701: loss 4.2680, time 338.14ms, mfu 38.74%, throughput 0.32M tokens/s
+iter 1702: loss 4.3003, time 332.18ms, mfu 39.73%, throughput 0.32M tokens/s
+iter 1703: loss 4.3548, time 335.12ms, mfu 40.58%, throughput 0.32M tokens/s
+iter 1704: loss 4.3055, time 335.44ms, mfu 41.35%, throughput 0.32M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.18s
+step 1705: train loss 4.2151, val loss 4.2329
+iter 1705: loss 4.3117, time 2699.14ms, mfu 37.81%, throughput 0.32M tokens/s
+iter 1706: loss 4.3019, time 333.87ms, mfu 38.87%, throughput 0.32M tokens/s
+iter 1707: loss 4.2864, time 336.47ms, mfu 39.79%, throughput 0.32M tokens/s
+iter 1708: loss 4.3459, time 336.93ms, mfu 40.61%, throughput 0.32M tokens/s
+iter 1709: loss 4.3241, time 334.33ms, mfu 41.39%, throughput 0.32M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.48 M tokens/s in 1.36s
+step 1710: train loss 4.2213, val loss 4.2133
+iter 1710: loss 4.3083, time 2876.41ms, mfu 37.81%, throughput 0.32M tokens/s
+iter 1711: loss 4.3147, time 335.61ms, mfu 38.85%, throughput 0.32M tokens/s
+iter 1712: loss 4.2699, time 336.43ms, mfu 39.77%, throughput 0.32M tokens/s
+iter 1713: loss 4.3535, time 341.53ms, mfu 40.53%, throughput 0.32M tokens/s
+iter 1714: loss 4.2759, time 332.97ms, mfu 41.33%, throughput 0.32M tokens/s
+train throughput: 0.56 M tokens/s in 1.18s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1715: train loss 4.2215, val loss 4.2204
+iter 1715: loss 4.2973, time 2689.24ms, mfu 37.80%, throughput 0.32M tokens/s
+iter 1716: loss 4.2765, time 332.43ms, mfu 38.88%, throughput 0.32M tokens/s
+iter 1717: loss 4.2826, time 339.93ms, mfu 39.75%, throughput 0.32M tokens/s
+iter 1718: loss 4.2614, time 331.05ms, mfu 40.66%, throughput 0.32M tokens/s
+iter 1719: loss 4.2676, time 335.95ms, mfu 41.41%, throughput 0.32M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1720: train loss 4.2064, val loss 4.2140
+iter 1720: loss 4.3375, time 2692.05ms, mfu 37.87%, throughput 0.32M tokens/s
+iter 1721: loss 4.2836, time 335.13ms, mfu 38.91%, throughput 0.32M tokens/s
+iter 1722: loss 4.3205, time 336.21ms, mfu 39.83%, throughput 0.32M tokens/s
+iter 1723: loss 4.3096, time 339.34ms, mfu 40.61%, throughput 0.32M tokens/s
+iter 1724: loss 4.2892, time 331.60ms, mfu 41.42%, throughput 0.32M tokens/s
+train throughput: 0.55 M tokens/s in 1.18s
+val throughput: 0.55 M tokens/s in 1.20s
+step 1725: train loss 4.1924, val loss 4.2085
+iter 1725: loss 4.3061, time 2714.79ms, mfu 37.88%, throughput 0.32M tokens/s
+iter 1726: loss 4.2776, time 336.48ms, mfu 38.90%, throughput 0.32M tokens/s
+iter 1727: loss 4.3258, time 335.65ms, mfu 39.82%, throughput 0.32M tokens/s
+iter 1728: loss 4.3312, time 336.34ms, mfu 40.65%, throughput 0.32M tokens/s
+iter 1729: loss 4.3274, time 335.61ms, mfu 41.40%, throughput 0.32M tokens/s
+train throughput: 0.55 M tokens/s in 1.19s
+val throughput: 0.56 M tokens/s in 1.17s
+step 1730: train loss 4.2114, val loss 4.2267
+iter 1730: loss 4.2749, time 2697.67ms, mfu 37.86%, throughput 0.32M tokens/s
+iter 1731: loss 4.3061, time 340.49ms, mfu 38.82%, throughput 0.32M tokens/s
+iter 1732: loss 4.1912, time 333.11ms, mfu 39.80%, throughput 0.32M tokens/s
+iter 1733: loss 4.3017, time 331.05ms, mfu 40.70%, throughput 0.32M tokens/s

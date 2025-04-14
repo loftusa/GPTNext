@@ -37,7 +37,9 @@ from _00_baseline_model import GPTConfig, GPT
 # I/O
 # changes regularly
 DEBUG = False
-wandb_run_name = 'baseline' + time.strftime("_%m%d_%H:%M:%S") + "_DEBUG" if DEBUG else ""
+wandb_run_name = 'baseline' + time.strftime("_%m%d_%H:%M:%S")
+if DEBUG: 
+    wandb_run_name += "_DEBUG"
 max_duration = 60*60*3  # maximum training duration in seconds 
 max_duration = 30 if DEBUG else max_duration
 wandb_notes = """
@@ -46,7 +48,7 @@ baseline training run. Includes torch.compile. First run with inference speed lo
 if DEBUG: 
     wandb_notes += "\n#########DEBUG RUN#########"
 batch_size = 2**8 # 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
-block_size = 2**10 # 1024
+block_size = 2**8 # 1024
 
 # other hyperparams
 out_dir = f"../data/output/out-openwebtext_{wandb_run_name}"
@@ -272,8 +274,8 @@ def estimate_loss():
         # Optionally log the speed test results to wandb
         if wandb_log and master_process:
             wandb.log({
-                f"{split}/loss": losses[split],
-                f"{split}/perplexity": math.exp(losses[split]),
+                f"{split}/loss": out[split],
+                f"{split}/perplexity": math.exp(out[split]),
                 f"{split}/throughput": tokens_per_sec,
                 f"{split}/time_s": elapsed,
             })

@@ -49,7 +49,9 @@ def get_train_scripts(directory: str = "experiments", retry_failed: bool = False
             "experiments/_06_no_compile_train.py",
             "experiments/_07_noflash_train.py",
         ]
+        print(f"scripts before skipping: {scripts}")
         scripts = [script for script in scripts if script not in to_skip]
+        print(f"scripts after skipping: {scripts}")
         print(f"Found {len(scripts)} scripts matching '{pattern}' for a standard run.")
         return scripts
 

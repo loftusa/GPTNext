@@ -45,7 +45,7 @@ Speculative decoding training run.
 if DEBUG: 
     wandb_notes += "\n#########DEBUG RUN#########"
 batch_size = 2**8 # 12 # if gradient_accumulation_steps > 1, this is the micro-batch size
-block_size = 2**10 # 1024
+block_size = 2**8 # 1024
 
 # other hyperparams
 out_dir = f"../data/output/out-openwebtext_{wandb_run_name}"
@@ -270,9 +270,9 @@ def estimate_loss():
         # Optionally log the speed test results to wandb
         if wandb_log and master_process:
             wandb.log({
-                f"{split}/loss": losses[split], # Changed key
-                f"{split}/perplexity": math.exp(losses[split]), # Added perplexity
-                f"{split}/throughput": tokens_per_sec, # Changed key
+                f"{split}/loss": out[split], # Changed key
+                f"{split}/perplexity": math.exp(out[split]), # Added perplexity
+                f"{split}/throughput": tokens_per_sec,
                 f"{split}/time_s": elapsed,
             })
 
