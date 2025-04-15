@@ -143,10 +143,7 @@ ctx = (
     else torch.amp.autocast(device_type=device_type, dtype=ptdtype)
 )
 
-# poor man's data loader
-data_dir = os.path.join("data", dataset)
-assert os.path.exists(data_dir), f"Data directory {data_dir} does not exist"
-
+data_dir = os.path.join('/disk/u/lofty/GPTNext/data', dataset); assert os.path.exists(data_dir)
 
 def get_batch(split):
     # We recreate np.memmap every batch to avoid a memory leak, as per
