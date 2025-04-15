@@ -66,7 +66,7 @@ dropout = 0.0 # 0.0 # for pretraining 0 is good, for finetuning try 0.1+
 bias = False # do we use bias inside LayerNorm and Linear layers?
 # soap optimizer
 learning_rate = 6e-4 # 6e-4 # max learning rate
-max_iters = 45000 # 600000 # total number of training iterations
+max_iters = 25000 # 600000 # total number of training iterations
 weight_decay = 1e-1
 beta1 = 0.9
 beta2 = 0.95
@@ -363,6 +363,9 @@ while True:
                 "iter": iter_num,
                 "train/loss": losses['train'],
                 "val/loss": losses['val'],
+                "train/perplexity": train_ppl,  # Added this line
+                "val/perplexity": val_ppl,      # Added this line
+                "tokens_processed": global_tokens_processed,  # Added this line
                 "lr": lr,
                 "mfu": running_mfu*100, # convert to percentage
                 **memory_stats, # Add all memory stats

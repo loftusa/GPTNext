@@ -437,6 +437,7 @@ while True:
                 "val/loss": losses["val"],
                 "train/perplexity": train_ppl,
                 "val/perplexity": val_ppl,
+                "tokens_processed": global_tokens_processed,  
                 "lr": lr,
                 "mfu": running_mfu * 100,  # convert to percentage
                 **memory_stats,  # Add all memory stats

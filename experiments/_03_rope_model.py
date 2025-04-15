@@ -30,7 +30,7 @@ class RotaryEmbedding(torch.nn.Module):
         self.cos_cached = None
         self.sin_cached = None
 
-    def forward(self, x, seq_dim=1):
+    def forward(self, x, seq_dim=2):
         seq_len = x.shape[seq_dim]
         
         if seq_len != self.seq_len_cached:
@@ -38,8 +38,8 @@ class RotaryEmbedding(torch.nn.Module):
             t = torch.arange(seq_len, device=x.device).type_as(self.inv_freq)
             freqs = torch.einsum('i,j->ij', t, self.inv_freq)
             emb = torch.cat((freqs, freqs), dim=-1).to(x.device)
-            self.cos_cached = emb.cos()[None, :, None, :]
-            self.sin_cached = emb.sin()[None, :, None, :]
+            self.cos_cached = emb.cos().view(1, 1, seq_len, emb.shape[-1])
+            self.sin_cached = emb.sin().view(1, 1, seq_len, emb.shape[-1])
         
         return self.cos_cached, self.sin_cached
 

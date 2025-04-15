@@ -71,7 +71,7 @@ dropout = 0.0 # 0.0 # for pretraining 0 is good, for finetuning try 0.1+
 bias = False # do we use bias inside LayerNorm and Linear layers?
 # adamw optimizer
 learning_rate = 6e-4 # 6e-4 # max learning rate
-max_iters = 50000 # 600000 # total number of training iterations
+max_iters = 25000 # 600000 # total number of training iterations
 weight_decay = 1e-1
 beta1 = 0.9
 beta2 = 0.95
@@ -372,6 +372,7 @@ while True:
                 "val/loss": losses['val'],
                 "train/perplexity": train_ppl,
                 "val/perplexity": val_ppl,
+                "tokens_processed": global_tokens_processed,  
                 "lr": lr,
                 "mfu": running_mfu*100, # convert to percentage
                 **memory_stats, # Add all memory stats

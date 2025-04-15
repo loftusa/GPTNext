@@ -375,7 +375,7 @@ class GPT(nn.Module):
         # Using default Muon settings for now, might need tuning.
         muon_optimizer = Muon(
             muon_params_list,
-            lr=learning_rate*10, # Muon uses this for its internal SGD. Use ~10x of AdamW LR
+            lr=learning_rate*50, # Muon uses this for its internal SGD. Use ~10x of AdamW LR
             weight_decay=weight_decay, # Check if Muon uses this effectively
             momentum=betas[0], # Use beta1 as momentum
             nesterov=True, # Recommended by Muon docs
